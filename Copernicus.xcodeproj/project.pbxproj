@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1BFF31823A5349A008165FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BFF31723A5349A008165FA /* AppDelegate.swift */; };
+		A1BFF31A23A5349A008165FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BFF31923A5349A008165FA /* SceneDelegate.swift */; };
+		A1BFF31C23A5349A008165FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BFF31B23A5349A008165FA /* ContentView.swift */; };
+		A1BFF31E23A5349B008165FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1BFF31D23A5349B008165FA /* Assets.xcassets */; };
+		A1BFF32123A5349B008165FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1BFF32023A5349B008165FA /* Preview Assets.xcassets */; };
+		A1BFF32423A5349B008165FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BFF32223A5349B008165FA /* LaunchScreen.storyboard */; };
+		A1BFF32F23A5349C008165FA /* CopernicusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BFF32E23A5349C008165FA /* CopernicusTests.swift */; };
+		A1BFF33A23A5349C008165FA /* CopernicusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BFF33923A5349C008165FA /* CopernicusUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A1BFF32B23A5349C008165FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1BFF30C23A5349A008165FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1BFF31323A5349A008165FA;
+			remoteInfo = Copernicus;
+		};
+		A1BFF33623A5349C008165FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1BFF30C23A5349A008165FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1BFF31323A5349A008165FA;
+			remoteInfo = Copernicus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A1BFF31423A5349A008165FA /* Copernicus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Copernicus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1BFF31723A5349A008165FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A1BFF31923A5349A008165FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A1BFF31B23A5349A008165FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A1BFF31D23A5349B008165FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A1BFF32023A5349B008165FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A1BFF32323A5349B008165FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A1BFF32523A5349B008165FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1BFF32A23A5349C008165FA /* CopernicusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CopernicusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1BFF32E23A5349C008165FA /* CopernicusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopernicusTests.swift; sourceTree = "<group>"; };
+		A1BFF33023A5349C008165FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1BFF33523A5349C008165FA /* CopernicusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CopernicusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1BFF33923A5349C008165FA /* CopernicusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopernicusUITests.swift; sourceTree = "<group>"; };
+		A1BFF33B23A5349C008165FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1BFF31123A5349A008165FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1BFF32723A5349C008165FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1BFF33223A5349C008165FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1BFF30B23A5349A008165FA = {
+			isa = PBXGroup;
+			children = (
+				A1BFF31623A5349A008165FA /* Copernicus */,
+				A1BFF32D23A5349C008165FA /* CopernicusTests */,
+				A1BFF33823A5349C008165FA /* CopernicusUITests */,
+				A1BFF31523A5349A008165FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A1BFF31523A5349A008165FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1BFF31423A5349A008165FA /* Copernicus.app */,
+				A1BFF32A23A5349C008165FA /* CopernicusTests.xctest */,
+				A1BFF33523A5349C008165FA /* CopernicusUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1BFF31623A5349A008165FA /* Copernicus */ = {
+			isa = PBXGroup;
+			children = (
+				A1BFF31723A5349A008165FA /* AppDelegate.swift */,
+				A1BFF31923A5349A008165FA /* SceneDelegate.swift */,
+				A1BFF31B23A5349A008165FA /* ContentView.swift */,
+				A1BFF31D23A5349B008165FA /* Assets.xcassets */,
+				A1BFF32223A5349B008165FA /* LaunchScreen.storyboard */,
+				A1BFF32523A5349B008165FA /* Info.plist */,
+				A1BFF31F23A5349B008165FA /* Preview Content */,
+			);
+			path = Copernicus;
+			sourceTree = "<group>";
+		};
+		A1BFF31F23A5349B008165FA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A1BFF32023A5349B008165FA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A1BFF32D23A5349C008165FA /* CopernicusTests */ = {
+			isa = PBXGroup;
+			children = (
+				A1BFF32E23A5349C008165FA /* CopernicusTests.swift */,
+				A1BFF33023A5349C008165FA /* Info.plist */,
+			);
+			path = CopernicusTests;
+			sourceTree = "<group>";
+		};
+		A1BFF33823A5349C008165FA /* CopernicusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A1BFF33923A5349C008165FA /* CopernicusUITests.swift */,
+				A1BFF33B23A5349C008165FA /* Info.plist */,
+			);
+			path = CopernicusUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1BFF31323A5349A008165FA /* Copernicus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1BFF33E23A5349C008165FA /* Build configuration list for PBXNativeTarget "Copernicus" */;
+			buildPhases = (
+				A1BFF31023A5349A008165FA /* Sources */,
+				A1BFF31123A5349A008165FA /* Frameworks */,
+				A1BFF31223A5349A008165FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Copernicus;
+			productName = Copernicus;
+			productReference = A1BFF31423A5349A008165FA /* Copernicus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A1BFF32923A5349C008165FA /* CopernicusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1BFF34123A5349C008165FA /* Build configuration list for PBXNativeTarget "CopernicusTests" */;
+			buildPhases = (
+				A1BFF32623A5349C008165FA /* Sources */,
+				A1BFF32723A5349C008165FA /* Frameworks */,
+				A1BFF32823A5349C008165FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1BFF32C23A5349C008165FA /* PBXTargetDependency */,
+			);
+			name = CopernicusTests;
+			productName = CopernicusTests;
+			productReference = A1BFF32A23A5349C008165FA /* CopernicusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A1BFF33423A5349C008165FA /* CopernicusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1BFF34423A5349C008165FA /* Build configuration list for PBXNativeTarget "CopernicusUITests" */;
+			buildPhases = (
+				A1BFF33123A5349C008165FA /* Sources */,
+				A1BFF33223A5349C008165FA /* Frameworks */,
+				A1BFF33323A5349C008165FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1BFF33723A5349C008165FA /* PBXTargetDependency */,
+			);
+			name = CopernicusUITests;
+			productName = CopernicusUITests;
+			productReference = A1BFF33523A5349C008165FA /* CopernicusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1BFF30C23A5349A008165FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Konrad Bełzowski";
+				TargetAttributes = {
+					A1BFF31323A5349A008165FA = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					A1BFF32923A5349C008165FA = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = A1BFF31323A5349A008165FA;
+					};
+					A1BFF33423A5349C008165FA = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = A1BFF31323A5349A008165FA;
+					};
+				};
+			};
+			buildConfigurationList = A1BFF30F23A5349A008165FA /* Build configuration list for PBXProject "Copernicus" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A1BFF30B23A5349A008165FA;
+			productRefGroup = A1BFF31523A5349A008165FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1BFF31323A5349A008165FA /* Copernicus */,
+				A1BFF32923A5349C008165FA /* CopernicusTests */,
+				A1BFF33423A5349C008165FA /* CopernicusUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1BFF31223A5349A008165FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1BFF32423A5349B008165FA /* LaunchScreen.storyboard in Resources */,
+				A1BFF32123A5349B008165FA /* Preview Assets.xcassets in Resources */,
+				A1BFF31E23A5349B008165FA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1BFF32823A5349C008165FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1BFF33323A5349C008165FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1BFF31023A5349A008165FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1BFF31823A5349A008165FA /* AppDelegate.swift in Sources */,
+				A1BFF31A23A5349A008165FA /* SceneDelegate.swift in Sources */,
+				A1BFF31C23A5349A008165FA /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1BFF32623A5349C008165FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1BFF32F23A5349C008165FA /* CopernicusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1BFF33123A5349C008165FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1BFF33A23A5349C008165FA /* CopernicusUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A1BFF32C23A5349C008165FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1BFF31323A5349A008165FA /* Copernicus */;
+			targetProxy = A1BFF32B23A5349C008165FA /* PBXContainerItemProxy */;
+		};
+		A1BFF33723A5349C008165FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1BFF31323A5349A008165FA /* Copernicus */;
+			targetProxy = A1BFF33623A5349C008165FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A1BFF32223A5349B008165FA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1BFF32323A5349B008165FA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A1BFF33C23A5349C008165FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A1BFF33D23A5349C008165FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1BFF33F23A5349C008165FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Copernicus/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Copernicus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = KB.Copernicus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A1BFF34023A5349C008165FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Copernicus/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Copernicus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = KB.Copernicus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A1BFF34223A5349C008165FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CopernicusTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = KB.CopernicusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Copernicus.app/Copernicus";
+			};
+			name = Debug;
+		};
+		A1BFF34323A5349C008165FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CopernicusTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = KB.CopernicusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Copernicus.app/Copernicus";
+			};
+			name = Release;
+		};
+		A1BFF34523A5349C008165FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CopernicusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = KB.CopernicusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Copernicus;
+			};
+			name = Debug;
+		};
+		A1BFF34623A5349C008165FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CopernicusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = KB.CopernicusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Copernicus;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1BFF30F23A5349A008165FA /* Build configuration list for PBXProject "Copernicus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1BFF33C23A5349C008165FA /* Debug */,
+				A1BFF33D23A5349C008165FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1BFF33E23A5349C008165FA /* Build configuration list for PBXNativeTarget "Copernicus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1BFF33F23A5349C008165FA /* Debug */,
+				A1BFF34023A5349C008165FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1BFF34123A5349C008165FA /* Build configuration list for PBXNativeTarget "CopernicusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1BFF34223A5349C008165FA /* Debug */,
+				A1BFF34323A5349C008165FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1BFF34423A5349C008165FA /* Build configuration list for PBXNativeTarget "CopernicusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1BFF34523A5349C008165FA /* Debug */,
+				A1BFF34623A5349C008165FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A1BFF30C23A5349A008165FA /* Project object */;
+}
