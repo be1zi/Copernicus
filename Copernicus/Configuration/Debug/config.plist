@@ -4,8 +4,10 @@
 <dict>
 	<key>API</key>
 	<dict>
+		<key>serverKey</key>
+		<string>5e14e2dd1abfddc853cbace1ff4fc08a331457c505e1af01a3436a43b2359dea</string>
 		<key>serverAddress</key>
-		<string></string>
+		<string>https://api.spectator.earth</string>
 	</dict>
 </dict>
 </plist>
