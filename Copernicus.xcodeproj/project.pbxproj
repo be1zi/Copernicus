@@ -11,6 +11,7 @@
 		217785FDE6411DCCDD6FD2CE /* Pods_Copernicus_CopernicusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE605A64A7BACCEAFEFF1325 /* Pods_Copernicus_CopernicusUITests.framework */; };
 		A160A18A23A5413A00025C02 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = A160A18923A5413A00025C02 /* config.plist */; };
 		A160A19723A544F500025C02 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160A19623A544F500025C02 /* ConfigurationManager.swift */; };
+		A160A19923A65CE700025C02 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160A19823A65CE700025C02 /* Logger.swift */; };
 		A1BFF31823A5349A008165FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BFF31723A5349A008165FA /* AppDelegate.swift */; };
 		A1BFF31A23A5349A008165FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BFF31923A5349A008165FA /* SceneDelegate.swift */; };
 		A1BFF31C23A5349A008165FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BFF31B23A5349A008165FA /* ContentView.swift */; };
@@ -50,6 +51,7 @@
 		8825F663483BEC8673BA0E19 /* Pods_Copernicus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Copernicus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A160A18923A5413A00025C02 /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		A160A19623A544F500025C02 /* ConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
+		A160A19823A65CE700025C02 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		A1BFF31423A5349A008165FA /* Copernicus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Copernicus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BFF31723A5349A008165FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1BFF31923A5349A008165FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 		A160A19323A5421D00025C02 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				A160A19823A65CE700025C02 /* Logger.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A160A19923A65CE700025C02 /* Logger.swift in Sources */,
 				A160A19723A544F500025C02 /* ConfigurationManager.swift in Sources */,
 				A1BFF31823A5349A008165FA /* AppDelegate.swift in Sources */,
 				A1BFF31A23A5349A008165FA /* SceneDelegate.swift in Sources */,
