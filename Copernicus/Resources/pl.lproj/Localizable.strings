@@ -6,4 +6,6 @@
   Copyright © 2019 Konrad Bełzowski. All rights reserved.
 */
 
-"test.test" = "PL";
+//Language
+"language.polish" = "Polski";
+"language.english" = "Angielski";
