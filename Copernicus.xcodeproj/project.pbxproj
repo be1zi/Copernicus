@@ -12,6 +12,8 @@
 		3D0E604123A764B000F9ECFD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0E604023A764B000F9ECFD /* BaseViewController.swift */; };
 		3D0E604A23A76FDE00F9ECFD /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0E604923A76FDE00F9ECFD /* String.swift */; };
 		3D0E604C23A76FFB00F9ECFD /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0E604B23A76FFB00F9ECFD /* LanguageManager.swift */; };
+		3D47BD3823A77DE6003697FA /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D47BD3723A77DE6003697FA /* LanguageViewController.swift */; };
+		3D47BD3A23A77DFA003697FA /* LanguageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D47BD3923A77DFA003697FA /* LanguageViewModel.swift */; };
 		A160A18A23A5413A00025C02 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = A160A18923A5413A00025C02 /* config.plist */; };
 		A160A19723A544F500025C02 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160A19623A544F500025C02 /* ConfigurationManager.swift */; };
 		A160A19923A65CE700025C02 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160A19823A65CE700025C02 /* Logger.swift */; };
@@ -50,6 +52,8 @@
 		3D0E604023A764B000F9ECFD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3D0E604923A76FDE00F9ECFD /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		3D0E604B23A76FFB00F9ECFD /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		3D47BD3723A77DE6003697FA /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
+		3D47BD3923A77DFA003697FA /* LanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewModel.swift; sourceTree = "<group>"; };
 		48811002C83BF34D05121043 /* Pods-Copernicus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copernicus.release.xcconfig"; path = "Target Support Files/Pods-Copernicus/Pods-Copernicus.release.xcconfig"; sourceTree = "<group>"; };
 		5809727A5C763EC5624E7E78 /* Pods-Copernicus-CopernicusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copernicus-CopernicusTests.release.xcconfig"; path = "Target Support Files/Pods-Copernicus-CopernicusTests/Pods-Copernicus-CopernicusTests.release.xcconfig"; sourceTree = "<group>"; };
 		6F7567B922A6F9FE7409AED0 /* Pods-Copernicus-CopernicusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copernicus-CopernicusTests.debug.xcconfig"; path = "Target Support Files/Pods-Copernicus-CopernicusTests/Pods-Copernicus-CopernicusTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +136,15 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
+		3D47BD3623A77DD4003697FA /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				3D47BD3723A77DE6003697FA /* LanguageViewController.swift */,
+				3D47BD3923A77DFA003697FA /* LanguageViewModel.swift */,
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
 		9C03E193019E7F940D724B45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,9 +167,9 @@
 		A160A18623A540F400025C02 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				A160A19023A541CC00025C02 /* Functionalities */,
-				A160A18C23A5418100025C02 /* Context */,
 				A160A18B23A5417500025C02 /* Configurations */,
+				A160A18C23A5418100025C02 /* Context */,
+				A160A19023A541CC00025C02 /* Functionalities */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -164,6 +177,7 @@
 		A160A18723A540FF00025C02 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A1BFF31F23A5349B008165FA /* Preview Content */,
 				A1BFF31D23A5349B008165FA /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -221,6 +235,7 @@
 		A160A19023A541CC00025C02 /* Functionalities */ = {
 			isa = PBXGroup;
 			children = (
+				3D47BD3623A77DD4003697FA /* Language */,
 				A160A19223A541EF00025C02 /* Home */,
 				A160A19123A541DB00025C02 /* Launch */,
 			);
@@ -294,7 +309,6 @@
 			isa = PBXGroup;
 			children = (
 				A160A18523A540E700025C02 /* Configuration */,
-				A1BFF31F23A5349B008165FA /* Preview Content */,
 				A160A18723A540FF00025C02 /* Resources */,
 				A160A18623A540F400025C02 /* Source */,
 				A160A19323A5421D00025C02 /* Tools */,
@@ -554,7 +568,9 @@
 			files = (
 				A160A19923A65CE700025C02 /* Logger.swift in Sources */,
 				A160A19723A544F500025C02 /* ConfigurationManager.swift in Sources */,
+				3D47BD3823A77DE6003697FA /* LanguageViewController.swift in Sources */,
 				A1BFF31823A5349A008165FA /* AppDelegate.swift in Sources */,
+				3D47BD3A23A77DFA003697FA /* LanguageViewModel.swift in Sources */,
 				A1BFF31A23A5349A008165FA /* SceneDelegate.swift in Sources */,
 				3D0E604A23A76FDE00F9ECFD /* String.swift in Sources */,
 				A1BFF31C23A5349A008165FA /* ContentView.swift in Sources */,
@@ -726,7 +742,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Copernicus/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Copernicus/Resources/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Copernicus/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -746,7 +762,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Copernicus/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Copernicus/Resources/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Copernicus/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
