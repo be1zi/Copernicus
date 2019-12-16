@@ -9,8 +9,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let text = "test.test".localized()
+    
     var body: some View {
-        Text("Hello, World!")
+        Text(text)
     }
 }
 
