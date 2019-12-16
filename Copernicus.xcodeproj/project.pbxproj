@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		006B6EA90C980D6DEBCA7383 /* Pods_Copernicus_CopernicusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C6DC01017572D1995E770EB /* Pods_Copernicus_CopernicusTests.framework */; };
 		217785FDE6411DCCDD6FD2CE /* Pods_Copernicus_CopernicusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE605A64A7BACCEAFEFF1325 /* Pods_Copernicus_CopernicusUITests.framework */; };
+		3D0E604123A764B000F9ECFD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0E604023A764B000F9ECFD /* BaseViewController.swift */; };
 		A160A18A23A5413A00025C02 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = A160A18923A5413A00025C02 /* config.plist */; };
 		A160A19723A544F500025C02 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160A19623A544F500025C02 /* ConfigurationManager.swift */; };
 		A160A19923A65CE700025C02 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160A19823A65CE700025C02 /* Logger.swift */; };
@@ -44,6 +45,7 @@
 		1C6DC01017572D1995E770EB /* Pods_Copernicus_CopernicusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Copernicus_CopernicusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		332F80B0FCE718ACF8E82B95 /* Pods-Copernicus-CopernicusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copernicus-CopernicusUITests.debug.xcconfig"; path = "Target Support Files/Pods-Copernicus-CopernicusUITests/Pods-Copernicus-CopernicusUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3535388B6765E502E313B8D8 /* Pods-Copernicus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copernicus.debug.xcconfig"; path = "Target Support Files/Pods-Copernicus/Pods-Copernicus.debug.xcconfig"; sourceTree = "<group>"; };
+		3D0E604023A764B000F9ECFD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		48811002C83BF34D05121043 /* Pods-Copernicus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copernicus.release.xcconfig"; path = "Target Support Files/Pods-Copernicus/Pods-Copernicus.release.xcconfig"; sourceTree = "<group>"; };
 		5809727A5C763EC5624E7E78 /* Pods-Copernicus-CopernicusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copernicus-CopernicusTests.release.xcconfig"; path = "Target Support Files/Pods-Copernicus-CopernicusTests/Pods-Copernicus-CopernicusTests.release.xcconfig"; sourceTree = "<group>"; };
 		6F7567B922A6F9FE7409AED0 /* Pods-Copernicus-CopernicusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copernicus-CopernicusTests.debug.xcconfig"; path = "Target Support Files/Pods-Copernicus-CopernicusTests/Pods-Copernicus-CopernicusTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 				7E87C8CC7BDBA1B7051B7B05 /* Pods-Copernicus-CopernicusUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		3D0E603F23A7649D00F9ECFD /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3D0E604023A764B000F9ECFD /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
 			sourceTree = "<group>";
 		};
 		9C03E193019E7F940D724B45 /* Frameworks */ = {
@@ -232,6 +242,7 @@
 		A160A19423A5422A00025C02 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				3D0E603F23A7649D00F9ECFD /* BaseViewController */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -532,6 +543,7 @@
 				A1BFF31823A5349A008165FA /* AppDelegate.swift in Sources */,
 				A1BFF31A23A5349A008165FA /* SceneDelegate.swift in Sources */,
 				A1BFF31C23A5349A008165FA /* ContentView.swift in Sources */,
+				3D0E604123A764B000F9ECFD /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
