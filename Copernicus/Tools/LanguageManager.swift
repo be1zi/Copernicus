@@ -36,4 +36,12 @@ public struct LanguageManager {
             return UserDefaults.standard.object(forKey: languageKey) as? String ?? Language.pl.rawValue
         }
     }
+    
+    //
+    // MARK: - Methods
+    //
+    
+    public func selectedBefore() -> Bool {
+        return UserDefaults.standard.object(forKey: languageKey) as? String != nil
+    }
 }

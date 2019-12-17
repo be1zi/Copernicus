@@ -12,19 +12,16 @@
 		3D0E604123A764B000F9ECFD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0E604023A764B000F9ECFD /* BaseViewController.swift */; };
 		3D0E604A23A76FDE00F9ECFD /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0E604923A76FDE00F9ECFD /* String.swift */; };
 		3D0E604C23A76FFB00F9ECFD /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0E604B23A76FFB00F9ECFD /* LanguageManager.swift */; };
+		3D231DB823A8BF8400B4CFD4 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D231DB723A8BF8400B4CFD4 /* WindowController.swift */; };
+		3D231DBA23A8C1AE00B4CFD4 /* Language.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D231DB923A8C1AE00B4CFD4 /* Language.storyboard */; };
 		3D47BD3823A77DE6003697FA /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D47BD3723A77DE6003697FA /* LanguageViewController.swift */; };
 		3D47BD3A23A77DFA003697FA /* LanguageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D47BD3923A77DFA003697FA /* LanguageViewModel.swift */; };
 		3DEE0E9023A7970D0036DA45 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DEE0E9223A7970D0036DA45 /* Localizable.strings */; };
-		3DEE0E9523A79F6C0036DA45 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEE0E9423A79F6C0036DA45 /* LanguageView.swift */; };
-		3DEE0E9823A7AFD40036DA45 /* ElementSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEE0E9723A7AFD40036DA45 /* ElementSize.swift */; };
 		A160A18A23A5413A00025C02 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = A160A18923A5413A00025C02 /* config.plist */; };
 		A160A19723A544F500025C02 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160A19623A544F500025C02 /* ConfigurationManager.swift */; };
 		A160A19923A65CE700025C02 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160A19823A65CE700025C02 /* Logger.swift */; };
 		A1BFF31823A5349A008165FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BFF31723A5349A008165FA /* AppDelegate.swift */; };
-		A1BFF31A23A5349A008165FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BFF31923A5349A008165FA /* SceneDelegate.swift */; };
-		A1BFF31C23A5349A008165FA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BFF31B23A5349A008165FA /* HomeView.swift */; };
 		A1BFF31E23A5349B008165FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1BFF31D23A5349B008165FA /* Assets.xcassets */; };
-		A1BFF32123A5349B008165FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1BFF32023A5349B008165FA /* Preview Assets.xcassets */; };
 		A1BFF32423A5349B008165FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BFF32223A5349B008165FA /* LaunchScreen.storyboard */; };
 		A1BFF32F23A5349C008165FA /* CopernicusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BFF32E23A5349C008165FA /* CopernicusTests.swift */; };
 		A1BFF33A23A5349C008165FA /* CopernicusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BFF33923A5349C008165FA /* CopernicusUITests.swift */; };
@@ -55,12 +52,12 @@
 		3D0E604023A764B000F9ECFD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3D0E604923A76FDE00F9ECFD /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		3D0E604B23A76FFB00F9ECFD /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		3D231DB723A8BF8400B4CFD4 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		3D231DB923A8C1AE00B4CFD4 /* Language.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Language.storyboard; sourceTree = "<group>"; };
 		3D47BD3723A77DE6003697FA /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		3D47BD3923A77DFA003697FA /* LanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewModel.swift; sourceTree = "<group>"; };
 		3DEE0E9123A7970D0036DA45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3DEE0E9323A798590036DA45 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
-		3DEE0E9423A79F6C0036DA45 /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
-		3DEE0E9723A7AFD40036DA45 /* ElementSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementSize.swift; sourceTree = "<group>"; };
 		48811002C83BF34D05121043 /* Pods-Copernicus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copernicus.release.xcconfig"; path = "Target Support Files/Pods-Copernicus/Pods-Copernicus.release.xcconfig"; sourceTree = "<group>"; };
 		5809727A5C763EC5624E7E78 /* Pods-Copernicus-CopernicusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copernicus-CopernicusTests.release.xcconfig"; path = "Target Support Files/Pods-Copernicus-CopernicusTests/Pods-Copernicus-CopernicusTests.release.xcconfig"; sourceTree = "<group>"; };
 		6F7567B922A6F9FE7409AED0 /* Pods-Copernicus-CopernicusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copernicus-CopernicusTests.debug.xcconfig"; path = "Target Support Files/Pods-Copernicus-CopernicusTests/Pods-Copernicus-CopernicusTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -71,10 +68,7 @@
 		A160A19823A65CE700025C02 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		A1BFF31423A5349A008165FA /* Copernicus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Copernicus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BFF31723A5349A008165FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A1BFF31923A5349A008165FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A1BFF31B23A5349A008165FA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A1BFF31D23A5349B008165FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A1BFF32023A5349B008165FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A1BFF32323A5349B008165FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1BFF32523A5349B008165FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1BFF32A23A5349C008165FA /* CopernicusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CopernicusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,12 +137,20 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
+		3D231DB623A8BF6E00B4CFD4 /* WindowController */ = {
+			isa = PBXGroup;
+			children = (
+				3D231DB723A8BF8400B4CFD4 /* WindowController.swift */,
+			);
+			path = WindowController;
+			sourceTree = "<group>";
+		};
 		3D47BD3623A77DD4003697FA /* Language */ = {
 			isa = PBXGroup;
 			children = (
 				3D47BD3723A77DE6003697FA /* LanguageViewController.swift */,
 				3D47BD3923A77DFA003697FA /* LanguageViewModel.swift */,
-				3DEE0E9423A79F6C0036DA45 /* LanguageView.swift */,
+				3D231DB923A8C1AE00B4CFD4 /* Language.storyboard */,
 			);
 			path = Language;
 			sourceTree = "<group>";
@@ -193,7 +195,6 @@
 		A160A18723A540FF00025C02 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A1BFF31F23A5349B008165FA /* Preview Content */,
 				A1BFF31D23A5349B008165FA /* Assets.xcassets */,
 				3DEE0E9223A7970D0036DA45 /* Localizable.strings */,
 			);
@@ -230,7 +231,6 @@
 			isa = PBXGroup;
 			children = (
 				A1BFF31723A5349A008165FA /* AppDelegate.swift */,
-				A1BFF31923A5349A008165FA /* SceneDelegate.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -270,7 +270,6 @@
 		A160A19223A541EF00025C02 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				A1BFF31B23A5349A008165FA /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -281,7 +280,6 @@
 				3DEE0E9623A7AFAD0036DA45 /* Extensions */,
 				A160A19823A65CE700025C02 /* Logger.swift */,
 				3D0E604B23A76FFB00F9ECFD /* LanguageManager.swift */,
-				3DEE0E9723A7AFD40036DA45 /* ElementSize.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -289,6 +287,7 @@
 		A160A19423A5422A00025C02 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				3D231DB623A8BF6E00B4CFD4 /* WindowController */,
 				3D0E603F23A7649D00F9ECFD /* BaseViewController */,
 			);
 			path = UI;
@@ -326,14 +325,6 @@
 				A160A19423A5422A00025C02 /* UI */,
 			);
 			path = Copernicus;
-			sourceTree = "<group>";
-		};
-		A1BFF31F23A5349B008165FA /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				A1BFF32023A5349B008165FA /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		A1BFF32D23A5349C008165FA /* CopernicusTests */ = {
@@ -464,9 +455,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DEE0E9023A7970D0036DA45 /* Localizable.strings in Resources */,
+				3D231DBA23A8C1AE00B4CFD4 /* Language.storyboard in Resources */,
 				A160A18A23A5413A00025C02 /* config.plist in Resources */,
 				A1BFF32423A5349B008165FA /* LaunchScreen.storyboard in Resources */,
-				A1BFF32123A5349B008165FA /* Preview Assets.xcassets in Resources */,
 				A1BFF31E23A5349B008165FA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,15 +570,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A160A19923A65CE700025C02 /* Logger.swift in Sources */,
+				3D231DB823A8BF8400B4CFD4 /* WindowController.swift in Sources */,
 				A160A19723A544F500025C02 /* ConfigurationManager.swift in Sources */,
 				3D47BD3823A77DE6003697FA /* LanguageViewController.swift in Sources */,
 				A1BFF31823A5349A008165FA /* AppDelegate.swift in Sources */,
 				3D47BD3A23A77DFA003697FA /* LanguageViewModel.swift in Sources */,
-				3DEE0E9823A7AFD40036DA45 /* ElementSize.swift in Sources */,
-				A1BFF31A23A5349A008165FA /* SceneDelegate.swift in Sources */,
 				3D0E604A23A76FDE00F9ECFD /* String.swift in Sources */,
-				A1BFF31C23A5349A008165FA /* HomeView.swift in Sources */,
-				3DEE0E9523A79F6C0036DA45 /* LanguageView.swift in Sources */,
 				3D0E604123A764B000F9ECFD /* BaseViewController.swift in Sources */,
 				3D0E604C23A76FFB00F9ECFD /* LanguageManager.swift in Sources */,
 			);
@@ -767,7 +755,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Copernicus/Resources/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Copernicus/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -787,7 +774,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Copernicus/Resources/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Copernicus/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
