@@ -31,11 +31,11 @@ struct HomeViewModel {
         
         cellViewModels = [HomeCellViewModel(title: "home.menu.item1".localized(), imageName: "menuSatellite"),
                           HomeCellViewModel(title: "home.menu.item2".localized()),
-                          HomeCellViewModel(title: "home.menu.item3".localized()),
+                          HomeCellViewModel(title: "home.menu.item3".localized(), imageName: "menuClouds"),
                           HomeCellViewModel(title: "home.menu.item4".localized()),
                           HomeCellViewModel(title: "home.menu.item5".localized()),
                           HomeCellViewModel(title: "home.menu.item6".localized()),
-                          HomeCellViewModel(title: "home.menu.item7".localized())]
+                          HomeCellViewModel(title: "home.menu.item7".localized(), imageName: "menuSettings")]
         
         cellsNumber = cellViewModels.count
     }
