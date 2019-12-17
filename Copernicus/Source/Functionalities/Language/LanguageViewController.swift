@@ -35,7 +35,7 @@ class LanguageViewController: BaseViewController {
     }
     
     //
-    // MARK: - Methods
+    // MARK: - Appearance
     //
     
     override func shouldHideBackButton() -> Bool {
@@ -45,6 +45,10 @@ class LanguageViewController: BaseViewController {
     override func shouldHideNavigationBar() -> Bool {
         return true
     }
+    
+    //
+    // MARK: - Methods
+    //
     
     private func setData() {
         infoLabel.text = viewModel.infoMessage

@@ -14,6 +14,8 @@ class HomeViewController: BaseViewController {
     // MARK: - Properties
     //
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     private let viewModel = HomeViewModel()
     
     //
@@ -22,5 +24,53 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        registerCell()
+    }
+    
+    //
+    // MARK: - Appearance
+    //
+    
+    override func shouldHideNavigationBar() -> Bool {
+        return true
+    }
+    
+    //
+    // MARK: - Methods
+    //
+    
+    private func registerCell() {
+        let cellName = String(describing: HomeCellView.self)
+        collectionView.register(UINib(nibName: cellName, bundle: nil), forCellWithReuseIdentifier: cellName)
+    }
+}
+
+extension HomeViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.cellsNumber
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let newCell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: HomeCellView.self), for: indexPath) as? HomeCellView
+        
+        guard let cell = newCell else {
+            return UICollectionViewCell()
+        }
+        
+        cell.setViewModel(viewModel.cellViewModels[indexPath.row])
+        
+        return cell
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let size = (UIScreen.main.bounds.width - 60.0) / 2.0
+        
+        return CGSize(width: size, height: 1.4 * size)
     }
 }

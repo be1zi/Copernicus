@@ -12,3 +12,13 @@
 
 //Language View
 "language.view.info" = "Welcome in Copernicus App. Please choose your language.";
+
+//Home View
+"home.title" = "Welcome in Copernicus";
+"home.menu.item1" = "Another flight of satellites";
+"home.menu.item2" = "Average imaging frequency";
+"home.menu.item3" = "Average cloudy";
+"home.menu.item4" = "Currently available imaging";
+"home.menu.item5" = "Recent imaging";
+"home.menu.item6" = "Imaging resolution";
+"home.menu.item7" = "Settings";

@@ -12,3 +12,13 @@
 
 //Language View
 "language.view.info" = "Witamy w aplikacji Copernicus. Proszę wybrać język.";
+
+//Home View
+"home.title" = "Witamy w aplikacji Copernicus";
+"home.menu.item1" = "Kolejne przeloty satelitów";
+"home.menu.item2" = "Średnia częstotliwość obrazowań";
+"home.menu.item3" = "Średnie zachmurzenie";
+"home.menu.item4" = "Obecnie dostępne obrazowania";
+"home.menu.item5" = "Ostatnie obrazowania";
+"home.menu.item6" = "Rozdzielczość obrazowań";
+"home.menu.item7" = "Ustawienia";
