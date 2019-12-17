@@ -58,8 +58,6 @@
                         <viewLayoutGuide key="safeArea" id="oty-90-3jW"/>
                     </view>
                     <navigationItem key="navigationItem" id="D3D-b5-jvZ"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="englishButton" destination="tQg-sP-G8O" id="xOu-nX-lT8"/>
                         <outlet property="infoLabel" destination="u49-5Z-nf0" id="15M-aH-w6p"/>

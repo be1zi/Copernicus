@@ -64,5 +64,11 @@ class LanguageViewController: BaseViewController {
         englishButton.rx.tap.subscribe(onNext: { _ in
             LanguageManager.sharedInstance.currentLanguage = Language.en.value()
         }).disposed(by: disposeBag)
+        
+        Observable.merge(polishButton.rx.tap.asObservable(),
+                                 englishButton.rx.tap.asObservable())
+            .subscribe(onNext: { _ in
+                AppDelegate.sharedInstance.windowController?.presentHomeController()
+        }).disposed(by: disposeBag)
     }
 }
