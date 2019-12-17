@@ -17,8 +17,8 @@ class LanguageViewController: BaseViewController {
     //
     
     @IBOutlet weak var infoLabel: UILabel!
-    @IBOutlet weak var polishButton: UIButton!
-    @IBOutlet weak var englishButton: UIButton!
+    @IBOutlet weak var polishButton: COPButton!
+    @IBOutlet weak var englishButton: COPButton!
     
     private let viewModel = LanguageViewModel()
     private let disposeBag = DisposeBag()

@@ -14,6 +14,9 @@
 		3D0E604C23A76FFB00F9ECFD /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0E604B23A76FFB00F9ECFD /* LanguageManager.swift */; };
 		3D231DB823A8BF8400B4CFD4 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D231DB723A8BF8400B4CFD4 /* WindowController.swift */; };
 		3D231DBA23A8C1AE00B4CFD4 /* Language.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D231DB923A8C1AE00B4CFD4 /* Language.storyboard */; };
+		3D231DBE23A8CF2200B4CFD4 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D231DBD23A8CF2200B4CFD4 /* UIButton.swift */; };
+		3D231DC123A8D0BF00B4CFD4 /* COPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D231DC023A8D0BF00B4CFD4 /* COPButton.swift */; };
+		3D231DC323A8D27D00B4CFD4 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D231DC223A8D27D00B4CFD4 /* Font.swift */; };
 		3D47BD3823A77DE6003697FA /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D47BD3723A77DE6003697FA /* LanguageViewController.swift */; };
 		3D47BD3A23A77DFA003697FA /* LanguageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D47BD3923A77DFA003697FA /* LanguageViewModel.swift */; };
 		3DEE0E9023A7970D0036DA45 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DEE0E9223A7970D0036DA45 /* Localizable.strings */; };
@@ -54,6 +57,9 @@
 		3D0E604B23A76FFB00F9ECFD /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		3D231DB723A8BF8400B4CFD4 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		3D231DB923A8C1AE00B4CFD4 /* Language.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Language.storyboard; sourceTree = "<group>"; };
+		3D231DBD23A8CF2200B4CFD4 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		3D231DC023A8D0BF00B4CFD4 /* COPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COPButton.swift; sourceTree = "<group>"; };
+		3D231DC223A8D27D00B4CFD4 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		3D47BD3723A77DE6003697FA /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		3D47BD3923A77DFA003697FA /* LanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewModel.swift; sourceTree = "<group>"; };
 		3DEE0E9123A7970D0036DA45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -133,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				3D0E604923A76FDE00F9ECFD /* String.swift */,
+				3D231DC223A8D27D00B4CFD4 /* Font.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -143,6 +150,22 @@
 				3D231DB723A8BF8400B4CFD4 /* WindowController.swift */,
 			);
 			path = WindowController;
+			sourceTree = "<group>";
+		};
+		3D231DBC23A8CEE000B4CFD4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3D231DBD23A8CF2200B4CFD4 /* UIButton.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3D231DBF23A8D09B00B4CFD4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3D231DC023A8D0BF00B4CFD4 /* COPButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		3D47BD3623A77DD4003697FA /* Language */ = {
@@ -287,6 +310,8 @@
 		A160A19423A5422A00025C02 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				3D231DBF23A8D09B00B4CFD4 /* Views */,
+				3D231DBC23A8CEE000B4CFD4 /* Extensions */,
 				3D231DB623A8BF6E00B4CFD4 /* WindowController */,
 				3D0E603F23A7649D00F9ECFD /* BaseViewController */,
 			);
@@ -610,9 +635,12 @@
 				A160A19723A544F500025C02 /* ConfigurationManager.swift in Sources */,
 				3D47BD3823A77DE6003697FA /* LanguageViewController.swift in Sources */,
 				A1BFF31823A5349A008165FA /* AppDelegate.swift in Sources */,
+				3D231DBE23A8CF2200B4CFD4 /* UIButton.swift in Sources */,
 				3D47BD3A23A77DFA003697FA /* LanguageViewModel.swift in Sources */,
 				3D0E604A23A76FDE00F9ECFD /* String.swift in Sources */,
+				3D231DC323A8D27D00B4CFD4 /* Font.swift in Sources */,
 				3D0E604123A764B000F9ECFD /* BaseViewController.swift in Sources */,
+				3D231DC123A8D0BF00B4CFD4 /* COPButton.swift in Sources */,
 				3D0E604C23A76FFB00F9ECFD /* LanguageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
