@@ -9,3 +9,6 @@
 //Language
 "language.polish" = "Polish";
 "language.english" = "English";
+
+//Language View
+"language.view.info" = "Welcome in Copernicus App. Please choose your language.";

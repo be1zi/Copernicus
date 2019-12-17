@@ -14,6 +14,7 @@ struct LanguageViewModel {
     
     var polishButtonTitle: String!
     var englishButtonTitle: String!
+    var infoMessage: String!
     
     //
     // MARK: - Init
@@ -28,7 +29,8 @@ struct LanguageViewModel {
     //
     
     private mutating func loadTranslations() {
-        polishButtonTitle = ""
-        englishButtonTitle = ""
+        polishButtonTitle = "language.polish".localized()
+        englishButtonTitle = "language.english".localized()
+        infoMessage = "language.view.info".localized()
     }
 }

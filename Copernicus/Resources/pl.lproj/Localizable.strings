@@ -9,3 +9,6 @@
 //Language
 "language.polish" = "Polski";
 "language.english" = "Angielski";
+
+//Language View
+"language.view.info" = "Witamy w aplikacji Copernicus. Proszę wybrać język.";
