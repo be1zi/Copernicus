@@ -42,6 +42,14 @@
                             <constraint firstItem="vwd-BW-VMx" firstAttribute="top" secondItem="xsx-V1-wm9" secondAttribute="top" constant="20" id="wkk-Yr-ipA"/>
                             <constraint firstItem="ly6-L0-eTQ" firstAttribute="leading" secondItem="xsx-V1-wm9" secondAttribute="leading" constant="10" id="yfD-9Y-5s9"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="corner">
+                                <real key="value" value="30"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <constraints>

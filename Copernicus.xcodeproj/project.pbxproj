@@ -15,6 +15,7 @@
 		3D144F1723A8EBDA00E17504 /* HomeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D144F1623A8EBDA00E17504 /* HomeCellViewModel.swift */; };
 		3D144F1923A8ECA300E17504 /* HomeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D144F1823A8ECA300E17504 /* HomeCellView.swift */; };
 		3D144F1B23A8ECD800E17504 /* HomeCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D144F1A23A8ECD800E17504 /* HomeCellView.xib */; };
+		3D144F1D23A908A000E17504 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D144F1C23A908A000E17504 /* UIView.swift */; };
 		3D231DB823A8BF8400B4CFD4 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D231DB723A8BF8400B4CFD4 /* WindowController.swift */; };
 		3D231DBA23A8C1AE00B4CFD4 /* Language.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D231DB923A8C1AE00B4CFD4 /* Language.storyboard */; };
 		3D231DBE23A8CF2200B4CFD4 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D231DBD23A8CF2200B4CFD4 /* UIButton.swift */; };
@@ -64,6 +65,7 @@
 		3D144F1623A8EBDA00E17504 /* HomeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellViewModel.swift; sourceTree = "<group>"; };
 		3D144F1823A8ECA300E17504 /* HomeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellView.swift; sourceTree = "<group>"; };
 		3D144F1A23A8ECD800E17504 /* HomeCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCellView.xib; sourceTree = "<group>"; };
+		3D144F1C23A908A000E17504 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		3D231DB723A8BF8400B4CFD4 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		3D231DB923A8C1AE00B4CFD4 /* Language.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Language.storyboard; sourceTree = "<group>"; };
 		3D231DBD23A8CF2200B4CFD4 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				3D231DBD23A8CF2200B4CFD4 /* UIButton.swift */,
+				3D144F1C23A908A000E17504 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -663,6 +666,7 @@
 				3D231DC723A8D4B500B4CFD4 /* HomeViewModel.swift in Sources */,
 				3D0E604123A764B000F9ECFD /* BaseViewController.swift in Sources */,
 				3D231DC123A8D0BF00B4CFD4 /* COPButton.swift in Sources */,
+				3D144F1D23A908A000E17504 /* UIView.swift in Sources */,
 				3D231DC523A8D42F00B4CFD4 /* HomeViewController.swift in Sources */,
 				3D0E604C23A76FFB00F9ECFD /* LanguageManager.swift in Sources */,
 				3D144F1723A8EBDA00E17504 /* HomeCellViewModel.swift in Sources */,
