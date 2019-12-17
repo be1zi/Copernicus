@@ -356,6 +356,7 @@
 				A1BFF31023A5349A008165FA /* Sources */,
 				A1BFF31123A5349A008165FA /* Frameworks */,
 				A1BFF31223A5349A008165FA /* Resources */,
+				B25DF8C8BD9C60D91E0BD6E9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -394,6 +395,7 @@
 				A1BFF33123A5349C008165FA /* Sources */,
 				A1BFF33223A5349C008165FA /* Frameworks */,
 				A1BFF33323A5349C008165FA /* Resources */,
+				3A9349E8D149765071A7287F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -496,6 +498,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Copernicus-CopernicusTests/Pods-Copernicus-CopernicusTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3A9349E8D149765071A7287F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Copernicus-CopernicusUITests/Pods-Copernicus-CopernicusUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Copernicus-CopernicusUITests/Pods-Copernicus-CopernicusUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Copernicus-CopernicusUITests/Pods-Copernicus-CopernicusUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6673966978E54A572C552F94 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -516,6 +535,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B25DF8C8BD9C60D91E0BD6E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Copernicus/Pods-Copernicus-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Copernicus/Pods-Copernicus-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Copernicus/Pods-Copernicus-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EB40661D52D6B0CCFB423D60 /* [CP] Check Pods Manifest.lock */ = {

@@ -19,20 +19,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u49-5Z-nf0">
-                                <rect key="frame" x="20" y="613.5" width="374" height="20.5"/>
+                                <rect key="frame" x="20" y="643.5" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQg-sP-G8O">
-                                <rect key="frame" x="20" y="738" width="374" height="44"/>
+                                <rect key="frame" x="20" y="768" width="374" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="54s-dg-yTa"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggc-Aw-rzd">
-                                <rect key="frame" x="20" y="674" width="374" height="44"/>
+                                <rect key="frame" x="20" y="704" width="374" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="oCT-gm-mpw"/>
                                 </constraints>
@@ -52,7 +52,7 @@
                             <constraint firstAttribute="bottom" secondItem="JL2-xo-Q6q" secondAttribute="bottom" id="Ujs-bz-s1Z"/>
                             <constraint firstItem="JL2-xo-Q6q" firstAttribute="leading" secondItem="oty-90-3jW" secondAttribute="leading" id="WWS-fx-0Ym"/>
                             <constraint firstItem="JL2-xo-Q6q" firstAttribute="top" secondItem="rFq-S3-3v7" secondAttribute="top" id="ZAA-4s-cSP"/>
-                            <constraint firstItem="oty-90-3jW" firstAttribute="bottom" secondItem="tQg-sP-G8O" secondAttribute="bottom" constant="80" id="cY7-B5-SjM"/>
+                            <constraint firstItem="oty-90-3jW" firstAttribute="bottom" secondItem="tQg-sP-G8O" secondAttribute="bottom" constant="50" id="cY7-B5-SjM"/>
                             <constraint firstItem="ggc-Aw-rzd" firstAttribute="top" secondItem="u49-5Z-nf0" secondAttribute="bottom" constant="40" id="qye-5N-wvn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oty-90-3jW"/>

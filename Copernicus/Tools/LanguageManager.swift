@@ -8,9 +8,13 @@
 
 import Foundation
 
-private enum Language: String {
+public enum Language: String {
     case pl
     case en
+    
+    public func value() -> String {
+        return self.rawValue
+    }
 }
 
 public struct LanguageManager {
