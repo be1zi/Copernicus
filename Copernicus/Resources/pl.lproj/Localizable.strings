@@ -22,3 +22,8 @@
 "home.menu.item5" = "Ostatnie obrazowania";
 "home.menu.item6" = "Rozdzielczość obrazowań";
 "home.menu.item7" = "Ustawienia";
+
+//Walkthrough View
+"walkthrough.title.1" = "Odkrywaj świat";
+"walkthrough.title.2" = "Wykorzystaj swoją lokalizację";
+"walkthrough.title.3" = "aby zobaczyń niezwykłe informację o otaczającym Cię świecie";

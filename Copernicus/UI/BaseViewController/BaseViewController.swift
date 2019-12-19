@@ -8,19 +8,19 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+public class BaseViewController: UIViewController {
     
     //
     // MARK: - Lifecycle
     //
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         
         loadConfigurations()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         loadConfigurations()

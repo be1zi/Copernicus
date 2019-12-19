@@ -16,8 +16,19 @@ class HomeCellView: UICollectionViewCell {
     
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var content: UIView!
     
     private var viewModel: HomeCellViewModel?
+    
+    //
+    // MARK: - Lifecycle
+    //
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        setStyle()
+    }
     
     //
     // MARK: - Methods
@@ -35,5 +46,10 @@ class HomeCellView: UICollectionViewCell {
         
         iconImageView.image = viewModel.image
         titleLabel.text = viewModel.title
+    }
+    
+    private func setStyle() {
+        titleLabel.textColor = UIColor.copGreyColor
+        //content.backgroundColor = UIColor.copYellowColor
     }
 }

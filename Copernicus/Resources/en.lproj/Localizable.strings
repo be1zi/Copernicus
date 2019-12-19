@@ -22,3 +22,8 @@
 "home.menu.item5" = "Recent imaging";
 "home.menu.item6" = "Imaging resolution";
 "home.menu.item7" = "Settings";
+
+//Walkthrough View
+"walkthrough.title.1" = "Explore the world";
+"walkthrough.title.2" = "Use your own location";
+"walkthrough.title.3" = "And get incredible information about area around you";

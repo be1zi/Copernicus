@@ -61,6 +61,7 @@
             </collectionViewCellContentView>
             <size key="customSize" width="225" height="300"/>
             <connections>
+                <outlet property="content" destination="xsx-V1-wm9" id="a4d-bO-CNo"/>
                 <outlet property="iconImageView" destination="vwd-BW-VMx" id="bHv-uB-EJ8"/>
                 <outlet property="titleLabel" destination="ly6-L0-eTQ" id="C4C-VM-sfN"/>
             </connections>

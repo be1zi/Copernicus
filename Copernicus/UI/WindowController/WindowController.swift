@@ -36,7 +36,19 @@ struct WindowController {
     }
     
     public func presentHomeController() {
+        
         let vc = UIStoryboard.init(name: "Home", bundle: nil).instantiateInitialViewController()
+        
+        guard let viewController = vc else {
+            return
+        }
+        
+        presentViewControllerAsRoot(viewController)
+    }
+    
+    public func presentWalkthroughController() {
+        
+        let vc = UIStoryboard.init(name: "Walkthrough", bundle: nil).instantiateInitialViewController()
         
         guard let viewController = vc else {
             return
