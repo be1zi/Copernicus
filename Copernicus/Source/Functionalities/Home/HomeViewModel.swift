@@ -18,6 +18,7 @@ struct HomeViewModel {
     public var cellsNumber: Int = 0
     public let appName: String
     public let headerBackground: UIImage?
+    public let ovalImage: UIImage?
     
     //
     // MARK: - Init
@@ -26,6 +27,7 @@ struct HomeViewModel {
     init() {
         self.appName = "app.name.short".localized()
         self.headerBackground = UIImage(named: "homeHeaderBackground")
+        self.ovalImage = UIImage(named: "homeOvalImage")
         
         self.setupCellViewModels()        
     }

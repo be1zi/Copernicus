@@ -16,6 +16,7 @@ class HomeViewController: BaseViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var logoContainerView: UIView!
+    @IBOutlet weak var logoOvalView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var headerBackgroundImageView: UIImageView!
     
@@ -56,6 +57,7 @@ class HomeViewController: BaseViewController {
     private func setupView() {
         nameLabel.text = viewModel.appName
         headerBackgroundImageView.image = viewModel.headerBackground
+        logoOvalView.image = viewModel.ovalImage
     }
 }
 
