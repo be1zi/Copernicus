@@ -14,13 +14,16 @@ struct HomeViewModel {
     
     public var cellViewModels: [HomeCellViewModel]!
     public var cellsNumber: Int = 0
+    public let appName: String
     
     //
     // MARK: - Init
     //
     
     init() {
-        self.setupCellViewModels()
+        self.appName = "app.name.short".localized()
+
+        self.setupCellViewModels()        
     }
     
     //

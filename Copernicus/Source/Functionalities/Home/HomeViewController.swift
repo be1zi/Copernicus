@@ -15,18 +15,10 @@ class HomeViewController: BaseViewController {
     //
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var logoContainerView: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     private let viewModel = HomeViewModel()
-    
-    //
-    // MARK: - Lifecycle
-    //
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        registerCell()
-    }
     
     //
     // MARK: - Appearance
@@ -37,12 +29,27 @@ class HomeViewController: BaseViewController {
     }
     
     //
+    // MARK: - Lifecycle
+    //
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        registerCell()
+        setupView()
+    }
+    
+    //
     // MARK: - Methods
     //
     
     private func registerCell() {
         let cellName = String(describing: HomeCellView.self)
         collectionView.register(UINib(nibName: cellName, bundle: nil), forCellWithReuseIdentifier: cellName)
+    }
+    
+    private func setupView() {
+        nameLabel.text = viewModel.appName
     }
 }
 

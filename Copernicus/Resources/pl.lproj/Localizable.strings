@@ -7,7 +7,8 @@
 */
 
 //App
-"app.name" = "Copernicus \r\nApp";
+"app.name.long" = "Copernicus \r\nApp";
+"app.name.short" = "Copernicus";
 
 //Language
 "language.polish" = "Polski";

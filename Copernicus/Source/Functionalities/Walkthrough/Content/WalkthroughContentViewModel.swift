@@ -37,7 +37,7 @@ public struct WalkthroughContentViewModel {
         self.number = number
         self.description = description?.uppercased()
 
-        self.appName = "app.name".localized()
+        self.appName = "app.name.long".localized()
         self.loopTitle = "button.loop.description".localized()
         self.loopImageEnabled = UIImage(named: "walkthroughLoopEnabled")
         self.loopImageDisabled = UIImage(named: "walkthroughLoopDisabled")
