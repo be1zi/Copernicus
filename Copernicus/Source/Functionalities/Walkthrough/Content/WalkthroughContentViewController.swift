@@ -95,11 +95,14 @@ public class WalkthroughContentViewController: BaseViewController {
         appNameLabel.text = viewModel?.appName
         infoLabel.text = viewModel?.description
         loopLabel.text = viewModel?.loopTitle
+        skipButton.setTitle(viewModel?.skipTitle, for: .normal)
     }
     
     private func setStyle() {
         infoLabel.textColor = UIColor.copGreyColor
         loopLabel.textColor = UIColor.copBlueColor
+        skipButton.backgroundColor = UIColor.copYellowColor
+        skipButton.contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     }
     
     private func setLoopImage() {

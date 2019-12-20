@@ -8,6 +8,14 @@
 
 import UIKit
 
+private enum ApplicationProperties: String {
+    case skipWalkthrough
+    
+    public func value() -> String {
+        return self.rawValue
+    }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -67,8 +75,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow.init(frame: UIScreen.main.bounds)
         //LanguageManager.sharedInstance.selectedBefore() ? windowController?.presentHomeController() : windowController?.presentLanguageController()
-        windowController?.presentWalkthroughController()
+        //windowController?.presentWalkthroughController()
+        windowController?.presentLanguageController()
         window?.makeKeyAndVisible()
+    }
+    
+    //
+    // MARK: - Stored properties
+    //
+    
+    public var shouldSkipWalkthrough: Bool  {
+        set {
+            UserDefaults.standard.set(newValue, forKey: ApplicationProperties.skipWalkthrough.value())
+            UserDefaults.standard.synchronize()
+        }
+        get {
+            return UserDefaults.standard.object(forKey: ApplicationProperties.skipWalkthrough.value()) as? Bool ?? false
+        }
     }
 }
 

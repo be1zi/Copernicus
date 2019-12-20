@@ -15,6 +15,7 @@
 
 //Buttons
 "button.loop.description" = "Pokaż ponownie";
+"button.skip.title" = "Pomiń";
 
 //Language View
 "language.view.info" = "Witamy w aplikacji Copernicus. Proszę wybrać język.";

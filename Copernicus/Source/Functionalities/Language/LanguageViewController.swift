@@ -72,7 +72,11 @@ class LanguageViewController: BaseViewController {
         Observable.merge(polishButton.rx.tap.asObservable(),
                                  englishButton.rx.tap.asObservable())
             .subscribe(onNext: { _ in
-                AppDelegate.sharedInstance.windowController?.presentHomeController()
+                if AppDelegate.sharedInstance.shouldSkipWalkthrough {
+                    AppDelegate.sharedInstance.windowController?.presentHomeController()
+                } else {
+                    AppDelegate.sharedInstance.windowController?.presentWalkthroughController()
+                }
         }).disposed(by: disposeBag)
     }
 }

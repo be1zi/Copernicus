@@ -55,15 +55,14 @@ class WalkthroughPageViewController: UIPageViewController {
                 self?.viewModel.pages[0].loopBehaviorRelay.accept(loopValue)
                 self?.viewModel.pages[1].loopBehaviorRelay.accept(loopValue)
                 self?.viewModel.pages[2].loopBehaviorRelay.accept(loopValue)
+                AppDelegate.sharedInstance.shouldSkipWalkthrough = loopValue
             }).disposed(by: disposeBag)
         
         Observable.merge(viewModel.pages[0].skipBehaviorRelay.asObservable(),
                          viewModel.pages[1].skipBehaviorRelay.asObservable(),
                          viewModel.pages[2].skipBehaviorRelay.asObservable())
             .subscribe(onNext: { _ in
-                DispatchQueue.main.async {
-                    AppDelegate.sharedInstance.windowController?.presentHomeController()
-                }
+                AppDelegate.sharedInstance.windowController?.presentHomeController()
             }).disposed(by: disposeBag)
     }
 }

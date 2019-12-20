@@ -26,6 +26,7 @@ public struct WalkthroughContentViewModel {
     public let loopTitle: String
     public let loopImageEnabled: UIImage?
     public let loopImageDisabled: UIImage?
+    public let skipTitle: String
     
     //
     // MARK: - Init
@@ -40,5 +41,6 @@ public struct WalkthroughContentViewModel {
         self.loopTitle = "button.loop.description".localized()
         self.loopImageEnabled = UIImage(named: "walkthroughLoopEnabled")
         self.loopImageDisabled = UIImage(named: "walkthroughLoopDisabled")
+        self.skipTitle = "button.skip.title".localized()
     }
 }
