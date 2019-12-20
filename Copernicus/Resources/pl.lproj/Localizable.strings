@@ -13,6 +13,9 @@
 "language.polish" = "Polski";
 "language.english" = "Angielski";
 
+//Buttons
+"button.loop.description" = "Pokaż ponownie";
+
 //Language View
 "language.view.info" = "Witamy w aplikacji Copernicus. Proszę wybrać język.";
 
@@ -29,4 +32,4 @@
 //Walkthrough View
 "walkthrough.desc.1" = "Odkrywaj \r\nświat";
 "walkthrough.desc.2" = "Wykorzystaj swoją \r\nlokalizację";
-"walkthrough.desc.3" = "aby zobaczyń niezwykłe informację o otaczającym Cię świecie";
+"walkthrough.desc.3" = "aby zobaczyć niezwykłe informacje o otaczającym Cię świecie";

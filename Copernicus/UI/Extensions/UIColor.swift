@@ -34,4 +34,8 @@ extension UIColor {
     static var copYellowColor: UIColor {
         return UIColor.colorWithHex(color: "FFDD00")
     }
+    
+    static var copBlueColor: UIColor {
+        return UIColor.colorWithHex(color: "#1DB1D9")
+    }
 }
