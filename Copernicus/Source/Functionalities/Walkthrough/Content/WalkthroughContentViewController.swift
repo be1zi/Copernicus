@@ -16,8 +16,22 @@ public class WalkthroughContentViewController: BaseViewController {
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var appNameLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
     
-    private var data: WalkthroughData?
+    private var viewModel: WalkthroughContentViewModel?
+    
+    //
+    // MARK: - Appearance
+    //
+
+    override public func shouldHideBackButton() -> Bool {
+        return true
+    }
+    
+    override public func shouldHideNavigationBar() -> Bool {
+        return true
+    }
     
     //
     // MARK: - Lifecycle
@@ -26,6 +40,7 @@ public class WalkthroughContentViewController: BaseViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         
+        setStyle()
         setupView()
     }
     
@@ -33,24 +48,22 @@ public class WalkthroughContentViewController: BaseViewController {
     // MARK: - Data
     //
     
-    public func setData(_ data: WalkthroughData) {
-        self.data = data
+    public func setViewModel(_ viewModel: WalkthroughContentViewModel) {
+        self.viewModel = viewModel
     }
     
     //
-    // MARK: - Appearance
+    // MARK: - Methods
     //
     
     private func setupView() {
-        backgroundImageView.image = data?.backgroundImage
-        numberLabel.text = data?.numberString
-    }
-
-    override public func shouldHideBackButton() -> Bool {
-        return true
+        backgroundImageView.image = viewModel?.backgroundImage
+        numberLabel.text = viewModel?.numberString
+        appNameLabel.text = viewModel?.appName
+        infoLabel.text = viewModel?.description
     }
     
-    override public func shouldHideNavigationBar() -> Bool {
-        return true
+    private func setStyle() {
+        infoLabel.tintColor = UIColor.copGreyColor
     }
 }

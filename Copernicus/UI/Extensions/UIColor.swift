@@ -28,7 +28,7 @@ extension UIColor {
     }
     
     static var copGreyColor: UIColor {
-        return UIColor.colorWithHex(color: "#ECF0F1")
+        return UIColor.colorWithHex(color: "#627886")
     }
     
     static var copYellowColor: UIColor {

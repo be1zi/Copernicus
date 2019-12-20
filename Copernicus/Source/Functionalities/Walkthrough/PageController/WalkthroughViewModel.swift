@@ -14,7 +14,7 @@ public struct WalkthroughViewModel {
     // MARK: - Properties
     //
     
-    private var data: [WalkthroughData] = []
+    private var contentViewModels: [WalkthroughContentViewModel] = []
     public var pages: [WalkthroughContentViewController] = []
     public var firstPage: WalkthroughContentViewController?
     
@@ -32,9 +32,9 @@ public struct WalkthroughViewModel {
     //
     
     private mutating func createData() {
-        data = [WalkthroughData(background: UIImage(named: "walkthroughBackground1"), number: 1),
-                WalkthroughData(background: UIImage(named: "walkthroughBackground2"), number: 2),
-                WalkthroughData(background: UIImage(named: "walkthroughBackground3"), number: 3)]
+        contentViewModels = [WalkthroughContentViewModel(background: UIImage(named: "walkthroughBackground1"), number: 1, description: "walkthrough.desc.1".localized()),
+                             WalkthroughContentViewModel(background: UIImage(named: "walkthroughBackground2"), number: 2, description: "walkthrough.desc.2".localized()),
+                             WalkthroughContentViewModel(background: UIImage(named: "walkthroughBackground3"), number: 3, description: "walkthrough.desc.3".localized())]
     }
     
     private mutating func createViewControllers() {
@@ -45,9 +45,9 @@ public struct WalkthroughViewModel {
         let vc2 = storyboard.instantiateViewController(withIdentifier: String(describing: WalkthroughContentViewController.self)) as? WalkthroughContentViewController
         let vc3 = storyboard.instantiateViewController(withIdentifier: String(describing: WalkthroughContentViewController.self)) as? WalkthroughContentViewController
         
-        vc1?.setData(data[0])
-        vc2?.setData(data[1])
-        vc3?.setData(data[2])
+        vc1?.setViewModel(contentViewModels[0])
+        vc2?.setViewModel(contentViewModels[1])
+        vc3?.setViewModel(contentViewModels[2])
         
         if let VC1 = vc1 { pages.append(VC1) }
         if let VC2 = vc2 { pages.append(VC2) }

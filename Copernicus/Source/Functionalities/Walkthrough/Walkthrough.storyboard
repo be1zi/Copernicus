@@ -21,21 +21,39 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0qf-5t-rHt">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9MI-3R-zqg">
-                                        <rect key="frame" x="65" y="88" width="42" height="20.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9MI-3R-zqg">
+                                        <rect key="frame" x="50" y="70" width="96" height="239"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="200"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copernicus App" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpT-nF-kcz">
+                                        <rect key="frame" x="50" y="486.33333333333331" width="275" height="119.66666666666669"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJ4-nk-Hj9">
+                                        <rect key="frame" x="50" y="646" width="275" height="26.333333333333371"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="0qf-5t-rHt" firstAttribute="top" secondItem="hxO-tt-lvH" secondAttribute="top" id="4Zk-YO-p9a"/>
+                                    <constraint firstItem="QJ4-nk-Hj9" firstAttribute="trailing" secondItem="LpT-nF-kcz" secondAttribute="trailing" id="6Tt-dF-Lix"/>
+                                    <constraint firstItem="LpT-nF-kcz" firstAttribute="centerY" secondItem="0qf-5t-rHt" secondAttribute="centerY" constant="140" id="8PO-Ue-AQ5"/>
                                     <constraint firstItem="0qf-5t-rHt" firstAttribute="leading" secondItem="hxO-tt-lvH" secondAttribute="leading" id="AE2-1o-Stt"/>
-                                    <constraint firstItem="9MI-3R-zqg" firstAttribute="leading" secondItem="hxO-tt-lvH" secondAttribute="leading" constant="65" id="CPd-tc-vaP"/>
+                                    <constraint firstItem="9MI-3R-zqg" firstAttribute="leading" secondItem="hxO-tt-lvH" secondAttribute="leading" constant="50" id="CPd-tc-vaP"/>
                                     <constraint firstAttribute="trailing" secondItem="0qf-5t-rHt" secondAttribute="trailing" id="FTE-Pa-Yps"/>
+                                    <constraint firstItem="LpT-nF-kcz" firstAttribute="leading" secondItem="hxO-tt-lvH" secondAttribute="leading" constant="50" id="Mij-de-nUM"/>
+                                    <constraint firstItem="QJ4-nk-Hj9" firstAttribute="leading" secondItem="LpT-nF-kcz" secondAttribute="leading" id="bff-wM-rHf"/>
                                     <constraint firstAttribute="bottom" secondItem="0qf-5t-rHt" secondAttribute="bottom" id="c8I-ee-dTz"/>
-                                    <constraint firstItem="9MI-3R-zqg" firstAttribute="top" secondItem="hxO-tt-lvH" secondAttribute="top" constant="88" id="xme-pR-bot"/>
+                                    <constraint firstItem="QJ4-nk-Hj9" firstAttribute="top" secondItem="LpT-nF-kcz" secondAttribute="bottom" constant="40" id="llk-EK-nzs"/>
+                                    <constraint firstItem="9MI-3R-zqg" firstAttribute="top" secondItem="hxO-tt-lvH" secondAttribute="top" constant="70" id="xme-pR-bot"/>
+                                    <constraint firstAttribute="trailing" secondItem="LpT-nF-kcz" secondAttribute="trailing" constant="50" id="zTv-8l-U4F"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -49,7 +67,9 @@
                         <viewLayoutGuide key="safeArea" id="8w3-IJ-sS5"/>
                     </view>
                     <connections>
+                        <outlet property="appNameLabel" destination="LpT-nF-kcz" id="AdA-Va-lBp"/>
                         <outlet property="backgroundImageView" destination="0qf-5t-rHt" id="gvj-oh-q7g"/>
+                        <outlet property="infoLabel" destination="QJ4-nk-Hj9" id="Y5c-Ye-bKI"/>
                         <outlet property="numberLabel" destination="9MI-3R-zqg" id="3JO-JG-hcX"/>
                     </connections>
                 </viewController>

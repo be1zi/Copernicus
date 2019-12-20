@@ -32,6 +32,6 @@ public struct WalkthroughContentViewModel {
         self.backgroundImage = background
         self.number = number
         self.appName = "app.name".localized()
-        self.description = description
+        self.description = description?.uppercased()
     }
 }
