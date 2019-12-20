@@ -81,6 +81,25 @@ extension HomeViewController: UICollectionViewDataSource {
     }
 }
 
+extension HomeViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        guard let cell = collectionView.cellForItem(at: indexPath) as? HomeCellView,
+            let storyboardName = cell.viewModel?.storyboardName else {
+            return
+        }
+        
+        let vc = UIStoryboard.init(name: storyboardName, bundle: nil).instantiateInitialViewController()
+        
+        guard let viewController = vc else {
+            return
+        }
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

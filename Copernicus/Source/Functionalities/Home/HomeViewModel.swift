@@ -44,7 +44,7 @@ struct HomeViewModel {
                           HomeCellViewModel(title: "home.menu.item4".localized()),
                           HomeCellViewModel(title: "home.menu.item5".localized()),
                           HomeCellViewModel(title: "home.menu.item6".localized()),
-                          HomeCellViewModel(title: "home.menu.item7".localized(), imageName: "menuSettings")]
+                          HomeCellViewModel(title: "home.menu.item7".localized(), imageName: "menuSettings", storyboardName: "Settings")]
         
         cellsNumber = cellViewModels.count
     }

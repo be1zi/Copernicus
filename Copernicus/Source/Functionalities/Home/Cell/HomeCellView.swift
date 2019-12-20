@@ -18,7 +18,7 @@ class HomeCellView: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var content: UIView!
     
-    private var viewModel: HomeCellViewModel?
+    public var viewModel: HomeCellViewModel?
     
     //
     // MARK: - Lifecycle
