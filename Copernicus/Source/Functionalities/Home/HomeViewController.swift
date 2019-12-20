@@ -17,6 +17,7 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var logoContainerView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var headerBackgroundImageView: UIImageView!
     
     private let viewModel = HomeViewModel()
     
@@ -26,6 +27,10 @@ class HomeViewController: BaseViewController {
     
     override func shouldHideNavigationBar() -> Bool {
         return true
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
     }
     
     //
@@ -50,6 +55,7 @@ class HomeViewController: BaseViewController {
     
     private func setupView() {
         nameLabel.text = viewModel.appName
+        headerBackgroundImageView.image = viewModel.headerBackground
     }
 }
 

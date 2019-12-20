@@ -6,6 +6,8 @@
 //  Copyright © 2019 Konrad Bełzowski. All rights reserved.
 //
 
+import UIKit
+
 struct HomeViewModel {
     
     //
@@ -15,6 +17,7 @@ struct HomeViewModel {
     public var cellViewModels: [HomeCellViewModel]!
     public var cellsNumber: Int = 0
     public let appName: String
+    public let headerBackground: UIImage?
     
     //
     // MARK: - Init
@@ -22,7 +25,8 @@ struct HomeViewModel {
     
     init() {
         self.appName = "app.name.short".localized()
-
+        self.headerBackground = UIImage(named: "homeHeaderBackground")
+        
         self.setupCellViewModels()        
     }
     

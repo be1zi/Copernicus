@@ -24,17 +24,6 @@ class LanguageViewController: BaseViewController {
     private let disposeBag = DisposeBag()
     
     //
-    // MARK: - Lifecycle
-    //
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setData()
-        setupRx()
-    }
-    
-    //
     // MARK: - Appearance
     //
     
@@ -44,6 +33,21 @@ class LanguageViewController: BaseViewController {
     
     override func shouldHideNavigationBar() -> Bool {
         return true
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
+    }
+    
+    //
+    // MARK: - Lifecycle
+    //
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setData()
+        setupRx()
     }
     
     //

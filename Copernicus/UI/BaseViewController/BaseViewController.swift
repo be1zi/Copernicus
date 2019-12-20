@@ -53,4 +53,8 @@ public class BaseViewController: UIViewController {
     public func shouldHideBackButton() -> Bool {
         return false
     }
+    
+    public override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
