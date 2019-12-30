@@ -43,6 +43,8 @@
 		A141EBC023BA5B7700BF26C6 /* SatellitesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBBF23BA5B7700BF26C6 /* SatellitesListViewController.swift */; };
 		A141EBC223BA5BCC00BF26C6 /* SatellitesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBC123BA5BCC00BF26C6 /* SatellitesListViewModel.swift */; };
 		A141EBC423BA5C0500BF26C6 /* Satellites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A141EBC323BA5C0500BF26C6 /* Satellites.storyboard */; };
+		A141EBC623BA5CBB00BF26C6 /* SatelliteRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBC523BA5CBB00BF26C6 /* SatelliteRemoteRepository.swift */; };
+		A141EBC823BA6DC800BF26C6 /* SatelliteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBC723BA6DC800BF26C6 /* SatelliteRepository.swift */; };
 		A160A18A23A5413A00025C02 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = A160A18923A5413A00025C02 /* config.plist */; };
 		A160A19723A544F500025C02 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160A19623A544F500025C02 /* ConfigurationManager.swift */; };
 		A160A19923A65CE700025C02 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160A19823A65CE700025C02 /* Logger.swift */; };
@@ -115,6 +117,8 @@
 		A141EBBF23BA5B7700BF26C6 /* SatellitesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitesListViewController.swift; sourceTree = "<group>"; };
 		A141EBC123BA5BCC00BF26C6 /* SatellitesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitesListViewModel.swift; sourceTree = "<group>"; };
 		A141EBC323BA5C0500BF26C6 /* Satellites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Satellites.storyboard; sourceTree = "<group>"; };
+		A141EBC523BA5CBB00BF26C6 /* SatelliteRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SatelliteRemoteRepository.swift; path = Copernicus/Source/Functionalities/Satellites/SatelliteRemoteRepository.swift; sourceTree = SOURCE_ROOT; };
+		A141EBC723BA6DC800BF26C6 /* SatelliteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteRepository.swift; sourceTree = "<group>"; };
 		A160A18923A5413A00025C02 /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		A160A19623A544F500025C02 /* ConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
 		A160A19823A65CE700025C02 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -296,6 +300,7 @@
 		A141EBB623BA523D00BF26C6 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				A141EBC723BA6DC800BF26C6 /* SatelliteRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -394,6 +399,7 @@
 		A160A18F23A541A400025C02 /* RemoteRepository */ = {
 			isa = PBXGroup;
 			children = (
+				A141EBC523BA5CBB00BF26C6 /* SatelliteRemoteRepository.swift */,
 			);
 			path = RemoteRepository;
 			sourceTree = "<group>";
@@ -775,6 +781,7 @@
 				A141EBC023BA5B7700BF26C6 /* SatellitesListViewController.swift in Sources */,
 				A160A19723A544F500025C02 /* ConfigurationManager.swift in Sources */,
 				A141EBB923BA526400BF26C6 /* SatelliteModel.swift in Sources */,
+				A141EBC623BA5CBB00BF26C6 /* SatelliteRemoteRepository.swift in Sources */,
 				3D47BD3823A77DE6003697FA /* LanguageViewController.swift in Sources */,
 				A1BFF31823A5349A008165FA /* AppDelegate.swift in Sources */,
 				3D231DBE23A8CF2200B4CFD4 /* UIButton.swift in Sources */,
@@ -794,6 +801,7 @@
 				3D144F1F23A90B9300E17504 /* UIColor.swift in Sources */,
 				3D144F1D23A908A000E17504 /* UIView.swift in Sources */,
 				3D231DC523A8D42F00B4CFD4 /* HomeViewController.swift in Sources */,
+				A141EBC823BA6DC800BF26C6 /* SatelliteRepository.swift in Sources */,
 				3D0E604C23A76FFB00F9ECFD /* LanguageManager.swift in Sources */,
 				3D144F1723A8EBDA00E17504 /* HomeCellViewModel.swift in Sources */,
 				3D8E525723ABAF920067CD39 /* WalkthroughContentViewModel.swift in Sources */,

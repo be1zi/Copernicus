@@ -15,17 +15,17 @@ public class SatelliteModel: Object, Codable {
     // MARK: - Properties
     //
     
-    @objc dynamic var id: String?
+    @objc dynamic var id: Int = 0
     @objc dynamic var name: String?
-    @objc dynamic var geometry: GeometryModel?
-    @objc dynamic var sensors: [SensorModel]?
+    //@objc dynamic var geometry: GeometryModel?
+    //@objc dynamic var sensors: [SensorModel]?
     @objc dynamic var open: Bool = true
     
     private enum CodingKeys: String, CodingKey {
         case id
         case name
-        case geometry
-        case sensors
+        //case geometry
+        //case sensors
         case open
     }
     
@@ -37,8 +37,8 @@ public class SatelliteModel: Object, Codable {
         
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        id = try container.decodeIfPresent(String.self, forKey: .id)
-        name = try container.decodeIfPresent(String.self, forKey: .name)
+        id = try container.decodeIfPresent(Int.self, forKey: .id) ?? 0
+        name = try? container.decodeIfPresent(String.self, forKey: .name)
         
         super.init()
     }

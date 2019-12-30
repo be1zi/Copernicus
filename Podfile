@@ -4,18 +4,18 @@ target 'Copernicus' do
   use_frameworks!
 
   pod 'RealmSwift'
-  pod 'RxSwift', '~> 5'
-  pod 'RxCocoa', '~> 5'
-  pod 'Moya', '~> 13.0'
-  
+  pod 'RxSwift', '~> 4.0'
+  pod 'RxCocoa', '~> 4.0'
+  pod 'Moya/RxSwift', '~> 13.0'
+
   target 'CopernicusTests' do
-    pod 'RxBlocking', '~> 5'
-    pod 'RxTest', '~> 5'
+    pod 'RxBlocking', '~> 4.0'
+    pod 'RxTest', '~> 4.0'
   end
 
   target 'CopernicusUITests' do
-    pod 'RxBlocking', '~> 5'
-    pod 'RxTest', '~> 5'
+    pod 'RxBlocking', '~> 4.0'
+    pod 'RxTest', '~> 4.0'
   end
 
 end
