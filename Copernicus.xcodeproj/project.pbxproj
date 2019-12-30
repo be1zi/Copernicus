@@ -37,6 +37,9 @@
 		3D98F3F623ACFBBF000E70D9 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D98F3F523ACFBBF000E70D9 /* SettingsViewModel.swift */; };
 		3D98F3F823ACFBCF000E70D9 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D98F3F723ACFBCF000E70D9 /* Settings.storyboard */; };
 		3DEE0E9023A7970D0036DA45 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DEE0E9223A7970D0036DA45 /* Localizable.strings */; };
+		A141EBB923BA526400BF26C6 /* SatelliteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBB823BA526400BF26C6 /* SatelliteModel.swift */; };
+		A141EBBB23BA543400BF26C6 /* GeometryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBBA23BA543400BF26C6 /* GeometryModel.swift */; };
+		A141EBBD23BA54D000BF26C6 /* SensorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBBC23BA54D000BF26C6 /* SensorModel.swift */; };
 		A160A18A23A5413A00025C02 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = A160A18923A5413A00025C02 /* config.plist */; };
 		A160A19723A544F500025C02 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160A19623A544F500025C02 /* ConfigurationManager.swift */; };
 		A160A19923A65CE700025C02 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160A19823A65CE700025C02 /* Logger.swift */; };
@@ -103,6 +106,9 @@
 		6F7567B922A6F9FE7409AED0 /* Pods-Copernicus-CopernicusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copernicus-CopernicusTests.debug.xcconfig"; path = "Target Support Files/Pods-Copernicus-CopernicusTests/Pods-Copernicus-CopernicusTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7E87C8CC7BDBA1B7051B7B05 /* Pods-Copernicus-CopernicusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copernicus-CopernicusUITests.release.xcconfig"; path = "Target Support Files/Pods-Copernicus-CopernicusUITests/Pods-Copernicus-CopernicusUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8825F663483BEC8673BA0E19 /* Pods_Copernicus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Copernicus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A141EBB823BA526400BF26C6 /* SatelliteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteModel.swift; sourceTree = "<group>"; };
+		A141EBBA23BA543400BF26C6 /* GeometryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryModel.swift; sourceTree = "<group>"; };
+		A141EBBC23BA54D000BF26C6 /* SensorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorModel.swift; sourceTree = "<group>"; };
 		A160A18923A5413A00025C02 /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		A160A19623A544F500025C02 /* ConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
 		A160A19823A65CE700025C02 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -281,6 +287,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A141EBB623BA523D00BF26C6 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		A141EBB723BA524D00BF26C6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A141EBB823BA526400BF26C6 /* SatelliteModel.swift */,
+				A141EBBA23BA543400BF26C6 /* GeometryModel.swift */,
+				A141EBBC23BA54D000BF26C6 /* SensorModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A160A18523A540E700025C02 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,6 +351,7 @@
 		A160A18C23A5418100025C02 /* Context */ = {
 			isa = PBXGroup;
 			children = (
+				A141EBB623BA523D00BF26C6 /* Repository */,
 				A160A18F23A541A400025C02 /* RemoteRepository */,
 				A160A18E23A5418D00025C02 /* LocalRepository */,
 				A160A18D23A5418600025C02 /* Application */,
@@ -346,6 +370,7 @@
 		A160A18E23A5418D00025C02 /* LocalRepository */ = {
 			isa = PBXGroup;
 			children = (
+				A141EBB723BA524D00BF26C6 /* Models */,
 			);
 			path = LocalRepository;
 			sourceTree = "<group>";
@@ -730,6 +755,7 @@
 				3D144F1923A8ECA300E17504 /* HomeCellView.swift in Sources */,
 				3D231DB823A8BF8400B4CFD4 /* WindowController.swift in Sources */,
 				A160A19723A544F500025C02 /* ConfigurationManager.swift in Sources */,
+				A141EBB923BA526400BF26C6 /* SatelliteModel.swift in Sources */,
 				3D47BD3823A77DE6003697FA /* LanguageViewController.swift in Sources */,
 				A1BFF31823A5349A008165FA /* AppDelegate.swift in Sources */,
 				3D231DBE23A8CF2200B4CFD4 /* UIButton.swift in Sources */,
@@ -737,7 +763,9 @@
 				3D0E604A23A76FDE00F9ECFD /* String.swift in Sources */,
 				3D98F3F623ACFBBF000E70D9 /* SettingsViewModel.swift in Sources */,
 				3D16356923AA5789001F05DD /* WalkthroughContentViewController.swift in Sources */,
+				A141EBBB23BA543400BF26C6 /* GeometryModel.swift in Sources */,
 				3D16356523AA4EA8001F05DD /* WalkthroughPageViewController.swift in Sources */,
+				A141EBBD23BA54D000BF26C6 /* SensorModel.swift in Sources */,
 				3D231DC323A8D27D00B4CFD4 /* Font.swift in Sources */,
 				3D231DC723A8D4B500B4CFD4 /* HomeViewModel.swift in Sources */,
 				3D0E604123A764B000F9ECFD /* BaseViewController.swift in Sources */,
