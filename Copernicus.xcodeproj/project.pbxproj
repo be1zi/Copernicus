@@ -40,6 +40,9 @@
 		A141EBB923BA526400BF26C6 /* SatelliteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBB823BA526400BF26C6 /* SatelliteModel.swift */; };
 		A141EBBB23BA543400BF26C6 /* GeometryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBBA23BA543400BF26C6 /* GeometryModel.swift */; };
 		A141EBBD23BA54D000BF26C6 /* SensorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBBC23BA54D000BF26C6 /* SensorModel.swift */; };
+		A141EBC023BA5B7700BF26C6 /* SatellitesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBBF23BA5B7700BF26C6 /* SatellitesListViewController.swift */; };
+		A141EBC223BA5BCC00BF26C6 /* SatellitesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBC123BA5BCC00BF26C6 /* SatellitesListViewModel.swift */; };
+		A141EBC423BA5C0500BF26C6 /* Satellites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A141EBC323BA5C0500BF26C6 /* Satellites.storyboard */; };
 		A160A18A23A5413A00025C02 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = A160A18923A5413A00025C02 /* config.plist */; };
 		A160A19723A544F500025C02 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160A19623A544F500025C02 /* ConfigurationManager.swift */; };
 		A160A19923A65CE700025C02 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160A19823A65CE700025C02 /* Logger.swift */; };
@@ -109,6 +112,9 @@
 		A141EBB823BA526400BF26C6 /* SatelliteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteModel.swift; sourceTree = "<group>"; };
 		A141EBBA23BA543400BF26C6 /* GeometryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryModel.swift; sourceTree = "<group>"; };
 		A141EBBC23BA54D000BF26C6 /* SensorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorModel.swift; sourceTree = "<group>"; };
+		A141EBBF23BA5B7700BF26C6 /* SatellitesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitesListViewController.swift; sourceTree = "<group>"; };
+		A141EBC123BA5BCC00BF26C6 /* SatellitesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitesListViewModel.swift; sourceTree = "<group>"; };
+		A141EBC323BA5C0500BF26C6 /* Satellites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Satellites.storyboard; sourceTree = "<group>"; };
 		A160A18923A5413A00025C02 /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		A160A19623A544F500025C02 /* ConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
 		A160A19823A65CE700025C02 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -304,6 +310,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		A141EBBE23BA5B5F00BF26C6 /* Satellites */ = {
+			isa = PBXGroup;
+			children = (
+				A141EBBF23BA5B7700BF26C6 /* SatellitesListViewController.swift */,
+				A141EBC123BA5BCC00BF26C6 /* SatellitesListViewModel.swift */,
+				A141EBC323BA5C0500BF26C6 /* Satellites.storyboard */,
+			);
+			path = Satellites;
+			sourceTree = "<group>";
+		};
 		A160A18523A540E700025C02 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,6 +401,7 @@
 		A160A19023A541CC00025C02 /* Functionalities */ = {
 			isa = PBXGroup;
 			children = (
+				A141EBBE23BA5B5F00BF26C6 /* Satellites */,
 				A160A19223A541EF00025C02 /* Home */,
 				3D47BD3623A77DD4003697FA /* Language */,
 				A160A19123A541DB00025C02 /* Launch */,
@@ -605,6 +622,7 @@
 				3D16356723AA4EB8001F05DD /* Walkthrough.storyboard in Resources */,
 				3D98F3F823ACFBCF000E70D9 /* Settings.storyboard in Resources */,
 				3D144F1B23A8ECD800E17504 /* HomeCellView.xib in Resources */,
+				A141EBC423BA5C0500BF26C6 /* Satellites.storyboard in Resources */,
 				A1BFF31E23A5349B008165FA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -754,6 +772,7 @@
 				3D8E525523ABAF1E0067CD39 /* WalkthroughViewModel.swift in Sources */,
 				3D144F1923A8ECA300E17504 /* HomeCellView.swift in Sources */,
 				3D231DB823A8BF8400B4CFD4 /* WindowController.swift in Sources */,
+				A141EBC023BA5B7700BF26C6 /* SatellitesListViewController.swift in Sources */,
 				A160A19723A544F500025C02 /* ConfigurationManager.swift in Sources */,
 				A141EBB923BA526400BF26C6 /* SatelliteModel.swift in Sources */,
 				3D47BD3823A77DE6003697FA /* LanguageViewController.swift in Sources */,
@@ -767,6 +786,7 @@
 				3D16356523AA4EA8001F05DD /* WalkthroughPageViewController.swift in Sources */,
 				A141EBBD23BA54D000BF26C6 /* SensorModel.swift in Sources */,
 				3D231DC323A8D27D00B4CFD4 /* Font.swift in Sources */,
+				A141EBC223BA5BCC00BF26C6 /* SatellitesListViewModel.swift in Sources */,
 				3D231DC723A8D4B500B4CFD4 /* HomeViewModel.swift in Sources */,
 				3D0E604123A764B000F9ECFD /* BaseViewController.swift in Sources */,
 				3D231DC123A8D0BF00B4CFD4 /* COPButton.swift in Sources */,
