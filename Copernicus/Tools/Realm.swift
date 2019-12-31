@@ -23,11 +23,18 @@ public extension Realm {
   
         for (index, value) in contentData.enumerated() {
             var satellite = value
+            
             if var geometry = satellite["geometry"] as? [String: Any] {
-                geometry["id"] = value["id"] ?? 0
+                geometry["id"] = satellite["id"] ?? 0
                 satellite["geometry"] = geometry
-                contentData[index] = satellite
             }
+            
+            if var properties = satellite["properties"] as? [String: Any] {
+                properties["id"] = satellite["id"]
+                satellite["properties"] = properties
+            }
+            
+            contentData[index] = satellite
         }
         
         guard let unwrappedData = try? JSONSerialization.data(withJSONObject: contentData, options: []) else {
@@ -80,7 +87,7 @@ public extension Realm {
 // MARK: - Cascading delete
 //
 
-public extension Realm {
+private extension Realm {
     func delete<S: Sequence>(_ objects: S, cascading: Bool) where S.Iterator.Element: Object {
         for obj in objects {
             delete(obj, cascading: cascading)

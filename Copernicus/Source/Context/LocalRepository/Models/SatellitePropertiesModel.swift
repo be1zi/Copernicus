@@ -1,27 +1,32 @@
 //
-//  SatelliteModel.swift
+//  SatellitePropertiesModel.swift
 //  Copernicus
 //
-//  Created by Konrad Bełzowski on 30/12/2019.
+//  Created by Konrad Bełzowski on 31/12/2019.
 //  Copyright © 2019 Konrad Bełzowski. All rights reserved.
 //
 
 import RealmSwift
 
-public class SatelliteModel: Object, Codable {
+public class SatellitePropertiesModel: Object, Codable {
     
     //
     // MARK: - Properties
     //
     
     @objc dynamic var id: Int = 0
-    @objc dynamic var geometry: GeometryModel?
-    @objc dynamic var properties: SatellitePropertiesModel?
-    
+    @objc dynamic var name: String?
+    @objc dynamic var norad_id: Int = 0
+    //@objc dynamic var sensors: List<SensorModel>?
+    @objc dynamic var open: Bool = false
+    @objc dynamic var platform: String?
+
     private enum CodingKeys: String, CodingKey {
         case id
-        case geometry
-        case properties
+        case name
+        case norad_id
+        case open
+        case platform
     }
     
     //
@@ -33,8 +38,10 @@ public class SatelliteModel: Object, Codable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         id = try container.decodeIfPresent(Int.self, forKey: .id) ?? 0
-        geometry = try? container.decodeIfPresent(GeometryModel.self, forKey: .geometry)
-        properties = try? container.decodeIfPresent(SatellitePropertiesModel.self, forKey: .properties)
+        name = try? container.decodeIfPresent(String.self, forKey: .name)
+        norad_id = try container.decodeIfPresent(Int.self, forKey: .norad_id) ?? 0
+        open = try container.decodeIfPresent(Bool.self, forKey: .open) ?? false
+        platform = try? container.decodeIfPresent(String.self, forKey: .platform)
         
         super.init()
     }
@@ -51,3 +58,4 @@ public class SatelliteModel: Object, Codable {
         return "id"
     }
 }
+

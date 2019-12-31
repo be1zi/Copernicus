@@ -10,6 +10,10 @@ import RealmSwift
 
 public class SensorModel: Object, Codable {
     
+    //
+    // MARK: - Properties
+    //
+    
     @objc dynamic var type: String?
     @objc dynamic var arvFootprintWidth: String?
 }
