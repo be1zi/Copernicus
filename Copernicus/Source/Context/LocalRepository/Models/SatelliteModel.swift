@@ -6,7 +6,6 @@
 //  Copyright © 2019 Konrad Bełzowski. All rights reserved.
 //
 
-import Realm
 import RealmSwift
 
 public class SatelliteModel: Object, Codable {
@@ -17,14 +16,14 @@ public class SatelliteModel: Object, Codable {
     
     @objc dynamic var id: Int = 0
     @objc dynamic var name: String?
-    //@objc dynamic var geometry: GeometryModel?
+    @objc dynamic var geometry: GeometryModel?
     //@objc dynamic var sensors: [SensorModel]?
     @objc dynamic var open: Bool = true
     
     private enum CodingKeys: String, CodingKey {
         case id
         case name
-        //case geometry
+        case geometry
         //case sensors
         case open
     }
@@ -38,7 +37,9 @@ public class SatelliteModel: Object, Codable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         id = try container.decodeIfPresent(Int.self, forKey: .id) ?? 0
+        geometry = try? container.decodeIfPresent(GeometryModel.self, forKey: .geometry)
         name = try? container.decodeIfPresent(String.self, forKey: .name)
+        open = try container.decodeIfPresent(Bool.self, forKey: .open) ?? true
         
         super.init()
     }
