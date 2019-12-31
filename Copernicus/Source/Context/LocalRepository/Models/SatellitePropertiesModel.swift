@@ -17,9 +17,9 @@ public class SatellitePropertiesModel: Object, Codable {
     @objc dynamic var id: Int = 0
     @objc dynamic var name: String?
     @objc dynamic var norad_id: Int = 0
-    //@objc dynamic var sensors: List<SensorModel>?
     @objc dynamic var open: Bool = false
     @objc dynamic var platform: String?
+    let sensors = List<SensorModel>()
 
     private enum CodingKeys: String, CodingKey {
         case id
@@ -27,6 +27,7 @@ public class SatellitePropertiesModel: Object, Codable {
         case norad_id
         case open
         case platform
+        case sensors
     }
     
     //
@@ -42,6 +43,14 @@ public class SatellitePropertiesModel: Object, Codable {
         norad_id = try container.decodeIfPresent(Int.self, forKey: .norad_id) ?? 0
         open = try container.decodeIfPresent(Bool.self, forKey: .open) ?? false
         platform = try? container.decodeIfPresent(String.self, forKey: .platform)
+        
+        if let data = try? container.decodeIfPresent([SensorModel].self, forKey: .sensors) {
+            if sensors.count > 0 {
+                sensors.removeAll()
+            }
+            
+            sensors.append(objectsIn: data)
+        }
         
         super.init()
     }

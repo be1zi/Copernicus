@@ -31,6 +31,19 @@ public extension Realm {
             
             if var properties = satellite["properties"] as? [String: Any] {
                 properties["id"] = satellite["id"]
+                
+                if var sensors = properties["sensors"] as? [[String: Any]] {
+                    
+                    for (sensorIndex, sensorValue) in sensors.enumerated() {
+                        var sensor = sensorValue
+                        
+                        sensor["id"] = "\(satellite["id"] ?? "0")\(sensor["type"] ?? "")"
+                        sensors[sensorIndex] = sensor
+                    }
+                    
+                    properties["sensors"] = sensors
+                }
+                
                 satellite["properties"] = properties
             }
             
