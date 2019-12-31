@@ -53,15 +53,20 @@ public extension Realm {
             let toAdd = satellites.filter { !toUpdateKeys.contains($0.id) }
             let toDelete = existedSatellites.filter { !toUpdateKeys.contains($0.id) }
 
-            try realm.write {
-                for object in toUpdate {
-                    if let satellite = existedSatellites.first(where: { $0.id == object.id }) {
-                        satellite.name = object.name
-                        satellite.open = object.open
-                        satellite.geometry = object.geometry
+            for object in satellites {
+                if let satellite = existedSatellites.first(where: { $0.id == object.id }) {
+                    
+                    try realm.write {
+                        if let oldGeometry = satellite.geometry, let newGeometry = object.geometry {
+                            realm.delete([oldGeometry], cascading: true)
+                            let newGeometry = realm.create(GeometryModel.self, value: newGeometry, update: .error)
+                            satellite.geometry = newGeometry
+                        }
                     }
                 }
-                
+            }
+            
+            try realm.write {
                 realm.add(toAdd)
                 realm.delete(toDelete, cascading: true)
             }
@@ -109,8 +114,10 @@ private extension Realm {
             if let entity = value as? RLMObjectBase {
                 toBeDeleted.insert(entity)
             } else if let list = value as? RealmSwift.ListBase {
-                for index in 0..<list._rlmArray.count {
-                    toBeDeleted.insert(list._rlmArray.object(at: index) as! RLMObjectBase)
+                for index in 0 ..< list._rlmArray.count {
+                  if let realmObject = list._rlmArray.object(at: index) as? RLMObjectBase {
+                    toBeDeleted.insert(realmObject)
+                  }
                 }
             }
         }

@@ -16,7 +16,7 @@ public class GeometryModel: Object, Codable {
     
     @objc dynamic var id: Int = 0
     @objc dynamic var type: String?
-    dynamic var coordinates: List<Double>?
+    let coordinates = List<Double>()
     
     private enum CodingKeys: String, CodingKey {
         case id
@@ -34,7 +34,14 @@ public class GeometryModel: Object, Codable {
         
         id = try container.decodeIfPresent(Int.self, forKey: .id) ?? 0
         type = try? container.decodeIfPresent(String.self, forKey: .type)
-        coordinates = try? container.decodeIfPresent(List<Double>.self, forKey: .coordinates)
+        
+        if let coord = try? container.decodeIfPresent([Double].self, forKey: .coordinates) {
+            if coordinates.count != 0 {
+                coordinates.removeAll()
+            }
+            
+            coordinates.append(objectsIn: coord)
+        }
         
         super.init()
     }
