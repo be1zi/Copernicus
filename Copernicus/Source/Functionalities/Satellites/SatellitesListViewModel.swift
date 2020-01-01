@@ -7,13 +7,16 @@
 //
 
 import RxSwift
+import RxCocoa
 
 public class SatellitesListViewModel {
     
     //
     // MARK: - Properties
     //
+    
     private let disposeBag = DisposeBag()
+    public let satellites = BehaviorRelay<[SatelliteModel]>(value: [])
     
     //
     // MARK: - Init
@@ -29,10 +32,11 @@ public class SatellitesListViewModel {
     
     private func getSatellites() {
         
-        SatelliteRepository.sharedInstance.getSatellitesObservable().subscribe(onSuccess: { [weak self] response in
-            print(response)
-        }) { [weak self] error in
-            print(error.localizedDescription)
-        }.disposed(by: disposeBag)
+        SatelliteRepository.sharedInstance
+            .getSatellitesObservable()
+            .subscribe(onNext: { [unowned self] satellites in
+                print(satellites.count)
+                self.satellites.accept(satellites)
+        }).disposed(by: disposeBag)
     }
 }

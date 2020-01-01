@@ -47,6 +47,7 @@
 		A141EBC423BA5C0500BF26C6 /* Satellites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A141EBC323BA5C0500BF26C6 /* Satellites.storyboard */; };
 		A141EBC623BA5CBB00BF26C6 /* SatelliteRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBC523BA5CBB00BF26C6 /* SatelliteRemoteRepository.swift */; };
 		A141EBC823BA6DC800BF26C6 /* SatelliteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBC723BA6DC800BF26C6 /* SatelliteRepository.swift */; };
+		A15A44B423BCF39800A3F07E /* SatelliteLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15A44B323BCF39800A3F07E /* SatelliteLocalRepository.swift */; };
 		A160A18A23A5413A00025C02 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = A160A18923A5413A00025C02 /* config.plist */; };
 		A160A19723A544F500025C02 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160A19623A544F500025C02 /* ConfigurationManager.swift */; };
 		A160A19923A65CE700025C02 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160A19823A65CE700025C02 /* Logger.swift */; };
@@ -123,6 +124,7 @@
 		A141EBC323BA5C0500BF26C6 /* Satellites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Satellites.storyboard; sourceTree = "<group>"; };
 		A141EBC523BA5CBB00BF26C6 /* SatelliteRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SatelliteRemoteRepository.swift; path = Copernicus/Source/Functionalities/Satellites/SatelliteRemoteRepository.swift; sourceTree = SOURCE_ROOT; };
 		A141EBC723BA6DC800BF26C6 /* SatelliteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteRepository.swift; sourceTree = "<group>"; };
+		A15A44B323BCF39800A3F07E /* SatelliteLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteLocalRepository.swift; sourceTree = "<group>"; };
 		A160A18923A5413A00025C02 /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		A160A19623A544F500025C02 /* ConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
 		A160A19823A65CE700025C02 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -397,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				A141EBB723BA524D00BF26C6 /* Models */,
+				A15A44B323BCF39800A3F07E /* SatelliteLocalRepository.swift */,
 			);
 			path = LocalRepository;
 			sourceTree = "<group>";
@@ -808,6 +811,7 @@
 				3D8E525023ABA6E40067CD39 /* WalkthroughViewController.swift in Sources */,
 				3D144F1F23A90B9300E17504 /* UIColor.swift in Sources */,
 				3D144F1D23A908A000E17504 /* UIView.swift in Sources */,
+				A15A44B423BCF39800A3F07E /* SatelliteLocalRepository.swift in Sources */,
 				3D231DC523A8D42F00B4CFD4 /* HomeViewController.swift in Sources */,
 				A141EBC823BA6DC800BF26C6 /* SatelliteRepository.swift in Sources */,
 				3D0E604C23A76FFB00F9ECFD /* LanguageManager.swift in Sources */,
