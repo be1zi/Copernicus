@@ -25,22 +25,6 @@ public struct SatelliteRepository {
     
     public func getSatellitesObservable() -> Observable<[SatelliteModel]> {
         
-//        SatelliteLocalRepository.sharedInstance.allSatellitesObservable().subscribe(onNext: { [weak self] objects in
-//            print("From database:", objects.count)
-//            }).disposed(by: disposeBag)
-//
-//        SatelliteRepository.sharedInstance.getSatellitesObservable().subscribe(onSuccess: { [weak self] response in
-//            print("From network:", response)
-//        }) { [weak self] error in
-//            print(error.localizedDescription)
-//        }.disposed(by: disposeBag)
-        
-        
-//        return provider.rx.request(.allSatellites).map { response in
-//            Realm.saveSatellites(jsonResponse: response)
-//        }
-        
-        
         // if need synchronize
         
         _ = provider.rx.request(.allSatellites).map { response in

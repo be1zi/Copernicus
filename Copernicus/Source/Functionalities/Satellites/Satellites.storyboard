@@ -14,9 +14,28 @@
                     <view key="view" contentMode="scaleToFill" id="sG3-Za-JEO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BdO-dP-EVx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="IY7-2g-6P5" id="HdO-wk-Yz2"/>
+                                    <outlet property="delegate" destination="IY7-2g-6P5" id="iX5-MY-crJ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cVj-fd-9Sr" firstAttribute="bottom" secondItem="BdO-dP-EVx" secondAttribute="bottom" id="9Ch-Zh-e7k"/>
+                            <constraint firstItem="cVj-fd-9Sr" firstAttribute="trailing" secondItem="BdO-dP-EVx" secondAttribute="trailing" id="SUY-h1-rr8"/>
+                            <constraint firstItem="BdO-dP-EVx" firstAttribute="top" secondItem="cVj-fd-9Sr" secondAttribute="top" id="Xix-fe-a08"/>
+                            <constraint firstItem="BdO-dP-EVx" firstAttribute="leading" secondItem="cVj-fd-9Sr" secondAttribute="leading" id="vap-Gs-wsO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cVj-fd-9Sr"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="BdO-dP-EVx" id="L6D-79-GOX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="itg-43-IrQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
