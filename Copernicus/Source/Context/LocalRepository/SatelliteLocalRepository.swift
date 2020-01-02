@@ -24,7 +24,11 @@ public struct SatelliteLocalRepository {
     
     public func allSatellitesObservable() -> Observable<[SatelliteModel]> {
         let realm = try! Realm()
+        let predicate = NSPredicate(format: "properties.name IN {'Landsat-8', 'Sentinel-2A', 'Sentinel-2B'}")
+        
         let satellites = realm.objects(SatelliteModel.self)
+            .filter(predicate)
+            .sorted(byKeyPath: "properties.name", ascending: true)
         
         return Observable.array(from: satellites)
     }
