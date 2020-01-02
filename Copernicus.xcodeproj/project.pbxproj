@@ -51,6 +51,9 @@
 		A11E20BB23BE398900F62995 /* SatelliteDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E20BA23BE398900F62995 /* SatelliteDetailsViewModel.swift */; };
 		A11E20BF23BE39B100F62995 /* SatelliteDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A11E20BE23BE39B100F62995 /* SatelliteDetails.storyboard */; };
 		A11E20C123BE5C1100F62995 /* MultiGeometryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E20C023BE5C1100F62995 /* MultiGeometryModel.swift */; };
+		A11E20C423BE725D00F62995 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E20C323BE725D00F62995 /* LocationViewController.swift */; };
+		A11E20C623BE726A00F62995 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E20C523BE726A00F62995 /* LocationViewModel.swift */; };
+		A11E20C823BE728100F62995 /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A11E20C723BE728100F62995 /* Location.storyboard */; };
 		A141EBB923BA526400BF26C6 /* SatelliteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBB823BA526400BF26C6 /* SatelliteModel.swift */; };
 		A141EBBB23BA543400BF26C6 /* SingleGeometryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBBA23BA543400BF26C6 /* SingleGeometryModel.swift */; };
 		A141EBBD23BA54D000BF26C6 /* SensorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBBC23BA54D000BF26C6 /* SensorModel.swift */; };
@@ -140,6 +143,9 @@
 		A11E20BA23BE398900F62995 /* SatelliteDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteDetailsViewModel.swift; sourceTree = "<group>"; };
 		A11E20BE23BE39B100F62995 /* SatelliteDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SatelliteDetails.storyboard; sourceTree = "<group>"; };
 		A11E20C023BE5C1100F62995 /* MultiGeometryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiGeometryModel.swift; sourceTree = "<group>"; };
+		A11E20C323BE725D00F62995 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		A11E20C523BE726A00F62995 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		A11E20C723BE728100F62995 /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
 		A141EBB823BA526400BF26C6 /* SatelliteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteModel.swift; sourceTree = "<group>"; };
 		A141EBBA23BA543400BF26C6 /* SingleGeometryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleGeometryModel.swift; sourceTree = "<group>"; };
 		A141EBBC23BA54D000BF26C6 /* SensorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorModel.swift; sourceTree = "<group>"; };
@@ -347,6 +353,16 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
+		A11E20C223BE71D600F62995 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				A11E20C323BE725D00F62995 /* LocationViewController.swift */,
+				A11E20C523BE726A00F62995 /* LocationViewModel.swift */,
+				A11E20C723BE728100F62995 /* Location.storyboard */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
 		A141EBB623BA523D00BF26C6 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -467,6 +483,7 @@
 		A160A19023A541CC00025C02 /* Functionalities */ = {
 			isa = PBXGroup;
 			children = (
+				A11E20C223BE71D600F62995 /* Location */,
 				A141EBBE23BA5B5F00BF26C6 /* Satellites */,
 				A160A19223A541EF00025C02 /* Home */,
 				3D47BD3623A77DD4003697FA /* Language */,
@@ -687,6 +704,7 @@
 				A11E20BF23BE39B100F62995 /* SatelliteDetails.storyboard in Resources */,
 				3D231DC923A8D4C100B4CFD4 /* Home.storyboard in Resources */,
 				A160A18A23A5413A00025C02 /* config.plist in Resources */,
+				A11E20C823BE728100F62995 /* Location.storyboard in Resources */,
 				A1BFF32423A5349B008165FA /* LaunchScreen.storyboard in Resources */,
 				3D16356723AA4EB8001F05DD /* Walkthrough.storyboard in Resources */,
 				3D98F3F823ACFBCF000E70D9 /* Settings.storyboard in Resources */,
@@ -864,6 +882,7 @@
 				A141EBBD23BA54D000BF26C6 /* SensorModel.swift in Sources */,
 				3D231DC323A8D27D00B4CFD4 /* Font.swift in Sources */,
 				A141EBC223BA5BCC00BF26C6 /* SatellitesListViewModel.swift in Sources */,
+				A11E20C623BE726A00F62995 /* LocationViewModel.swift in Sources */,
 				3D231DC723A8D4B500B4CFD4 /* HomeViewModel.swift in Sources */,
 				3D0E604123A764B000F9ECFD /* BaseViewController.swift in Sources */,
 				3D231DC123A8D0BF00B4CFD4 /* COPButton.swift in Sources */,
@@ -872,6 +891,7 @@
 				A11E20C123BE5C1100F62995 /* MultiGeometryModel.swift in Sources */,
 				3D144F1F23A90B9300E17504 /* UIColor.swift in Sources */,
 				3D144F1D23A908A000E17504 /* UIView.swift in Sources */,
+				A11E20C423BE725D00F62995 /* LocationViewController.swift in Sources */,
 				A11E20AE23BE272900F62995 /* TrajectoryModel.swift in Sources */,
 				A11E20B623BE35D000F62995 /* TrajectoryRemoteRepository.swift in Sources */,
 				A15A44B423BCF39800A3F07E /* SatelliteLocalRepository.swift in Sources */,

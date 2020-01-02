@@ -57,6 +57,17 @@ struct WindowController {
         presentViewControllerAsRoot(viewController)
     }
     
+    public func presentLocationController() {
+        
+        let vc = UIStoryboard.init(name: "Location", bundle: nil).instantiateInitialViewController()
+        
+        guard let viewController = vc else {
+            return
+        }
+        
+        presentViewControllerAsRoot(viewController)
+    }
+    
     //
     // MARK: - Helper
     //

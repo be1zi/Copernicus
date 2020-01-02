@@ -17,6 +17,7 @@
 //Buttons
 "button.loop.description" = "Show again";
 "button.skip.title" = "Skip";
+"button.save.title" = "Save";
 
 //Language View
 "language.view.info" = "Welcome in Copernicus App. Please choose your language.";

@@ -62,7 +62,7 @@ class WalkthroughPageViewController: UIPageViewController {
                          viewModel.pages[1].skipBehaviorRelay.asObservable(),
                          viewModel.pages[2].skipBehaviorRelay.asObservable())
             .subscribe(onNext: { _ in
-                AppDelegate.sharedInstance.windowController?.presentHomeController()
+                AppDelegate.sharedInstance.windowController?.presentLocationController()
             }).disposed(by: disposeBag)
     }
 }
