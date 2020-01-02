@@ -14,9 +14,25 @@
                     <view key="view" contentMode="scaleToFill" id="9Qu-ES-93Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ff-jz-lG8">
+                                <rect key="frame" x="20" y="64" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4ff-jz-lG8" firstAttribute="top" secondItem="gra-ge-d5S" secondAttribute="top" constant="20" id="M9J-lP-2fT"/>
+                            <constraint firstItem="4ff-jz-lG8" firstAttribute="leading" secondItem="gra-ge-d5S" secondAttribute="leading" constant="20" id="SmO-3I-wub"/>
+                            <constraint firstItem="gra-ge-d5S" firstAttribute="trailing" secondItem="4ff-jz-lG8" secondAttribute="trailing" constant="20" id="iT6-2C-hY7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gra-ge-d5S"/>
                     </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="4ff-jz-lG8" id="OFy-wj-DSJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Icy-Xe-2hc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -88,6 +88,7 @@ extension SatellitesListViewController: UITableViewDelegate {
         let viewController = UIStoryboard(name: "SatelliteDetails", bundle: nil).instantiateInitialViewController()
         
         if let vc = viewController as? SatelliteDetailsViewController {
+            vc.setViewModel(viewModel: SatelliteDetailsViewModel(satellite: viewModel.satellites.value[indexPath.row]))
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

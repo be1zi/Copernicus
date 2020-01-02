@@ -8,4 +8,22 @@
 
 public struct SatelliteDetailsViewModel {
     
+    //
+    // MARK: - Properties
+    //
+    
+    private let satellite: SatelliteModel
+    public var title: String? {
+        get {
+            return satellite.properties?.name
+        }
+    }
+    
+    //
+    // MARK: - Init
+    //
+    
+    init(satellite: SatelliteModel) {
+        self.satellite = satellite
+    }
 }

@@ -14,5 +14,37 @@ public class SatelliteDetailsViewController: BaseViewController {
     // MARK: - Properties
     //
     
+    @IBOutlet weak var titleLabel: UILabel!
+    
     private var viewModel: SatelliteDetailsViewModel?
+    
+    //
+    // MARK: - Lifecycle
+    //
+    
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setData()
+    }
+    
+    //
+    // MARK: - Appearance
+    //
+    
+    override public var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
+    }
+    
+    //
+    // MARK: - Methods
+    //
+    
+    public func setViewModel(viewModel: SatelliteDetailsViewModel) {
+        self.viewModel = viewModel
+    }
+    
+    public func setData() {
+        titleLabel.text = viewModel?.title
+    }
 }
