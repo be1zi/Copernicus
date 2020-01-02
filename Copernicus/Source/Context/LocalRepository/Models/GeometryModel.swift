@@ -16,7 +16,7 @@ public class GeometryModel: Object, Codable {
     
     @objc dynamic var id: Int = 0
     @objc dynamic var type: String?
-    let coordinates = List<Double>()
+    let coordinates = List<CoordinateModel>()
     
     private enum CodingKeys: String, CodingKey {
         case id
@@ -40,7 +40,8 @@ public class GeometryModel: Object, Codable {
                 coordinates.removeAll()
             }
             
-            coordinates.append(objectsIn: coord)
+            let coordinatesObject = CoordinateModel(latitude: coord.first, longitude: coord.last)
+            coordinates.append(coordinatesObject)
         }
         
         super.init()

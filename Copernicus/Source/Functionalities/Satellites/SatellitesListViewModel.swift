@@ -17,9 +17,13 @@ public class SatellitesListViewModel {
     
     private let disposeBag = DisposeBag()
     public let satellites = BehaviorRelay<[SatelliteModel]>(value: [])
-    public var satellitesCount: Int = 0
+    public var satellitesCount: Int {
+        get {
+            return satellites.value.count
+        }
+    }
     public let cellName = String(describing: SatellitesListCell.self)
-
+    
     //
     // MARK: - Init
     //
@@ -38,7 +42,6 @@ public class SatellitesListViewModel {
             .getSatellitesObservable()
             .subscribe(onNext: { [unowned self] satellites in
                 self.satellites.accept(satellites)
-                self.satellitesCount = satellites.count
         }).disposed(by: disposeBag)
     }
 }

@@ -18,6 +18,7 @@ public struct SatelliteRepository {
     
     public static let sharedInstance = SatelliteRepository()
     private let provider = MoyaProvider<SatelliteRemoteRepository>()
+    private let disposeBag = DisposeBag()
     
     //
     // MARK: - Methods
@@ -27,9 +28,11 @@ public struct SatelliteRepository {
         
         // if need synchronize
         
-        _ = provider.rx.request(.allSatellites).map { response in
+        provider.rx.request(.allSatellites).map { response in
             Realm.saveSatellites(jsonResponse: response)
-        }
+            }
+        .subscribe()
+        .disposed(by: disposeBag)
                 
         return SatelliteLocalRepository.sharedInstance.allSatellitesObservable()
     }
