@@ -80,3 +80,15 @@ extension SatellitesListViewController: UITableViewDataSource {
         return cell
     }
 }
+
+extension SatellitesListViewController: UITableViewDelegate {
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let viewController = UIStoryboard(name: "SatelliteDetails", bundle: nil).instantiateInitialViewController()
+        
+        if let vc = viewController as? SatelliteDetailsViewController {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+}
