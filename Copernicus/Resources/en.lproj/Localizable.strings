@@ -35,3 +35,6 @@
 "walkthrough.desc.1" = "Explore \r\nthe world";
 "walkthrough.desc.2" = "Use your own \r\nlocation";
 "walkthrough.desc.3" = "And get incredible information about area around you";
+
+//Satellites
+"satellites.list.title" = "Satellites";

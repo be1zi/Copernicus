@@ -35,3 +35,6 @@
 "walkthrough.desc.1" = "Odkrywaj \r\nświat";
 "walkthrough.desc.2" = "Wykorzystaj swoją \r\nlokalizację";
 "walkthrough.desc.3" = "aby zobaczyć niezwykłe informacje o otaczającym Cię świecie";
+
+//Satellites
+"satellites.list.title" = "Satelity";

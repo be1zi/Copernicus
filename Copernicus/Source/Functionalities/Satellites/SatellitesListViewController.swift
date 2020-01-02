@@ -29,6 +29,20 @@ public class SatellitesListViewController: BaseViewController {
         
         registerCell()
         setupRx()
+        
+        tableView.tableFooterView = UIView()
+    }
+    
+    //
+    // MARK: - Appearance
+    //
+    
+    override public var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
+    }
+    
+    public override func navigationBarTitle() -> String? {
+        return "satellites.list.title".localized()
     }
     
     //
