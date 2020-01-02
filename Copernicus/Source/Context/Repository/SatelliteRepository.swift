@@ -29,7 +29,7 @@ public struct SatelliteRepository {
         // if need synchronize
         
         provider.rx.request(.allSatellites).map { response in
-            Realm.saveSatellites(jsonResponse: response)
+            SatelliteLocalRepository.sharedInstance.saveSatellites(jsonResponse: response)
         }
         .subscribe()
         .disposed(by: disposeBag)

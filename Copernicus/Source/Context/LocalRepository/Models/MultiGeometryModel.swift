@@ -40,8 +40,8 @@ public class MultiGeometryModel: Object, Codable {
                 coordinates.removeAll()
             }
             
-            for singleCoordinate in coord {
-                let coordinatesObject = CoordinateModel(latitude: singleCoordinate.first, longitude: singleCoordinate.last)
+            for (index, singleCoordinate) in coord.enumerated() {
+                let coordinatesObject = CoordinateModel(id: "\(id)\(index)_multi", latitude: singleCoordinate.first, longitude: singleCoordinate.last)
                 coordinates.append(coordinatesObject)
             }
         }

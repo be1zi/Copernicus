@@ -40,7 +40,7 @@ public class SingleGeometryModel: Object, Codable {
                 coordinates.removeAll()
             }
             
-            let coordinatesObject = CoordinateModel(latitude: coord.first, longitude: coord.last)
+            let coordinatesObject = CoordinateModel(id: "\(id)\(1)_single", latitude: coord.first, longitude: coord.last)
             coordinates.append(coordinatesObject)
         }
         

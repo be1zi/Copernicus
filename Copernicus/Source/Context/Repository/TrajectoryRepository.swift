@@ -27,7 +27,7 @@ public struct TrajectoryRepository {
     public func getTrajectoryObservable(satelliteId id: Int) -> Observable<TrajectoryModel> {
         
         provider.rx.request(.trajectory(satelliteId: id)).map { response in
-            Realm.saveTrajectory(jsonResponse: response)
+            TrajectoryLocalRepository.sharedInstance.saveTrajectory(jsonResponse: response)
         }
         .subscribe()
         .disposed(by: disposeBag)
