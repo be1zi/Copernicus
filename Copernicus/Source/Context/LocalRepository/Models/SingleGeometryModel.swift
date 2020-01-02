@@ -1,5 +1,5 @@
 //
-//  SatelliteModel.swift
+//  SingleGeometryModel.swift
 //  Copernicus
 //
 //  Created by Konrad Bełzowski on 30/12/2019.
@@ -8,20 +8,20 @@
 
 import RealmSwift
 
-public class SatelliteModel: Object, Codable {
+public class SingleGeometryModel: Object, Codable {
     
     //
     // MARK: - Properties
     //
     
     @objc dynamic var id: Int = 0
-    @objc dynamic var geometry: SingleGeometryModel?
-    @objc dynamic var properties: SatellitePropertiesModel?
+    @objc dynamic var type: String?
+    let coordinates = List<CoordinateModel>()
     
     private enum CodingKeys: String, CodingKey {
         case id
-        case geometry
-        case properties
+        case type
+        case coordinates
     }
     
     //
@@ -33,8 +33,16 @@ public class SatelliteModel: Object, Codable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         id = try container.decodeIfPresent(Int.self, forKey: .id) ?? 0
-        geometry = try? container.decodeIfPresent(SingleGeometryModel.self, forKey: .geometry)
-        properties = try? container.decodeIfPresent(SatellitePropertiesModel.self, forKey: .properties)
+        type = try? container.decodeIfPresent(String.self, forKey: .type)
+        
+        if let coord = try? container.decodeIfPresent([Double].self, forKey: .coordinates) {
+            if coordinates.count != 0 {
+                coordinates.removeAll()
+            }
+            
+            let coordinatesObject = CoordinateModel(latitude: coord.first, longitude: coord.last)
+            coordinates.append(coordinatesObject)
+        }
         
         super.init()
     }

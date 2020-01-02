@@ -6,13 +6,20 @@
 //  Copyright © 2020 Konrad Bełzowski. All rights reserved.
 //
 
-public struct SatelliteDetailsViewModel {
+import RxSwift
+import RxCocoa
+
+public class SatelliteDetailsViewModel {
     
     //
     // MARK: - Properties
     //
     
     private let satellite: SatelliteModel
+    private var trajectory = ReplaySubject<TrajectoryModel>.create(bufferSize: 1)
+    public var changed = ReplaySubject<Void>.create(bufferSize: 1)
+    private let disposeBag = DisposeBag()
+    
     public var title: String? {
         get {
             return satellite.properties?.name
@@ -25,5 +32,20 @@ public struct SatelliteDetailsViewModel {
     
     init(satellite: SatelliteModel) {
         self.satellite = satellite
+        
+        getTrajectory()
+    }
+    
+    //
+    // MARK: - Data
+    //
+    
+    private func getTrajectory() {
+        
+        TrajectoryRepository.sharedInstance.getTrajectoryObservable(satelliteId: satellite.id)
+            .subscribe(onNext: { [unowned self] trajectory in
+                self.trajectory.onNext(trajectory)
+                self.changed.onNext(())
+        }).disposed(by: disposeBag)
     }
 }

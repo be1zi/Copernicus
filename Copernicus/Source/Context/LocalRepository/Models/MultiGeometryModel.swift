@@ -1,14 +1,14 @@
 //
-//  GeometryModel.swift
+//  MultiGeometryModel.swift
 //  Copernicus
 //
-//  Created by Konrad Bełzowski on 30/12/2019.
-//  Copyright © 2019 Konrad Bełzowski. All rights reserved.
+//  Created by Konrad Bełzowski on 02/01/2020.
+//  Copyright © 2020 Konrad Bełzowski. All rights reserved.
 //
 
 import RealmSwift
 
-public class GeometryModel: Object, Codable {
+public class MultiGeometryModel: Object, Codable {
     
     //
     // MARK: - Properties
@@ -35,13 +35,15 @@ public class GeometryModel: Object, Codable {
         id = try container.decodeIfPresent(Int.self, forKey: .id) ?? 0
         type = try? container.decodeIfPresent(String.self, forKey: .type)
         
-        if let coord = try? container.decodeIfPresent([Double].self, forKey: .coordinates) {
+        if let coord = try? container.decodeIfPresent([[Double]].self, forKey: .coordinates) {
             if coordinates.count != 0 {
                 coordinates.removeAll()
             }
             
-            let coordinatesObject = CoordinateModel(latitude: coord.first, longitude: coord.last)
-            coordinates.append(coordinatesObject)
+            for singleCoordinate in coord {
+                let coordinatesObject = CoordinateModel(latitude: singleCoordinate.first, longitude: singleCoordinate.last)
+                coordinates.append(coordinatesObject)
+            }
         }
         
         super.init()

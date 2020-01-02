@@ -15,7 +15,7 @@ public class TrajectoryModel: Object, Codable {
     //
     
     @objc dynamic var id: Int = 0
-    @objc dynamic var geometry: GeometryModel?
+    @objc dynamic var geometry: MultiGeometryModel?
     
     private enum CodingKeys: String, CodingKey {
         case id
@@ -30,7 +30,7 @@ public class TrajectoryModel: Object, Codable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         id = try container.decodeIfPresent(Int.self, forKey: .id) ?? 0
-        geometry = try? container.decodeIfPresent(GeometryModel.self, forKey: .geometry)
+        geometry = try? container.decodeIfPresent(MultiGeometryModel.self, forKey: .geometry)
         
         super.init()
     }

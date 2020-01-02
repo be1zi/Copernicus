@@ -79,7 +79,7 @@ public extension Realm {
                     try realm.write {
                         if let oldGeometry = satellite.geometry, let newGeometry = object.geometry {
                             realm.delete([oldGeometry], cascading: true)
-                            let newGeometry = realm.create(GeometryModel.self, value: newGeometry, update: .error)
+                            let newGeometry = realm.create(SingleGeometryModel.self, value: newGeometry, update: .error)
                             satellite.geometry = newGeometry
                         }
                     }
@@ -97,7 +97,20 @@ public extension Realm {
     
     static func saveTrajectory(jsonResponse: Response) {
         
-        guard let trajectory = try? JSONDecoder().decode(TrajectoryModel.self, from: jsonResponse.data) else {
+        guard var data = try? JSONSerialization.jsonObject(with: jsonResponse.data, options: []) as? [String: Any] else {
+            return
+        }
+        
+        if var geometry = data["geometry"] as? [String: Any] {
+            geometry["id"] = data["id"]
+            data["geometry"] = geometry
+        }
+        
+        guard let unwrappedData = try? JSONSerialization.data(withJSONObject: data, options: []) else {
+            return
+        }
+        
+        guard let trajectory = try? JSONDecoder().decode(TrajectoryModel.self, from: unwrappedData) else {
             return
         }
         

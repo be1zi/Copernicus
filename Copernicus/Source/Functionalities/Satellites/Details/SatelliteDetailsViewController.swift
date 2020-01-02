@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 public class SatelliteDetailsViewController: BaseViewController {
     
@@ -17,6 +18,7 @@ public class SatelliteDetailsViewController: BaseViewController {
     @IBOutlet weak var titleLabel: UILabel!
     
     private var viewModel: SatelliteDetailsViewModel?
+    private let disposeBag = DisposeBag()
     
     //
     // MARK: - Lifecycle
@@ -26,6 +28,7 @@ public class SatelliteDetailsViewController: BaseViewController {
         super.viewDidLoad()
         
         setData()
+        setupRx()
     }
     
     //
@@ -46,5 +49,12 @@ public class SatelliteDetailsViewController: BaseViewController {
     
     public func setData() {
         titleLabel.text = viewModel?.title
+    }
+    
+    private func setupRx() {
+        
+        viewModel?.changed.subscribe(onNext: {
+            // reload map
+        }).disposed(by: disposeBag)
     }
 }

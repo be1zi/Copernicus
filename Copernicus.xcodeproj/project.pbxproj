@@ -50,8 +50,9 @@
 		A11E20B923BE397C00F62995 /* SatelliteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E20B823BE397C00F62995 /* SatelliteDetailsViewController.swift */; };
 		A11E20BB23BE398900F62995 /* SatelliteDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E20BA23BE398900F62995 /* SatelliteDetailsViewModel.swift */; };
 		A11E20BF23BE39B100F62995 /* SatelliteDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A11E20BE23BE39B100F62995 /* SatelliteDetails.storyboard */; };
+		A11E20C123BE5C1100F62995 /* MultiGeometryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E20C023BE5C1100F62995 /* MultiGeometryModel.swift */; };
 		A141EBB923BA526400BF26C6 /* SatelliteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBB823BA526400BF26C6 /* SatelliteModel.swift */; };
-		A141EBBB23BA543400BF26C6 /* GeometryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBBA23BA543400BF26C6 /* GeometryModel.swift */; };
+		A141EBBB23BA543400BF26C6 /* SingleGeometryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBBA23BA543400BF26C6 /* SingleGeometryModel.swift */; };
 		A141EBBD23BA54D000BF26C6 /* SensorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBBC23BA54D000BF26C6 /* SensorModel.swift */; };
 		A141EBC023BA5B7700BF26C6 /* SatellitesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBBF23BA5B7700BF26C6 /* SatellitesListViewController.swift */; };
 		A141EBC223BA5BCC00BF26C6 /* SatellitesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBC123BA5BCC00BF26C6 /* SatellitesListViewModel.swift */; };
@@ -138,8 +139,9 @@
 		A11E20B823BE397C00F62995 /* SatelliteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteDetailsViewController.swift; sourceTree = "<group>"; };
 		A11E20BA23BE398900F62995 /* SatelliteDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteDetailsViewModel.swift; sourceTree = "<group>"; };
 		A11E20BE23BE39B100F62995 /* SatelliteDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SatelliteDetails.storyboard; sourceTree = "<group>"; };
+		A11E20C023BE5C1100F62995 /* MultiGeometryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiGeometryModel.swift; sourceTree = "<group>"; };
 		A141EBB823BA526400BF26C6 /* SatelliteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteModel.swift; sourceTree = "<group>"; };
-		A141EBBA23BA543400BF26C6 /* GeometryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryModel.swift; sourceTree = "<group>"; };
+		A141EBBA23BA543400BF26C6 /* SingleGeometryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleGeometryModel.swift; sourceTree = "<group>"; };
 		A141EBBC23BA54D000BF26C6 /* SensorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorModel.swift; sourceTree = "<group>"; };
 		A141EBBF23BA5B7700BF26C6 /* SatellitesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitesListViewController.swift; sourceTree = "<group>"; };
 		A141EBC123BA5BCC00BF26C6 /* SatellitesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitesListViewModel.swift; sourceTree = "<group>"; };
@@ -358,11 +360,12 @@
 			isa = PBXGroup;
 			children = (
 				A141EBB823BA526400BF26C6 /* SatelliteModel.swift */,
-				A141EBBA23BA543400BF26C6 /* GeometryModel.swift */,
+				A141EBBA23BA543400BF26C6 /* SingleGeometryModel.swift */,
 				A141EBBC23BA54D000BF26C6 /* SensorModel.swift */,
 				A11CBF2C23BBA44B000F976C /* SatellitePropertiesModel.swift */,
 				A11E20AD23BE272900F62995 /* TrajectoryModel.swift */,
 				A11E20AF23BE296400F62995 /* CoordinateModel.swift */,
+				A11E20C023BE5C1100F62995 /* MultiGeometryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -854,7 +857,7 @@
 				3D98F3F623ACFBBF000E70D9 /* SettingsViewModel.swift in Sources */,
 				A11CBF2B23BB59C6000F976C /* Realm.swift in Sources */,
 				3D16356923AA5789001F05DD /* WalkthroughContentViewController.swift in Sources */,
-				A141EBBB23BA543400BF26C6 /* GeometryModel.swift in Sources */,
+				A141EBBB23BA543400BF26C6 /* SingleGeometryModel.swift in Sources */,
 				A11CBF2D23BBA44B000F976C /* SatellitePropertiesModel.swift in Sources */,
 				A11E20B923BE397C00F62995 /* SatelliteDetailsViewController.swift in Sources */,
 				3D16356523AA4EA8001F05DD /* WalkthroughPageViewController.swift in Sources */,
@@ -866,6 +869,7 @@
 				3D231DC123A8D0BF00B4CFD4 /* COPButton.swift in Sources */,
 				A11E20B223BE33AA00F62995 /* TrajectoryLocalRepository.swift in Sources */,
 				3D8E525023ABA6E40067CD39 /* WalkthroughViewController.swift in Sources */,
+				A11E20C123BE5C1100F62995 /* MultiGeometryModel.swift in Sources */,
 				3D144F1F23A90B9300E17504 /* UIColor.swift in Sources */,
 				3D144F1D23A908A000E17504 /* UIView.swift in Sources */,
 				A11E20AE23BE272900F62995 /* TrajectoryModel.swift in Sources */,
