@@ -44,6 +44,9 @@
 		A11E20AC23BE155C00F62995 /* SatellitesListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E20AB23BE155C00F62995 /* SatellitesListCellViewModel.swift */; };
 		A11E20AE23BE272900F62995 /* TrajectoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E20AD23BE272900F62995 /* TrajectoryModel.swift */; };
 		A11E20B023BE296400F62995 /* CoordinateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E20AF23BE296400F62995 /* CoordinateModel.swift */; };
+		A11E20B223BE33AA00F62995 /* TrajectoryLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E20B123BE33AA00F62995 /* TrajectoryLocalRepository.swift */; };
+		A11E20B423BE352300F62995 /* TrajectoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E20B323BE352300F62995 /* TrajectoryRepository.swift */; };
+		A11E20B623BE35D000F62995 /* TrajectoryRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E20B523BE35D000F62995 /* TrajectoryRemoteRepository.swift */; };
 		A141EBB923BA526400BF26C6 /* SatelliteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBB823BA526400BF26C6 /* SatelliteModel.swift */; };
 		A141EBBB23BA543400BF26C6 /* GeometryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBBA23BA543400BF26C6 /* GeometryModel.swift */; };
 		A141EBBD23BA54D000BF26C6 /* SensorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBBC23BA54D000BF26C6 /* SensorModel.swift */; };
@@ -126,6 +129,9 @@
 		A11E20AB23BE155C00F62995 /* SatellitesListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitesListCellViewModel.swift; sourceTree = "<group>"; };
 		A11E20AD23BE272900F62995 /* TrajectoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrajectoryModel.swift; sourceTree = "<group>"; };
 		A11E20AF23BE296400F62995 /* CoordinateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateModel.swift; sourceTree = "<group>"; };
+		A11E20B123BE33AA00F62995 /* TrajectoryLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrajectoryLocalRepository.swift; sourceTree = "<group>"; };
+		A11E20B323BE352300F62995 /* TrajectoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrajectoryRepository.swift; sourceTree = "<group>"; };
+		A11E20B523BE35D000F62995 /* TrajectoryRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrajectoryRemoteRepository.swift; path = Copernicus/Source/Context/Repository/TrajectoryRemoteRepository.swift; sourceTree = SOURCE_ROOT; };
 		A141EBB823BA526400BF26C6 /* SatelliteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteModel.swift; sourceTree = "<group>"; };
 		A141EBBA23BA543400BF26C6 /* GeometryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryModel.swift; sourceTree = "<group>"; };
 		A141EBBC23BA54D000BF26C6 /* SensorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorModel.swift; sourceTree = "<group>"; };
@@ -327,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				A141EBC723BA6DC800BF26C6 /* SatelliteRepository.swift */,
+				A11E20B323BE352300F62995 /* TrajectoryRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -423,6 +430,7 @@
 			children = (
 				A141EBB723BA524D00BF26C6 /* Models */,
 				A15A44B323BCF39800A3F07E /* SatelliteLocalRepository.swift */,
+				A11E20B123BE33AA00F62995 /* TrajectoryLocalRepository.swift */,
 			);
 			path = LocalRepository;
 			sourceTree = "<group>";
@@ -431,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				A141EBC523BA5CBB00BF26C6 /* SatelliteRemoteRepository.swift */,
+				A11E20B523BE35D000F62995 /* TrajectoryRemoteRepository.swift */,
 			);
 			path = RemoteRepository;
 			sourceTree = "<group>";
@@ -817,6 +826,7 @@
 				A141EBB923BA526400BF26C6 /* SatelliteModel.swift in Sources */,
 				A141EBC623BA5CBB00BF26C6 /* SatelliteRemoteRepository.swift in Sources */,
 				3D47BD3823A77DE6003697FA /* LanguageViewController.swift in Sources */,
+				A11E20B423BE352300F62995 /* TrajectoryRepository.swift in Sources */,
 				A1BFF31823A5349A008165FA /* AppDelegate.swift in Sources */,
 				3D231DBE23A8CF2200B4CFD4 /* UIButton.swift in Sources */,
 				3D47BD3A23A77DFA003697FA /* LanguageViewModel.swift in Sources */,
@@ -835,10 +845,12 @@
 				3D231DC723A8D4B500B4CFD4 /* HomeViewModel.swift in Sources */,
 				3D0E604123A764B000F9ECFD /* BaseViewController.swift in Sources */,
 				3D231DC123A8D0BF00B4CFD4 /* COPButton.swift in Sources */,
+				A11E20B223BE33AA00F62995 /* TrajectoryLocalRepository.swift in Sources */,
 				3D8E525023ABA6E40067CD39 /* WalkthroughViewController.swift in Sources */,
 				3D144F1F23A90B9300E17504 /* UIColor.swift in Sources */,
 				3D144F1D23A908A000E17504 /* UIView.swift in Sources */,
 				A11E20AE23BE272900F62995 /* TrajectoryModel.swift in Sources */,
+				A11E20B623BE35D000F62995 /* TrajectoryRemoteRepository.swift in Sources */,
 				A15A44B423BCF39800A3F07E /* SatelliteLocalRepository.swift in Sources */,
 				3D231DC523A8D42F00B4CFD4 /* HomeViewController.swift in Sources */,
 				A141EBC823BA6DC800BF26C6 /* SatelliteRepository.swift in Sources */,

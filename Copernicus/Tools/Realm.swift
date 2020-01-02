@@ -94,6 +94,24 @@ public extension Realm {
             Logger.logError(error: error)
         }
     }
+    
+    static func saveTrajectory(jsonResponse: Response) {
+        
+        guard let trajectory = try? JSONDecoder().decode(TrajectoryModel.self, from: jsonResponse.data) else {
+            return
+        }
+        
+        do {
+            let realm = try Realm()
+            Logger.logInfo(info: realm.configuration.fileURL?.absoluteString ?? "")
+            
+            try realm.write {
+                realm.add(trajectory, update: .modified)
+            }
+        } catch {
+            Logger.logError(error: error)
+        }
+    }
 }
 
 //

@@ -30,7 +30,7 @@ public struct SatelliteRepository {
         
         provider.rx.request(.allSatellites).map { response in
             Realm.saveSatellites(jsonResponse: response)
-            }
+        }
         .subscribe()
         .disposed(by: disposeBag)
                 
