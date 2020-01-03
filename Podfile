@@ -8,6 +8,7 @@ target 'Copernicus' do
   pod 'RxCocoa', '~> 5.0'
   pod 'Moya/RxSwift', '~> 14.0.0-beta.6'
   pod 'RxRealm', '~> 2.0.0'
+  pod 'SkyFloatingLabelTextField', '~> 3.0'
   
   target 'CopernicusTests' do
     pod 'RxTest', '~> 5.0'

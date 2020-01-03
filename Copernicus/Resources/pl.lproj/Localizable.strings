@@ -39,3 +39,12 @@
 
 //Satellites
 "satellites.list.title" = "Satelity";
+
+//Location
+"location.subtitle" = "Proszę wybrać domyślną lokalizację";
+"location.info" = "Możesz ją póżniej zmienić w ustawieniach";
+"location.textfield.country.placeholder" = "Państwo";
+"location.textfield.city.placeholder" = "Miasto";
+"location.textfield.street.placeholder" = "Ulica";
+"location.textfield.houseNumber.placeholder" = "Numer domu";
+"location.textfield.zipCode.placeholder" = "Kod pocztowy";

@@ -39,3 +39,12 @@
 
 //Satellites
 "satellites.list.title" = "Satellites";
+
+//Location
+"location.subtitle" = "Please choose the default location";
+"location.info" = "You can change it later in the settings";
+"location.textfield.country.placeholder" = "Country";
+"location.textfield.city.placeholder" = "City";
+"location.textfield.street.placeholder" = "Street";
+"location.textfield.houseNumber.placeholder" = "House number";
+"location.textfield.zipCode.placeholder" = "Zip code";

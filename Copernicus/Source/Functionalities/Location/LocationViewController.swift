@@ -16,6 +16,16 @@ public class LocationViewController: BaseViewController {
     //
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
+    
+    @IBOutlet weak var countryTextField: COPTextField!
+    @IBOutlet weak var cityTextField: COPTextField!
+    @IBOutlet weak var streetTextField: COPTextField!
+    @IBOutlet weak var houseNumberTextField: COPTextField!
+    @IBOutlet weak var zipCodeTextField: COPTextField!
+    
+    
     @IBOutlet weak var saveButton: COPButton!
     @IBOutlet weak var skipButton: COPButton!
     @IBOutlet weak var languageButton: UIButton!
@@ -30,6 +40,7 @@ public class LocationViewController: BaseViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTextFields()
         setData()
         setupRx()
     }
@@ -46,12 +57,23 @@ public class LocationViewController: BaseViewController {
         return .darkContent
     }
     
+    private func setupTextFields() {
+        countryTextField.placeholder = viewModel.country
+        cityTextField.placeholder = viewModel.city
+        streetTextField.placeholder = viewModel.street
+        houseNumberTextField.placeholder = viewModel.houseNumber
+        zipCodeTextField.placeholder = viewModel.zipCode
+    }
+    
     //
     // MARK: - Data
     //
     
     private func setData() {
         titleLabel.text = viewModel.title
+        subtitleLabel.text = viewModel.subtitle
+        infoLabel.text = viewModel.info
+        
         saveButton.setTitle(viewModel.saveButtonTitle, for: .normal)
         skipButton.setTitle(viewModel.skipButtonTitle, for: .normal)
         languageButton.setTitle(viewModel.selectedLanguage, for: .normal)
