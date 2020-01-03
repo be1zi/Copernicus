@@ -30,7 +30,7 @@ public class LocationViewController: BaseViewController {
     @IBOutlet weak var skipButton: COPButton!
     @IBOutlet weak var languageButton: UIButton!
     
-    private let viewModel = LocationViewModel()
+    private var viewModel = LocationViewModel()
     private let disposeBag = DisposeBag()
     
     //
@@ -95,8 +95,33 @@ public class LocationViewController: BaseViewController {
             AppDelegate.sharedInstance.windowController?.presentHomeController()
         }).disposed(by: disposeBag)
         
+        saveButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.viewModel.saveLocation()
+            AppDelegate.sharedInstance.windowController?.presentHomeController()
+        }).disposed(by: disposeBag)
+        
         languageButton.rx.tap.subscribe(onNext: {
             AppDelegate.sharedInstance.windowController?.presentLanguageController()
+        }).disposed(by: disposeBag)
+        
+        countryTextField.rx.value.distinctUntilChanged().subscribe(onNext: { [weak self] newValue in
+            self?.viewModel.setData(newValue: newValue, type: .country)
+        }).disposed(by: disposeBag)
+        
+        cityTextField.rx.value.distinctUntilChanged().subscribe(onNext: { [weak self] newValue in
+            self?.viewModel.setData(newValue: newValue, type: .city)
+        }).disposed(by: disposeBag)
+        
+        streetTextField.rx.value.distinctUntilChanged().subscribe(onNext: { [weak self] newValue in
+            self?.viewModel.setData(newValue: newValue, type: .street)
+        }).disposed(by: disposeBag)
+        
+        houseNumberTextField.rx.value.distinctUntilChanged().subscribe(onNext: { [weak self] newValue in
+            self?.viewModel.setData(newValue: newValue, type: .houseNumber)
+        }).disposed(by: disposeBag)
+        
+        zipCodeTextField.rx.value.distinctUntilChanged().subscribe(onNext: { [weak self] newValue in
+            self?.viewModel.setData(newValue: newValue, type: .zipCode)
         }).disposed(by: disposeBag)
     }
 }

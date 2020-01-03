@@ -1,0 +1,49 @@
+//
+//  LocationModel.swift
+//  Copernicus
+//
+//  Created by Konrad Bełzowski on 03/01/2020.
+//  Copyright © 2020 Konrad Bełzowski. All rights reserved.
+//
+
+import RealmSwift
+
+public class LocationModel: Object {
+    
+    //
+    // MARK: - Properties
+    //
+    
+    @objc dynamic var id: Int = 0
+    @objc dynamic var country: String?
+    @objc dynamic var city: String?
+    @objc dynamic var street: String?
+    @objc dynamic var houseNumber: String?
+    @objc dynamic var zipCode: String?
+    
+    //
+    // MARK: - Init
+    //
+    
+    init(_ data: LocationData) {
+        self.country = data.country
+        self.city = data.city
+        self.street = data.street
+        self.houseNumber = data.houseNumber
+        self.zipCode = data.zipCode
+        
+        super.init()
+    }
+    
+    public required init() {
+        super.init()
+    }
+    
+    //
+    // MARK: - Methods
+    //
+    
+    public override class func primaryKey() -> String? {
+        return "id"
+    }
+}

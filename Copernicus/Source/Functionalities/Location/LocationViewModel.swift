@@ -6,6 +6,14 @@
 //  Copyright © 2020 Konrad Bełzowski. All rights reserved.
 //
 
+public enum LocationFieldType {
+    case country
+    case city
+    case street
+    case houseNumber
+    case zipCode
+}
+
 public struct LocationViewModel {
     
     //
@@ -27,6 +35,12 @@ public struct LocationViewModel {
     public var selectedLanguage: String {
         return LanguageManager.sharedInstance.currentLanguage.uppercased()
     }
+        
+    private var locationData = LocationData()
+    
+    //
+    // MARK: - init
+    //
     
     public init() {
         self.setupData()
@@ -49,5 +63,33 @@ public struct LocationViewModel {
         
         self.skipButtonTitle = "button.skip.title".localized().uppercased()
         self.saveButtonTitle = "button.save.title".localized().uppercased()
+    }
+    
+    //
+    // MARK: - Set data
+    //
+    
+    public mutating func setData(newValue: String?, type: LocationFieldType) {
+        
+        switch type {
+        case .country:
+            locationData.country = newValue
+        case .city:
+            locationData.city = newValue
+        case .street:
+            locationData.street = newValue
+        case .houseNumber:
+            locationData.houseNumber = newValue
+        case .zipCode:
+            locationData.zipCode = newValue
+        }
+    }
+    
+    //
+    // MARK: - Action
+    //
+    
+    public func saveLocation() {
+        LocationLocalRepository.sharedInstance.saveLocation(locationData)
     }
 }

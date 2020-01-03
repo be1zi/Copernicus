@@ -38,6 +38,9 @@
 		3D98F3F823ACFBCF000E70D9 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D98F3F723ACFBCF000E70D9 /* Settings.storyboard */; };
 		3DEE0E9023A7970D0036DA45 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DEE0E9223A7970D0036DA45 /* Localizable.strings */; };
 		A102B28823BF75510035F915 /* COPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102B28723BF75510035F915 /* COPTextField.swift */; };
+		A102B28A23BF85DF0035F915 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102B28923BF85DF0035F915 /* LocationModel.swift */; };
+		A102B28C23BF866B0035F915 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102B28B23BF866B0035F915 /* LocationData.swift */; };
+		A102B28E23BF906B0035F915 /* LocationLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102B28D23BF906B0035F915 /* LocationLocalRepository.swift */; };
 		A11CBF2B23BB59C6000F976C /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CBF2A23BB59C6000F976C /* Realm.swift */; };
 		A11CBF2D23BBA44B000F976C /* SatellitePropertiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CBF2C23BBA44B000F976C /* SatellitePropertiesModel.swift */; };
 		A11E20A823BE14D000F62995 /* SatellitesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E20A723BE14D000F62995 /* SatellitesListCell.swift */; };
@@ -131,6 +134,9 @@
 		7E87C8CC7BDBA1B7051B7B05 /* Pods-Copernicus-CopernicusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copernicus-CopernicusUITests.release.xcconfig"; path = "Target Support Files/Pods-Copernicus-CopernicusUITests/Pods-Copernicus-CopernicusUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8825F663483BEC8673BA0E19 /* Pods_Copernicus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Copernicus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A102B28723BF75510035F915 /* COPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COPTextField.swift; sourceTree = "<group>"; };
+		A102B28923BF85DF0035F915 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		A102B28B23BF866B0035F915 /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
+		A102B28D23BF906B0035F915 /* LocationLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLocalRepository.swift; sourceTree = "<group>"; };
 		A11CBF2A23BB59C6000F976C /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
 		A11CBF2C23BBA44B000F976C /* SatellitePropertiesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitePropertiesModel.swift; sourceTree = "<group>"; };
 		A11E20A723BE14D000F62995 /* SatellitesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitesListCell.swift; sourceTree = "<group>"; };
@@ -361,6 +367,7 @@
 			children = (
 				A11E20C323BE725D00F62995 /* LocationViewController.swift */,
 				A11E20C523BE726A00F62995 /* LocationViewModel.swift */,
+				A102B28B23BF866B0035F915 /* LocationData.swift */,
 				A11E20C723BE728100F62995 /* Location.storyboard */,
 			);
 			path = Location;
@@ -378,13 +385,14 @@
 		A141EBB723BA524D00BF26C6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A141EBB823BA526400BF26C6 /* SatelliteModel.swift */,
-				A141EBBA23BA543400BF26C6 /* SingleGeometryModel.swift */,
-				A141EBBC23BA54D000BF26C6 /* SensorModel.swift */,
-				A11CBF2C23BBA44B000F976C /* SatellitePropertiesModel.swift */,
-				A11E20AD23BE272900F62995 /* TrajectoryModel.swift */,
 				A11E20AF23BE296400F62995 /* CoordinateModel.swift */,
+				A102B28923BF85DF0035F915 /* LocationModel.swift */,
 				A11E20C023BE5C1100F62995 /* MultiGeometryModel.swift */,
+				A141EBB823BA526400BF26C6 /* SatelliteModel.swift */,
+				A11CBF2C23BBA44B000F976C /* SatellitePropertiesModel.swift */,
+				A141EBBC23BA54D000BF26C6 /* SensorModel.swift */,
+				A141EBBA23BA543400BF26C6 /* SingleGeometryModel.swift */,
+				A11E20AD23BE272900F62995 /* TrajectoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -469,6 +477,7 @@
 			children = (
 				A141EBB723BA524D00BF26C6 /* Models */,
 				A15A44B323BCF39800A3F07E /* SatelliteLocalRepository.swift */,
+				A102B28D23BF906B0035F915 /* LocationLocalRepository.swift */,
 				A11E20B123BE33AA00F62995 /* TrajectoryLocalRepository.swift */,
 			);
 			path = LocalRepository;
@@ -867,6 +876,7 @@
 				A160A19723A544F500025C02 /* ConfigurationManager.swift in Sources */,
 				A141EBB923BA526400BF26C6 /* SatelliteModel.swift in Sources */,
 				A102B28823BF75510035F915 /* COPTextField.swift in Sources */,
+				A102B28E23BF906B0035F915 /* LocationLocalRepository.swift in Sources */,
 				A141EBC623BA5CBB00BF26C6 /* SatelliteRemoteRepository.swift in Sources */,
 				3D47BD3823A77DE6003697FA /* LanguageViewController.swift in Sources */,
 				A11E20B423BE352300F62995 /* TrajectoryRepository.swift in Sources */,
@@ -877,10 +887,12 @@
 				A11E20AC23BE155C00F62995 /* SatellitesListCellViewModel.swift in Sources */,
 				A11E20A823BE14D000F62995 /* SatellitesListCell.swift in Sources */,
 				3D98F3F623ACFBBF000E70D9 /* SettingsViewModel.swift in Sources */,
+				A102B28A23BF85DF0035F915 /* LocationModel.swift in Sources */,
 				A11CBF2B23BB59C6000F976C /* Realm.swift in Sources */,
 				3D16356923AA5789001F05DD /* WalkthroughContentViewController.swift in Sources */,
 				A141EBBB23BA543400BF26C6 /* SingleGeometryModel.swift in Sources */,
 				A11CBF2D23BBA44B000F976C /* SatellitePropertiesModel.swift in Sources */,
+				A102B28C23BF866B0035F915 /* LocationData.swift in Sources */,
 				A11E20B923BE397C00F62995 /* SatelliteDetailsViewController.swift in Sources */,
 				3D16356523AA4EA8001F05DD /* WalkthroughPageViewController.swift in Sources */,
 				A141EBBD23BA54D000BF26C6 /* SensorModel.swift in Sources */,
