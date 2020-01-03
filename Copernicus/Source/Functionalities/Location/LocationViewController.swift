@@ -41,6 +41,7 @@ public class LocationViewController: BaseViewController {
         super.viewDidLoad()
         
         setupTextFields()
+        setupView()
         setData()
         setupRx()
     }
@@ -57,12 +58,9 @@ public class LocationViewController: BaseViewController {
         return .darkContent
     }
     
-    private func setupTextFields() {
-        countryTextField.placeholder = viewModel.country
-        cityTextField.placeholder = viewModel.city
-        streetTextField.placeholder = viewModel.street
-        houseNumberTextField.placeholder = viewModel.houseNumber
-        zipCodeTextField.placeholder = viewModel.zipCode
+    private func setupView() {
+        languageButton.backgroundColor = UIColor.copYellowColor
+        infoLabel.textColor = UIColor.copGreyColor
     }
     
     //
@@ -77,6 +75,14 @@ public class LocationViewController: BaseViewController {
         saveButton.setTitle(viewModel.saveButtonTitle, for: .normal)
         skipButton.setTitle(viewModel.skipButtonTitle, for: .normal)
         languageButton.setTitle(viewModel.selectedLanguage, for: .normal)
+    }
+    
+    private func setupTextFields() {
+        countryTextField.placeholder = viewModel.country
+        cityTextField.placeholder = viewModel.city
+        streetTextField.placeholder = viewModel.street
+        houseNumberTextField.placeholder = viewModel.houseNumber
+        zipCodeTextField.placeholder = viewModel.zipCode
     }
     
     //
