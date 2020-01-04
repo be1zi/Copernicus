@@ -10,6 +10,7 @@ import UIKit
 
 private enum ApplicationProperties: String {
     case skipWalkthrough
+    case skipToHome
     
     public func value() -> String {
         return self.rawValue
@@ -74,7 +75,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func configureUserInterface() {
         
         window = UIWindow.init(frame: UIScreen.main.bounds)
-        windowController?.presentLanguageController()
+        shouldSkipToHome == true ? windowController?.presentHomeController() : windowController?.presentLanguageController()
         window?.makeKeyAndVisible()
     }
     
@@ -89,6 +90,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         get {
             return UserDefaults.standard.object(forKey: ApplicationProperties.skipWalkthrough.value()) as? Bool ?? false
+        }
+    }
+    
+    public var shouldSkipToHome: Bool {
+        set {
+            UserDefaults.standard.set(newValue, forKey: ApplicationProperties.skipToHome.value())
+            UserDefaults.standard.synchronize()
+        }
+        get {
+            return UserDefaults.standard.object(forKey: ApplicationProperties.skipToHome.value()) as? Bool ?? false
         }
     }
 }
