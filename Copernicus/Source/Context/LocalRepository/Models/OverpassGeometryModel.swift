@@ -1,5 +1,5 @@
 //
-//  OverpassModel.swift
+//  OverpassGeometryModel.swift
 //  Copernicus
 //
 //  Created by Konrad Bełzowski on 04/01/2020.
@@ -8,39 +8,40 @@
 
 import RealmSwift
 
-public class OverpassModel: Object, Codable {
+public class OverpassGeometryModel: Object, Codable {
     
     //
     // MARK: - Properties
     //
     
     @objc dynamic var id: Int = 0
-    @objc dynamic var frequency: Int = 0
-    let overpasses = List<SingleOverpassModel>()
+    @objc dynamic var type: String?
+    let coordinates = List<CoordinateModel>()
     
     private enum CodingKeys: String, CodingKey {
         case id
-        case frequency
-        case overpasses
+        case type
+        case coordinates
     }
     
     //
     // MARK: - Init
     //
     
-    public required init(from decoder: Decoder) throws {
+    required public init(from decoder: Decoder) throws {
         
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         id = try container.decodeIfPresent(Int.self, forKey: .id) ?? 0
-        frequency = try container.decodeIfPresent(Int.self, forKey: .frequency) ?? 0
+        type = try? container.decodeIfPresent(String.self, forKey: .type)
         
-        if let data = try? container.decodeIfPresent([SingleOverpassModel].self, forKey: .overpasses) {
-            if overpasses.count > 0 {
-                overpasses.removeAll()
+        if let coord = try? container.decodeIfPresent([Double].self, forKey: .coordinates) {
+            if coordinates.count != 0 {
+                coordinates.removeAll()
             }
             
-            overpasses.append(objectsIn: data)
+            let coordinatesObject = CoordinateModel(id: "\(id)_overpass", latitude: coord.first, longitude: coord.last)
+            coordinates.append(coordinatesObject)
         }
         
         super.init()

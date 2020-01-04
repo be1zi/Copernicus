@@ -20,15 +20,7 @@ extension OverpassRemoteRepository: TargetType {
     }
     
     public var path: String {
-        
-        switch self {
-        case .overpass(let data):
-            let apiKey = "api_key=" + (ConfigurationManager.sharedInstance.serverKey ?? "")
-            let bbox = "bbox=" + data.geometryString()
-            let satellites = "satellites=" + data.satellitesString()
-            
-            return "/overpass/?\(apiKey)&\(bbox)&\(satellites)"
-        }
+        return "/overpass/"
     }
     
     public var method: Method {
@@ -40,7 +32,15 @@ extension OverpassRemoteRepository: TargetType {
     }
     
     public var task: Task {
-        return .requestPlain
+        
+        switch self {
+        case .overpass(let data):
+            let params = ["api_key" : ConfigurationManager.sharedInstance.serverKey ?? "",
+                          "bbox" : data.geometryString(),
+                          "satellites" : data.satellitesString()]
+            
+            return .requestParameters(parameters: params, encoding: URLEncoding.default)
+        }
     }
     
     public var headers: [String : String]? {

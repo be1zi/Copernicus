@@ -12,18 +12,18 @@ public struct OverpassData {
     // MARK: - Properties
     //
     
-    public var latitude1: Double = 0.0
-    public var longitude1: Double = 0.0
-    public var latitude2: Double = 0.0
-    public var longitude2: Double = 0.0
+    public var latitude1: Double = 19.59
+    public var longitude1: Double = 49.90
+    public var latitude2: Double = 20.33
+    public var longitude2: Double = 50.21
     private let satellites: [String]
-    
+
     //
     // MARK: - Init
     //
     
     public init() {
-        self.satellites = ["Sentinel-2A", "Sentinel-2B", "Landsast-8"]
+        self.satellites = ["Sentinel-2A", "Sentinel-2B", "Landsat-8"]
     }
     
     //
@@ -41,7 +41,8 @@ public struct OverpassData {
             if index == (satellites.count - 1) {
                 value += element
             } else {
-                value += ",\(element)"
+                value += "\(element),"
+
             }
         }
         

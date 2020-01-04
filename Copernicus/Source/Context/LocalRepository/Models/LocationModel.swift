@@ -25,7 +25,7 @@ public class LocationModel: Object {
     // MARK: - Init
     //
     
-    init(_ data: LocationData) {
+    public init(_ data: LocationData) {
         self.country = data.country
         self.city = data.city
         self.street = data.street
