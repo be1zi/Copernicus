@@ -25,10 +25,11 @@ public class LocationViewController: BaseViewController {
     @IBOutlet weak var houseNumberTextField: COPTextField!
     @IBOutlet weak var zipCodeTextField: COPTextField!
     
-    
     @IBOutlet weak var saveButton: COPButton!
     @IBOutlet weak var skipButton: COPButton!
     @IBOutlet weak var languageButton: UIButton!
+    
+    @IBOutlet weak var constraintToBottom: NSLayoutConstraint!
     
     private var viewModel = LocationViewModel()
     private let disposeBag = DisposeBag()
@@ -91,6 +92,14 @@ public class LocationViewController: BaseViewController {
     
     private func setupRx() {
         
+        setupButtonRx()
+        setupTextFieldsChangeValueRx()
+        setupTextFieldsReturnButtonRx()
+        setupKeyboardRx()
+    }
+    
+    private func setupButtonRx() {
+        
         skipButton.rx.tap.subscribe(onNext: {
             AppDelegate.sharedInstance.windowController?.presentHomeController()
         }).disposed(by: disposeBag)
@@ -103,6 +112,9 @@ public class LocationViewController: BaseViewController {
         languageButton.rx.tap.subscribe(onNext: {
             AppDelegate.sharedInstance.windowController?.presentLanguageController()
         }).disposed(by: disposeBag)
+    }
+    
+    private func setupTextFieldsChangeValueRx() {
         
         countryTextField.rx.value.distinctUntilChanged().subscribe(onNext: { [weak self] newValue in
             self?.viewModel.setData(newValue: newValue, type: .country)
@@ -122,6 +134,43 @@ public class LocationViewController: BaseViewController {
         
         zipCodeTextField.rx.value.distinctUntilChanged().subscribe(onNext: { [weak self] newValue in
             self?.viewModel.setData(newValue: newValue, type: .zipCode)
+        }).disposed(by: disposeBag)
+    }
+    
+    private func setupTextFieldsReturnButtonRx() {
+        countryTextField.rx.controlEvent(.editingDidEndOnExit).subscribe(onNext: { [weak self] _ in
+            self?.countryTextField.resignFirstResponder()
+            self?.cityTextField.becomeFirstResponder()
+        }).disposed(by: disposeBag)
+     
+        cityTextField.rx.controlEvent(.editingDidEndOnExit).subscribe(onNext: { [weak self] _ in
+            self?.cityTextField.resignFirstResponder()
+            self?.streetTextField.becomeFirstResponder()
+        }).disposed(by: disposeBag)
+        
+        streetTextField.rx.controlEvent(.editingDidEndOnExit).subscribe(onNext: { [weak self] _ in
+            self?.streetTextField.resignFirstResponder()
+            self?.houseNumberTextField.becomeFirstResponder()
+        }).disposed(by: disposeBag)
+        
+        houseNumberTextField.rx.controlEvent(.editingDidEndOnExit).subscribe(onNext: { [weak self] _ in
+            self?.houseNumberTextField.resignFirstResponder()
+            self?.zipCodeTextField.becomeFirstResponder()
+        }).disposed(by: disposeBag)
+        
+        zipCodeTextField.rx.controlEvent(.editingDidEndOnExit).subscribe(onNext: { [weak self] _ in
+            self?.zipCodeTextField.resignFirstResponder()
+        }).disposed(by: disposeBag)
+    }
+    
+    private func setupKeyboardRx() {
+        
+        keyboardObserver.didShow.subscribe(onNext: { [weak self] keyboardInfo in
+            self?.constraintToBottom.constant = keyboardInfo.frameEnd.height
+        }).disposed(by: disposeBag)
+        
+        keyboardObserver.willHide.subscribe(onNext: { [weak self] keyboardInfo in
+            self?.constraintToBottom.constant = 0
         }).disposed(by: disposeBag)
     }
 }

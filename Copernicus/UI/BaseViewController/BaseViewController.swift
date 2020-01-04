@@ -11,6 +11,14 @@ import UIKit
 public class BaseViewController: UIViewController {
     
     //
+    // MARK: - Properties
+    //
+    
+    public lazy var keyboardObserver: KeyboardObserver = {
+       return KeyboardObserver()
+    }()
+    
+    //
     // MARK: - Lifecycle
     //
     

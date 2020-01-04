@@ -41,6 +41,7 @@
 		A102B28A23BF85DF0035F915 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102B28923BF85DF0035F915 /* LocationModel.swift */; };
 		A102B28C23BF866B0035F915 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102B28B23BF866B0035F915 /* LocationData.swift */; };
 		A102B28E23BF906B0035F915 /* LocationLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102B28D23BF906B0035F915 /* LocationLocalRepository.swift */; };
+		A102B29223BFBDE30035F915 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102B29123BFBDE30035F915 /* KeyboardObserver.swift */; };
 		A11CBF2B23BB59C6000F976C /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CBF2A23BB59C6000F976C /* Realm.swift */; };
 		A11CBF2D23BBA44B000F976C /* SatellitePropertiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CBF2C23BBA44B000F976C /* SatellitePropertiesModel.swift */; };
 		A11E20A823BE14D000F62995 /* SatellitesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E20A723BE14D000F62995 /* SatellitesListCell.swift */; };
@@ -137,6 +138,7 @@
 		A102B28923BF85DF0035F915 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		A102B28B23BF866B0035F915 /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
 		A102B28D23BF906B0035F915 /* LocationLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLocalRepository.swift; sourceTree = "<group>"; };
+		A102B29123BFBDE30035F915 /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
 		A11CBF2A23BB59C6000F976C /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
 		A11CBF2C23BBA44B000F976C /* SatellitePropertiesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitePropertiesModel.swift; sourceTree = "<group>"; };
 		A11E20A723BE14D000F62995 /* SatellitesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitesListCell.swift; sourceTree = "<group>"; };
@@ -532,6 +534,7 @@
 				A160A19823A65CE700025C02 /* Logger.swift */,
 				3D0E604B23A76FFB00F9ECFD /* LanguageManager.swift */,
 				A11CBF2A23BB59C6000F976C /* Realm.swift */,
+				A102B29123BFBDE30035F915 /* KeyboardObserver.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -881,6 +884,7 @@
 				3D47BD3823A77DE6003697FA /* LanguageViewController.swift in Sources */,
 				A11E20B423BE352300F62995 /* TrajectoryRepository.swift in Sources */,
 				A1BFF31823A5349A008165FA /* AppDelegate.swift in Sources */,
+				A102B29223BFBDE30035F915 /* KeyboardObserver.swift in Sources */,
 				3D231DBE23A8CF2200B4CFD4 /* UIButton.swift in Sources */,
 				3D47BD3A23A77DFA003697FA /* LanguageViewModel.swift in Sources */,
 				3D0E604A23A76FDE00F9ECFD /* String.swift in Sources */,
