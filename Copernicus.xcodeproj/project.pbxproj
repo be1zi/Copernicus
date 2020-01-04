@@ -46,6 +46,9 @@
 		A109226723C0AF690073B416 /* OverpassListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A109226623C0AF690073B416 /* OverpassListViewModel.swift */; };
 		A109226923C0AF890073B416 /* Overpass.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A109226823C0AF890073B416 /* Overpass.storyboard */; };
 		A109226B23C0B6F70073B416 /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A109226A23C0B6F70073B416 /* LocationRepository.swift */; };
+		A109226D23C0C9F70073B416 /* OverpassRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A109226C23C0C9F70073B416 /* OverpassRemoteRepository.swift */; };
+		A109226F23C0CAB00073B416 /* OverpassData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A109226E23C0CAB00073B416 /* OverpassData.swift */; };
+		A109227123C0E27E0073B416 /* OverpassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A109227023C0E27E0073B416 /* OverpassModel.swift */; };
 		A11CBF2B23BB59C6000F976C /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CBF2A23BB59C6000F976C /* Realm.swift */; };
 		A11CBF2D23BBA44B000F976C /* SatellitePropertiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CBF2C23BBA44B000F976C /* SatellitePropertiesModel.swift */; };
 		A11E20A823BE14D000F62995 /* SatellitesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E20A723BE14D000F62995 /* SatellitesListCell.swift */; };
@@ -147,6 +150,9 @@
 		A109226623C0AF690073B416 /* OverpassListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassListViewModel.swift; sourceTree = "<group>"; };
 		A109226823C0AF890073B416 /* Overpass.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Overpass.storyboard; sourceTree = "<group>"; };
 		A109226A23C0B6F70073B416 /* LocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepository.swift; sourceTree = "<group>"; };
+		A109226C23C0C9F70073B416 /* OverpassRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OverpassRemoteRepository.swift; path = Copernicus/Source/Context/Repository/OverpassRemoteRepository.swift; sourceTree = SOURCE_ROOT; };
+		A109226E23C0CAB00073B416 /* OverpassData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassData.swift; sourceTree = "<group>"; };
+		A109227023C0E27E0073B416 /* OverpassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassModel.swift; sourceTree = "<group>"; };
 		A11CBF2A23BB59C6000F976C /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
 		A11CBF2C23BBA44B000F976C /* SatellitePropertiesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitePropertiesModel.swift; sourceTree = "<group>"; };
 		A11E20A723BE14D000F62995 /* SatellitesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitesListCell.swift; sourceTree = "<group>"; };
@@ -357,6 +363,7 @@
 			children = (
 				A109226423C0AF480073B416 /* OverpassListViewController.swift */,
 				A109226623C0AF690073B416 /* OverpassListViewModel.swift */,
+				A109226E23C0CAB00073B416 /* OverpassData.swift */,
 				A109226823C0AF890073B416 /* Overpass.storyboard */,
 			);
 			path = Overpass;
@@ -414,6 +421,7 @@
 				A141EBBC23BA54D000BF26C6 /* SensorModel.swift */,
 				A141EBBA23BA543400BF26C6 /* SingleGeometryModel.swift */,
 				A11E20AD23BE272900F62995 /* TrajectoryModel.swift */,
+				A109227023C0E27E0073B416 /* OverpassModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -509,6 +517,7 @@
 			children = (
 				A141EBC523BA5CBB00BF26C6 /* SatelliteRemoteRepository.swift */,
 				A11E20B523BE35D000F62995 /* TrajectoryRemoteRepository.swift */,
+				A109226C23C0C9F70073B416 /* OverpassRemoteRepository.swift */,
 			);
 			path = RemoteRepository;
 			sourceTree = "<group>";
@@ -921,6 +930,7 @@
 				A102B28C23BF866B0035F915 /* LocationData.swift in Sources */,
 				A11E20B923BE397C00F62995 /* SatelliteDetailsViewController.swift in Sources */,
 				A109226523C0AF480073B416 /* OverpassListViewController.swift in Sources */,
+				A109226F23C0CAB00073B416 /* OverpassData.swift in Sources */,
 				3D16356523AA4EA8001F05DD /* WalkthroughPageViewController.swift in Sources */,
 				A141EBBD23BA54D000BF26C6 /* SensorModel.swift in Sources */,
 				3D231DC323A8D27D00B4CFD4 /* Font.swift in Sources */,
@@ -928,9 +938,11 @@
 				A11E20C623BE726A00F62995 /* LocationViewModel.swift in Sources */,
 				3D231DC723A8D4B500B4CFD4 /* HomeViewModel.swift in Sources */,
 				3D0E604123A764B000F9ECFD /* BaseViewController.swift in Sources */,
+				A109227123C0E27E0073B416 /* OverpassModel.swift in Sources */,
 				3D231DC123A8D0BF00B4CFD4 /* COPButton.swift in Sources */,
 				A11E20B223BE33AA00F62995 /* TrajectoryLocalRepository.swift in Sources */,
 				3D8E525023ABA6E40067CD39 /* WalkthroughViewController.swift in Sources */,
+				A109226D23C0C9F70073B416 /* OverpassRemoteRepository.swift in Sources */,
 				A11E20C123BE5C1100F62995 /* MultiGeometryModel.swift in Sources */,
 				3D144F1F23A90B9300E17504 /* UIColor.swift in Sources */,
 				3D144F1D23A908A000E17504 /* UIView.swift in Sources */,
