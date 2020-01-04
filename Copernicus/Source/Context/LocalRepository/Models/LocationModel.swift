@@ -64,4 +64,56 @@ public class LocationModel: Object {
         
         return exist
     }
+    
+    public func toString() -> String {
+        var location = ""
+        var emptyString = true
+        
+        if let value = self.country, !value.isEmpty {
+            location += value
+            emptyString = false
+        }
+        
+        if let value = self.city, !value.isEmpty {
+            if emptyString {
+                location += value
+            } else {
+                location += ", \(value)"
+            }
+            
+            emptyString = false
+        }
+        
+        if let value = self.street, !value.isEmpty {
+            if emptyString {
+                location += value
+            } else {
+                location += ", \(value)"
+            }
+            
+            emptyString = false
+        }
+        
+        if let value = self.houseNumber, !value.isEmpty {
+            if emptyString {
+                location += value
+            } else {
+                location += ", \(value)"
+            }
+            
+            emptyString = false
+        }
+        
+        if let value = self.zipCode, !value.isEmpty {
+            if emptyString {
+                location += value
+            } else {
+                location += ", \(value)"
+            }
+            
+            emptyString = false
+        }
+        
+        return location
+    }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 public class OverpassListViewController: BaseViewController {
     
@@ -21,6 +22,7 @@ public class OverpassListViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private let viewModel = OverpassListViewModel()
+    private let disposeBag = DisposeBag()
     
     //
     // MARK: - Lifecycle
@@ -30,6 +32,10 @@ public class OverpassListViewController: BaseViewController {
         super.viewDidLoad()
         
         setupView()
+        setupRx()
+        
+        setStaticData()
+        setDynamicData()
     }
     
     //
@@ -53,9 +59,18 @@ public class OverpassListViewController: BaseViewController {
     // MARK: - Data
     //
     
-    private func setData() {
+    private func setStaticData() {
         subtitleLabel.text = viewModel.subtitle
-        
         changeLocationButton.setTitle(viewModel.changeButton, for: .normal)
+    }
+    
+    public func setDynamicData() {
+        currentLocationLabel.text = viewModel.locationString
+    }
+    
+    private func setupRx() {
+        viewModel.location.subscribe(onNext: { [weak self] _ in
+            self?.setDynamicData()
+        }).disposed(by: disposeBag)
     }
 }

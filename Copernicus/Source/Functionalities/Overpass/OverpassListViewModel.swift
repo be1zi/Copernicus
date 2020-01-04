@@ -19,7 +19,8 @@ public class OverpassListViewModel {
     
     private let disposeBag = DisposeBag()
     public let location = ReplaySubject<LocationModel>.create(bufferSize: 1)
-    public var locationSelected: Bool = false
+    private var locationSelected: Bool = false
+    public var locationString = ""
 //    public var satellitesCount: Int {
 //        get {
 //            return satellites.value.count
@@ -52,6 +53,15 @@ public class OverpassListViewModel {
         LocationRepository.sharedInstance.getLocationObservable().subscribe(onNext: { [unowned self] location in
             self.location.onNext(location)
             self.locationSelected = location.exist()
+            self.setLocationData(location)
         }).disposed(by: disposeBag)
+    }
+    
+    private func setLocationData(_ loc: LocationModel) {
+        if locationSelected {
+            locationString = loc.toString()
+        } else {
+            locationString = "overpass.list.selectedLocation.notChoosed".localized()
+        }
     }
 }
