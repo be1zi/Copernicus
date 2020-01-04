@@ -46,4 +46,22 @@ public class LocationModel: Object {
     public override class func primaryKey() -> String? {
         return "id"
     }
+    
+    public func exist() -> Bool {
+        var exist = false
+        
+        if let country = self.country, !country.isEmpty {
+            exist = true
+        }
+        
+        if let city = self.city, !city.isEmpty {
+            exist = true
+        }
+        
+        if let zipCode = self.zipCode, !zipCode.isEmpty {
+            exist = true
+        }
+        
+        return exist
+    }
 }

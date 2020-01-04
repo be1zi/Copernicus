@@ -7,6 +7,7 @@
 //
 
 import RealmSwift
+import RxSwift
 
 public struct LocationLocalRepository {
     
@@ -32,5 +33,13 @@ public struct LocationLocalRepository {
         } catch {
             Logger.logError(error: error)
         }
+    }
+    
+    public func getLocationObservable() -> Observable<LocationModel> {
+        let realm = try! Realm()
+        
+        let location = realm.objects(LocationModel.self).first
+        
+        return Observable.from(optional: location)
     }
 }

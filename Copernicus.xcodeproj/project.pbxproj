@@ -42,6 +42,10 @@
 		A102B28C23BF866B0035F915 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102B28B23BF866B0035F915 /* LocationData.swift */; };
 		A102B28E23BF906B0035F915 /* LocationLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102B28D23BF906B0035F915 /* LocationLocalRepository.swift */; };
 		A102B29223BFBDE30035F915 /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102B29123BFBDE30035F915 /* KeyboardObserver.swift */; };
+		A109226523C0AF480073B416 /* OverpassListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A109226423C0AF480073B416 /* OverpassListViewController.swift */; };
+		A109226723C0AF690073B416 /* OverpassListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A109226623C0AF690073B416 /* OverpassListViewModel.swift */; };
+		A109226923C0AF890073B416 /* Overpass.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A109226823C0AF890073B416 /* Overpass.storyboard */; };
+		A109226B23C0B6F70073B416 /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A109226A23C0B6F70073B416 /* LocationRepository.swift */; };
 		A11CBF2B23BB59C6000F976C /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CBF2A23BB59C6000F976C /* Realm.swift */; };
 		A11CBF2D23BBA44B000F976C /* SatellitePropertiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CBF2C23BBA44B000F976C /* SatellitePropertiesModel.swift */; };
 		A11E20A823BE14D000F62995 /* SatellitesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E20A723BE14D000F62995 /* SatellitesListCell.swift */; };
@@ -139,6 +143,10 @@
 		A102B28B23BF866B0035F915 /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
 		A102B28D23BF906B0035F915 /* LocationLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLocalRepository.swift; sourceTree = "<group>"; };
 		A102B29123BFBDE30035F915 /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
+		A109226423C0AF480073B416 /* OverpassListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassListViewController.swift; sourceTree = "<group>"; };
+		A109226623C0AF690073B416 /* OverpassListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassListViewModel.swift; sourceTree = "<group>"; };
+		A109226823C0AF890073B416 /* Overpass.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Overpass.storyboard; sourceTree = "<group>"; };
+		A109226A23C0B6F70073B416 /* LocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepository.swift; sourceTree = "<group>"; };
 		A11CBF2A23BB59C6000F976C /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
 		A11CBF2C23BBA44B000F976C /* SatellitePropertiesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitePropertiesModel.swift; sourceTree = "<group>"; };
 		A11E20A723BE14D000F62995 /* SatellitesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitesListCell.swift; sourceTree = "<group>"; };
@@ -344,6 +352,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A109226323C0AF290073B416 /* Overpass */ = {
+			isa = PBXGroup;
+			children = (
+				A109226423C0AF480073B416 /* OverpassListViewController.swift */,
+				A109226623C0AF690073B416 /* OverpassListViewModel.swift */,
+				A109226823C0AF890073B416 /* Overpass.storyboard */,
+			);
+			path = Overpass;
+			sourceTree = "<group>";
+		};
 		A11E20A423BE149C00F62995 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,6 +398,7 @@
 			children = (
 				A141EBC723BA6DC800BF26C6 /* SatelliteRepository.swift */,
 				A11E20B323BE352300F62995 /* TrajectoryRepository.swift */,
+				A109226A23C0B6F70073B416 /* LocationRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -497,6 +516,7 @@
 		A160A19023A541CC00025C02 /* Functionalities */ = {
 			isa = PBXGroup;
 			children = (
+				A109226323C0AF290073B416 /* Overpass */,
 				A11E20C223BE71D600F62995 /* Location */,
 				A141EBBE23BA5B5F00BF26C6 /* Satellites */,
 				A160A19223A541EF00025C02 /* Home */,
@@ -718,6 +738,7 @@
 				A11E20AA23BE14FE00F62995 /* SatellitesListCell.xib in Resources */,
 				A11E20BF23BE39B100F62995 /* SatelliteDetails.storyboard in Resources */,
 				3D231DC923A8D4C100B4CFD4 /* Home.storyboard in Resources */,
+				A109226923C0AF890073B416 /* Overpass.storyboard in Resources */,
 				A160A18A23A5413A00025C02 /* config.plist in Resources */,
 				A11E20C823BE728100F62995 /* Location.storyboard in Resources */,
 				A1BFF32423A5349B008165FA /* LaunchScreen.storyboard in Resources */,
@@ -885,6 +906,7 @@
 				A11E20B423BE352300F62995 /* TrajectoryRepository.swift in Sources */,
 				A1BFF31823A5349A008165FA /* AppDelegate.swift in Sources */,
 				A102B29223BFBDE30035F915 /* KeyboardObserver.swift in Sources */,
+				A109226723C0AF690073B416 /* OverpassListViewModel.swift in Sources */,
 				3D231DBE23A8CF2200B4CFD4 /* UIButton.swift in Sources */,
 				3D47BD3A23A77DFA003697FA /* LanguageViewModel.swift in Sources */,
 				3D0E604A23A76FDE00F9ECFD /* String.swift in Sources */,
@@ -898,6 +920,7 @@
 				A11CBF2D23BBA44B000F976C /* SatellitePropertiesModel.swift in Sources */,
 				A102B28C23BF866B0035F915 /* LocationData.swift in Sources */,
 				A11E20B923BE397C00F62995 /* SatelliteDetailsViewController.swift in Sources */,
+				A109226523C0AF480073B416 /* OverpassListViewController.swift in Sources */,
 				3D16356523AA4EA8001F05DD /* WalkthroughPageViewController.swift in Sources */,
 				A141EBBD23BA54D000BF26C6 /* SensorModel.swift in Sources */,
 				3D231DC323A8D27D00B4CFD4 /* Font.swift in Sources */,
@@ -914,6 +937,7 @@
 				A11E20C423BE725D00F62995 /* LocationViewController.swift in Sources */,
 				A11E20AE23BE272900F62995 /* TrajectoryModel.swift in Sources */,
 				A11E20B623BE35D000F62995 /* TrajectoryRemoteRepository.swift in Sources */,
+				A109226B23C0B6F70073B416 /* LocationRepository.swift in Sources */,
 				A15A44B423BCF39800A3F07E /* SatelliteLocalRepository.swift in Sources */,
 				3D231DC523A8D42F00B4CFD4 /* HomeViewController.swift in Sources */,
 				A141EBC823BA6DC800BF26C6 /* SatelliteRepository.swift in Sources */,

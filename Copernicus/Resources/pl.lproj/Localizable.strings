@@ -18,6 +18,7 @@
 "button.loop.description" = "Pokaż ponownie";
 "button.skip.title" = "Pomiń";
 "button.save.title" = "Zapisz";
+"button.change.title" = "Zmień";
 
 //Language View
 "language.view.info" = "Witamy w aplikacji Copernicus. Proszę wybrać język.";
@@ -48,3 +49,7 @@
 "location.textfield.street.placeholder" = "Ulica";
 "location.textfield.houseNumber.placeholder" = "Numer domu";
 "location.textfield.zipCode.placeholder" = "Kod pocztowy";
+
+//Overpass
+"overpass.list.title" = "Kolejne przeloty";
+"overpass.list.selectedLocation.title" = "Wybrana lokacja";

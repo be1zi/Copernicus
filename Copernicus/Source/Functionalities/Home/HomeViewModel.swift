@@ -39,6 +39,7 @@ struct HomeViewModel {
     private mutating func setupCellViewModels() {
         
         cellViewModels = [HomeCellViewModel(title: "home.menu.item1".localized(), imageName: "menuSatellite", storyboardName: "Satellites"),
+                          HomeCellViewModel(title: "home.menu.item1".localized(), storyboardName: "Overpass"),
                           HomeCellViewModel(title: "home.menu.item2".localized()),
                           HomeCellViewModel(title: "home.menu.item3".localized(), imageName: "menuClouds"),
                           HomeCellViewModel(title: "home.menu.item4".localized()),

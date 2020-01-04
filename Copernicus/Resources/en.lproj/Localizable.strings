@@ -18,6 +18,7 @@
 "button.loop.description" = "Show again";
 "button.skip.title" = "Skip";
 "button.save.title" = "Save";
+"button.change.title" = "Change";
 
 //Language View
 "language.view.info" = "Welcome in Copernicus App. Please choose your language.";
@@ -48,3 +49,7 @@
 "location.textfield.street.placeholder" = "Street";
 "location.textfield.houseNumber.placeholder" = "House number";
 "location.textfield.zipCode.placeholder" = "Zip code";
+
+//Overpass
+"overpass.list.title" = "Overpasses";
+"overpass.list.selectedLocation.title" = "Selected location";
