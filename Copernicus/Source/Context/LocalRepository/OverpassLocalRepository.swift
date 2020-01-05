@@ -75,6 +75,7 @@ public struct OverpassLocalRepository {
             Logger.logInfo(info: realm.configuration.fileURL?.absoluteString ?? "")
             
             try realm.write {
+                realm.delete(realm.objects(OverpassModel.self), cascading: true)
                 realm.add(overpass, update: .modified)
             }
         } catch {
