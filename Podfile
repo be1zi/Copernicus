@@ -9,6 +9,7 @@ target 'Copernicus' do
   pod 'Moya/RxSwift', '~> 14.0.0-beta.6'
   pod 'RxRealm', '~> 2.0.0'
   pod 'SkyFloatingLabelTextField', '~> 3.0'
+  pod 'MXSegmentedPager'
   
   target 'CopernicusTests' do
     pod 'RxTest', '~> 5.0'

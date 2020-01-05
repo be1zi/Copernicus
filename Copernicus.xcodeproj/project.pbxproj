@@ -83,6 +83,9 @@
 		A160A18A23A5413A00025C02 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = A160A18923A5413A00025C02 /* config.plist */; };
 		A160A19723A544F500025C02 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160A19623A544F500025C02 /* ConfigurationManager.swift */; };
 		A160A19923A65CE700025C02 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160A19823A65CE700025C02 /* Logger.swift */; };
+		A1BA8FB623C23053007979E0 /* OverpassPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BA8FB523C23053007979E0 /* OverpassPagerViewController.swift */; };
+		A1BA8FC223C245D9007979E0 /* OverpassContentView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BA8FC123C245D9007979E0 /* OverpassContentView.storyboard */; };
+		A1BA8FC623C24D63007979E0 /* OverpassPagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BA8FC523C24D63007979E0 /* OverpassPagerViewModel.swift */; };
 		A1BFF31823A5349A008165FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BFF31723A5349A008165FA /* AppDelegate.swift */; };
 		A1BFF31E23A5349B008165FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1BFF31D23A5349B008165FA /* Assets.xcassets */; };
 		A1BFF32423A5349B008165FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BFF32223A5349B008165FA /* LaunchScreen.storyboard */; };
@@ -192,6 +195,9 @@
 		A160A18923A5413A00025C02 /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		A160A19623A544F500025C02 /* ConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
 		A160A19823A65CE700025C02 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		A1BA8FB523C23053007979E0 /* OverpassPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassPagerViewController.swift; sourceTree = "<group>"; };
+		A1BA8FC123C245D9007979E0 /* OverpassContentView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OverpassContentView.storyboard; sourceTree = "<group>"; };
+		A1BA8FC523C24D63007979E0 /* OverpassPagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassPagerViewModel.swift; sourceTree = "<group>"; };
 		A1BFF31423A5349A008165FA /* Copernicus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Copernicus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BFF31723A5349A008165FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1BFF31D23A5349B008165FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -371,10 +377,9 @@
 		A109226323C0AF290073B416 /* Overpass */ = {
 			isa = PBXGroup;
 			children = (
-				A109226423C0AF480073B416 /* OverpassListViewController.swift */,
-				A109226623C0AF690073B416 /* OverpassListViewModel.swift */,
+				A1BA8FC423C24D39007979E0 /* Content */,
+				A1BA8FC323C24D33007979E0 /* Pager */,
 				A109226E23C0CAB00073B416 /* OverpassData.swift */,
-				A109226823C0AF890073B416 /* Overpass.storyboard */,
 			);
 			path = Overpass;
 			sourceTree = "<group>";
@@ -594,6 +599,26 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		A1BA8FC323C24D33007979E0 /* Pager */ = {
+			isa = PBXGroup;
+			children = (
+				A1BA8FB523C23053007979E0 /* OverpassPagerViewController.swift */,
+				A1BA8FC523C24D63007979E0 /* OverpassPagerViewModel.swift */,
+				A109226823C0AF890073B416 /* Overpass.storyboard */,
+			);
+			path = Pager;
+			sourceTree = "<group>";
+		};
+		A1BA8FC423C24D39007979E0 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				A109226423C0AF480073B416 /* OverpassListViewController.swift */,
+				A109226623C0AF690073B416 /* OverpassListViewModel.swift */,
+				A1BA8FC123C245D9007979E0 /* OverpassContentView.storyboard */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
 		A1BFF30B23A5349A008165FA = {
 			isa = PBXGroup;
 			children = (
@@ -766,6 +791,7 @@
 				A160A18A23A5413A00025C02 /* config.plist in Resources */,
 				A11E20C823BE728100F62995 /* Location.storyboard in Resources */,
 				A1BFF32423A5349B008165FA /* LaunchScreen.storyboard in Resources */,
+				A1BA8FC223C245D9007979E0 /* OverpassContentView.storyboard in Resources */,
 				3D16356723AA4EB8001F05DD /* Walkthrough.storyboard in Resources */,
 				3D98F3F823ACFBCF000E70D9 /* Settings.storyboard in Resources */,
 				3D144F1B23A8ECD800E17504 /* HomeCellView.xib in Resources */,
@@ -925,6 +951,7 @@
 				A141EBC023BA5B7700BF26C6 /* SatellitesListViewController.swift in Sources */,
 				A160A19723A544F500025C02 /* ConfigurationManager.swift in Sources */,
 				A141EBB923BA526400BF26C6 /* SatelliteModel.swift in Sources */,
+				A1BA8FC623C24D63007979E0 /* OverpassPagerViewModel.swift in Sources */,
 				A109227923C0EA550073B416 /* OverpassRepository.swift in Sources */,
 				A102B28823BF75510035F915 /* COPTextField.swift in Sources */,
 				A102B28E23BF906B0035F915 /* LocationLocalRepository.swift in Sources */,
@@ -970,6 +997,7 @@
 				A11E20AE23BE272900F62995 /* TrajectoryModel.swift in Sources */,
 				A11E20B623BE35D000F62995 /* TrajectoryRemoteRepository.swift in Sources */,
 				A109226B23C0B6F70073B416 /* LocationRepository.swift in Sources */,
+				A1BA8FB623C23053007979E0 /* OverpassPagerViewController.swift in Sources */,
 				A15A44B423BCF39800A3F07E /* SatelliteLocalRepository.swift in Sources */,
 				3D231DC523A8D42F00B4CFD4 /* HomeViewController.swift in Sources */,
 				A141EBC823BA6DC800BF26C6 /* SatelliteRepository.swift in Sources */,

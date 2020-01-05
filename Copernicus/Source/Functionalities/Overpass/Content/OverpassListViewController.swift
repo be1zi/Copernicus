@@ -51,8 +51,8 @@ public class OverpassListViewController: BaseViewController {
     }
     
     private func setupView() {
-        tableView.tableFooterView = UIView()
-        separatorView.backgroundColor = UIColor.copYellowColor
+        //tableView.tableFooterView = UIView()
+        //separatorView.backgroundColor = UIColor.copYellowColor
     }
     
     //
@@ -60,12 +60,12 @@ public class OverpassListViewController: BaseViewController {
     //
     
     private func setStaticData() {
-        subtitleLabel.text = viewModel.subtitle
-        changeLocationButton.setTitle(viewModel.changeButton, for: .normal)
+        //subtitleLabel.text = viewModel.subtitle
+       // changeLocationButton.setTitle(viewModel.changeButton, for: .normal)
     }
     
     public func setDynamicData() {
-        currentLocationLabel.text = viewModel.locationString
+        //currentLocationLabel.text = viewModel.locationString
     }
     
     private func setupRx() {

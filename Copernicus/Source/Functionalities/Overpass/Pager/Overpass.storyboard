@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Overpass List View Controller-->
+        <!--Data Source-->
         <scene sceneID="0UQ-cd-Msp">
             <objects>
-                <viewController id="nJM-oP-WUt" customClass="OverpassListViewController" customModule="Copernicus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nJM-oP-WUt" customClass="OverpassPagerViewController" customModule="Copernicus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Zf-vr-lav">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,37 +41,40 @@
                                     <constraint firstAttribute="height" constant="2" id="7Kc-cI-7vd"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1K1-0n-vI2">
-                                <rect key="frame" x="0.0" y="140.5" width="414" height="721.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2RY-qB-SM3" customClass="MXSegmentedPager">
+                                <rect key="frame" x="0.0" y="148.5" width="414" height="713.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </tableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="nJM-oP-WUt" id="FIi-K5-9r8"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="C8D-Wx-lIl" firstAttribute="trailing" secondItem="n56-q4-cNa" secondAttribute="trailing" constant="20" id="53H-jc-wh8"/>
                             <constraint firstItem="jPh-nF-L0k" firstAttribute="leading" secondItem="C8D-Wx-lIl" secondAttribute="leading" id="9d3-5K-Axf"/>
-                            <constraint firstItem="1K1-0n-vI2" firstAttribute="top" secondItem="jPh-nF-L0k" secondAttribute="bottom" id="A2K-Gf-T79"/>
                             <constraint firstItem="jPh-nF-L0k" firstAttribute="top" secondItem="cdJ-ld-JMc" secondAttribute="bottom" constant="20" id="BVt-qR-gqV"/>
-                            <constraint firstItem="C8D-Wx-lIl" firstAttribute="bottom" secondItem="1K1-0n-vI2" secondAttribute="bottom" id="F3P-be-ij0"/>
                             <constraint firstItem="gKe-87-Zdv" firstAttribute="leading" secondItem="C8D-Wx-lIl" secondAttribute="leading" constant="20" id="HRs-1b-RU5"/>
                             <constraint firstItem="C8D-Wx-lIl" firstAttribute="trailing" secondItem="jPh-nF-L0k" secondAttribute="trailing" id="KBO-Nh-Iq3"/>
                             <constraint firstItem="cdJ-ld-JMc" firstAttribute="width" secondItem="gKe-87-Zdv" secondAttribute="width" multiplier="0.996212" id="Og3-Mt-4O0"/>
+                            <constraint firstItem="2RY-qB-SM3" firstAttribute="leading" secondItem="C8D-Wx-lIl" secondAttribute="leading" id="OjF-eO-BoU"/>
                             <constraint firstItem="cdJ-ld-JMc" firstAttribute="top" secondItem="gKe-87-Zdv" secondAttribute="bottom" constant="10" id="Rbr-nZ-ewZ"/>
                             <constraint firstItem="cdJ-ld-JMc" firstAttribute="leading" secondItem="C8D-Wx-lIl" secondAttribute="leading" constant="20" id="Tnu-6t-oOE"/>
                             <constraint firstItem="n56-q4-cNa" firstAttribute="leading" secondItem="gKe-87-Zdv" secondAttribute="trailing" constant="10" id="cIt-FE-IjF"/>
                             <constraint firstItem="n56-q4-cNa" firstAttribute="top" secondItem="gKe-87-Zdv" secondAttribute="top" id="jQI-yG-Gb6"/>
-                            <constraint firstItem="1K1-0n-vI2" firstAttribute="leading" secondItem="C8D-Wx-lIl" secondAttribute="leading" id="lPt-m0-Cxe"/>
+                            <constraint firstItem="C8D-Wx-lIl" firstAttribute="bottom" secondItem="2RY-qB-SM3" secondAttribute="bottom" id="l2U-qb-DRo"/>
                             <constraint firstItem="gKe-87-Zdv" firstAttribute="top" secondItem="C8D-Wx-lIl" secondAttribute="top" constant="20" id="ppK-mX-6Z8"/>
-                            <constraint firstItem="C8D-Wx-lIl" firstAttribute="trailing" secondItem="1K1-0n-vI2" secondAttribute="trailing" id="yfa-RU-Qyp"/>
+                            <constraint firstItem="C8D-Wx-lIl" firstAttribute="trailing" secondItem="2RY-qB-SM3" secondAttribute="trailing" id="xv2-eM-Y7W"/>
+                            <constraint firstItem="2RY-qB-SM3" firstAttribute="top" secondItem="jPh-nF-L0k" secondAttribute="bottom" constant="8" symbolic="YES" id="znJ-bi-Vwb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C8D-Wx-lIl"/>
                     </view>
                     <connections>
-                        <outlet property="changeLocationButton" destination="n56-q4-cNa" id="4P5-OT-M7d"/>
-                        <outlet property="currentLocationLabel" destination="cdJ-ld-JMc" id="z0s-ql-Ali"/>
-                        <outlet property="separatorView" destination="jPh-nF-L0k" id="OtL-tS-eCX"/>
-                        <outlet property="subtitleLabel" destination="gKe-87-Zdv" id="9fb-S6-qY2"/>
-                        <outlet property="tableView" destination="1K1-0n-vI2" id="CjW-Lf-NSU"/>
+                        <outlet property="changeLocationButton" destination="n56-q4-cNa" id="3aO-To-bjt"/>
+                        <outlet property="currentLocationLabel" destination="cdJ-ld-JMc" id="eFv-Px-EQM"/>
+                        <outlet property="segmentedPager" destination="2RY-qB-SM3" id="Dt9-jC-c9o"/>
+                        <outlet property="separatorView" destination="jPh-nF-L0k" id="3DZ-q6-A5F"/>
+                        <outlet property="subtitleLabel" destination="gKe-87-Zdv" id="JuK-lP-WTN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="td4-bL-w6h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
