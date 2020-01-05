@@ -46,6 +46,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="nJM-oP-WUt" id="FIi-K5-9r8"/>
+                                    <outlet property="delegate" destination="nJM-oP-WUt" id="g2A-Eq-de2"/>
                                 </connections>
                             </view>
                         </subviews>

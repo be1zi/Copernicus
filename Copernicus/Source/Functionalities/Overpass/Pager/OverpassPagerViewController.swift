@@ -53,6 +53,41 @@ public class OverpassPagerViewController: BaseViewController {
     
     private func setupView() {
         separatorView.backgroundColor = UIColor.copYellowColor
+        
+        changeLocationButton.backgroundColor = UIColor.copYellowColor
+        changeLocationButton.tintColor = UIColor.black
+        changeLocationButton.cornerRadius = changeLocationButton.bounds.height / 2.0
+        
+        segmentedPager.segmentedControl.rx.controlEvent(.valueChanged).subscribe(onNext: { [weak self] _ in
+            self?.updateSegmentedControllerBackground()
+        }).disposed(by: disposeBag)
+    }
+    
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        updateSegmentedControllerBackground()
+        
+        segmentedPager.segmentedControl.clipsToBounds = true
+        segmentedPager.segmentedControl.selectedTextColor = UIColor.black
+        segmentedPager.segmentedControl.textColor = UIColor.copGreyColor
+        segmentedPager.segmentedControlEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        
+        segmentedPager.segmentedControl.borderColor = UIColor.copYellowColor
+        segmentedPager.segmentedControl.borderWidth = 2.0
+        segmentedPager.segmentedControl.cornerRadius = segmentedPager.segmentedControl.bounds.height / 2.0
+    }
+    
+    private func updateSegmentedControllerBackground() {
+        let selectedIndex = segmentedPager.segmentedControl.selectedIndex
+        
+        if selectedIndex == 0 {
+            segmentedPager.segmentedControl.segment(at: selectedIndex)?.backgroundColor = UIColor.copYellowColor
+            segmentedPager.segmentedControl.segment(at: 1)?.backgroundColor = UIColor.clear
+        } else {
+            segmentedPager.segmentedControl.segment(at: selectedIndex)?.backgroundColor = UIColor.copYellowColor
+            segmentedPager.segmentedControl.segment(at: 0)?.backgroundColor = UIColor.clear
+        }
     }
     
     //
@@ -97,4 +132,3 @@ extension OverpassPagerViewController: MXSegmentedPagerControllerDataSource {
         return viewModel.titleForController(atIndex: index)
     }
 }
-

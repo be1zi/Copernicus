@@ -16,7 +16,7 @@ public class OverpassPagerViewModel {
     //
     
     private var pageViewControllers: [BaseViewController] = []
-    private let titles = ["Future", "Past"]
+    private var titles = [String]()
     private let disposeBag = DisposeBag()
     
     public let segue = "OverpassContentView"
@@ -62,9 +62,10 @@ public class OverpassPagerViewModel {
     }
     
     private func setStaticProperties() {
-        self.title = "overpass.list.title".localized()
-        self.subtitle = "overpass.list.selectedLocation.title".localized()
+        self.title = "overpass.pager.title".localized()
+        self.subtitle = "overpass.pager.selectedLocation.title".localized()
         self.changeButton = "button.change.title".localized()
+        self.titles = ["overpass.pager.leftItem".localized(), "overpass.pager.rightItem".localized()]
         
         setLocationData()
     }
@@ -82,7 +83,7 @@ public class OverpassPagerViewModel {
         if locationSelected {
             locationString = loc?.toString() ?? ""
         } else {
-            locationString = "overpass.list.selectedLocation.notChoosed".localized()
+            locationString = "overpass.pager.selectedLocation.notChoosed".localized()
         }
     }
     

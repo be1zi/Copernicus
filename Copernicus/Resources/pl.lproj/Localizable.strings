@@ -51,6 +51,8 @@
 "location.textfield.zipCode.placeholder" = "Kod pocztowy";
 
 //Overpass
-"overpass.list.title" = "Kolejne przeloty";
-"overpass.list.selectedLocation.title" = "Wybrana lokacja";
-"overpass.list.selectedLocation.notChoosed" = "Lokacja nie została wybrana";
+"overpass.pager.title" = "Kolejne przeloty";
+"overpass.pager.selectedLocation.title" = "Wybrana lokacja";
+"overpass.pager.selectedLocation.notChoosed" = "Lokacja nie została wybrana";
+"overpass.pager.leftItem" = "Przyszłe";
+"overpass.pager.rightItem" = "Przeszłe";
