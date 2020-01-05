@@ -35,14 +35,16 @@ public class OverpassFootprintModel: Object, Codable {
         id = try container.decodeIfPresent(Int.self, forKey: .id) ?? 0
         type = try? container.decodeIfPresent(String.self, forKey: .type)
         
-        if let coord = try? container.decodeIfPresent([[Double]].self, forKey: .coordinates) {
+        if let coord = try? container.decodeIfPresent([[[Double]]].self, forKey: .coordinates) {
             if coordinates.count != 0 {
                 coordinates.removeAll()
             }
             
-            for (index, singleCoordinate) in coord.enumerated() {
-                let coordinatesObject = CoordinateModel(id: "\(id)\(index)_footprint", latitude: singleCoordinate.first, longitude: singleCoordinate.last)
-                coordinates.append(coordinatesObject)
+            if let object = coord.first {
+                for (index, singleCoordinate) in object.enumerated() {
+                    let coordinatesObject = CoordinateModel(id: "\(id)\(index)_footprint", latitude: singleCoordinate.first, longitude: singleCoordinate.last)
+                    coordinates.append(coordinatesObject)
+                }
             }
         }
         
