@@ -53,7 +53,7 @@ public struct OverpassLocalRepository {
                 // fix footprint
                 if var footprint = overpass["footprint"] as? [String: Any] {
                     footprint["id"] = overpass["id"]
-                    overpass["geometry"] = footprint
+                    overpass["footprint"] = footprint
                 }
                 
                 overpasses[index] = overpass

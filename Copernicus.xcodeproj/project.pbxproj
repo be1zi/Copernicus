@@ -433,9 +433,9 @@
 				A141EBBA23BA543400BF26C6 /* SingleGeometryModel.swift */,
 				A11E20AD23BE272900F62995 /* TrajectoryModel.swift */,
 				A109227023C0E27E0073B416 /* OverpassModel.swift */,
-				A109227223C0E3480073B416 /* SingleOverpassModel.swift */,
 				A109227423C0E65D0073B416 /* OverpassFootprintModel.swift */,
 				A109227A23C112510073B416 /* OverpassGeometryModel.swift */,
+				A109227223C0E3480073B416 /* SingleOverpassModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
