@@ -19,7 +19,7 @@ public class OverpassPagerViewModel {
     private var titles = [String]()
     private let disposeBag = DisposeBag()
     
-    public let segue = "OverpassContentView"
+    public let segue = "OverpassListView"
     public var title: String?
     public var subtitle: String?
     public var changeButton: String = ""

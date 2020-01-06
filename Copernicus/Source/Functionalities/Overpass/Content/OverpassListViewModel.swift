@@ -13,69 +13,33 @@ public class OverpassListViewModel {
     // MARK: - Properties
     //
     
-    public var title: String?
-    public var subtitle: String?
-    public var changeButton: String = ""
+    public let cellIdentifier = String(describing: OverpassListFutureTableViewCell.self)
+    private let overpass = ReplaySubject<OverpassModel>.create(bufferSize: 1)
+    public let changed = ReplaySubject<Void>.create(bufferSize: 1)
+    private let overpassData = OverpassData()
+    public var cellNumber = 0
     
     private let disposeBag = DisposeBag()
-    
-    public let location = ReplaySubject<LocationModel>.create(bufferSize: 1)
-    private var locationSelected: Bool = false
-    public var locationString = ""
-    
-    public let overpass = ReplaySubject<OverpassModel>.create(bufferSize: 1)
-    
-    public var overpassData = OverpassData()
-//    public var satellitesCount: Int {
-//        get {
-//            return satellites.value.count
-//        }
-//    }
-//    public let cellName = String(describing: SatellitesListCell.self)
     
     //
     // MARK: - Init
     //
     
     public init() {
-        setStaticProperties()
-        
-        getCurrentLocation()
         getData()
     }
     
     //
     // MARK: - Data
     //
-    
-    private func setStaticProperties() {
-        self.title = "overpass.list.title".localized()
-        self.subtitle = "overpass.list.selectedLocation.title".localized()
-        self.changeButton = "button.change.title".localized()
-    }
-    
-    private func getCurrentLocation() {
-        
-        LocationRepository.sharedInstance.getLocationObservable().subscribe(onNext: { [unowned self] location in
-            self.location.onNext(location)
-            self.locationSelected = location.exist()
-            self.setLocationData(location)
-        }).disposed(by: disposeBag)
-    }
-    
-    private func setLocationData(_ loc: LocationModel) {
-        if locationSelected {
-            locationString = loc.toString()
-        } else {
-            locationString = "overpass.list.selectedLocation.notChoosed".localized()
-        }
-    }
+
     
     private func getData() {
         
         OverpassRepository.sharedInstance.getOverpassObservable(data: overpassData).subscribe(onNext: { [unowned self] overpass in
             self.overpass.onNext(overpass)
-            print(overpass)
+            self.cellNumber = overpass.overpasses.count
+            self.changed.onNext(())
         }).disposed(by: disposeBag)
     }
 }

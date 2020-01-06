@@ -71,7 +71,7 @@ public class OverpassPagerViewController: BaseViewController {
         segmentedPager.segmentedControl.clipsToBounds = true
         segmentedPager.segmentedControl.selectedTextColor = UIColor.black
         segmentedPager.segmentedControl.textColor = UIColor.copGreyColor
-        segmentedPager.segmentedControlEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        segmentedPager.segmentedControlEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 8, right: 20)
         
         segmentedPager.segmentedControl.borderColor = UIColor.copYellowColor
         segmentedPager.segmentedControl.borderWidth = 2.0
