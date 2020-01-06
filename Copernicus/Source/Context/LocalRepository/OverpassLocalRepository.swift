@@ -22,12 +22,12 @@ public struct OverpassLocalRepository {
     // MARK: - Get
     //
     
-    public func getOverpassObservable() -> Observable<OverpassModel> {
+    public func getOverpassObservable() -> Observable<[OverpassModel]> {
         let realm = try! Realm()
         
-        let overpass = realm.objects(OverpassModel.self).first
+        let overpasses = realm.objects(OverpassModel.self)
         
-        return Observable.from(optional: overpass)
+        return Observable.array(from: overpasses)
     }
     
     //

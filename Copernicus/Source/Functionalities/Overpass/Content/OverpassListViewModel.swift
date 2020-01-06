@@ -36,10 +36,12 @@ public class OverpassListViewModel {
     
     private func getData() {
         
-        OverpassRepository.sharedInstance.getOverpassObservable(data: overpassData).subscribe(onNext: { [unowned self] overpass in
-            self.overpass.onNext(overpass)
-            self.cellNumber = overpass.overpasses.count
-            self.changed.onNext(())
+        OverpassRepository.sharedInstance.getOverpassObservable(data: overpassData).subscribe(onNext: { [unowned self] overpasses in
+            if let overpass = overpasses.first {
+                self.overpass.onNext(overpass)
+                self.cellNumber = overpass.overpasses.count
+                self.changed.onNext(())
+            }
         }).disposed(by: disposeBag)
     }
 }
