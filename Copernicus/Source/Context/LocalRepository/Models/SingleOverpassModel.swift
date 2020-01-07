@@ -7,6 +7,7 @@
 //
 
 import RealmSwift
+import Foundation
 
 public class SingleOverpassModel: Object, Codable {
  
@@ -16,7 +17,7 @@ public class SingleOverpassModel: Object, Codable {
     
     @objc dynamic var id: Int = 0
     @objc dynamic var satellite: String?
-    @objc dynamic var date: String?
+    @objc dynamic var date: Date?
     @objc dynamic var acquisition: Bool = false
     @objc dynamic var geometry: OverpassGeometryModel?
     @objc dynamic var footprint: OverpassFootprintModel?
@@ -40,7 +41,9 @@ public class SingleOverpassModel: Object, Codable {
         
         id = try container.decodeIfPresent(Int.self, forKey: .id) ?? 0
         satellite = try? container.decodeIfPresent(String.self, forKey: .satellite)
-        date = try? container.decodeIfPresent(String.self, forKey: .date)
+        if let dateString = try? container.decodeIfPresent(String.self, forKey: .date) {
+            date = DateFormatter.stringToDate(date: dateString)
+        }
         acquisition = try container.decodeIfPresent(Bool.self, forKey: .acquisition) ?? false
         geometry = try? container.decodeIfPresent(OverpassGeometryModel.self, forKey: .geometry)
         footprint = try? container.decodeIfPresent(OverpassFootprintModel.self, forKey: .footprint)
