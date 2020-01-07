@@ -23,6 +23,10 @@
 //Errors
 "error.geocoder.description" = "Nie można zmienić adresu na współrzędne geograficzne. Proszę sprawdzić czy podany adres jest poprawny.";
 
+//TRUE/FALSE
+"boolean.true.description" = "Tak";
+"boolean.false.description" = "Nie";
+
 //Language View
 "language.view.info" = "Witamy w aplikacji Copernicus. Proszę wybrać język.";
 
@@ -59,3 +63,8 @@
 "overpass.pager.selectedLocation.notChoosed" = "Lokacja nie została wybrana";
 "overpass.pager.leftItem" = "Przyszłe";
 "overpass.pager.rightItem" = "Przeszłe";
+
+//Overpass list cell
+"overpass.list.cell.overpass" = "Przelot";
+"overpass.list.cell.in" = "za";
+"overpass.list.cell.imagining" = "Obrazowanie?";

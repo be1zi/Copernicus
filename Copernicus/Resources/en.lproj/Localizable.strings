@@ -23,6 +23,10 @@
 //Errors
 "error.geocoder.description" = "The address cannot be changed to geographic coordinates. Please check that the address provided is correct.";
 
+//TRUE/FALSE
+"boolean.true.description" = "Yes";
+"boolean.false.description" = "No";
+
 //Language View
 "language.view.info" = "Welcome in Copernicus App. Please choose your language.";
 
@@ -59,3 +63,8 @@
 "overpass.pager.selectedLocation.notChoosed" = "Location not selected";
 "overpass.pager.leftItem" = "Future";
 "overpass.pager.rightItem" = "Past";
+
+//Overpass list cell
+"overpass.list.cell.overpass" = "Overpass";
+"overpass.list.cell.in" = "in";
+"overpass.list.cell.imagining" = "Imagining?";

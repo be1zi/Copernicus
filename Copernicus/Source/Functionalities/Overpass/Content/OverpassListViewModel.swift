@@ -14,7 +14,7 @@ public class OverpassListViewModel {
     //
     
     public let cellIdentifier = String(describing: OverpassListFutureTableViewCell.self)
-    private let overpass = ReplaySubject<OverpassModel>.create(bufferSize: 1)
+    public var overpass: OverpassModel?
     public let changed = ReplaySubject<Void>.create(bufferSize: 1)
     private let overpassData = OverpassData()
     public var cellNumber = 0
@@ -33,12 +33,11 @@ public class OverpassListViewModel {
     // MARK: - Data
     //
 
-    
     private func getData() {
         
         OverpassRepository.sharedInstance.getOverpassObservable(data: overpassData).subscribe(onNext: { [unowned self] overpasses in
             if let overpass = overpasses.first {
-                self.overpass.onNext(overpass)
+                self.overpass = overpass
                 self.cellNumber = overpass.overpasses.count
                 self.changed.onNext(())
             }

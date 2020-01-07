@@ -396,8 +396,8 @@
 			isa = PBXGroup;
 			children = (
 				A11E20A723BE14D000F62995 /* SatellitesListCell.swift */,
-				A11E20A923BE14FE00F62995 /* SatellitesListCell.xib */,
 				A11E20AB23BE155C00F62995 /* SatellitesListCellViewModel.swift */,
+				A11E20A923BE14FE00F62995 /* SatellitesListCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
