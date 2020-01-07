@@ -6,6 +6,8 @@
 //  Copyright © 2020 Konrad Bełzowski. All rights reserved.
 //
 
+import RxSwift
+
 public enum LocationFieldType {
     case country
     case city
@@ -89,7 +91,7 @@ public struct LocationViewModel {
     // MARK: - Action
     //
     
-    public func saveLocation() {
-        LocationLocalRepository.sharedInstance.saveLocation(locationData)
+    public func saveLocation() -> Single<Void> {
+        return LocationLocalRepository.sharedInstance.saveLocation(locationData)
     }
 }

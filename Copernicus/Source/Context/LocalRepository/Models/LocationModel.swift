@@ -7,6 +7,8 @@
 //
 
 import RealmSwift
+import CoreLocation
+import RxSwift
 
 public class LocationModel: Object {
     
@@ -20,6 +22,8 @@ public class LocationModel: Object {
     @objc dynamic var street: String?
     @objc dynamic var houseNumber: String?
     @objc dynamic var zipCode: String?
+    @objc dynamic var latitide: Double = 0.0
+    @objc dynamic var longitude: Double = 0.0
     
     //
     // MARK: - Init
@@ -115,5 +119,28 @@ public class LocationModel: Object {
         }
         
         return location
+    }
+    
+    public func createCoordinates() -> Single<Void> {
+        let address = self.toString()
+        let geocoder = CLGeocoder()
+       
+        return Single.create { single in
+            geocoder.geocodeAddressString(address) { placemarks, error in
+                let placemark = placemarks?.first
+                let lat = placemark?.location?.coordinate.latitude
+                let lon = placemark?.location?.coordinate.longitude
+                
+                if let latitude = lat, let longitude = lon {
+                    single(.success(()))
+                    print("Lat: \(latitude), Lon: \(longitude)")
+
+                } else {
+                    single(.error(NSError(domain: "Geocoder error", code: 0, userInfo: nil)))
+                }
+            }
+            
+            return Disposables.create()
+        }
     }
 }

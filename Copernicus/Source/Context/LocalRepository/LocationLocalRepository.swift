@@ -16,22 +16,34 @@ public struct LocationLocalRepository {
     //
     
     public static let sharedInstance = LocationLocalRepository()
+    private let disposeBag = DisposeBag()
     
     //
     // MARK: - Methods
     //
     
-    public func saveLocation(_ data: LocationData) {
+    public func saveLocation(_ data: LocationData) -> Single<Void> {
         
         let realm = try! Realm()
         let object = LocationModel(data)
-        
-        do {
-            try realm.write {
-                realm.add(object, update: .modified)
-            }
-        } catch {
-            Logger.logError(error: error)
+                
+        return Single.create { single in
+            
+            object.createCoordinates().subscribe(onSuccess: { _ in
+                do {
+                    try realm.write {
+                        realm.add(object, update: .modified)
+                    }
+                    single(.success(()))
+                } catch {
+                    Logger.logError(error: error)
+                    single(.error(error))
+                }
+            }) { error in
+                single(.error(error))
+            }.disposed(by: LocationLocalRepository.sharedInstance.disposeBag)
+            
+            return Disposables.create()
         }
     }
     

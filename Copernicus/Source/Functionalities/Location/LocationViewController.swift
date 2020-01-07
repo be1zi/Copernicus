@@ -106,9 +106,14 @@ public class LocationViewController: BaseViewController {
         }).disposed(by: disposeBag)
         
         saveButton.rx.tap.subscribe(onNext: { [weak self] in
-            self?.viewModel.saveLocation()
-            AppDelegate.sharedInstance.windowController?.presentHomeController()
-            AppDelegate.sharedInstance.shouldSkipToHome = true
+            guard let self = self else { return }
+            
+            self.viewModel.saveLocation().subscribe(onSuccess: { _ in
+                  AppDelegate.sharedInstance.windowController?.presentHomeController()
+                  AppDelegate.sharedInstance.shouldSkipToHome = true
+            }) { error in
+                  Logger.logError(error: error)
+            }.disposed(by: self.disposeBag)
         }).disposed(by: disposeBag)
         
         languageButton.rx.tap.subscribe(onNext: {
