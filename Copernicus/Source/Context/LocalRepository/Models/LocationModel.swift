@@ -125,18 +125,20 @@ public class LocationModel: Object {
         let address = self.toString()
         let geocoder = CLGeocoder()
        
-        return Single.create { single in
+        return Single.create { [weak self] single in
             geocoder.geocodeAddressString(address) { placemarks, error in
                 let placemark = placemarks?.first
                 let lat = placemark?.location?.coordinate.latitude
                 let lon = placemark?.location?.coordinate.longitude
                 
                 if let latitude = lat, let longitude = lon {
+                    guard let self = self else { return }
+                    self.latitide = latitude
+                    self.longitude = longitude
+                    
                     single(.success(()))
-                    print("Lat: \(latitude), Lon: \(longitude)")
-
                 } else {
-                    single(.error(NSError(domain: "Geocoder error", code: 0, userInfo: nil)))
+                    single(.error(AppError.geocoder))
                 }
             }
             

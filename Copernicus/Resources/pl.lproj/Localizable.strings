@@ -20,6 +20,9 @@
 "button.save.title" = "Zapisz";
 "button.change.title" = "Zmień";
 
+//Errors
+"error.geocoder.description" = "Nie można zmienić adresu na współrzędne geograficzne. Proszę sprawdzić czy podany adres jest poprawny.";
+
 //Language View
 "language.view.info" = "Witamy w aplikacji Copernicus. Proszę wybrać język.";
 

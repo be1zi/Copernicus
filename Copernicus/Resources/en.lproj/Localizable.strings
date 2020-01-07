@@ -20,6 +20,9 @@
 "button.save.title" = "Save";
 "button.change.title" = "Change";
 
+//Errors
+"error.geocoder.description" = "The address cannot be changed to geographic coordinates. Please check that the address provided is correct.";
+
 //Language View
 "language.view.info" = "Welcome in Copernicus App. Please choose your language.";
 

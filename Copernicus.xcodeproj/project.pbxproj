@@ -30,6 +30,7 @@
 		3D231DC923A8D4C100B4CFD4 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D231DC823A8D4C100B4CFD4 /* Home.storyboard */; };
 		3D47BD3823A77DE6003697FA /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D47BD3723A77DE6003697FA /* LanguageViewController.swift */; };
 		3D47BD3A23A77DFA003697FA /* LanguageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D47BD3923A77DFA003697FA /* LanguageViewModel.swift */; };
+		3D602E0D23C4927400B06568 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D602E0C23C4927400B06568 /* AppError.swift */; };
 		3D8E525023ABA6E40067CD39 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E524F23ABA6E40067CD39 /* WalkthroughViewController.swift */; };
 		3D8E525523ABAF1E0067CD39 /* WalkthroughViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E525423ABAF1E0067CD39 /* WalkthroughViewModel.swift */; };
 		3D8E525723ABAF920067CD39 /* WalkthroughContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E525623ABAF920067CD39 /* WalkthroughContentViewModel.swift */; };
@@ -139,6 +140,7 @@
 		3D231DC823A8D4C100B4CFD4 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		3D47BD3723A77DE6003697FA /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		3D47BD3923A77DFA003697FA /* LanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewModel.swift; sourceTree = "<group>"; };
+		3D602E0C23C4927400B06568 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		3D8E524F23ABA6E40067CD39 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		3D8E525423ABAF1E0067CD39 /* WalkthroughViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewModel.swift; sourceTree = "<group>"; };
 		3D8E525623ABAF920067CD39 /* WalkthroughContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewModel.swift; sourceTree = "<group>"; };
@@ -608,6 +610,7 @@
 				3D0E604B23A76FFB00F9ECFD /* LanguageManager.swift */,
 				A11CBF2A23BB59C6000F976C /* Realm.swift */,
 				A102B29123BFBDE30035F915 /* KeyboardObserver.swift */,
+				3D602E0C23C4927400B06568 /* AppError.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -971,6 +974,7 @@
 				A160A19923A65CE700025C02 /* Logger.swift in Sources */,
 				3D8E525523ABAF1E0067CD39 /* WalkthroughViewModel.swift in Sources */,
 				A149558323C361E60054A314 /* OverpassListFutureTableViewCell.swift in Sources */,
+				3D602E0D23C4927400B06568 /* AppError.swift in Sources */,
 				A109227323C0E3480073B416 /* SingleOverpassModel.swift in Sources */,
 				A109227523C0E65D0073B416 /* OverpassFootprintModel.swift in Sources */,
 				3D144F1923A8ECA300E17504 /* HomeCellView.swift in Sources */,
