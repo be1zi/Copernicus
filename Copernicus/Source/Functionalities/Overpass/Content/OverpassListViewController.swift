@@ -38,6 +38,8 @@ public class OverpassListViewController: BaseViewController {
     
     private func setupView() {
         tableView.tableFooterView = UIView()
+        tableView.sectionHeaderHeight = UITableView.automaticDimension
+        tableView.estimatedSectionHeaderHeight = 50.0
     }
     
     //
@@ -52,7 +54,11 @@ public class OverpassListViewController: BaseViewController {
     }
     
     private func registerCells() {
-        tableView.register(UINib(nibName: viewModel.cellIdentifier, bundle: nil), forCellReuseIdentifier: viewModel.cellIdentifier)
+        viewModel.cellIdentifiers.forEach { cellIdentifier in
+            tableView.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        }
+        
+        tableView.register(UINib(nibName: viewModel.headerIdentifier, bundle: nil), forHeaderFooterViewReuseIdentifier: viewModel.headerIdentifier)
     }
 }
 
@@ -61,10 +67,10 @@ extension OverpassListViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.cellNumber
     }
-    
+        
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
-        let newCell = tableView.dequeueReusableCell(withIdentifier: viewModel.cellIdentifier, for: indexPath)
+        let newCell = tableView.dequeueReusableCell(withIdentifier: viewModel.cellIdentifiers[0], for: indexPath)
         
         guard let overpass = viewModel.overpass?.overpasses[indexPath.row] else {
             return UITableViewCell()
@@ -78,5 +84,21 @@ extension OverpassListViewController: UITableViewDataSource {
         }
         
         return UITableViewCell()
+    }
+}
+
+extension OverpassListViewController: UITableViewDelegate {
+    
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: viewModel.headerIdentifier) as? OverpassListHeaderTableViewCell
+        
+        if let headerCell = headerView {
+            let headerViewModel = OverpassListHeaderViewModel(frequency: viewModel.frequency)
+            headerCell.setViewModel(headerViewModel)
+            
+            return headerCell
+        }
+        
+        return UITableViewHeaderFooterView()
     }
 }

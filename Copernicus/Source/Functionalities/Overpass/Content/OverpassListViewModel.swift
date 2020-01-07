@@ -13,11 +13,13 @@ public class OverpassListViewModel {
     // MARK: - Properties
     //
     
-    public let cellIdentifier = String(describing: OverpassListFutureTableViewCell.self)
+    public let cellIdentifiers = [String(describing: OverpassListFutureTableViewCell.self)]
+    public let headerIdentifier = String(describing: OverpassListHeaderTableViewCell.self)
     public var overpass: OverpassModel?
     public let changed = ReplaySubject<Void>.create(bufferSize: 1)
     private let overpassData = OverpassData()
     public var cellNumber = 0
+    public var frequency = 0
     
     private let disposeBag = DisposeBag()
     
@@ -39,6 +41,7 @@ public class OverpassListViewModel {
             if let overpass = overpasses.first {
                 self.overpass = overpass
                 self.cellNumber = overpass.overpasses.count
+                self.frequency = overpass.frequency
                 self.changed.onNext(())
             }
         }).disposed(by: disposeBag)

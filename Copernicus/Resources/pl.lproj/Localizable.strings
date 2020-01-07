@@ -68,3 +68,4 @@
 "overpass.list.cell.overpass" = "Przelot";
 "overpass.list.cell.in" = "za";
 "overpass.list.cell.imagining" = "Obrazowanie?";
+"overpass.list.header.frequency" = "Częstotliwość:";

@@ -32,6 +32,9 @@
 		3D47BD3A23A77DFA003697FA /* LanguageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D47BD3923A77DFA003697FA /* LanguageViewModel.swift */; };
 		3D602E0D23C4927400B06568 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D602E0C23C4927400B06568 /* AppError.swift */; };
 		3D602E0F23C4A74900B06568 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D602E0E23C4A74900B06568 /* DateFormatter.swift */; };
+		3D602E1223C4B3FD00B06568 /* OverpassListHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D602E1123C4B3FD00B06568 /* OverpassListHeaderTableViewCell.swift */; };
+		3D602E1423C4B41600B06568 /* OverpassListHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D602E1323C4B41600B06568 /* OverpassListHeaderViewModel.swift */; };
+		3D602E1623C4B51A00B06568 /* OverpassListHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D602E1523C4B51A00B06568 /* OverpassListHeaderTableViewCell.xib */; };
 		3D8E525023ABA6E40067CD39 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E524F23ABA6E40067CD39 /* WalkthroughViewController.swift */; };
 		3D8E525523ABAF1E0067CD39 /* WalkthroughViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E525423ABAF1E0067CD39 /* WalkthroughViewModel.swift */; };
 		3D8E525723ABAF920067CD39 /* WalkthroughContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8E525623ABAF920067CD39 /* WalkthroughContentViewModel.swift */; };
@@ -143,6 +146,9 @@
 		3D47BD3923A77DFA003697FA /* LanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewModel.swift; sourceTree = "<group>"; };
 		3D602E0C23C4927400B06568 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		3D602E0E23C4A74900B06568 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		3D602E1123C4B3FD00B06568 /* OverpassListHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassListHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		3D602E1323C4B41600B06568 /* OverpassListHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassListHeaderViewModel.swift; sourceTree = "<group>"; };
+		3D602E1523C4B51A00B06568 /* OverpassListHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverpassListHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		3D8E524F23ABA6E40067CD39 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		3D8E525423ABAF1E0067CD39 /* WalkthroughViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewModel.swift; sourceTree = "<group>"; };
 		3D8E525623ABAF920067CD39 /* WalkthroughContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewModel.swift; sourceTree = "<group>"; };
@@ -329,6 +335,16 @@
 			path = Language;
 			sourceTree = "<group>";
 		};
+		3D602E1023C4B3D800B06568 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				3D602E1123C4B3FD00B06568 /* OverpassListHeaderTableViewCell.swift */,
+				3D602E1323C4B41600B06568 /* OverpassListHeaderViewModel.swift */,
+				3D602E1523C4B51A00B06568 /* OverpassListHeaderTableViewCell.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		3D8E525123ABAEEC0067CD39 /* Container */ = {
 			isa = PBXGroup;
 			children = (
@@ -471,6 +487,7 @@
 		A149557F23C361A90054A314 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				3D602E1023C4B3D800B06568 /* Header */,
 				A149558123C361BC0054A314 /* Future */,
 			);
 			path = Cell;
@@ -826,6 +843,7 @@
 				A1BA8FC223C245D9007979E0 /* OverpassListView.storyboard in Resources */,
 				3D16356723AA4EB8001F05DD /* Walkthrough.storyboard in Resources */,
 				3D98F3F823ACFBCF000E70D9 /* Settings.storyboard in Resources */,
+				3D602E1623C4B51A00B06568 /* OverpassListHeaderTableViewCell.xib in Resources */,
 				3D144F1B23A8ECD800E17504 /* HomeCellView.xib in Resources */,
 				A141EBC423BA5C0500BF26C6 /* Satellites.storyboard in Resources */,
 				A1BFF31E23A5349B008165FA /* Assets.xcassets in Resources */,
@@ -996,6 +1014,7 @@
 				A1BFF31823A5349A008165FA /* AppDelegate.swift in Sources */,
 				A102B29223BFBDE30035F915 /* KeyboardObserver.swift in Sources */,
 				A109226723C0AF690073B416 /* OverpassListViewModel.swift in Sources */,
+				3D602E1223C4B3FD00B06568 /* OverpassListHeaderTableViewCell.swift in Sources */,
 				3D231DBE23A8CF2200B4CFD4 /* UIButton.swift in Sources */,
 				3D47BD3A23A77DFA003697FA /* LanguageViewModel.swift in Sources */,
 				3D0E604A23A76FDE00F9ECFD /* String.swift in Sources */,
@@ -1036,6 +1055,7 @@
 				A1BA8FB623C23053007979E0 /* OverpassPagerViewController.swift in Sources */,
 				A15A44B423BCF39800A3F07E /* SatelliteLocalRepository.swift in Sources */,
 				3D231DC523A8D42F00B4CFD4 /* HomeViewController.swift in Sources */,
+				3D602E1423C4B41600B06568 /* OverpassListHeaderViewModel.swift in Sources */,
 				A141EBC823BA6DC800BF26C6 /* SatelliteRepository.swift in Sources */,
 				A11E20BB23BE398900F62995 /* SatelliteDetailsViewModel.swift in Sources */,
 				3D0E604C23A76FFB00F9ECFD /* LanguageManager.swift in Sources */,
