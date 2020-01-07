@@ -57,10 +57,6 @@ public class OverpassPagerViewController: BaseViewController {
         changeLocationButton.backgroundColor = UIColor.copYellowColor
         changeLocationButton.tintColor = UIColor.black
         changeLocationButton.cornerRadius = changeLocationButton.bounds.height / 2.0
-        
-        segmentedPager.segmentedControl.rx.controlEvent(.valueChanged).subscribe(onNext: { [weak self] _ in
-            self?.updateSegmentedControllerBackground()
-        }).disposed(by: disposeBag)
     }
     
     public override func viewDidLayoutSubviews() {
@@ -106,6 +102,10 @@ public class OverpassPagerViewController: BaseViewController {
     private func setupRx() {
         viewModel.location.subscribe(onNext: { [weak self] _ in
             self?.setDynamicData()
+        }).disposed(by: disposeBag)
+        
+        segmentedPager.segmentedControl.rx.controlEvent(.valueChanged).subscribe(onNext: { [weak self] _ in
+            self?.updateSegmentedControllerBackground()
         }).disposed(by: disposeBag)
     }
 }

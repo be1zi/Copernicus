@@ -20,6 +20,18 @@ public class OverpassListFutureTableViewCell: UITableViewCell {
     @IBOutlet weak var overpassLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var imaginingValueLabel: UILabel!
+    @IBOutlet weak var separatorView: UIView!
+    
+    //
+    // MARK: - Appearance
+    //
+    
+    private func setupView() {
+        nameLabel.textColor = UIColor.copGreyColor
+        inSeparatorLabel.textColor = UIColor.copGreyColor
+        imaginingLabel.textColor = UIColor.copGreyColor
+        separatorView.backgroundColor = UIColor.red
+    }
     
     //
     // MARK: - Data
@@ -32,5 +44,7 @@ public class OverpassListFutureTableViewCell: UITableViewCell {
         overpassLabel.text = viewModel.overpassName
         timeLabel.text = viewModel.time
         imaginingValueLabel.text = viewModel.imaginingValue
+        
+        setupView()
     }
 }

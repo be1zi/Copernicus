@@ -16,6 +16,16 @@ public class OverpassListHeaderTableViewCell: UITableViewHeaderFooterView {
     
     @IBOutlet weak var frequencyLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
+    @IBOutlet weak var separatorView: UIView!
+    
+    //
+    // MARK: - Appearance
+    //
+    
+    private func setupView() {
+        separatorView.backgroundColor = UIColor.copYellowColor
+        frequencyLabel.textColor = UIColor.copGreyColor
+    }
     
     //
     // MARK: - Data
@@ -24,5 +34,7 @@ public class OverpassListHeaderTableViewCell: UITableViewHeaderFooterView {
     public func setViewModel(_ viewModel: OverpassListHeaderViewModel) {
         frequencyLabel.text = viewModel.frequencyName
         valueLabel.text = viewModel.frequency
+        
+        setupView()
     }
 }

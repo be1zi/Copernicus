@@ -15,34 +15,45 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="73"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUL-Ay-zfc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="3"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="3" id="mky-bq-Xes"/>
+                        </constraints>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VwR-rs-nzj">
-                        <rect key="frame" x="20" y="20" width="42" height="33"/>
+                        <rect key="frame" x="20" y="23" width="42" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ie5-MA-KPO">
-                        <rect key="frame" x="72" y="26" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="72" y="27.5" width="43" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
+                    <constraint firstItem="lUL-Ay-zfc" firstAttribute="leading" secondItem="MyB-dV-9eJ" secondAttribute="leading" id="29G-Hp-lIP"/>
                     <constraint firstItem="ie5-MA-KPO" firstAttribute="centerY" secondItem="VwR-rs-nzj" secondAttribute="centerY" id="6Ry-RT-xCS"/>
                     <constraint firstItem="VwR-rs-nzj" firstAttribute="leading" secondItem="MyB-dV-9eJ" secondAttribute="leading" constant="20" id="GBh-gY-UaM"/>
+                    <constraint firstItem="lUL-Ay-zfc" firstAttribute="top" secondItem="MyB-dV-9eJ" secondAttribute="top" id="HmW-cs-pWB"/>
+                    <constraint firstAttribute="trailing" secondItem="lUL-Ay-zfc" secondAttribute="trailing" id="JOo-py-A8x"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ie5-MA-KPO" secondAttribute="trailing" constant="20" id="aDi-Fy-0hh"/>
-                    <constraint firstItem="VwR-rs-nzj" firstAttribute="top" secondItem="MyB-dV-9eJ" secondAttribute="top" constant="20" id="g1P-ED-wCz"/>
                     <constraint firstItem="ie5-MA-KPO" firstAttribute="leading" secondItem="VwR-rs-nzj" secondAttribute="trailing" constant="10" id="g7b-hg-bor"/>
+                    <constraint firstItem="VwR-rs-nzj" firstAttribute="top" secondItem="lUL-Ay-zfc" secondAttribute="bottom" constant="20" id="na9-Pi-7kM"/>
                     <constraint firstAttribute="bottom" secondItem="VwR-rs-nzj" secondAttribute="bottom" constant="20" id="rmW-V6-Y53"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="frequencyLabel" destination="VwR-rs-nzj" id="aat-At-7PL"/>
+                <outlet property="separatorView" destination="lUL-Ay-zfc" id="DfX-vn-veH"/>
                 <outlet property="valueLabel" destination="ie5-MA-KPO" id="sOK-ah-kog"/>
             </connections>
-            <point key="canvasLocation" x="24.637681159420293" y="18.415178571428569"/>
+            <point key="canvasLocation" x="24.637681159420293" y="17.075892857142858"/>
         </tableViewCell>
     </objects>
 </document>
