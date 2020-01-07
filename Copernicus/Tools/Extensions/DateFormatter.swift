@@ -21,12 +21,12 @@ extension DateFormatter {
         return dateFormatter.date(from: date)
     }
     
-//    static func dateToString(date: Date?) -> String? {
-//        guard let date = date else { return nil}
-//        
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = DEFAULT_DISPLAY_DATE_FORMAT
-//        
-//        return dateFormatter.string(from: date)
-//    }
+    static func dateToString(date: Date?) -> String? {
+        guard let date = date else { return nil}
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = DEFAULT_DISPLAY_DATE_FORMAT
+        
+        return dateFormatter.string(from: date)
+    }
 }

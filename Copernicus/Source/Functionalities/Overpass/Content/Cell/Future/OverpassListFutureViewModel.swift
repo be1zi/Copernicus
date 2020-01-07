@@ -34,7 +34,7 @@ public struct OverpassListFutureViewModel {
     
     private mutating func setDynamicData(_ model: SingleOverpassModel) {
         self.name = model.satellite
-        //self.time = DateFormatter.dateToString(date: DateFormatter.stringToDate(date: model.date))
+        self.time = DateFormatter.dateToString(date: model.date)
 
         if model.acquisition == true {
             self.imaginingValue = "boolean.true.description".localized()
