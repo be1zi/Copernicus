@@ -15,7 +15,7 @@ public class OverpassPagerViewModel {
     // MARK: - Properties
     //
     
-    private var pageViewControllers: [BaseViewController] = []
+    private var pageViewControllers: [OverpassListViewController] = []
     private var titles = [String]()
     private let disposeBag = DisposeBag()
     
@@ -48,13 +48,15 @@ public class OverpassPagerViewModel {
     //
     
     private func createViewControllers() {
-        let vc = UIStoryboard.init(name: segue, bundle: nil).instantiateInitialViewController() as? BaseViewController
+        let vc = UIStoryboard.init(name: segue, bundle: nil).instantiateInitialViewController() as? OverpassListViewController
+        vc?.setViewModel(OverpassListViewModel(type: .Future))
         
         if let viewController = vc {
             pageViewControllers.append(viewController)
         }
         
-        let vc2 = UIStoryboard.init(name: segue, bundle: nil).instantiateInitialViewController() as? BaseViewController
+        let vc2 = UIStoryboard.init(name: segue, bundle: nil).instantiateInitialViewController() as? OverpassListViewController
+        vc2?.setViewModel(OverpassListViewModel(type: .Past))
         
         if let viewController2 = vc2 {
             pageViewControllers.append(viewController2)

@@ -7,19 +7,27 @@
 //
 import RxSwift
 
+public enum OverpassCellType {
+    case Future
+    case Past
+}
+
 public class OverpassListViewModel {
     
     //
     // MARK: - Properties
     //
     
-    public let cellIdentifiers = [String(describing: OverpassListFutureTableViewCell.self)]
+    public let cellIdentifiers = [String(describing: OverpassListFutureTableViewCell.self),
+                                  String(describing: OverpassListPastTableViewCell.self)]
     public let headerIdentifier = String(describing: OverpassListHeaderTableViewCell.self)
+    
     public var overpass: OverpassModel?
     public let changed = ReplaySubject<Void>.create(bufferSize: 1)
     private let overpassData = OverpassData()
     public var cellNumber = 0
     public var frequency = 0
+    public let cellType: OverpassCellType
     
     private let disposeBag = DisposeBag()
     
@@ -27,7 +35,8 @@ public class OverpassListViewModel {
     // MARK: - Init
     //
     
-    public init() {
+    public init(type: OverpassCellType) {
+        self.cellType = type
         getData()
     }
     
@@ -37,7 +46,7 @@ public class OverpassListViewModel {
 
     private func getData() {
         
-        OverpassRepository.sharedInstance.getOverpassObservable(data: overpassData).subscribe(onNext: { [unowned self] overpasses in
+        OverpassRepository.sharedInstance.getOverpassObservable(data: overpassData, type: cellType).subscribe(onNext: { [unowned self] overpasses in
             if let overpass = overpasses.first {
                 self.overpass = overpass
                 self.cellNumber = overpass.overpasses.count

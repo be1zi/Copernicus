@@ -21,10 +21,18 @@ public struct OverpassListFutureViewModel {
     public var imagining: String?
     public var imaginingValue: String?
     
+    //
+    // MARK: - Init
+    //
+    
     public init(_ model: SingleOverpassModel) {
         self.setStaticData()
         self.setDynamicData(model)
     }
+    
+    //
+    // MARK: - Data
+    //
     
     private mutating func setStaticData() {
         self.overpassName = "overpass.list.cell.overpass".localized()

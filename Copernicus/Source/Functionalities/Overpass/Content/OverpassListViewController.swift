@@ -17,7 +17,7 @@ public class OverpassListViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    private let viewModel = OverpassListViewModel()
+    private var viewModel: OverpassListViewModel!
     private let disposeBag = DisposeBag()
     
     //
@@ -45,6 +45,10 @@ public class OverpassListViewController: BaseViewController {
     //
     // MARK: - Data
     //
+    
+    public func setViewModel(_ vm: OverpassListViewModel) {
+        self.viewModel = vm
+    }
     
     private func setupRx() {
         

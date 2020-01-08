@@ -69,3 +69,6 @@
 "overpass.list.cell.in" = "in";
 "overpass.list.cell.imagining" = "Imagining?";
 "overpass.list.header.frequency" = "Frequency:";
+"overpass.list.cell.image" = "image";
+"overpass.list.cell.ago" = "ago";
+"overpass.list.cell.clouds" = "clouds";
