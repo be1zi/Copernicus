@@ -38,4 +38,8 @@ extension UIColor {
     static var copBlueColor: UIColor {
         return UIColor.colorWithHex(color: "#1DB1D9")
     }
+    
+    static var copBlackColor: UIColor {
+        return UIColor.colorWithHex(color: "2D2D2D")
+    }
 }
