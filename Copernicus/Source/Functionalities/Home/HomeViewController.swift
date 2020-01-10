@@ -19,6 +19,7 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var logoOvalView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var headerBackgroundImageView: UIImageView!
+    @IBOutlet var contentView: UIView!
     
     private let viewModel = HomeViewModel()
     
@@ -58,6 +59,7 @@ class HomeViewController: BaseViewController {
         nameLabel.text = viewModel.appName
         headerBackgroundImageView.image = viewModel.headerBackground
         logoOvalView.image = viewModel.ovalImage
+        contentView.backgroundColor = UIColor.copBlackColor
     }
 }
 

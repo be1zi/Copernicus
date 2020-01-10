@@ -94,6 +94,7 @@
                     <navigationItem key="navigationItem" id="kJd-Zv-KTv"/>
                     <connections>
                         <outlet property="collectionView" destination="dtJ-T1-aWP" id="Qfa-uZ-Kc1"/>
+                        <outlet property="contentView" destination="CJS-ey-Pj5" id="mQZ-Xq-7gd"/>
                         <outlet property="headerBackgroundImageView" destination="99S-mN-DhS" id="5Mc-5a-ZYc"/>
                         <outlet property="logoContainerView" destination="hNY-HH-EXx" id="GP9-Pd-PKX"/>
                         <outlet property="logoOvalView" destination="tej-OT-rWa" id="1n4-iZ-wyM"/>
