@@ -23,7 +23,7 @@ public struct OverpassRepository {
     // MARK: - Methods
     //
     
-    public func getOverpassObservable(data: OverpassData, type: OverpassCellType) -> Observable<[OverpassModel]> {
+    public func getOverpassObservable(data: OverpassData) -> Observable<[OverpassModel]> {
         
         provider.rx.request(.overpass(data)).map { response in
             OverpassLocalRepository.sharedInstance.saveOverpass(response)

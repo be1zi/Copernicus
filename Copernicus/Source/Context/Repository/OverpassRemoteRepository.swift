@@ -35,9 +35,10 @@ extension OverpassRemoteRepository: TargetType {
         
         switch self {
         case .overpass(let data):
-            let params = ["api_key" : ConfigurationManager.sharedInstance.serverKey ?? "",
+            let params: [String: Any] = ["api_key" : ConfigurationManager.sharedInstance.serverKey ?? "",
                           "bbox" : data.geometryString(),
-                          "satellites" : data.satellitesString()]
+                          "satellites" : data.satellitesString(),
+                          "days_before" : 7]
             
             return .requestParameters(parameters: params, encoding: URLEncoding.default)
         }

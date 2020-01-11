@@ -22,10 +22,14 @@ public class OverpassListViewModel {
                                   String(describing: OverpassListPastTableViewCell.self)]
     public let headerIdentifier = String(describing: OverpassListHeaderTableViewCell.self)
     
-    public var overpass: OverpassModel?
     public let changed = ReplaySubject<Void>.create(bufferSize: 1)
+    public var overpasses: [SingleOverpassModel] = []
     private let overpassData = OverpassData()
-    public var cellNumber = 0
+    public var cellNumber: Int  {
+        get {
+            return overpasses.count
+        }
+    }
     public var frequency = 0
     public let cellType: OverpassCellType
     
@@ -46,13 +50,28 @@ public class OverpassListViewModel {
 
     private func getData() {
         
-        OverpassRepository.sharedInstance.getOverpassObservable(data: overpassData, type: cellType).subscribe(onNext: { [unowned self] overpasses in
-            if let overpass = overpasses.first {
-                self.overpass = overpass
-                self.cellNumber = overpass.overpasses.count
-                self.frequency = overpass.frequency
-                self.changed.onNext(())
-            }
+        OverpassRepository.sharedInstance.getOverpassObservable(data: overpassData).subscribe(onNext: { [unowned self] overpasses in
+            self.setData(overpasses)
         }).disposed(by: disposeBag)
+    }
+    
+    private func setData(_ overpasses: [OverpassModel]) {
+        guard let overpass = overpasses.first else { return }
+        
+        switch cellType {
+            case .Future:
+                self.overpasses = overpass.overpasses
+                    .filter(NSPredicate(format: "date >= %@", argumentArray: [Date()]))
+                    .sorted(byKeyPath: "date", ascending: true)
+                    .toArray()
+            case .Past:
+                self.overpasses = overpass.overpasses
+                    .filter(NSPredicate(format: "date < %@", argumentArray: [Date()]))
+                    .sorted(byKeyPath: "date", ascending: false)
+                    .toArray()
+        }
+
+        self.frequency = overpass.frequency
+        self.changed.onNext(())
     }
 }
