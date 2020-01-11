@@ -19,6 +19,7 @@
 "button.skip.title" = "Skip";
 "button.save.title" = "Save";
 "button.change.title" = "Change";
+"button.cancel.title" = "Cancel";
 
 //Errors
 "error.geocoder.description" = "The address cannot be changed to geographic coordinates. Please check that the address provided is correct.";
@@ -56,6 +57,11 @@
 "location.textfield.street.placeholder" = "Street";
 "location.textfield.houseNumber.placeholder" = "House number";
 "location.textfield.zipCode.placeholder" = "Zip code";
+
+//Location picker
+"location.picker.title" = "Select a new location";
+"location.picker.useAsDefault" = "Use as default";
+"location.picker.useMylocation" = "Use my location";
 
 //Overpass
 "overpass.pager.title" = "Overpasses";

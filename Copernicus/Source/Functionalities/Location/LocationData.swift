@@ -6,15 +6,30 @@
 //  Copyright © 2020 Konrad Bełzowski. All rights reserved.
 //
 
+public enum LocationType: Int {
+    case Default = 0
+    case Temporary
+}
+
 public struct LocationData {
     
     //
     // MARK: - Properties
     //
     
-    var country: String?
-    var city: String?
-    var street: String?
-    var houseNumber: String?
-    var zipCode: String?
+    public var country: String?
+    public var city: String?
+    public var street: String?
+    public var houseNumber: String?
+    public var zipCode: String?
+    public var type: LocationType
+    public var saveAsDefault = true
+    
+    //
+    // MARK: - Init
+    //
+    
+    public init(type: LocationType = .Default) {
+        self.type = type
+    }
 }

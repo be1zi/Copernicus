@@ -107,6 +107,16 @@ public class OverpassPagerViewController: BaseViewController {
         segmentedPager.segmentedControl.rx.controlEvent(.valueChanged).subscribe(onNext: { [weak self] _ in
             self?.updateSegmentedControllerBackground()
         }).disposed(by: disposeBag)
+        
+        changeLocationButton.rx.tap.subscribe(onNext: { [weak self] in
+            let viewController = UIStoryboard.init(name: "LocationPicker", bundle: nil).instantiateInitialViewController()
+            
+            guard let vc = viewController as? LocationPickerViewController else {
+                return
+            }
+            
+            self?.navigationController?.present(vc, animated: true, completion: nil)
+        }).disposed(by: disposeBag)
     }
 }
 

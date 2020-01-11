@@ -19,6 +19,7 @@
 "button.skip.title" = "Pomiń";
 "button.save.title" = "Zapisz";
 "button.change.title" = "Zmień";
+"button.cancel.title" = "Anuluj";
 
 //Errors
 "error.geocoder.description" = "Nie można zmienić adresu na współrzędne geograficzne. Proszę sprawdzić czy podany adres jest poprawny.";
@@ -56,6 +57,11 @@
 "location.textfield.street.placeholder" = "Ulica";
 "location.textfield.houseNumber.placeholder" = "Numer domu";
 "location.textfield.zipCode.placeholder" = "Kod pocztowy";
+
+//Location picker
+"location.picker.title" = "Wybierz nową lokalizację";
+"location.picker.useAsDefault" = "Użyj jako domyślną";
+"location.picker.useMylocation" = "Użyj mojej lokalizacji";
 
 //Overpass
 "overpass.pager.title" = "Kolejne przeloty";
