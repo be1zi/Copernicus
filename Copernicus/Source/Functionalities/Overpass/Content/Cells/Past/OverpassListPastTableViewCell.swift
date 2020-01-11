@@ -38,7 +38,7 @@ public class OverpassListPastTableViewCell: UITableViewCell {
     //
     
     public func setViewModel(_ viewModel: OverpassListPastViewModel) {
-        
+
         satelliteNameLabel.text = viewModel.satellite
         timeLabel.text = viewModel.time
         cloudsValueLabel.text = viewModel.cloudsValue

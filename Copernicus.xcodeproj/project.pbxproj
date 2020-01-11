@@ -500,14 +500,14 @@
 			path = Satellites;
 			sourceTree = "<group>";
 		};
-		A149557F23C361A90054A314 /* Cell */ = {
+		A149557F23C361A90054A314 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				3DB5970823C609D900E4D433 /* Past */,
 				3D602E1023C4B3D800B06568 /* Header */,
 				A149558123C361BC0054A314 /* Future */,
 			);
-			path = Cell;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		A149558123C361BC0054A314 /* Future */ = {
@@ -676,7 +676,7 @@
 		A1BA8FC423C24D39007979E0 /* Content */ = {
 			isa = PBXGroup;
 			children = (
-				A149557F23C361A90054A314 /* Cell */,
+				A149557F23C361A90054A314 /* Cells */,
 				A109226423C0AF480073B416 /* OverpassListViewController.swift */,
 				A109226623C0AF690073B416 /* OverpassListViewModel.swift */,
 				A1BA8FC123C245D9007979E0 /* OverpassListView.storyboard */,

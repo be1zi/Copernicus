@@ -5,11 +5,12 @@
 //  Created by Konrad Bełzowski on 04/01/2020.
 //  Copyright © 2020 Konrad Bełzowski. All rights reserved.
 //
+
 import RxSwift
 
-public enum OverpassCellType {
-    case Future
-    case Past
+public enum OverpassCellType: String {
+    case Future = "OverpassListFutureTableViewCell"
+    case Past = "OverpassListPastTableViewCell"
 }
 
 public class OverpassListViewModel {
@@ -18,8 +19,8 @@ public class OverpassListViewModel {
     // MARK: - Properties
     //
     
-    public let cellIdentifiers = [String(describing: OverpassListFutureTableViewCell.self),
-                                  String(describing: OverpassListPastTableViewCell.self)]
+    public let cellIdentifiers = [OverpassCellType.Future.rawValue,
+                                  OverpassCellType.Past.rawValue]
     public let headerIdentifier = String(describing: OverpassListHeaderTableViewCell.self)
     
     public let changed = ReplaySubject<Void>.create(bufferSize: 1)

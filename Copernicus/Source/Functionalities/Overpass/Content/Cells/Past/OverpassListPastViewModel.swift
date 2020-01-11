@@ -6,6 +6,8 @@
 //  Copyright © 2020 Konrad Bełzowski. All rights reserved.
 //
 
+import Foundation
+
 public struct OverpassListPastViewModel {
     
     //
@@ -39,8 +41,9 @@ public struct OverpassListPastViewModel {
     }
        
     private mutating func setDynamicData(_ model: SingleOverpassModel) {
-//        self.name = model.satellite
-//        self.time = DateFormatter.dateToString(date: model.date)
+        self.satellite = model.satellite
+        self.time = DateFormatter.dateToString(date: model.date)
+        
 //
 //        if model.acquisition == true {
 //            self.imaginingValue = "boolean.true.description".localized()
