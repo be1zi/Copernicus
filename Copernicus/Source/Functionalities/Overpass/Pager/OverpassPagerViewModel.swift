@@ -76,9 +76,9 @@ public class OverpassPagerViewModel {
         
         LocationRepository.sharedInstance.getLocationObservable().subscribe(onNext: { [unowned self] locations in
             guard let loc = locations.last else { return }
-            self.location.onNext(loc)
-            self.locationSelected = loc.exist()
             self.setLocationData(loc)
+            self.locationSelected = loc.exist()
+            self.location.onNext(loc)
         }).disposed(by: disposeBag)
     }
     
