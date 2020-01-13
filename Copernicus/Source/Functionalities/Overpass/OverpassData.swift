@@ -6,23 +6,23 @@
 //  Copyright © 2020 Konrad Bełzowski. All rights reserved.
 //
 
+import CoreLocation
+
 public struct OverpassData {
     
     //
     // MARK: - Properties
     //
     
-    public var latitude1: Double = 19.59
-    public var longitude1: Double = 49.90
-    public var latitude2: Double = 20.33
-    public var longitude2: Double = 50.21
+    public var boundingBox: LocationRegion
     private let satellites: [String]
 
     //
     // MARK: - Init
     //
     
-    public init() {
+    public init(latitude: Double, longitude: Double) {
+        self.boundingBox = LocationManager.sharedInstance.createBoundingBox(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
         self.satellites = ["Sentinel-2A", "Sentinel-2B", "Landsat-8"]
     }
     
@@ -31,7 +31,7 @@ public struct OverpassData {
     //
     
     public func geometryString() -> String {
-        return "\(latitude1),\(longitude1),\(latitude2),\(longitude2)"
+        return boundingBox.toString()
     }
     
     public func satellitesString() -> String {

@@ -49,7 +49,6 @@ public class LocationPickerViewController: BaseViewController {
         setupTextFields()
         setupView()
         setupRx()
-        setupLocationManager()
         setData()
     }
     
@@ -86,6 +85,14 @@ public class LocationPickerViewController: BaseViewController {
         zipCodeTextField.placeholder = viewModel.zipCode
     }
     
+    private func setDataFromPlacemark(_ placemark: CLPlacemark) {
+        countryTextField.text = placemark.country
+        cityTextField.text = placemark.locality
+        zipCodeTextField.text = placemark.postalCode
+        streetTextField.text = placemark.thoroughfare
+        houseNumberTextField.text = nil
+    }
+    
     //
     // MARK: - Actions
     //
@@ -106,7 +113,7 @@ public class LocationPickerViewController: BaseViewController {
             self.viewModel.saveLocation().subscribe(onSuccess: { [weak self] in
                 self?.dismiss(animated: true, completion: nil)
             }, onError: { error in
-                    Logger.logError(error: error)
+                Logger.logError(error: error)
             }).disposed(by: self.disposeBag)
             
         }).disposed(by: disposeBag)
@@ -120,10 +127,9 @@ public class LocationPickerViewController: BaseViewController {
         }).disposed(by: disposeBag)
         
         useMyLocationSwitch.rx.isOn.changed.subscribe(onNext: { [weak self] result in
+            self?.setupLocationManager()
             self?.setUserInteractionEnabled(!result)
             self?.setTextFieldsBackgroundColor(!result)
-            
-            self?.setupLocationManager()
         }).disposed(by: disposeBag)
     }
     
@@ -226,6 +232,8 @@ public class LocationPickerViewController: BaseViewController {
 extension LocationPickerViewController: CLLocationManagerDelegate {
     
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+
+        if useMyLocationSwitch.isOn == false { return }
         
         guard let location = manager.location else { return }
         
@@ -237,7 +245,8 @@ extension LocationPickerViewController: CLLocationManagerDelegate {
             
             guard let placemark = placemarks?.first else { return }
             
-            self.viewModel.setMyLocation(placemark)
+            //self.viewModel.setMyLocation(placemark)
+            self.setDataFromPlacemark(placemark)
         }
     }
 }

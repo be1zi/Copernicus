@@ -23,7 +23,6 @@ public struct LocationData {
     public var houseNumber: String?
     public var zipCode: String?
     public var type: LocationType
-    public var saveAsDefault = true
     
     //
     // MARK: - Init

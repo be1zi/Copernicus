@@ -30,6 +30,7 @@ public class LocationModel: Object {
     //
     
     public init(_ data: LocationData) {
+        self.id = data.type.rawValue
         self.country = data.country
         self.city = data.city
         self.street = data.street

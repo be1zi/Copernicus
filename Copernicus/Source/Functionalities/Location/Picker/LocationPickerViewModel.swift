@@ -80,15 +80,10 @@ public struct LocationPickerViewModel {
     }
     
     public mutating func saveAsDefaultChanged(_ newValue: Bool) {
-        locationData.saveAsDefault = newValue
-    }
-    
-    public mutating func setMyLocation(_ placemark: CLPlacemark) {
         
-        setData(newValue: placemark.country, type: .country)
-        setData(newValue: placemark.postalCode, type: .zipCode)
-        setData(newValue: placemark.locality, type: .city)
-        setData(newValue: placemark.thoroughfare, type: .street)
+        let type = newValue == true ? LocationType.Default : LocationType.Temporary
+        
+        locationData.type = type
     }
     
     //

@@ -25,7 +25,6 @@ public class OverpassListViewModel {
     
     public let changed = ReplaySubject<Void>.create(bufferSize: 1)
     public var overpasses: [SingleOverpassModel] = []
-    private let overpassData = OverpassData()
     public var cellNumber: Int  {
         get {
             return overpasses.count
@@ -51,8 +50,12 @@ public class OverpassListViewModel {
 
     private func getData() {
         
-        OverpassRepository.sharedInstance.getOverpassObservable(data: overpassData).subscribe(onNext: { [unowned self] overpasses in
-            self.setData(overpasses)
+        LocationRepository.sharedInstance.getLocationObservable().subscribe(onNext: { [unowned self] locations in
+            guard let loc = locations.last else { return }
+            let overpassData = OverpassData(latitude: loc.latitide, longitude: loc.longitude)
+            OverpassRepository.sharedInstance.getOverpassObservable(data: overpassData).subscribe(onNext: { [unowned self] overpasses in
+                self.setData(overpasses)
+            }).disposed(by: self.disposeBag)
         }).disposed(by: disposeBag)
     }
     

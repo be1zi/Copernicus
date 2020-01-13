@@ -32,7 +32,14 @@ public struct LocationLocalRepository {
             object.createCoordinates().subscribe(onSuccess: { _ in
                 do {
                     try realm.write {
-                        realm.add(object, update: .modified)
+                        if data.type == .Default {
+                            realm.delete(realm.objects(LocationModel.self), cascading: true)
+                        } else {
+                            let objects = realm.objects(LocationModel.self).filter(NSPredicate(format: "id = %@", argumentArray: [object.id]))
+                            realm.delete(objects, cascading: true)
+                        }
+                        
+                        realm.add(object)
                     }
                     single(.success(()))
                 } catch {
@@ -47,11 +54,11 @@ public struct LocationLocalRepository {
         }
     }
     
-    public func getLocationObservable() -> Observable<LocationModel> {
+    public func getLocationObservable() -> Observable<[LocationModel]> {
         let realm = try! Realm()
         
-        let location = realm.objects(LocationModel.self).first
+        let location = realm.objects(LocationModel.self)
         
-        return Observable.from(optional: location)
+        return Observable.array(from: location)
     }
 }

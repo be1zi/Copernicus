@@ -45,6 +45,7 @@
 		3DB5970C23C60A3600E4D433 /* OverpassListPastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB5970B23C60A3600E4D433 /* OverpassListPastViewModel.swift */; };
 		3DB5970E23C60A7B00E4D433 /* OverpassListPastTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DB5970D23C60A7B00E4D433 /* OverpassListPastTableViewCell.xib */; };
 		3DEE0E9023A7970D0036DA45 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DEE0E9223A7970D0036DA45 /* Localizable.strings */; };
+		A102356923CCC8A000F63B66 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102356823CCC8A000F63B66 /* LocationManager.swift */; };
 		A102B28823BF75510035F915 /* COPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102B28723BF75510035F915 /* COPTextField.swift */; };
 		A102B28A23BF85DF0035F915 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102B28923BF85DF0035F915 /* LocationModel.swift */; };
 		A102B28C23BF866B0035F915 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102B28B23BF866B0035F915 /* LocationData.swift */; };
@@ -171,6 +172,7 @@
 		6F7567B922A6F9FE7409AED0 /* Pods-Copernicus-CopernicusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copernicus-CopernicusTests.debug.xcconfig"; path = "Target Support Files/Pods-Copernicus-CopernicusTests/Pods-Copernicus-CopernicusTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7E87C8CC7BDBA1B7051B7B05 /* Pods-Copernicus-CopernicusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copernicus-CopernicusUITests.release.xcconfig"; path = "Target Support Files/Pods-Copernicus-CopernicusUITests/Pods-Copernicus-CopernicusUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8825F663483BEC8673BA0E19 /* Pods_Copernicus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Copernicus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A102356823CCC8A000F63B66 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		A102B28723BF75510035F915 /* COPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COPTextField.swift; sourceTree = "<group>"; };
 		A102B28923BF85DF0035F915 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		A102B28B23BF866B0035F915 /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
@@ -653,6 +655,7 @@
 				A11CBF2A23BB59C6000F976C /* Realm.swift */,
 				A102B29123BFBDE30035F915 /* KeyboardObserver.swift */,
 				3D602E0C23C4927400B06568 /* AppError.swift */,
+				A102356823CCC8A000F63B66 /* LocationManager.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1071,6 +1074,7 @@
 				3D16356923AA5789001F05DD /* WalkthroughContentViewController.swift in Sources */,
 				A141EBBB23BA543400BF26C6 /* SingleGeometryModel.swift in Sources */,
 				3DB5970C23C60A3600E4D433 /* OverpassListPastViewModel.swift in Sources */,
+				A102356923CCC8A000F63B66 /* LocationManager.swift in Sources */,
 				A11CBF2D23BBA44B000F976C /* SatellitePropertiesModel.swift in Sources */,
 				A102B28C23BF866B0035F915 /* LocationData.swift in Sources */,
 				A11E20B923BE397C00F62995 /* SatelliteDetailsViewController.swift in Sources */,

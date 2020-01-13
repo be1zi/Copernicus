@@ -74,10 +74,11 @@ public class OverpassPagerViewModel {
     
     private func getCurrentLocation() {
         
-        LocationRepository.sharedInstance.getLocationObservable().subscribe(onNext: { [unowned self] location in
-            self.location.onNext(location)
-            self.locationSelected = location.exist()
-            self.setLocationData(location)
+        LocationRepository.sharedInstance.getLocationObservable().subscribe(onNext: { [unowned self] locations in
+            guard let loc = locations.last else { return }
+            self.location.onNext(loc)
+            self.locationSelected = loc.exist()
+            self.setLocationData(loc)
         }).disposed(by: disposeBag)
     }
     
