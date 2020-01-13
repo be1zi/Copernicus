@@ -23,6 +23,8 @@ public struct LocationData {
     public var houseNumber: String?
     public var zipCode: String?
     public var type: LocationType
+    public var latitude: Double?
+    public var longitude: Double?
     
     //
     // MARK: - Init

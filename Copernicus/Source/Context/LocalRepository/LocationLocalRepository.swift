@@ -26,10 +26,10 @@ public struct LocationLocalRepository {
         
         let realm = try! Realm()
         let object = LocationModel(data)
-                
+
         return Single.create { single in
-            
-            object.createCoordinates().subscribe(onSuccess: { _ in
+
+            if let _ = data.latitude, let _ = data.longitude {
                 do {
                     try realm.write {
                         if data.type == .Default {
@@ -46,10 +46,28 @@ public struct LocationLocalRepository {
                     Logger.logError(error: error)
                     single(.error(error))
                 }
-            }) { error in
-                single(.error(error))
-            }.disposed(by: LocationLocalRepository.sharedInstance.disposeBag)
-            
+            } else {
+                object.createCoordinates().subscribe(onSuccess: { _ in
+                    do {
+                        try realm.write {
+                            if data.type == .Default {
+                                realm.delete(realm.objects(LocationModel.self), cascading: true)
+                            } else {
+                                let objects = realm.objects(LocationModel.self).filter(NSPredicate(format: "id = %@", argumentArray: [object.id]))
+                                realm.delete(objects, cascading: true)
+                            }
+                            
+                            realm.add(object)
+                        }
+                        single(.success(()))
+                    } catch {
+                        Logger.logError(error: error)
+                        single(.error(error))
+                    }
+                }) { error in
+                    single(.error(error))
+                }.disposed(by: LocationLocalRepository.sharedInstance.disposeBag)
+            }
             return Disposables.create()
         }
     }

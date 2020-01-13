@@ -50,6 +50,7 @@ public class LocationPickerViewController: BaseViewController {
         setupView()
         setupRx()
         setData()
+        setupLocationManager()
     }
     
     //

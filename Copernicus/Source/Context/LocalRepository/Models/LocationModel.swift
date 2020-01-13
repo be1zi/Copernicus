@@ -36,6 +36,8 @@ public class LocationModel: Object {
         self.street = data.street
         self.houseNumber = data.houseNumber
         self.zipCode = data.zipCode
+        self.latitide = data.latitude ?? 0.0
+        self.longitude = data.longitude ?? 0.0
         
         super.init()
     }
