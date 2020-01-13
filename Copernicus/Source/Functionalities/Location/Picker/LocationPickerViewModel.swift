@@ -76,6 +76,14 @@ public struct LocationPickerViewModel {
             locationData.houseNumber = newValue
         case .zipCode:
             locationData.zipCode = newValue
+        case .latitude:
+            if let value = newValue, let latitude = Double(value) {
+                locationData.latitude = latitude
+            }
+        case .longitude:
+            if let value = newValue, let longitude = Double(value) {
+                locationData.longitude = longitude
+            }
         }
     }
     
@@ -84,6 +92,10 @@ public struct LocationPickerViewModel {
         let type = newValue == true ? LocationType.Default : LocationType.Temporary
         
         locationData.type = type
+    }
+    
+    public mutating func useMyLocation(_ isOn: Bool) {
+        locationData.useMyLocation = isOn
     }
     
     //

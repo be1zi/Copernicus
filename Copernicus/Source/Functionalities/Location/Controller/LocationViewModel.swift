@@ -14,6 +14,8 @@ public enum LocationFieldType {
     case street
     case houseNumber
     case zipCode
+    case latitude
+    case longitude
 }
 
 public struct LocationViewModel {
@@ -84,6 +86,8 @@ public struct LocationViewModel {
             locationData.houseNumber = newValue
         case .zipCode:
             locationData.zipCode = newValue
+        default:
+            break
         }
     }
     

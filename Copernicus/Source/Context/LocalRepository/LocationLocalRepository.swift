@@ -29,7 +29,7 @@ public struct LocationLocalRepository {
 
         return Single.create { single in
 
-            if let _ = data.latitude, let _ = data.longitude {
+            if data.useMyLocation == true, let _ = data.latitude, let _ = data.longitude {
                 do {
                     try realm.write {
                         if data.type == .Default {

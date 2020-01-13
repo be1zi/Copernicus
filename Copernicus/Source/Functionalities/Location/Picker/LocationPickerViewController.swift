@@ -37,7 +37,7 @@ public class LocationPickerViewController: BaseViewController {
     
     private var viewModel = LocationPickerViewModel()
     private let disposeBag = DisposeBag()
-    private let locationManager = CLLocationManager()
+    private var locationManager = CLLocationManager()
 
     //
     // MARK: - Lifecycle
@@ -88,10 +88,25 @@ public class LocationPickerViewController: BaseViewController {
     
     private func setDataFromPlacemark(_ placemark: CLPlacemark) {
         countryTextField.text = placemark.country
+        countryTextField.sendActions(for: .valueChanged)
         cityTextField.text = placemark.locality
+        cityTextField.sendActions(for: .valueChanged)
         zipCodeTextField.text = placemark.postalCode
+        zipCodeTextField.sendActions(for: .valueChanged)
         streetTextField.text = placemark.thoroughfare
+        streetTextField.sendActions(for: .valueChanged)
         houseNumberTextField.text = nil
+        houseNumberTextField.sendActions(for: .valueChanged)
+        
+        guard let location = placemark.location else {
+            return
+        }
+        
+        let latitude = "\(location.coordinate.latitude)"
+        let longitude = "\(location.coordinate.longitude)"
+        
+        viewModel.setData(newValue: latitude, type: .latitude)
+        viewModel.setData(newValue: longitude, type: .longitude)
     }
     
     //
@@ -131,12 +146,13 @@ public class LocationPickerViewController: BaseViewController {
             self?.setupLocationManager()
             self?.setUserInteractionEnabled(!result)
             self?.setTextFieldsBackgroundColor(!result)
+            self?.viewModel.useMyLocation(result)
         }).disposed(by: disposeBag)
     }
     
     private func setupTextFieldsChangeValueRx() {
         
-        countryTextField.rx.value.distinctUntilChanged().subscribe(onNext: { [weak self] newValue in
+        countryTextField.rx.value.distinctUntilChanged().subscribe(onNext: { [ weak self] newValue in
             self?.viewModel.setData(newValue: newValue, type: .country)
         }).disposed(by: disposeBag)
         
@@ -223,8 +239,9 @@ public class LocationPickerViewController: BaseViewController {
         self.locationManager.requestWhenInUseAuthorization()
 
         if CLLocationManager.locationServicesEnabled() {
+            locationManager = CLLocationManager()
             locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
         }
     }
@@ -246,7 +263,6 @@ extension LocationPickerViewController: CLLocationManagerDelegate {
             
             guard let placemark = placemarks?.first else { return }
             
-            //self.viewModel.setMyLocation(placemark)
             self.setDataFromPlacemark(placemark)
         }
     }

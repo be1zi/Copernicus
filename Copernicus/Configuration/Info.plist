@@ -36,6 +36,18 @@
 	<string>Copernicus would like to use your current location.
 
 </string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Copernicus would like to use your current location.
+
+</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Copernicus would like to use your current location.
+
+</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Copernicus would like to use your current location.
+
+</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

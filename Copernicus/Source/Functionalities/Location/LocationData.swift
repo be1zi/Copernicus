@@ -25,6 +25,7 @@ public struct LocationData {
     public var type: LocationType
     public var latitude: Double?
     public var longitude: Double?
+    public var useMyLocation: Bool = false
     
     //
     // MARK: - Init
