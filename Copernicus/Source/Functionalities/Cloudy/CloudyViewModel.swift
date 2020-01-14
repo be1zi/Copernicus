@@ -6,4 +6,9 @@
 //  Copyright © 2020 Konrad Bełzowski. All rights reserved.
 //
 
-import Foundation
+public struct CloudyViewModel {
+    
+    //
+    // MARK: - Properties
+    //
+}
