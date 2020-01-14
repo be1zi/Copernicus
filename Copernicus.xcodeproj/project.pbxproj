@@ -101,6 +101,10 @@
 		A16C25D223CA09B900C4B4FD /* LocationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16C25D123CA09B900C4B4FD /* LocationPickerViewController.swift */; };
 		A16C25D423CA09C800C4B4FD /* LocationPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16C25D323CA09C800C4B4FD /* LocationPickerViewModel.swift */; };
 		A16C25D623CA09D500C4B4FD /* LocationPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A16C25D523CA09D500C4B4FD /* LocationPicker.storyboard */; };
+		A1710A3823CE1B2C00CA846D /* ImageryRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1710A3723CE1B2C00CA846D /* ImageryRemoteRepository.swift */; };
+		A1710A3B23CE1C1A00CA846D /* CloudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1710A3A23CE1C1A00CA846D /* CloudyViewController.swift */; };
+		A1710A3D23CE1C2600CA846D /* CloudyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1710A3C23CE1C2600CA846D /* CloudyViewModel.swift */; };
+		A1710A3F23CE1C4400CA846D /* CloudyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1710A3E23CE1C4400CA846D /* CloudyData.swift */; };
 		A1BA8FB623C23053007979E0 /* OverpassPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BA8FB523C23053007979E0 /* OverpassPagerViewController.swift */; };
 		A1BA8FC223C245D9007979E0 /* OverpassListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BA8FC123C245D9007979E0 /* OverpassListView.storyboard */; };
 		A1BA8FC623C24D63007979E0 /* OverpassPagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BA8FC523C24D63007979E0 /* OverpassPagerViewModel.swift */; };
@@ -231,6 +235,10 @@
 		A16C25D123CA09B900C4B4FD /* LocationPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerViewController.swift; sourceTree = "<group>"; };
 		A16C25D323CA09C800C4B4FD /* LocationPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerViewModel.swift; sourceTree = "<group>"; };
 		A16C25D523CA09D500C4B4FD /* LocationPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationPicker.storyboard; sourceTree = "<group>"; };
+		A1710A3723CE1B2C00CA846D /* ImageryRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageryRemoteRepository.swift; sourceTree = "<group>"; };
+		A1710A3A23CE1C1A00CA846D /* CloudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudyViewController.swift; sourceTree = "<group>"; };
+		A1710A3C23CE1C2600CA846D /* CloudyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudyViewModel.swift; sourceTree = "<group>"; };
+		A1710A3E23CE1C4400CA846D /* CloudyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudyData.swift; sourceTree = "<group>"; };
 		A1BA8FB523C23053007979E0 /* OverpassPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassPagerViewController.swift; sourceTree = "<group>"; };
 		A1BA8FC123C245D9007979E0 /* OverpassListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OverpassListView.storyboard; sourceTree = "<group>"; };
 		A1BA8FC523C24D63007979E0 /* OverpassPagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassPagerViewModel.swift; sourceTree = "<group>"; };
@@ -617,6 +625,7 @@
 				A141EBC523BA5CBB00BF26C6 /* SatelliteRemoteRepository.swift */,
 				A11E20B523BE35D000F62995 /* TrajectoryRemoteRepository.swift */,
 				A109226C23C0C9F70073B416 /* OverpassRemoteRepository.swift */,
+				A1710A3723CE1B2C00CA846D /* ImageryRemoteRepository.swift */,
 			);
 			path = RemoteRepository;
 			sourceTree = "<group>";
@@ -624,6 +633,7 @@
 		A160A19023A541CC00025C02 /* Functionalities */ = {
 			isa = PBXGroup;
 			children = (
+				A1710A3923CE1C0500CA846D /* Cloudy */,
 				A109226323C0AF290073B416 /* Overpass */,
 				A11E20C223BE71D600F62995 /* Location */,
 				A141EBBE23BA5B5F00BF26C6 /* Satellites */,
@@ -698,6 +708,16 @@
 				A16C25D523CA09D500C4B4FD /* LocationPicker.storyboard */,
 			);
 			path = Picker;
+			sourceTree = "<group>";
+		};
+		A1710A3923CE1C0500CA846D /* Cloudy */ = {
+			isa = PBXGroup;
+			children = (
+				A1710A3A23CE1C1A00CA846D /* CloudyViewController.swift */,
+				A1710A3C23CE1C2600CA846D /* CloudyViewModel.swift */,
+				A1710A3E23CE1C4400CA846D /* CloudyData.swift */,
+			);
+			path = Cloudy;
 			sourceTree = "<group>";
 		};
 		A1BA8FC323C24D33007979E0 /* Pager */ = {
@@ -1065,6 +1085,8 @@
 				A102B28823BF75510035F915 /* COPTextField.swift in Sources */,
 				A102B28E23BF906B0035F915 /* LocationLocalRepository.swift in Sources */,
 				A141EBC623BA5CBB00BF26C6 /* SatelliteRemoteRepository.swift in Sources */,
+				A1710A3823CE1B2C00CA846D /* ImageryRemoteRepository.swift in Sources */,
+				A1710A3F23CE1C4400CA846D /* CloudyData.swift in Sources */,
 				A109227723C0E8530073B416 /* OverpassLocalRepository.swift in Sources */,
 				3D47BD3823A77DE6003697FA /* LanguageViewController.swift in Sources */,
 				3DDF89D223CDF2680088741C /* ImageryModel.swift in Sources */,
@@ -1082,6 +1104,7 @@
 				A102B28A23BF85DF0035F915 /* LocationModel.swift in Sources */,
 				3D602E0F23C4A74900B06568 /* DateFormatter.swift in Sources */,
 				A11CBF2B23BB59C6000F976C /* Realm.swift in Sources */,
+				A1710A3B23CE1C1A00CA846D /* CloudyViewController.swift in Sources */,
 				3D16356923AA5789001F05DD /* WalkthroughContentViewController.swift in Sources */,
 				A141EBBB23BA543400BF26C6 /* SingleGeometryModel.swift in Sources */,
 				3DB5970C23C60A3600E4D433 /* OverpassListPastViewModel.swift in Sources */,
@@ -1097,6 +1120,7 @@
 				3D231DC323A8D27D00B4CFD4 /* Font.swift in Sources */,
 				A141EBC223BA5BCC00BF26C6 /* SatellitesListViewModel.swift in Sources */,
 				A109227B23C112510073B416 /* OverpassGeometryModel.swift in Sources */,
+				A1710A3D23CE1C2600CA846D /* CloudyViewModel.swift in Sources */,
 				A11E20C623BE726A00F62995 /* LocationViewModel.swift in Sources */,
 				3D231DC723A8D4B500B4CFD4 /* HomeViewModel.swift in Sources */,
 				3D0E604123A764B000F9ECFD /* BaseViewController.swift in Sources */,
