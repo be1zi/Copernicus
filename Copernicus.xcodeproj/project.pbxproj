@@ -44,6 +44,9 @@
 		3DB5970A23C60A1800E4D433 /* OverpassListPastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB5970923C60A1800E4D433 /* OverpassListPastTableViewCell.swift */; };
 		3DB5970C23C60A3600E4D433 /* OverpassListPastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB5970B23C60A3600E4D433 /* OverpassListPastViewModel.swift */; };
 		3DB5970E23C60A7B00E4D433 /* OverpassListPastTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DB5970D23C60A7B00E4D433 /* OverpassListPastTableViewCell.xib */; };
+		3DDF89D223CDF2680088741C /* ImageryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF89D123CDF2680088741C /* ImageryModel.swift */; };
+		3DDF89D423CDF3240088741C /* ImageryResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF89D323CDF3240088741C /* ImageryResultModel.swift */; };
+		3DDF89D623CDF4330088741C /* ImageryGeometryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDF89D523CDF4330088741C /* ImageryGeometryModel.swift */; };
 		3DEE0E9023A7970D0036DA45 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DEE0E9223A7970D0036DA45 /* Localizable.strings */; };
 		A102356923CCC8A000F63B66 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102356823CCC8A000F63B66 /* LocationManager.swift */; };
 		A102B28823BF75510035F915 /* COPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102B28723BF75510035F915 /* COPTextField.swift */; };
@@ -165,6 +168,9 @@
 		3DB5970923C60A1800E4D433 /* OverpassListPastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassListPastTableViewCell.swift; sourceTree = "<group>"; };
 		3DB5970B23C60A3600E4D433 /* OverpassListPastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassListPastViewModel.swift; sourceTree = "<group>"; };
 		3DB5970D23C60A7B00E4D433 /* OverpassListPastTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverpassListPastTableViewCell.xib; sourceTree = "<group>"; };
+		3DDF89D123CDF2680088741C /* ImageryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageryModel.swift; sourceTree = "<group>"; };
+		3DDF89D323CDF3240088741C /* ImageryResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageryResultModel.swift; sourceTree = "<group>"; };
+		3DDF89D523CDF4330088741C /* ImageryGeometryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageryGeometryModel.swift; sourceTree = "<group>"; };
 		3DEE0E9123A7970D0036DA45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3DEE0E9323A798590036DA45 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		48811002C83BF34D05121043 /* Pods-Copernicus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Copernicus.release.xcconfig"; path = "Target Support Files/Pods-Copernicus/Pods-Copernicus.release.xcconfig"; sourceTree = "<group>"; };
@@ -491,6 +497,9 @@
 				A109227423C0E65D0073B416 /* OverpassFootprintModel.swift */,
 				A109227A23C112510073B416 /* OverpassGeometryModel.swift */,
 				A109227223C0E3480073B416 /* SingleOverpassModel.swift */,
+				3DDF89D123CDF2680088741C /* ImageryModel.swift */,
+				3DDF89D323CDF3240088741C /* ImageryResultModel.swift */,
+				3DDF89D523CDF4330088741C /* ImageryGeometryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1039,6 +1048,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A11E20B023BE296400F62995 /* CoordinateModel.swift in Sources */,
+				3DDF89D423CDF3240088741C /* ImageryResultModel.swift in Sources */,
 				A160A19923A65CE700025C02 /* Logger.swift in Sources */,
 				3D8E525523ABAF1E0067CD39 /* WalkthroughViewModel.swift in Sources */,
 				A149558323C361E60054A314 /* OverpassListFutureTableViewCell.swift in Sources */,
@@ -1057,6 +1067,7 @@
 				A141EBC623BA5CBB00BF26C6 /* SatelliteRemoteRepository.swift in Sources */,
 				A109227723C0E8530073B416 /* OverpassLocalRepository.swift in Sources */,
 				3D47BD3823A77DE6003697FA /* LanguageViewController.swift in Sources */,
+				3DDF89D223CDF2680088741C /* ImageryModel.swift in Sources */,
 				A11E20B423BE352300F62995 /* TrajectoryRepository.swift in Sources */,
 				A1BFF31823A5349A008165FA /* AppDelegate.swift in Sources */,
 				A102B29223BFBDE30035F915 /* KeyboardObserver.swift in Sources */,
@@ -1103,6 +1114,7 @@
 				A16C25D423CA09C800C4B4FD /* LocationPickerViewModel.swift in Sources */,
 				A109226B23C0B6F70073B416 /* LocationRepository.swift in Sources */,
 				A1BA8FB623C23053007979E0 /* OverpassPagerViewController.swift in Sources */,
+				3DDF89D623CDF4330088741C /* ImageryGeometryModel.swift in Sources */,
 				A15A44B423BCF39800A3F07E /* SatelliteLocalRepository.swift in Sources */,
 				3D231DC523A8D42F00B4CFD4 /* HomeViewController.swift in Sources */,
 				3DB5970A23C60A1800E4D433 /* OverpassListPastTableViewCell.swift in Sources */,
