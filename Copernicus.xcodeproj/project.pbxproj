@@ -188,7 +188,7 @@
 		A109226623C0AF690073B416 /* OverpassListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassListViewModel.swift; sourceTree = "<group>"; };
 		A109226823C0AF890073B416 /* Overpass.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Overpass.storyboard; sourceTree = "<group>"; };
 		A109226A23C0B6F70073B416 /* LocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepository.swift; sourceTree = "<group>"; };
-		A109226C23C0C9F70073B416 /* OverpassRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OverpassRemoteRepository.swift; path = Copernicus/Source/Context/Repository/OverpassRemoteRepository.swift; sourceTree = SOURCE_ROOT; };
+		A109226C23C0C9F70073B416 /* OverpassRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OverpassRemoteRepository.swift; path = Copernicus/Source/Context/RemoteRepository/OverpassRemoteRepository.swift; sourceTree = SOURCE_ROOT; };
 		A109226E23C0CAB00073B416 /* OverpassData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassData.swift; sourceTree = "<group>"; };
 		A109227023C0E27E0073B416 /* OverpassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassModel.swift; sourceTree = "<group>"; };
 		A109227223C0E3480073B416 /* SingleOverpassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleOverpassModel.swift; sourceTree = "<group>"; };
@@ -205,7 +205,7 @@
 		A11E20AF23BE296400F62995 /* CoordinateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateModel.swift; sourceTree = "<group>"; };
 		A11E20B123BE33AA00F62995 /* TrajectoryLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrajectoryLocalRepository.swift; sourceTree = "<group>"; };
 		A11E20B323BE352300F62995 /* TrajectoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrajectoryRepository.swift; sourceTree = "<group>"; };
-		A11E20B523BE35D000F62995 /* TrajectoryRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrajectoryRemoteRepository.swift; path = Copernicus/Source/Context/Repository/TrajectoryRemoteRepository.swift; sourceTree = SOURCE_ROOT; };
+		A11E20B523BE35D000F62995 /* TrajectoryRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrajectoryRemoteRepository.swift; path = Copernicus/Source/Context/RemoteRepository/TrajectoryRemoteRepository.swift; sourceTree = SOURCE_ROOT; };
 		A11E20B823BE397C00F62995 /* SatelliteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteDetailsViewController.swift; sourceTree = "<group>"; };
 		A11E20BA23BE398900F62995 /* SatelliteDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteDetailsViewModel.swift; sourceTree = "<group>"; };
 		A11E20BE23BE39B100F62995 /* SatelliteDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SatelliteDetails.storyboard; sourceTree = "<group>"; };
@@ -219,7 +219,7 @@
 		A141EBBF23BA5B7700BF26C6 /* SatellitesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitesListViewController.swift; sourceTree = "<group>"; };
 		A141EBC123BA5BCC00BF26C6 /* SatellitesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitesListViewModel.swift; sourceTree = "<group>"; };
 		A141EBC323BA5C0500BF26C6 /* Satellites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Satellites.storyboard; sourceTree = "<group>"; };
-		A141EBC523BA5CBB00BF26C6 /* SatelliteRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SatelliteRemoteRepository.swift; path = Copernicus/Source/Functionalities/Satellites/SatelliteRemoteRepository.swift; sourceTree = SOURCE_ROOT; };
+		A141EBC523BA5CBB00BF26C6 /* SatelliteRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SatelliteRemoteRepository.swift; path = Copernicus/Source/Context/RemoteRepository/SatelliteRemoteRepository.swift; sourceTree = SOURCE_ROOT; };
 		A141EBC723BA6DC800BF26C6 /* SatelliteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteRepository.swift; sourceTree = "<group>"; };
 		A149558223C361E60054A314 /* OverpassListFutureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassListFutureTableViewCell.swift; sourceTree = "<group>"; };
 		A149558423C361FF0054A314 /* OverpassListFutureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassListFutureViewModel.swift; sourceTree = "<group>"; };
