@@ -88,6 +88,11 @@
 		A11E20C423BE725D00F62995 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E20C323BE725D00F62995 /* LocationViewController.swift */; };
 		A11E20C623BE726A00F62995 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E20C523BE726A00F62995 /* LocationViewModel.swift */; };
 		A11E20C823BE728100F62995 /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A11E20C723BE728100F62995 /* Location.storyboard */; };
+		A1372C7223CF7CE600D31D56 /* CloudyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1372C7123CF7CE600D31D56 /* CloudyTableViewCell.swift */; };
+		A1372C7423CF7D2100D31D56 /* CloudyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1372C7323CF7D2100D31D56 /* CloudyTableViewCell.xib */; };
+		A1372C7623CF7D8800D31D56 /* CloudyTableViewFooterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1372C7523CF7D8800D31D56 /* CloudyTableViewFooterViewModel.swift */; };
+		A1372C7823CF7DBC00D31D56 /* CloudyTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1372C7723CF7DBC00D31D56 /* CloudyTableViewCellViewModel.swift */; };
+		A1372C7A23CF7E0A00D31D56 /* CloudyTableViewHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1372C7923CF7E0A00D31D56 /* CloudyTableViewHeaderViewModel.swift */; };
 		A141EBB923BA526400BF26C6 /* SatelliteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBB823BA526400BF26C6 /* SatelliteModel.swift */; };
 		A141EBBB23BA543400BF26C6 /* SingleGeometryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBBA23BA543400BF26C6 /* SingleGeometryModel.swift */; };
 		A141EBBD23BA54D000BF26C6 /* SensorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A141EBBC23BA54D000BF26C6 /* SensorModel.swift */; };
@@ -228,6 +233,11 @@
 		A11E20C323BE725D00F62995 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		A11E20C523BE726A00F62995 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		A11E20C723BE728100F62995 /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
+		A1372C7123CF7CE600D31D56 /* CloudyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CloudyTableViewCell.swift; path = Copernicus/Source/Functionalities/Cloudy/CloudyTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		A1372C7323CF7D2100D31D56 /* CloudyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CloudyTableViewCell.xib; path = Copernicus/Source/Functionalities/Cloudy/CloudyTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		A1372C7523CF7D8800D31D56 /* CloudyTableViewFooterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudyTableViewFooterViewModel.swift; sourceTree = "<group>"; };
+		A1372C7723CF7DBC00D31D56 /* CloudyTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CloudyTableViewCellViewModel.swift; path = Copernicus/Source/Functionalities/Cloudy/Cells/Footer/CloudyTableViewCellViewModel.swift; sourceTree = SOURCE_ROOT; };
+		A1372C7923CF7E0A00D31D56 /* CloudyTableViewHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudyTableViewHeaderViewModel.swift; sourceTree = "<group>"; };
 		A141EBB823BA526400BF26C6 /* SatelliteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteModel.swift; sourceTree = "<group>"; };
 		A141EBBA23BA543400BF26C6 /* SingleGeometryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleGeometryModel.swift; sourceTree = "<group>"; };
 		A141EBBC23BA54D000BF26C6 /* SensorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorModel.swift; sourceTree = "<group>"; };
@@ -342,6 +352,7 @@
 			children = (
 				3D15AAD623CF4FD800499ADF /* CloudyTableViewHeader.swift */,
 				3D15AAD823CF500000499ADF /* CloudyTableViewHeader.xib */,
+				A1372C7923CF7E0A00D31D56 /* CloudyTableViewHeaderViewModel.swift */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -351,6 +362,7 @@
 			children = (
 				3D15AAD223CF4E7700499ADF /* CloudyTableViewFooter.swift */,
 				3D15AAD423CF4EE500499ADF /* CloudyTableViewFooter.xib */,
+				A1372C7523CF7D8800D31D56 /* CloudyTableViewFooterViewModel.swift */,
 			);
 			path = Footer;
 			sourceTree = "<group>";
@@ -358,6 +370,9 @@
 		3D15AAD123CF4E6200499ADF /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				A1372C7123CF7CE600D31D56 /* CloudyTableViewCell.swift */,
+				A1372C7323CF7D2100D31D56 /* CloudyTableViewCell.xib */,
+				A1372C7723CF7DBC00D31D56 /* CloudyTableViewCellViewModel.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -974,6 +989,7 @@
 				3D98F3F823ACFBCF000E70D9 /* Settings.storyboard in Resources */,
 				3D602E1623C4B51A00B06568 /* OverpassListHeaderTableViewCell.xib in Resources */,
 				3D144F1B23A8ECD800E17504 /* HomeCellView.xib in Resources */,
+				A1372C7423CF7D2100D31D56 /* CloudyTableViewCell.xib in Resources */,
 				A141EBC423BA5C0500BF26C6 /* Satellites.storyboard in Resources */,
 				A1BFF31E23A5349B008165FA /* Assets.xcassets in Resources */,
 			);
@@ -1123,6 +1139,7 @@
 				A11E20B023BE296400F62995 /* CoordinateModel.swift in Sources */,
 				3DDF89D423CDF3240088741C /* ImageryResultModel.swift in Sources */,
 				A160A19923A65CE700025C02 /* Logger.swift in Sources */,
+				A1372C7A23CF7E0A00D31D56 /* CloudyTableViewHeaderViewModel.swift in Sources */,
 				3D8E525523ABAF1E0067CD39 /* WalkthroughViewModel.swift in Sources */,
 				A149558323C361E60054A314 /* OverpassListFutureTableViewCell.swift in Sources */,
 				3D602E0D23C4927400B06568 /* AppError.swift in Sources */,
@@ -1189,6 +1206,7 @@
 				3D144F1D23A908A000E17504 /* UIView.swift in Sources */,
 				A11E20C423BE725D00F62995 /* LocationViewController.swift in Sources */,
 				A11E20AE23BE272900F62995 /* TrajectoryModel.swift in Sources */,
+				A1372C7623CF7D8800D31D56 /* CloudyTableViewFooterViewModel.swift in Sources */,
 				A11E20B623BE35D000F62995 /* TrajectoryRemoteRepository.swift in Sources */,
 				A16C25D423CA09C800C4B4FD /* LocationPickerViewModel.swift in Sources */,
 				A109226B23C0B6F70073B416 /* LocationRepository.swift in Sources */,
@@ -1196,10 +1214,12 @@
 				3DDF89D623CDF4330088741C /* ImageryGeometryModel.swift in Sources */,
 				A15A44B423BCF39800A3F07E /* SatelliteLocalRepository.swift in Sources */,
 				3D231DC523A8D42F00B4CFD4 /* HomeViewController.swift in Sources */,
+				A1372C7223CF7CE600D31D56 /* CloudyTableViewCell.swift in Sources */,
 				3DB5970A23C60A1800E4D433 /* OverpassListPastTableViewCell.swift in Sources */,
 				3D602E1423C4B41600B06568 /* OverpassListHeaderViewModel.swift in Sources */,
 				A16C25D223CA09B900C4B4FD /* LocationPickerViewController.swift in Sources */,
 				A141EBC823BA6DC800BF26C6 /* SatelliteRepository.swift in Sources */,
+				A1372C7823CF7DBC00D31D56 /* CloudyTableViewCellViewModel.swift in Sources */,
 				3D15AACD23CF48E400499ADF /* ImageryLocalRepository.swift in Sources */,
 				A11E20BB23BE398900F62995 /* SatelliteDetailsViewModel.swift in Sources */,
 				3D0E604C23A76FFB00F9ECFD /* LanguageManager.swift in Sources */,
