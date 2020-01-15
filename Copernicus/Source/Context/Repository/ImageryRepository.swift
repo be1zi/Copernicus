@@ -23,11 +23,11 @@ public struct ImageryRepository {
     // MARK: - Methods
     //
     
-    public func getImageryObservable(_ cloudyData: CloudyData) -> Observable<[ImageryModel]> {
+    public func getImageryObservable(_ cloudyData: CloudyData) -> Observable<[ImageryResultModel]> {
                 
         provider.rx.request(.imagery(cloudyData)).map { response in
-            //ImageryLocalRepository
-            }
+            ImageryLocalRepository.sharedInstance.saveImagery(jsonResponse: response)
+        }
         .subscribe()
         .disposed(by: disposeBag)
         

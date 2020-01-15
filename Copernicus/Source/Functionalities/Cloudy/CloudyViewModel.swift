@@ -19,7 +19,7 @@ public class CloudyViewModel {
     
     private let disposeBag = DisposeBag()
     private let location = ReplaySubject<LocationModel>.create(bufferSize: 1)
-    private let imagery = BehaviorSubject<[ImageryModel]>(value: [])
+    private let imagery = BehaviorSubject<[ImageryResultModel]>(value: [])
     
     //
     // MARK: - Init
@@ -52,6 +52,7 @@ public class CloudyViewModel {
             
             ImageryRepository.sharedInstance.getImageryObservable(cloudyData).subscribe(onNext: { [unowned self] imageryArray in
                 self.imagery.onNext(imageryArray)
+                print(imageryArray.count)
             }).disposed(by: self.disposeBag)
         }).disposed(by: disposeBag)
     }
