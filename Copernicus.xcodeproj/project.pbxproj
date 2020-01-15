@@ -17,6 +17,8 @@
 		3D144F1B23A8ECD800E17504 /* HomeCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D144F1A23A8ECD800E17504 /* HomeCellView.xib */; };
 		3D144F1D23A908A000E17504 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D144F1C23A908A000E17504 /* UIView.swift */; };
 		3D144F1F23A90B9300E17504 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D144F1E23A90B9300E17504 /* UIColor.swift */; };
+		3D15AAC923CEF46C00499ADF /* ImageryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D15AAC823CEF46B00499ADF /* ImageryRepository.swift */; };
+		3D15AACD23CF48E400499ADF /* ImageryLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D15AACC23CF48E400499ADF /* ImageryLocalRepository.swift */; };
 		3D16356523AA4EA8001F05DD /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D16356423AA4EA8001F05DD /* WalkthroughPageViewController.swift */; };
 		3D16356723AA4EB8001F05DD /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D16356623AA4EB8001F05DD /* Walkthrough.storyboard */; };
 		3D16356923AA5789001F05DD /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D16356823AA5789001F05DD /* WalkthroughContentViewController.swift */; };
@@ -146,6 +148,8 @@
 		3D144F1A23A8ECD800E17504 /* HomeCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCellView.xib; sourceTree = "<group>"; };
 		3D144F1C23A908A000E17504 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		3D144F1E23A90B9300E17504 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		3D15AAC823CEF46B00499ADF /* ImageryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageryRepository.swift; sourceTree = "<group>"; };
+		3D15AACC23CF48E400499ADF /* ImageryLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageryLocalRepository.swift; sourceTree = "<group>"; };
 		3D16356423AA4EA8001F05DD /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		3D16356623AA4EB8001F05DD /* Walkthrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
 		3D16356823AA5789001F05DD /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
@@ -488,6 +492,7 @@
 				A11E20B323BE352300F62995 /* TrajectoryRepository.swift */,
 				A109226A23C0B6F70073B416 /* LocationRepository.swift */,
 				A109227823C0EA550073B416 /* OverpassRepository.swift */,
+				3D15AAC823CEF46B00499ADF /* ImageryRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -617,6 +622,7 @@
 				A102B28D23BF906B0035F915 /* LocationLocalRepository.swift */,
 				A11E20B123BE33AA00F62995 /* TrajectoryLocalRepository.swift */,
 				A109227623C0E8530073B416 /* OverpassLocalRepository.swift */,
+				3D15AACC23CF48E400499ADF /* ImageryLocalRepository.swift */,
 			);
 			path = LocalRepository;
 			sourceTree = "<group>";
@@ -1115,6 +1121,7 @@
 				A102356923CCC8A000F63B66 /* LocationManager.swift in Sources */,
 				A11CBF2D23BBA44B000F976C /* SatellitePropertiesModel.swift in Sources */,
 				A102B28C23BF866B0035F915 /* LocationData.swift in Sources */,
+				3D15AAC923CEF46C00499ADF /* ImageryRepository.swift in Sources */,
 				A11E20B923BE397C00F62995 /* SatelliteDetailsViewController.swift in Sources */,
 				A109226523C0AF480073B416 /* OverpassListViewController.swift in Sources */,
 				A149558523C361FF0054A314 /* OverpassListFutureViewModel.swift in Sources */,
@@ -1149,6 +1156,7 @@
 				3D602E1423C4B41600B06568 /* OverpassListHeaderViewModel.swift in Sources */,
 				A16C25D223CA09B900C4B4FD /* LocationPickerViewController.swift in Sources */,
 				A141EBC823BA6DC800BF26C6 /* SatelliteRepository.swift in Sources */,
+				3D15AACD23CF48E400499ADF /* ImageryLocalRepository.swift in Sources */,
 				A11E20BB23BE398900F62995 /* SatelliteDetailsViewModel.swift in Sources */,
 				3D0E604C23A76FFB00F9ECFD /* LanguageManager.swift in Sources */,
 				3D144F1723A8EBDA00E17504 /* HomeCellViewModel.swift in Sources */,

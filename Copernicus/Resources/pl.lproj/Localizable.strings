@@ -78,3 +78,7 @@
 "overpass.list.cell.image" = "obraz";
 "overpass.list.cell.ago" = "temu";
 "overpass.list.cell.clouds" = "zachmurzenie";
+
+// Cloudy
+"cloudy.header.title" = "Zachmurzenie";
+"cloudy.header.subtitle" = "Poniżej zobaczyć możesz informacje o zachmurzeniu w twojej okolicy z ostatniego roku";

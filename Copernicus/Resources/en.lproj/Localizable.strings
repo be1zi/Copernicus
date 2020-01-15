@@ -78,3 +78,7 @@
 "overpass.list.cell.image" = "image";
 "overpass.list.cell.ago" = "ago";
 "overpass.list.cell.clouds" = "clouds";
+
+// Cloudy
+"cloudy.header.title" = "Cloudy";
+"cloudy.header.subtitle" = "Below you can see information about the cloud cover in your area from last year";
