@@ -34,6 +34,7 @@ public class CloudyViewController: BaseViewController {
         setupView()
         setupRx()
         setStaticData()
+        registerCells()
     }
     
     //
@@ -49,6 +50,10 @@ public class CloudyViewController: BaseViewController {
     }
     
     private func setupView() {
+        tableView.tableFooterView = UIView()
+        tableView.sectionHeaderHeight = UITableView.automaticDimension
+        tableView.estimatedSectionHeaderHeight = 50.0
+        
         contentView.backgroundColor = UIColor.copBlackColor
     }
     
@@ -61,6 +66,10 @@ public class CloudyViewController: BaseViewController {
         subtitleLabel.text = viewModel.subtitle
     }
     
+    private func registerCells() {
+        tableView.register(UINib(nibName: viewModel.headerIdentifier, bundle: nil), forHeaderFooterViewReuseIdentifier: viewModel.headerIdentifier)
+    }
+    
     //
     // MARK: - Action
     //
@@ -69,5 +78,34 @@ public class CloudyViewController: BaseViewController {
         backButton.rx.tap.subscribe(onNext: { [weak self] _ in
             self?.navigationController?.popViewController(animated: true)
         }).disposed(by: disposeBag)
+        
+        viewModel.shouldReload.subscribe(onNext: { [weak self] _ in
+            self?.tableView.reloadData()
+        }).disposed(by: disposeBag)
+    }
+}
+
+extension CloudyViewController: UITableViewDataSource {
+    
+    public func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.seasonsCount
+    }
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.imageryCount
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+}
+
+extension CloudyViewController: UITableViewDelegate {
+    
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: viewModel.headerIdentifier)
+        
+        return header
     }
 }

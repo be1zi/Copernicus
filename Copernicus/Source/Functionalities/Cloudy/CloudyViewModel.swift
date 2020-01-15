@@ -7,6 +7,7 @@
 //
 
 import RxSwift
+import RxCocoa
 
 public class CloudyViewModel {
     
@@ -19,7 +20,22 @@ public class CloudyViewModel {
     
     private let disposeBag = DisposeBag()
     private let location = ReplaySubject<LocationModel>.create(bufferSize: 1)
-    private let imagery = BehaviorSubject<[ImageryResultModel]>(value: [])
+    private let imagery = BehaviorRelay<[ImageryResultModel]>(value: [])
+    
+    public var shouldReload = ReplaySubject<Void>.create(bufferSize: 1)
+    public var imageryCount: Int {
+        get {
+            return imagery.value.count
+        }
+    }
+    public var seasons: [String] = ["Wiosna", "Lato", "Jesień", "Zima"]
+    public var seasonsCount: Int {
+        get {
+            return seasons.count
+        }
+    }
+    
+    public let headerIdentifier = String(describing: CloudyTableViewHeader.self)
     
     //
     // MARK: - Init
@@ -51,8 +67,8 @@ public class CloudyViewModel {
             let cloudyData = CloudyData(latitude: location.latitide, longitude: location.longitude)
             
             ImageryRepository.sharedInstance.getImageryObservable(cloudyData).subscribe(onNext: { [unowned self] imageryArray in
-                self.imagery.onNext(imageryArray)
-                print(imageryArray.count)
+                self.imagery.accept(imageryArray)
+                self.shouldReload.onNext(())
             }).disposed(by: self.disposeBag)
         }).disposed(by: disposeBag)
     }
