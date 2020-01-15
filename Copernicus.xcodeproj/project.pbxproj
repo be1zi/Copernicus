@@ -19,6 +19,8 @@
 		3D144F1F23A90B9300E17504 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D144F1E23A90B9300E17504 /* UIColor.swift */; };
 		3D15AAC923CEF46C00499ADF /* ImageryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D15AAC823CEF46B00499ADF /* ImageryRepository.swift */; };
 		3D15AACD23CF48E400499ADF /* ImageryLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D15AACC23CF48E400499ADF /* ImageryLocalRepository.swift */; };
+		3D15AAD323CF4E7700499ADF /* CloudyTableViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D15AAD223CF4E7700499ADF /* CloudyTableViewFooter.swift */; };
+		3D15AAD523CF4EE500499ADF /* CloudyTableViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D15AAD423CF4EE500499ADF /* CloudyTableViewFooter.xib */; };
 		3D16356523AA4EA8001F05DD /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D16356423AA4EA8001F05DD /* WalkthroughPageViewController.swift */; };
 		3D16356723AA4EB8001F05DD /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D16356623AA4EB8001F05DD /* Walkthrough.storyboard */; };
 		3D16356923AA5789001F05DD /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D16356823AA5789001F05DD /* WalkthroughContentViewController.swift */; };
@@ -150,6 +152,8 @@
 		3D144F1E23A90B9300E17504 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		3D15AAC823CEF46B00499ADF /* ImageryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageryRepository.swift; sourceTree = "<group>"; };
 		3D15AACC23CF48E400499ADF /* ImageryLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageryLocalRepository.swift; sourceTree = "<group>"; };
+		3D15AAD223CF4E7700499ADF /* CloudyTableViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudyTableViewFooter.swift; sourceTree = "<group>"; };
+		3D15AAD423CF4EE500499ADF /* CloudyTableViewFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CloudyTableViewFooter.xib; sourceTree = "<group>"; };
 		3D16356423AA4EA8001F05DD /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		3D16356623AA4EB8001F05DD /* Walkthrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
 		3D16356823AA5789001F05DD /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
@@ -317,6 +321,39 @@
 				3D144F1623A8EBDA00E17504 /* HomeCellViewModel.swift */,
 				3D144F1823A8ECA300E17504 /* HomeCellView.swift */,
 				3D144F1A23A8ECD800E17504 /* HomeCellView.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3D15AACE23CF4E4500499ADF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3D15AACF23CF4E5900499ADF /* Header */,
+				3D15AAD123CF4E6200499ADF /* Cell */,
+				3D15AAD023CF4E5E00499ADF /* Footer */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3D15AACF23CF4E5900499ADF /* Header */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		3D15AAD023CF4E5E00499ADF /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				3D15AAD223CF4E7700499ADF /* CloudyTableViewFooter.swift */,
+				3D15AAD423CF4EE500499ADF /* CloudyTableViewFooter.xib */,
+			);
+			path = Footer;
+			sourceTree = "<group>";
+		};
+		3D15AAD123CF4E6200499ADF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -721,6 +758,7 @@
 		A1710A3923CE1C0500CA846D /* Cloudy */ = {
 			isa = PBXGroup;
 			children = (
+				3D15AACE23CF4E4500499ADF /* Cells */,
 				A1710A3A23CE1C1A00CA846D /* CloudyViewController.swift */,
 				A1710A3C23CE1C2600CA846D /* CloudyViewModel.swift */,
 				A1710A3E23CE1C4400CA846D /* CloudyData.swift */,
@@ -925,6 +963,7 @@
 				A160A18A23A5413A00025C02 /* config.plist in Resources */,
 				A11E20C823BE728100F62995 /* Location.storyboard in Resources */,
 				A1BFF32423A5349B008165FA /* LaunchScreen.storyboard in Resources */,
+				3D15AAD523CF4EE500499ADF /* CloudyTableViewFooter.xib in Resources */,
 				A149558723C3623E0054A314 /* OverpassListFutureTableViewCell.xib in Resources */,
 				A1BA8FC223C245D9007979E0 /* OverpassListView.storyboard in Resources */,
 				3D16356723AA4EB8001F05DD /* Walkthrough.storyboard in Resources */,
@@ -1129,6 +1168,7 @@
 				3D16356523AA4EA8001F05DD /* WalkthroughPageViewController.swift in Sources */,
 				A141EBBD23BA54D000BF26C6 /* SensorModel.swift in Sources */,
 				3D231DC323A8D27D00B4CFD4 /* Font.swift in Sources */,
+				3D15AAD323CF4E7700499ADF /* CloudyTableViewFooter.swift in Sources */,
 				A141EBC223BA5BCC00BF26C6 /* SatellitesListViewModel.swift in Sources */,
 				A109227B23C112510073B416 /* OverpassGeometryModel.swift in Sources */,
 				A1710A3D23CE1C2600CA846D /* CloudyViewModel.swift in Sources */,
