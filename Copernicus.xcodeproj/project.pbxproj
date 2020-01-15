@@ -21,6 +21,8 @@
 		3D15AACD23CF48E400499ADF /* ImageryLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D15AACC23CF48E400499ADF /* ImageryLocalRepository.swift */; };
 		3D15AAD323CF4E7700499ADF /* CloudyTableViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D15AAD223CF4E7700499ADF /* CloudyTableViewFooter.swift */; };
 		3D15AAD523CF4EE500499ADF /* CloudyTableViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D15AAD423CF4EE500499ADF /* CloudyTableViewFooter.xib */; };
+		3D15AAD723CF4FD800499ADF /* CloudyTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D15AAD623CF4FD800499ADF /* CloudyTableViewHeader.swift */; };
+		3D15AAD923CF500000499ADF /* CloudyTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D15AAD823CF500000499ADF /* CloudyTableViewHeader.xib */; };
 		3D16356523AA4EA8001F05DD /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D16356423AA4EA8001F05DD /* WalkthroughPageViewController.swift */; };
 		3D16356723AA4EB8001F05DD /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D16356623AA4EB8001F05DD /* Walkthrough.storyboard */; };
 		3D16356923AA5789001F05DD /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D16356823AA5789001F05DD /* WalkthroughContentViewController.swift */; };
@@ -154,6 +156,8 @@
 		3D15AACC23CF48E400499ADF /* ImageryLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageryLocalRepository.swift; sourceTree = "<group>"; };
 		3D15AAD223CF4E7700499ADF /* CloudyTableViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudyTableViewFooter.swift; sourceTree = "<group>"; };
 		3D15AAD423CF4EE500499ADF /* CloudyTableViewFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CloudyTableViewFooter.xib; sourceTree = "<group>"; };
+		3D15AAD623CF4FD800499ADF /* CloudyTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudyTableViewHeader.swift; sourceTree = "<group>"; };
+		3D15AAD823CF500000499ADF /* CloudyTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CloudyTableViewHeader.xib; sourceTree = "<group>"; };
 		3D16356423AA4EA8001F05DD /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		3D16356623AA4EB8001F05DD /* Walkthrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
 		3D16356823AA5789001F05DD /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
@@ -338,6 +342,8 @@
 		3D15AACF23CF4E5900499ADF /* Header */ = {
 			isa = PBXGroup;
 			children = (
+				3D15AAD623CF4FD800499ADF /* CloudyTableViewHeader.swift */,
+				3D15AAD823CF500000499ADF /* CloudyTableViewHeader.xib */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -951,6 +957,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D15AAD923CF500000499ADF /* CloudyTableViewHeader.xib in Resources */,
 				A1710A4123CE1D3000CA846D /* Cloudy.storyboard in Resources */,
 				3DEE0E9023A7970D0036DA45 /* Localizable.strings in Resources */,
 				3D231DBA23A8C1AE00B4CFD4 /* Language.storyboard in Resources */,
@@ -1129,6 +1136,7 @@
 				A141EBC023BA5B7700BF26C6 /* SatellitesListViewController.swift in Sources */,
 				A160A19723A544F500025C02 /* ConfigurationManager.swift in Sources */,
 				A141EBB923BA526400BF26C6 /* SatelliteModel.swift in Sources */,
+				3D15AAD723CF4FD800499ADF /* CloudyTableViewHeader.swift in Sources */,
 				A1BA8FC623C24D63007979E0 /* OverpassPagerViewModel.swift in Sources */,
 				A109227923C0EA550073B416 /* OverpassRepository.swift in Sources */,
 				A102B28823BF75510035F915 /* COPTextField.swift in Sources */,
