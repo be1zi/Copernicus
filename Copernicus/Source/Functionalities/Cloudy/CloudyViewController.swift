@@ -53,7 +53,10 @@ public class CloudyViewController: BaseViewController {
         tableView.tableFooterView = UIView()
         tableView.sectionHeaderHeight = UITableView.automaticDimension
         tableView.estimatedSectionHeaderHeight = 50.0
-        
+            
+        tableView.sectionFooterHeight = UITableView.automaticDimension
+        tableView.estimatedSectionFooterHeight = 50.0
+
         contentView.backgroundColor = UIColor.copBlackColor
     }
     
@@ -68,6 +71,7 @@ public class CloudyViewController: BaseViewController {
     
     private func registerCells() {
         tableView.register(UINib(nibName: viewModel.headerIdentifier, bundle: nil), forHeaderFooterViewReuseIdentifier: viewModel.headerIdentifier)
+        tableView.register(UINib(nibName: viewModel.footerIdentifier, bundle: nil), forHeaderFooterViewReuseIdentifier: viewModel.footerIdentifier)
     }
     
     //
@@ -107,5 +111,12 @@ extension CloudyViewController: UITableViewDelegate {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: viewModel.headerIdentifier)
         
         return header
+    }
+    
+    public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        
+        let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: viewModel.footerIdentifier)
+        
+        return footer
     }
 }

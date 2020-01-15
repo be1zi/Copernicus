@@ -36,6 +36,7 @@ public class CloudyViewModel {
     }
     
     public let headerIdentifier = String(describing: CloudyTableViewHeader.self)
+    public let footerIdentifier = String(describing: CloudyTableViewFooter.self)
     
     //
     // MARK: - Init
