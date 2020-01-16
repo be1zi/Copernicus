@@ -13,4 +13,11 @@ public class CloudyTableViewCell: UITableViewCell {
     //
     // MARK: - Properties
     //
+    
+    @IBOutlet weak var leftSeparator: UIView!
+    @IBOutlet weak var rightSeparator: UIView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var satelliteLabel: UILabel!
+    @IBOutlet weak var cloudyLabel: UILabel!
+    
 }
