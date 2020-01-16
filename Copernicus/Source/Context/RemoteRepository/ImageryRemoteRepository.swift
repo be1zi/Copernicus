@@ -9,7 +9,7 @@
 import Moya
 
 public enum ImageryRemoteRepository {
-    case imagery(_ data: CloudyData)
+    case imagery(_ data: CloudyData, page: Int)
 }
 
 extension ImageryRemoteRepository: TargetType {
@@ -34,11 +34,12 @@ extension ImageryRemoteRepository: TargetType {
     public var task: Task {
         
         switch self {
-        case .imagery(let data):
+        case .imagery(let data, let page):
             let params: [String: Any] = ["api_key" : ConfigurationManager.sharedInstance.serverKey ?? "",
                                          "bbox" : data.geometryString(),
                                          "satelites" : data.satellitesString(),
-                                         "date_from" : data.dateFromString()]
+                                         "date_from" : data.dateFromString(),
+                                         "page" : page]
             return .requestParameters(parameters: params, encoding: URLEncoding.default)
         }
     }

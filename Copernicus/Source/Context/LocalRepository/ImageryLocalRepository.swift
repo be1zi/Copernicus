@@ -61,4 +61,23 @@ public struct ImageryLocalRepository {
             Logger.logError(error: error)
         }
     }
+    
+    public func saveImageryArray(_ jsonResponse: [Response]) {
+        
+        let result = jsonResponse.compactMap { try? JSONSerialization.jsonObject(with: $0.data, options: []) as? [String: Any] }
+            .compactMap { $0["results"] as? [[String: Any]] }
+            .compactMap { try? JSONSerialization.data(withJSONObject: $0, options: []) }
+            .compactMap { try? JSONDecoder().decode([ImageryResultModel].self, from: $0) }
+            .flatMap { $0 }
+        
+        do {
+            let realm = try Realm()
+            
+            try realm.write {
+                realm.add(result, update: .modified)
+            }
+        } catch {
+            Logger.logError(error: error)
+        }
+    }
 }

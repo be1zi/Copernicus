@@ -25,7 +25,7 @@ public class ImageryResultModel: Object, Codable {
     @objc dynamic var sceneId: String?
     @objc dynamic var cloudCoverPercentage: Double = 0.0
     @objc dynamic var productType: String?
-    var geometry: ImageryGeometryModel?
+    @objc dynamic var geometry: ImageryGeometryModel?
     
     private enum CodingKeys: String, CodingKey {
         case id
@@ -75,6 +75,8 @@ public class ImageryResultModel: Object, Codable {
         
         productType = try? container.decodeIfPresent(String.self, forKey: .productType)
         geometry = try? container.decodeIfPresent(ImageryGeometryModel.self, forKey: .geometry)
+        //TODO: fix
+        geometry?.id = id
         
         super.init()
     }
