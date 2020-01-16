@@ -16,7 +16,8 @@ public struct CloudyData {
     
     public var boundingBox: LocationRegion
     private let satellites: [String]
-
+    private let dateFrom: Date
+    
     //
     // MARK: - Init
     //
@@ -24,6 +25,7 @@ public struct CloudyData {
     public init(latitude: Double, longitude: Double) {
         self.boundingBox = LocationManager.sharedInstance.createBoundingBox(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
         self.satellites = ["Sentinel-2A", "Sentinel-2B", "Landsat-8"]
+        self.dateFrom = Seasons.dateYearAgo()
     }
     
     //
@@ -47,5 +49,12 @@ public struct CloudyData {
         }
         
         return value
+    }
+    
+    public func dateFromString() -> String {
+        let df = DateFormatter()
+        df.dateFormat = "yyyy-MM-dd"
+        
+        return df.string(from: dateFrom)
     }
 }

@@ -37,7 +37,8 @@ extension ImageryRemoteRepository: TargetType {
         case .imagery(let data):
             let params: [String: Any] = ["api_key" : ConfigurationManager.sharedInstance.serverKey ?? "",
                                          "bbox" : data.geometryString(),
-                                         "satelites" : data.satellitesString()]
+                                         "satelites" : data.satellitesString(),
+                                         "date_from" : data.dateFromString()]
             return .requestParameters(parameters: params, encoding: URLEncoding.default)
         }
     }
