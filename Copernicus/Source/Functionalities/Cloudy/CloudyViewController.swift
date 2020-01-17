@@ -72,6 +72,7 @@ public class CloudyViewController: BaseViewController {
     private func registerCells() {
         tableView.register(UINib(nibName: viewModel.headerIdentifier, bundle: nil), forHeaderFooterViewReuseIdentifier: viewModel.headerIdentifier)
         tableView.register(UINib(nibName: viewModel.footerIdentifier, bundle: nil), forHeaderFooterViewReuseIdentifier: viewModel.footerIdentifier)
+        tableView.register(UINib(nibName: viewModel.cellIdentifier, bundle: nil), forCellReuseIdentifier: viewModel.cellIdentifier)
     }
     
     //
@@ -96,11 +97,19 @@ extension CloudyViewController: UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.imageryCount
+        return viewModel.numberOfRowsInSection(section)
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.cellIdentifier, for: indexPath) as? CloudyTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        let cellViewModel = CloudyTableViewCellViewModel(imagery: viewModel.dataForCell(atIndexPath: indexPath))
+        cell.setViewModel(cellViewModel)
+        
+        return cell
     }
 }
 
@@ -108,14 +117,24 @@ extension CloudyViewController: UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: viewModel.headerIdentifier)
+        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: viewModel.headerIdentifier) as? CloudyTableViewHeader else {
+            return nil
+        }
+        
+        let vm = CloudyTableViewHeaderViewModel(title: viewModel.titleForSection(section))
+        header.setViewModel(vm)
         
         return header
     }
     
     public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         
-        let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: viewModel.footerIdentifier)
+        guard let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: viewModel.footerIdentifier) as? CloudyTableViewFooter else {
+            return nil
+        }
+        
+        let vm = CloudyTableViewFooterViewModel(cloudy: viewModel.averageCloudyForSection(section))
+        footer.setViewModel(vm)
         
         return footer
     }

@@ -20,7 +20,7 @@ private struct SeasonDates {
     public static let winterEnd = "20-03"
 }
 
-private enum Season {
+public enum Season {
     case spring
     case summer
     case autumn
@@ -67,6 +67,21 @@ public struct Seasons {
         }
         
         return false
+    }
+    
+    public static func isInSeason(season: Season, date: Date?) -> Bool {
+        guard let date = date else { return false }
+        
+        switch season {
+        case .spring:
+            return isInSeason(begin: SeasonDates.springBegin, end: SeasonDates.springEnd, date: date)
+        case .summer:
+            return isInSeason(begin: SeasonDates.summerBegin, end: SeasonDates.summerEnd, date: date)
+        case .autumn:
+            return isInSeason(begin: SeasonDates.autumnBegin, end: SeasonDates.autumnEnd, date: date)
+        default:
+            return false
+        }
     }
     
     public static func dateYearAgo() -> Date {

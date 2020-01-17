@@ -82,3 +82,13 @@
 // Cloudy
 "cloudy.header.title" = "Cloudy";
 "cloudy.header.subtitle" = "Below you can see information about the cloud cover in your area from last year";
+"cloudy.header.date" = "Date";
+"cloudy.header.satellite" = "Satellite";
+"cloudy.header.cloudy" = "Cloudy";
+"cloudy.header.average" = "Average";
+
+// Seasons
+"seasons.spring" = "Spring";
+"seasons.summer" = "Summer";
+"seasons.autumn" = "Autumn";
+"seasons.Winter" = "Winter";

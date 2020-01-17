@@ -82,3 +82,13 @@
 // Cloudy
 "cloudy.header.title" = "Zachmurzenie";
 "cloudy.header.subtitle" = "Poniżej zobaczyć możesz informacje o zachmurzeniu w twojej okolicy z ostatniego roku";
+"cloudy.header.date" = "Data";
+"cloudy.header.satellite" = "Satelita";
+"cloudy.header.cloudy" = "Zachmurzenie";
+"cloudy.header.average" = "Średnia";
+
+// Seasons
+"seasons.spring" = "Wiosna";
+"seasons.summer" = "Lato";
+"seasons.autumn" = "Jesień";
+"seasons.Winter" = "Zima";

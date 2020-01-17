@@ -8,4 +8,17 @@
 
 public struct CloudyTableViewFooterViewModel {
     
+    //
+    // MARK: - Properties
+    //
+    
+    public var cloudy: String?
+    
+    //
+    // MARK: - Init
+    //
+    
+    public init(cloudy: Double) {
+        self.cloudy = "\("cloudy.header.average".localized()): \(String(describing: cloudy))%"
+    }
 }

@@ -20,23 +20,21 @@ public class CloudyViewModel {
     
     private let disposeBag = DisposeBag()
     private let location = ReplaySubject<LocationModel>.create(bufferSize: 1)
-    private let imagery = BehaviorRelay<[ImageryResultModel]>(value: [])
     
     public var shouldReload = ReplaySubject<Void>.create(bufferSize: 1)
-    public var imageryCount: Int {
-        get {
-            return imagery.value.count
-        }
-    }
-    public var seasons: [String] = ["Wiosna", "Lato", "Jesień", "Zima"]
+    
+    public var seasons = [String]()
     public var seasonsCount: Int {
         get {
             return seasons.count
         }
     }
     
+    public var cloudyData = [[ImageryResultModel]]()
+    
     public let headerIdentifier = String(describing: CloudyTableViewHeader.self)
     public let footerIdentifier = String(describing: CloudyTableViewFooter.self)
+    public let cellIdentifier = String(describing: CloudyTableViewCell.self)
     
     //
     // MARK: - Init
@@ -48,9 +46,17 @@ public class CloudyViewModel {
         getImageryData()
     }
     
+    //
+    // MARK: - Prepare data
+    //
+    
     private func setStaticData() {
         self.title = "cloudy.header.title".localized()
         self.subtitle = "cloudy.header.subtitle".localized()
+        self.seasons = ["seasons.spring".localized(),
+                        "seasons.summer".localized(),
+                        "seasons.autumn".localized(),
+                        "seasons.Winter".localized()]
     }
     
     private func getCurrentLocation() {
@@ -68,9 +74,51 @@ public class CloudyViewModel {
             let cloudyData = CloudyData(latitude: location.latitide, longitude: location.longitude)
             
             ImageryRepository.sharedInstance.getImageryObservable(cloudyData).subscribe(onNext: { [unowned self] imageryArray in
-                self.imagery.accept(imageryArray)
-                self.shouldReload.onNext(())
+                self.prepareData(imageryArray)
             }).disposed(by: self.disposeBag)
         }).disposed(by: disposeBag)
+    }
+    
+    private func prepareData(_ data: [ImageryResultModel]) {
+        var localData = data
+        
+        cloudyData.removeAll()
+        cloudyData.append( data.filter { Seasons.isInSeason(season: .spring, date: $0.endPositionDate) } )
+        cloudyData.append( data.filter { Seasons.isInSeason(season: .summer, date: $0.endPositionDate) } )
+        cloudyData.append( data.filter { Seasons.isInSeason(season: .autumn, date: $0.endPositionDate) } )
+        
+        cloudyData.forEach { element in
+            localData = localData.filter { !element.contains($0) }
+        }
+        
+        cloudyData.append(localData)
+        
+        shouldReload.onNext(())
+    }
+    
+    //
+    // MARK: - Get data
+    //
+    
+    public func numberOfRowsInSection(_ section: Int) -> Int {
+        return section <= cloudyData.count ? cloudyData[section].count : 0
+    }
+    
+    public func dataForCell(atIndexPath indexPath: IndexPath) -> ImageryResultModel {
+        return cloudyData[indexPath.section][indexPath.row]
+    }
+    
+    public func titleForSection(_ section: Int) -> String {
+        return section <= seasons.count ? seasons[section] : ""
+    }
+    
+    public func averageCloudyForSection(_ section: Int) -> Double {
+        
+        if section > cloudyData.count {
+            return 0.0
+        }
+        let average = cloudyData[section].map { $0.cloudCoverPercentage }.reduce(0.0, +) / Double(cloudyData[section].count)
+        
+        return (average * 100).rounded() / 100
     }
 }

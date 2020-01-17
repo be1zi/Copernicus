@@ -353,8 +353,8 @@
 			isa = PBXGroup;
 			children = (
 				3D15AAD623CF4FD800499ADF /* CloudyTableViewHeader.swift */,
-				3D15AAD823CF500000499ADF /* CloudyTableViewHeader.xib */,
 				A1372C7923CF7E0A00D31D56 /* CloudyTableViewHeaderViewModel.swift */,
+				3D15AAD823CF500000499ADF /* CloudyTableViewHeader.xib */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -363,8 +363,8 @@
 			isa = PBXGroup;
 			children = (
 				3D15AAD223CF4E7700499ADF /* CloudyTableViewFooter.swift */,
-				3D15AAD423CF4EE500499ADF /* CloudyTableViewFooter.xib */,
 				A1372C7523CF7D8800D31D56 /* CloudyTableViewFooterViewModel.swift */,
+				3D15AAD423CF4EE500499ADF /* CloudyTableViewFooter.xib */,
 			);
 			path = Footer;
 			sourceTree = "<group>";
@@ -373,8 +373,8 @@
 			isa = PBXGroup;
 			children = (
 				A1372C7123CF7CE600D31D56 /* CloudyTableViewCell.swift */,
-				A1372C7323CF7D2100D31D56 /* CloudyTableViewCell.xib */,
 				A1372C7723CF7DBC00D31D56 /* CloudyTableViewCellViewModel.swift */,
+				A1372C7323CF7D2100D31D56 /* CloudyTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";

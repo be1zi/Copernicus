@@ -25,7 +25,7 @@ public struct ImageryLocalRepository {
     public func imageryObservable() -> Observable<[ImageryResultModel]> {
         let realm = try! Realm()
         
-        let imagery = realm.objects(ImageryResultModel.self)
+        let imagery = realm.objects(ImageryResultModel.self).sorted(byKeyPath: "endPositionDate", ascending: true)
         
         return Observable.array(from: imagery)
     }

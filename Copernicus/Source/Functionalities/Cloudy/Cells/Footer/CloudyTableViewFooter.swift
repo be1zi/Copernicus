@@ -16,4 +16,24 @@ public class CloudyTableViewFooter: UITableViewHeaderFooterView {
     
     @IBOutlet weak var separatorView: UIView!
     @IBOutlet weak var cloudyLabel: UILabel!
+    @IBOutlet weak var backgroundContentView: UIView!
+    
+    //
+    // MARK: - Appearance
+    //
+    
+    private func setStyle() {
+        separatorView.backgroundColor = UIColor.copYellowColor
+        backgroundContentView.backgroundColor = UIColor.copBlackColor
+    }
+    
+    //
+    // MARK: - Data
+    //
+    
+    public func setViewModel(_ vm: CloudyTableViewFooterViewModel) {
+        cloudyLabel.text = vm.cloudy
+        
+        setStyle()
+    }
 }
