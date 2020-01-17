@@ -9,11 +9,12 @@
 import Realm
 import RealmSwift
 
-//
-// MARK: - Cascading delete
-//
-
 public extension Realm {
+    
+    //
+    // MARK: - Cascading delete
+    //
+    
     func delete<S: Sequence>(_ objects: S, cascading: Bool) where S.Iterator.Element: Object {
         for obj in objects {
             delete(obj, cascading: cascading)
@@ -25,6 +26,40 @@ public extension Realm {
             cascadeDelete(entity)
         } else {
             delete(entity)
+        }
+    }
+    
+    func clearDatabase(without: [Object.Type]) {
+        var mainEntityList = [LocationModel.self,
+                              SatelliteModel.self,
+                              TrajectoryModel.self,
+                              OverpassModel.self,
+                              ImageryResultModel.self]
+        
+        mainEntityList = mainEntityList.filter { element in
+            !without.contains(where: { element == $0 })
+        }
+        
+        deleteEntities(mainEntityList)
+    }
+    
+    func clearDatabase(with: [Object.Type]) {
+        deleteEntities(with)
+    }
+    
+    private func deleteEntities(_ entities: [Object.Type]) {
+        
+        let realm = try! Realm()
+        
+        entities.forEach { entity in
+            
+            do {
+                try realm.write {
+                    realm.delete(realm.objects(entity), cascading: true)
+                }
+            } catch {
+                Logger.logError(error: error)
+            }
         }
     }
 }

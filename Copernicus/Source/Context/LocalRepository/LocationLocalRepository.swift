@@ -34,13 +34,16 @@ public struct LocationLocalRepository {
                     try realm.write {
                         if data.type == .Default {
                             realm.delete(realm.objects(LocationModel.self), cascading: true)
+                            realm.clearDatabase(without: [LocationModel.self])
                         } else {
                             let objects = realm.objects(LocationModel.self).filter(NSPredicate(format: "id = %@", argumentArray: [object.id]))
                             realm.delete(objects, cascading: true)
+                            realm.clearDatabase(with: [OverpassModel.self])
                         }
                         
                         realm.add(object)
                     }
+                    
                     single(.success(()))
                 } catch {
                     Logger.logError(error: error)
@@ -52,13 +55,16 @@ public struct LocationLocalRepository {
                         try realm.write {
                             if data.type == .Default {
                                 realm.delete(realm.objects(LocationModel.self), cascading: true)
+                                realm.clearDatabase(without: [LocationModel.self])
                             } else {
                                 let objects = realm.objects(LocationModel.self).filter(NSPredicate(format: "id = %@", argumentArray: [object.id]))
                                 realm.delete(objects, cascading: true)
+                                realm.clearDatabase(with: [OverpassModel.self])
                             }
                             
                             realm.add(object)
                         }
+                        
                         single(.success(()))
                     } catch {
                         Logger.logError(error: error)

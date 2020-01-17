@@ -61,21 +61,26 @@ public class OverpassListViewModel {
     
     private func setData(_ overpasses: [OverpassModel]) {
         guard let overpass = overpasses.first else { return }
+        let currentDate = Date()
         
         switch cellType {
             case .Future:
                 self.overpasses = overpass.overpasses
-                    .filter(NSPredicate(format: "date >= %@", argumentArray: [Date()]))
+                    .filter(NSPredicate(format: "date >= %@", argumentArray: [currentDate]))
                     .sorted(byKeyPath: "date", ascending: true)
                     .toArray()
             case .Past:
                 self.overpasses = overpass.overpasses
-                    .filter(NSPredicate(format: "date < %@", argumentArray: [Date()]))
+                    .filter(NSPredicate(format: "date < %@", argumentArray: [currentDate]))
                     .sorted(byKeyPath: "date", ascending: false)
                     .toArray()
         }
-
+        
         self.frequency = overpass.frequency
         self.changed.onNext(())
+    }
+    
+    private func getCloudy() {
+        //ImageryRepository.sharedInstance.get
     }
 }
