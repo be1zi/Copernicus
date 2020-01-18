@@ -106,6 +106,7 @@
 		A149558523C361FF0054A314 /* OverpassListFutureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A149558423C361FF0054A314 /* OverpassListFutureViewModel.swift */; };
 		A149558723C3623E0054A314 /* OverpassListFutureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A149558623C3623E0054A314 /* OverpassListFutureTableViewCell.xib */; };
 		A15A44B423BCF39800A3F07E /* SatelliteLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15A44B323BCF39800A3F07E /* SatelliteLocalRepository.swift */; };
+		A160982923D33ED1006A4A39 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = A160982823D33ED1006A4A39 /* TODO */; };
 		A160A18A23A5413A00025C02 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = A160A18923A5413A00025C02 /* config.plist */; };
 		A160A19723A544F500025C02 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160A19623A544F500025C02 /* ConfigurationManager.swift */; };
 		A160A19923A65CE700025C02 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A160A19823A65CE700025C02 /* Logger.swift */; };
@@ -252,6 +253,7 @@
 		A149558423C361FF0054A314 /* OverpassListFutureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassListFutureViewModel.swift; sourceTree = "<group>"; };
 		A149558623C3623E0054A314 /* OverpassListFutureTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverpassListFutureTableViewCell.xib; sourceTree = "<group>"; };
 		A15A44B323BCF39800A3F07E /* SatelliteLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteLocalRepository.swift; sourceTree = "<group>"; };
+		A160982823D33ED1006A4A39 /* TODO */ = {isa = PBXFileReference; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		A160A18923A5413A00025C02 /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		A160A19623A544F500025C02 /* ConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
 		A160A19823A65CE700025C02 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -812,6 +814,7 @@
 		A1BFF30B23A5349A008165FA = {
 			isa = PBXGroup;
 			children = (
+				A160982823D33ED1006A4A39 /* TODO */,
 				A1BFF31623A5349A008165FA /* Copernicus */,
 				A1BFF32D23A5349C008165FA /* CopernicusTests */,
 				A1BFF33823A5349C008165FA /* CopernicusUITests */,
@@ -990,6 +993,7 @@
 				A1BA8FC223C245D9007979E0 /* OverpassListView.storyboard in Resources */,
 				3D16356723AA4EB8001F05DD /* Walkthrough.storyboard in Resources */,
 				3D98F3F823ACFBCF000E70D9 /* Settings.storyboard in Resources */,
+				A160982923D33ED1006A4A39 /* TODO in Resources */,
 				3D602E1623C4B51A00B06568 /* OverpassListHeaderTableViewCell.xib in Resources */,
 				3D144F1B23A8ECD800E17504 /* HomeCellView.xib in Resources */,
 				A1372C7423CF7D2100D31D56 /* CloudyTableViewCell.xib in Resources */,

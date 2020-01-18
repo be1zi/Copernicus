@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ahi-Ci-bCt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ahi-Ci-bCt">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,18 +21,37 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settingsBackground" translatesAutoresizingMaskIntoConstraints="NO" id="fIb-Al-eIC">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="309"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGR-55-PTk" userLabel="subtitle">
+                                        <rect key="frame" x="20" y="191.5" width="374" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NH-nz-5UN">
                                         <rect key="frame" x="20" y="75" width="24" height="24"/>
                                         <state key="normal" image="arrowLeft"/>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPh-rn-87e" userLabel="title">
+                                        <rect key="frame" x="20" y="139" width="374" height="32.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="xGR-55-PTk" firstAttribute="leading" secondItem="Cfx-GR-9Dw" secondAttribute="leading" constant="20" id="AcA-68-rsi"/>
+                                    <constraint firstItem="bPh-rn-87e" firstAttribute="top" secondItem="0NH-nz-5UN" secondAttribute="bottom" constant="40" id="Ele-7f-OKX"/>
                                     <constraint firstItem="fIb-Al-eIC" firstAttribute="leading" secondItem="Cfx-GR-9Dw" secondAttribute="leading" id="KE6-RR-Bof"/>
                                     <constraint firstAttribute="width" secondItem="Cfx-GR-9Dw" secondAttribute="height" multiplier="375:280" id="L66-bI-7MQ"/>
+                                    <constraint firstItem="bPh-rn-87e" firstAttribute="leading" secondItem="Cfx-GR-9Dw" secondAttribute="leading" constant="20" id="MBQ-yN-G6r"/>
                                     <constraint firstItem="0NH-nz-5UN" firstAttribute="leading" secondItem="Cfx-GR-9Dw" secondAttribute="leading" constant="20" id="MNG-2k-q2J"/>
+                                    <constraint firstAttribute="trailing" secondItem="bPh-rn-87e" secondAttribute="trailing" constant="20" id="Uh9-OR-5vx"/>
                                     <constraint firstAttribute="bottom" secondItem="fIb-Al-eIC" secondAttribute="bottom" id="W6o-x8-Tei"/>
+                                    <constraint firstItem="xGR-55-PTk" firstAttribute="top" secondItem="bPh-rn-87e" secondAttribute="bottom" constant="20" id="Zq2-MZ-pH9"/>
                                     <constraint firstItem="fIb-Al-eIC" firstAttribute="top" secondItem="Cfx-GR-9Dw" secondAttribute="top" id="g7U-tJ-hKM"/>
+                                    <constraint firstAttribute="trailing" secondItem="xGR-55-PTk" secondAttribute="trailing" constant="20" id="iUE-Le-8Km"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xGR-55-PTk" secondAttribute="bottom" constant="20" id="lSu-7B-Oko"/>
                                     <constraint firstAttribute="trailing" secondItem="fIb-Al-eIC" secondAttribute="trailing" id="mTe-f9-rhn"/>
                                     <constraint firstItem="0NH-nz-5UN" firstAttribute="top" secondItem="Cfx-GR-9Dw" secondAttribute="top" constant="75" id="qdg-Yw-vxt"/>
                                 </constraints>
@@ -68,6 +87,8 @@
                         <outlet property="backButton" destination="0NH-nz-5UN" id="R0G-vt-2hf"/>
                         <outlet property="contentView" destination="dvl-dz-cRj" id="HyO-6y-eKq"/>
                         <outlet property="saveButton" destination="b7t-ti-kJd" id="Mju-xZ-1rc"/>
+                        <outlet property="subtitleLabel" destination="xGR-55-PTk" id="1X1-MF-AxH"/>
+                        <outlet property="titleLabel" destination="bPh-rn-87e" id="aAZ-eN-N6j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SNw-aE-Z1B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -18,6 +18,8 @@ class SettingsViewController: BaseViewController {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
     
     private let viewModel = SettingsViewModel()
     private let disposeBag = DisposeBag()
@@ -31,6 +33,7 @@ class SettingsViewController: BaseViewController {
         
         setupView()
         setupRx()
+        setData()
     }
     
     //
@@ -51,6 +54,17 @@ class SettingsViewController: BaseViewController {
     }
     
     //
+    // MARK: - Data
+    //
+    
+    private func setData() {
+        titleLabel.text = viewModel.title
+        subtitleLabel.text = viewModel.subtitle
+        
+        saveButton.setTitle(viewModel.saveButton, for: .normal)
+    }
+    
+    //
     // MARK: - Action
     //
     
@@ -59,5 +73,4 @@ class SettingsViewController: BaseViewController {
             self?.navigationController?.popViewController(animated: true)
         }).disposed(by: disposeBag)
     }
-    
 }

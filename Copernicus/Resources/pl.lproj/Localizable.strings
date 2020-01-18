@@ -92,3 +92,7 @@
 "seasons.summer" = "Lato";
 "seasons.autumn" = "Jesień";
 "seasons.Winter" = "Zima";
+
+//Settings
+"settings.title" = "Ustawienia";
+"settings.subtitle" = "Możesz tutaj dostosować działanie swojej aplikacji";
