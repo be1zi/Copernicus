@@ -107,5 +107,15 @@ class SettingsViewController: BaseViewController {
         viewModel.locationValue.subscribe(onNext: { [weak self] value in
             self?.locationValueLabel.text = value
         }).disposed(by: disposeBag)
+        
+        changeLocationButton.rx.tap.subscribe(onNext: { [weak self] _ in
+            let viewController = UIStoryboard.init(name: "LocationPicker", bundle: nil).instantiateInitialViewController()
+            
+            guard let vc = viewController as? LocationPickerViewController else {
+                return
+            }
+            
+            self?.navigationController?.present(vc, animated: true, completion: nil)
+        }).disposed(by: disposeBag)
     }
 }
