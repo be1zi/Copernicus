@@ -62,7 +62,7 @@ public class CloudyViewModel {
     private func getCurrentLocation() {
         
         LocationRepository.sharedInstance.getLocationObservable().subscribe(onNext: { [unowned self] locations in
-            guard let loc = locations.last else { return }
+            guard let loc = locations.first else { return }
             self.location.onNext(loc)
         }).disposed(by: disposeBag)
     }
