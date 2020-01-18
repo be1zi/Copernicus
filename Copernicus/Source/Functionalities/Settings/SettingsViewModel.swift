@@ -6,7 +6,9 @@
 //  Copyright © 2019 Konrad Bełzowski. All rights reserved.
 //
 
-public struct SettingsViewModel {
+import RxSwift
+
+public class SettingsViewModel {
     
     //
     // MARK: - Properties
@@ -23,20 +25,25 @@ public struct SettingsViewModel {
     public var notificationsInfo: String?
     public var changeLocation: String = ""
     public var changeGpsPermission: String = ""
+    public var locationValue = BehaviorSubject<String>(value: "")
+    
+    private let disposeBag = DisposeBag()
+    
     
     //
     // MARK: Init
     //
     
     public init() {
-        self.setStaticData()
+        setStaticData()
+        getCurrentLocation()
     }
     
     //
     // MARK: - Data
     //
     
-    private mutating func setStaticData() {
+    private func setStaticData() {
         self.title = "settings.title".localized()
         self.subtitle = "settings.subtitle".localized()
         self.saveButton = "button.save.title".localized()
@@ -49,5 +56,25 @@ public struct SettingsViewModel {
         
         self.changeLocation = "  \("button.change.title".localized())  "
         self.changeGpsPermission = "  \("button.change.title".localized())  "
+    }
+    
+    private func getCurrentLocation() {
+        
+        LocationRepository.sharedInstance.getLocationObservable().subscribe(onNext: { [unowned self] locations in
+            guard let location = locations.first else { return }
+            self.setData(location: location)
+        }).disposed(by: disposeBag)
+    }
+    
+    private func setData(location: LocationModel) {
+        var value = ""
+        
+        if location.exist() == true {
+            value = location.toString()
+        } else {
+            value = "settings.content.location.notChoosed".localized()
+        }
+
+        locationValue.onNext(value)
     }
 }

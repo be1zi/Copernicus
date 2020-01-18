@@ -98,6 +98,7 @@
 "settings.subtitle" = "Możesz tutaj dostosować działanie swojej aplikacji";
 "settings.content.location.title" = "Lokalizacja";
 "settings.content.location.gps" = "Dostęp do modułu gps";
+"settings.content.location.notChoosed" = "Lokacja nie została wybrana";
 "settings.content.data.title" = "Dane";
 "settings.content.data.clear" = "Wyszyść wszystkie dane";
 "settings.content.notifications.title" = "Powiadomienia";

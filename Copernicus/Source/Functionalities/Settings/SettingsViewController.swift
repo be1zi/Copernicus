@@ -103,5 +103,9 @@ class SettingsViewController: BaseViewController {
         backButton.rx.tap.subscribe(onNext: { [weak self] _ in
             self?.navigationController?.popViewController(animated: true)
         }).disposed(by: disposeBag)
+        
+        viewModel.locationValue.subscribe(onNext: { [weak self] value in
+            self?.locationValueLabel.text = value
+        }).disposed(by: disposeBag)
     }
 }
