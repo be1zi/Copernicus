@@ -32,15 +32,8 @@ public struct LocationLocalRepository {
             if data.useMyLocation == true, let _ = data.latitude, let _ = data.longitude {
                 do {
                     try realm.write {
-                        var entityToClear = [Object.Type]()
-                        if data.type == .Default {
-                            realm.delete(realm.objects(LocationModel.self), cascading: true)
-                            entityToClear = realm.entitiesToClear(without: [LocationModel.self])
-                        } else {
-                            let objects = realm.objects(LocationModel.self).filter(NSPredicate(format: "id = %@", argumentArray: [object.id]))
-                            realm.delete(objects, cascading: true)
-                            entityToClear = [OverpassModel.self]
-                        }
+                        realm.delete(realm.objects(LocationModel.self), cascading: true)
+                        let entityToClear = realm.entitiesToClear(without: [LocationModel.self])
                         
                         entityToClear.forEach { entity in
                             realm.delete(realm.objects(entity), cascading: true)
@@ -58,16 +51,9 @@ public struct LocationLocalRepository {
                 object.createCoordinates().subscribe(onSuccess: { _ in
                     do {
                         try realm.write {
-                            var entitiesToClear = [Object.Type]()
-                            if data.type == .Default {
-                                realm.delete(realm.objects(LocationModel.self), cascading: true)
-                                entitiesToClear = realm.entitiesToClear(without: [LocationModel.self])
-                            } else {
-                                let objects = realm.objects(LocationModel.self).filter(NSPredicate(format: "id = %@", argumentArray: [object.id]))
-                                realm.delete(objects, cascading: true)
-                                entitiesToClear = [OverpassModel.self]
-                            }
-                            
+                            realm.delete(realm.objects(LocationModel.self), cascading: true)
+                            let entitiesToClear = realm.entitiesToClear(without: [LocationModel.self])
+
                             entitiesToClear.forEach { entity in
                                 realm.delete(realm.objects(entity), cascading: true)
                             }

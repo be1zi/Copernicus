@@ -24,12 +24,11 @@ public struct LocationPickerViewModel {
     public var zipCode: String?
     
     public var useMyLocationTitle: String?
-    public var saveAsDefaultTitle: String?
     
     public var saveButton = ""
     public var cancelButton = ""
     
-    private var locationData = LocationData(type: .Temporary)
+    private var locationData = LocationData()
     
     //
     // MARK: - Init
@@ -52,7 +51,6 @@ public struct LocationPickerViewModel {
         self.houseNumber = "location.textfield.houseNumber.placeholder".localized()
         self.zipCode = "location.textfield.zipCode.placeholder".localized()
         
-        self.saveAsDefaultTitle = "location.picker.useAsDefault".localized()
         self.useMyLocationTitle = "location.picker.useMylocation".localized()
         
         self.saveButton = "button.save.title".localized().uppercased()
@@ -85,13 +83,6 @@ public struct LocationPickerViewModel {
                 locationData.longitude = longitude
             }
         }
-    }
-    
-    public mutating func saveAsDefaultChanged(_ newValue: Bool) {
-        
-        let type = newValue == true ? LocationType.Default : LocationType.Temporary
-        
-        locationData.type = type
     }
     
     public mutating func useMyLocation(_ isOn: Bool) {

@@ -26,8 +26,6 @@ public class LocationPickerViewController: BaseViewController {
     
     @IBOutlet weak var useMyLocationLabel: UILabel!
     @IBOutlet weak var useMyLocationSwitch: UISwitch!
-    @IBOutlet weak var saveAsDefaultLabel: UILabel!
-    @IBOutlet weak var saveAsDefaultSwitch: UISwitch!
     @IBOutlet weak var separatorView: UIView!
 
     @IBOutlet weak var saveButton: COPButton!
@@ -59,10 +57,8 @@ public class LocationPickerViewController: BaseViewController {
     
     private func setupView() {
         separatorView.backgroundColor = UIColor.copGreyColor
-        saveAsDefaultSwitch.onTintColor = UIColor.copYellowColor
         useMyLocationSwitch.onTintColor = UIColor.copYellowColor
         useMyLocationSwitch.isOn = false
-        saveAsDefaultSwitch.isOn = false
     }
     
     //
@@ -72,7 +68,6 @@ public class LocationPickerViewController: BaseViewController {
     private func setData() {
         titleLabel.text = viewModel.title
         useMyLocationLabel.text = viewModel.useMyLocationTitle
-        saveAsDefaultLabel.text = viewModel.saveAsDefaultTitle
         
         saveButton.setTitle(viewModel.saveButton, for: .normal)
         cancelButton.setTitle(viewModel.cancelButton, for: .normal)
@@ -136,10 +131,6 @@ public class LocationPickerViewController: BaseViewController {
         
         cancelButton.rx.tap.subscribe(onNext: { [weak self] in
             self?.dismiss(animated: true, completion: nil)
-        }).disposed(by: disposeBag)
-        
-        saveAsDefaultSwitch.rx.isOn.changed.subscribe(onNext: { [ weak self] isOn in
-            self?.viewModel.saveAsDefaultChanged(isOn)
         }).disposed(by: disposeBag)
         
         useMyLocationSwitch.rx.isOn.changed.subscribe(onNext: { [weak self] result in

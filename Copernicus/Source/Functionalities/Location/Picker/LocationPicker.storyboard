@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pny-C4-Oep">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pny-C4-Oep">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -51,7 +51,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xhf-p2-cLF">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="567"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="526"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wybierz nową lokalizajcę:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GT8-Qu-1QY">
                                                         <rect key="frame" x="20" y="30" width="374" height="24"/>
@@ -88,10 +88,10 @@
                                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                     </textField>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MbJ-Hi-a3Z">
-                                                        <rect key="frame" x="0.0" y="424" width="414" height="123"/>
+                                                        <rect key="frame" x="0.0" y="424" width="414" height="82"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YMB-YM-YB6">
-                                                                <rect key="frame" x="0.0" y="20" width="414" height="103"/>
+                                                                <rect key="frame" x="0.0" y="20" width="414" height="62"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Użyj mojej lokalizacji" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcc-uQ-w17">
                                                                         <rect key="frame" x="20" y="20" width="157" height="21"/>
@@ -106,30 +106,17 @@
                                                                             <constraint firstAttribute="height" constant="1" id="Cbz-Ra-dKW"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zapisz jako domyślną lokalizajce" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uH0-mI-unJ">
-                                                                        <rect key="frame" x="20" y="62" width="247.5" height="21"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
                                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FKW-di-2na">
                                                                         <rect key="frame" x="345" y="15" width="51" height="31"/>
-                                                                    </switch>
-                                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Wf-f1-ab6">
-                                                                        <rect key="frame" x="345" y="57" width="51" height="31"/>
                                                                     </switch>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="trailing" secondItem="2Wf-f1-ab6" secondAttribute="trailing" constant="20" id="5Rj-ek-e3c"/>
-                                                                    <constraint firstItem="2Wf-f1-ab6" firstAttribute="centerY" secondItem="uH0-mI-unJ" secondAttribute="centerY" id="8Qc-RC-QDK"/>
                                                                     <constraint firstAttribute="trailing" secondItem="FKW-di-2na" secondAttribute="trailing" constant="20" id="CUI-iO-fRZ"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="uH0-mI-unJ" secondAttribute="bottom" constant="20" symbolic="YES" id="NHf-HV-0HV"/>
                                                                     <constraint firstItem="7Bj-gt-Zo9" firstAttribute="top" secondItem="Gcc-uQ-w17" secondAttribute="bottom" constant="10" id="Nl7-Ct-jMl"/>
-                                                                    <constraint firstItem="uH0-mI-unJ" firstAttribute="leading" secondItem="YMB-YM-YB6" secondAttribute="leading" constant="20" symbolic="YES" id="PmF-LA-nE8"/>
                                                                     <constraint firstItem="7Bj-gt-Zo9" firstAttribute="leading" secondItem="YMB-YM-YB6" secondAttribute="leading" constant="20" symbolic="YES" id="T3u-Dg-oHa"/>
-                                                                    <constraint firstItem="uH0-mI-unJ" firstAttribute="top" secondItem="7Bj-gt-Zo9" secondAttribute="bottom" constant="10" id="XYW-cr-WaX"/>
                                                                     <constraint firstItem="Gcc-uQ-w17" firstAttribute="top" secondItem="YMB-YM-YB6" secondAttribute="top" constant="20" id="d1i-gc-qUq"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="7Bj-gt-Zo9" secondAttribute="bottom" constant="10" id="dWb-8e-P38"/>
                                                                     <constraint firstItem="FKW-di-2na" firstAttribute="centerY" secondItem="Gcc-uQ-w17" secondAttribute="centerY" id="udc-0c-QGH"/>
                                                                     <constraint firstItem="Gcc-uQ-w17" firstAttribute="leading" secondItem="YMB-YM-YB6" secondAttribute="leading" constant="20" id="xVf-YT-iCe"/>
                                                                     <constraint firstAttribute="trailing" secondItem="7Bj-gt-Zo9" secondAttribute="trailing" constant="20" symbolic="YES" id="zx2-ll-oRG"/>
@@ -217,8 +204,6 @@
                         <outlet property="constraintToBottom" destination="Ko4-IQ-nJ6" id="beG-0B-uwy"/>
                         <outlet property="countryTextField" destination="jN4-Ri-bcN" id="iEE-FR-W88"/>
                         <outlet property="houseNumberTextField" destination="yrW-dC-cnY" id="exb-cn-s4v"/>
-                        <outlet property="saveAsDefaultLabel" destination="uH0-mI-unJ" id="GLB-fK-xQL"/>
-                        <outlet property="saveAsDefaultSwitch" destination="2Wf-f1-ab6" id="EjQ-gH-zVg"/>
                         <outlet property="saveButton" destination="ctG-wF-Boa" id="zgs-Kg-SvC"/>
                         <outlet property="separatorView" destination="7Bj-gt-Zo9" id="FPg-5r-l32"/>
                         <outlet property="streetTextField" destination="gTA-MP-zJB" id="Xjn-Ar-Ulh"/>
