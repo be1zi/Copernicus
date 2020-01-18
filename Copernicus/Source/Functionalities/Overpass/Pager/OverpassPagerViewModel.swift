@@ -77,16 +77,19 @@ public class OverpassPagerViewModel {
         LocationRepository.sharedInstance.getLocationObservable().subscribe(onNext: { [unowned self] locations in
             guard let loc = locations.last else { return }
             self.setLocationData(loc)
-            self.locationSelected = loc.exist()
-            self.location.onNext(loc)
         }).disposed(by: disposeBag)
     }
     
     private func setLocationData(_ loc: LocationModel? = nil) {
+        self.locationSelected = loc?.exist() ?? false
         if locationSelected {
             locationString = loc?.toString() ?? ""
         } else {
             locationString = "overpass.pager.selectedLocation.notChoosed".localized()
+        }
+    
+        if let newLocation = loc {
+            location.onNext(newLocation)
         }
     }
     

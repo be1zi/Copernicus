@@ -43,6 +43,7 @@ public class BaseViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(shouldHideNavigationBar(), animated: true)
         
         let backButton = UIBarButtonItem()
+        backButton.tintColor = UIColor.black
         navigationItem.backBarButtonItem = backButton
         
         self.title = navigationBarTitle()
