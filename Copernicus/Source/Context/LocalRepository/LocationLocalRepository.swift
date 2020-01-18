@@ -32,13 +32,18 @@ public struct LocationLocalRepository {
             if data.useMyLocation == true, let _ = data.latitude, let _ = data.longitude {
                 do {
                     try realm.write {
+                        var entityToClear = [Object.Type]()
                         if data.type == .Default {
                             realm.delete(realm.objects(LocationModel.self), cascading: true)
-                            realm.clearDatabase(without: [LocationModel.self])
+                            entityToClear = realm.entitiesToClear(without: [LocationModel.self])
                         } else {
                             let objects = realm.objects(LocationModel.self).filter(NSPredicate(format: "id = %@", argumentArray: [object.id]))
                             realm.delete(objects, cascading: true)
-                            realm.clearDatabase(with: [OverpassModel.self])
+                            entityToClear = [OverpassModel.self]
+                        }
+                        
+                        entityToClear.forEach { entity in
+                            realm.delete(realm.objects(entity), cascading: true)
                         }
                         
                         realm.add(object)
@@ -53,13 +58,18 @@ public struct LocationLocalRepository {
                 object.createCoordinates().subscribe(onSuccess: { _ in
                     do {
                         try realm.write {
+                            var entitiesToClear = [Object.Type]()
                             if data.type == .Default {
                                 realm.delete(realm.objects(LocationModel.self), cascading: true)
-                                realm.clearDatabase(without: [LocationModel.self])
+                                entitiesToClear = realm.entitiesToClear(without: [LocationModel.self])
                             } else {
                                 let objects = realm.objects(LocationModel.self).filter(NSPredicate(format: "id = %@", argumentArray: [object.id]))
                                 realm.delete(objects, cascading: true)
-                                realm.clearDatabase(with: [OverpassModel.self])
+                                entitiesToClear = [OverpassModel.self]
+                            }
+                            
+                            entitiesToClear.forEach { entity in
+                                realm.delete(realm.objects(entity), cascading: true)
                             }
                             
                             realm.add(object)

@@ -29,7 +29,7 @@ public extension Realm {
         }
     }
     
-    func clearDatabase(without: [Object.Type]) {
+    func entitiesToClear(without: [Object.Type]) -> [Object.Type] {
         var mainEntityList = [LocationModel.self,
                               SatelliteModel.self,
                               TrajectoryModel.self,
@@ -40,27 +40,7 @@ public extension Realm {
             !without.contains(where: { element == $0 })
         }
         
-        deleteEntities(mainEntityList)
-    }
-    
-    func clearDatabase(with: [Object.Type]) {
-        deleteEntities(with)
-    }
-    
-    private func deleteEntities(_ entities: [Object.Type]) {
-        
-        let realm = try! Realm()
-        
-        entities.forEach { entity in
-            
-            do {
-                try realm.write {
-                    realm.delete(realm.objects(entity), cascading: true)
-                }
-            } catch {
-                Logger.logError(error: error)
-            }
-        }
+        return mainEntityList
     }
 }
 
