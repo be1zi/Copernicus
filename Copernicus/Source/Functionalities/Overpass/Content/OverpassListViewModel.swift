@@ -13,6 +13,17 @@ public enum OverpassCellType: String {
     case Past = "OverpassListPastTableViewCell"
 }
 
+public struct OverpassCellModel {
+    
+    public var overpass: SingleOverpassModel
+    public var cloudy: ImageryResultModel?
+    
+    public init(overpass: SingleOverpassModel, cloudy: ImageryResultModel? = nil) {
+        self.overpass = overpass
+        self.cloudy = cloudy
+    }
+}
+
 public class OverpassListViewModel {
     
     //
@@ -24,10 +35,10 @@ public class OverpassListViewModel {
     public let headerIdentifier = String(describing: OverpassListHeaderTableViewCell.self)
     
     public let changed = ReplaySubject<Void>.create(bufferSize: 1)
-    public var overpasses: [SingleOverpassModel] = []
+    public var cellModels: [OverpassCellModel] = []
     public var cellNumber: Int  {
         get {
-            return overpasses.count
+            return cellModels.count
         }
     }
     public var frequency = 0
@@ -41,46 +52,59 @@ public class OverpassListViewModel {
     
     public init(type: OverpassCellType) {
         self.cellType = type
-        getData()
+        getLocation()
     }
     
     //
     // MARK: - Data
     //
 
-    private func getData() {
+    private func getLocation() {
         
         LocationRepository.sharedInstance.getLocationObservable().subscribe(onNext: { [unowned self] locations in
             guard let loc = locations.last else { return }
-            let overpassData = OverpassData(latitude: loc.latitide, longitude: loc.longitude)
-            OverpassRepository.sharedInstance.getOverpassObservable(data: overpassData).subscribe(onNext: { [unowned self] overpasses in
-                self.setData(overpasses)
-            }).disposed(by: self.disposeBag)
+            self.getData(loc)
         }).disposed(by: disposeBag)
     }
     
-    private func setData(_ overpasses: [OverpassModel]) {
+    private func getData(_ location: LocationModel) {
+        
+        let overpassData = OverpassData(latitude: location.latitide, longitude: location.longitude)
+        let cloudyData = CloudyData(latitude: location.latitide, longitude: location.longitude)
+        
+        let overpassObservable = OverpassRepository.sharedInstance.getOverpassObservable(data: overpassData).asObservable()
+        let cloudyObservable = ImageryRepository.sharedInstance.getImageryObservable(cloudyData)
+        
+        Observable.zip(overpassObservable, cloudyObservable).subscribe(onNext: { [unowned self] overpasses, cloudy in
+            self.setData(overpasses, cloudy: cloudy)
+        }).disposed(by: disposeBag)
+    }
+    
+    private func setData(_ overpasses: [OverpassModel], cloudy: [ImageryResultModel]) {
         guard let overpass = overpasses.first else { return }
         let currentDate = Date()
+        var overpassArray = [SingleOverpassModel]()
         
         switch cellType {
             case .Future:
-                self.overpasses = overpass.overpasses
+                overpassArray = overpass.overpasses
                     .filter(NSPredicate(format: "date >= %@", argumentArray: [currentDate]))
                     .sorted(byKeyPath: "date", ascending: true)
                     .toArray()
             case .Past:
-                self.overpasses = overpass.overpasses
+                overpassArray = overpass.overpasses
                     .filter(NSPredicate(format: "date < %@", argumentArray: [currentDate]))
                     .sorted(byKeyPath: "date", ascending: false)
                     .toArray()
         }
         
+        overpassArray.forEach { overpass in
+            let cloudyModel = cloudy.first(where: { (overpass.satellite == $0.satellite) && (overpass.date == $0.endPositionDate) })
+            let model = OverpassCellModel(overpass: overpass, cloudy: cloudyModel)
+            cellModels.append(model)
+        }
+        
         self.frequency = overpass.frequency
         self.changed.onNext(())
-    }
-    
-    private func getCloudy() {
-        //ImageryRepository.sharedInstance.get
     }
 }

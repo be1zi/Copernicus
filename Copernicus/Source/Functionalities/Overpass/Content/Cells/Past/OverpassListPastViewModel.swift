@@ -25,7 +25,7 @@ public struct OverpassListPastViewModel {
     // MARK: - Init
     //
        
-    public init(_ model: SingleOverpassModel) {
+    public init(_ model: OverpassCellModel) {
         self.setStaticData()
         self.setDynamicData(model)
     }
@@ -40,15 +40,12 @@ public struct OverpassListPastViewModel {
         self.clouds = "overpass.list.cell.clouds".localized()
     }
        
-    private mutating func setDynamicData(_ model: SingleOverpassModel) {
-        self.satellite = model.satellite
-        self.time = DateFormatter.dateToString(date: model.date)
+    private mutating func setDynamicData(_ model: OverpassCellModel) {
+        self.satellite = model.overpass.satellite
+        self.time = DateFormatter.dateToString(date: model.overpass.date)
         
-//
-//        if model.acquisition == true {
-//            self.imaginingValue = "boolean.true.description".localized()
-//        } else {
-//            self.imaginingValue = "boolean.false.description".localized()
-//        }
+        if let cloudy = model.cloudy {
+            self.cloudsValue = "\(cloudy.cloudCoverPercentage)%"
+        }
     }
 }

@@ -75,13 +75,13 @@ extension OverpassListViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.cellType.rawValue, for: indexPath)
-        let overpass = viewModel.overpasses[indexPath.row]
-
+        let model = viewModel.cellModels[indexPath.row]
+        
         switch viewModel.cellType {
         case .Future:
             guard let newCell = cell as? OverpassListFutureTableViewCell else { return UITableViewCell() }
             
-            let viewModel = OverpassListFutureViewModel(overpass)
+            let viewModel = OverpassListFutureViewModel(model)
             newCell.setViewModel(viewModel)
             
             return newCell
@@ -89,7 +89,7 @@ extension OverpassListViewController: UITableViewDataSource {
         case .Past:
             guard let newCell = cell as? OverpassListPastTableViewCell else { return UITableViewCell() }
             
-            let viewModel = OverpassListPastViewModel(overpass)
+            let viewModel = OverpassListPastViewModel(model)
             newCell.setViewModel(viewModel)
             
             return newCell

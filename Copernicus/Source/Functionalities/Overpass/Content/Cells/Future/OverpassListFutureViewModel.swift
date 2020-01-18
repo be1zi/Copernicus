@@ -25,9 +25,9 @@ public struct OverpassListFutureViewModel {
     // MARK: - Init
     //
     
-    public init(_ model: SingleOverpassModel) {
+    public init(_ model: OverpassCellModel) {
         self.setStaticData()
-        self.setDynamicData(model)
+        self.setDynamicData(model.overpass)
     }
     
     //
