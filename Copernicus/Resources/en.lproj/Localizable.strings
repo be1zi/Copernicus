@@ -96,3 +96,9 @@
 // Settings
 "settings.title" = "Settings";
 "settings.subtitle" = "You can customize the operation of your application here";
+"settings.content.location.title" = "Location";
+"settings.content.location.gps" = "Access to the gps module";
+"settings.content.data.title" = "Data";
+"settings.content.data.clear" = "Clear all data";
+"settings.content.notifications.title" = "Notifications";
+"settings.content.notifications.info" = "Soon available";
