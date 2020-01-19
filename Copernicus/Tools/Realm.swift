@@ -42,6 +42,10 @@ public extension Realm {
         
         return mainEntityList
     }
+    
+    func allEntities() -> [Object.Type] {
+        return entitiesToClear(without: [])
+    }
 }
 
 private extension Realm {

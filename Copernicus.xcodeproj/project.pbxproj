@@ -118,6 +118,7 @@
 		A1710A3D23CE1C2600CA846D /* CloudyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1710A3C23CE1C2600CA846D /* CloudyViewModel.swift */; };
 		A1710A3F23CE1C4400CA846D /* CloudyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1710A3E23CE1C4400CA846D /* CloudyData.swift */; };
 		A1710A4123CE1D3000CA846D /* Cloudy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1710A4023CE1D3000CA846D /* Cloudy.storyboard */; };
+		A1AAE5D123D4DB99003E99A3 /* LocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AAE5D023D4DB99003E99A3 /* LocalRepository.swift */; };
 		A1BA8FB623C23053007979E0 /* OverpassPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BA8FB523C23053007979E0 /* OverpassPagerViewController.swift */; };
 		A1BA8FC223C245D9007979E0 /* OverpassListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BA8FC123C245D9007979E0 /* OverpassListView.storyboard */; };
 		A1BA8FC623C24D63007979E0 /* OverpassPagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BA8FC523C24D63007979E0 /* OverpassPagerViewModel.swift */; };
@@ -265,6 +266,7 @@
 		A1710A3C23CE1C2600CA846D /* CloudyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudyViewModel.swift; sourceTree = "<group>"; };
 		A1710A3E23CE1C4400CA846D /* CloudyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudyData.swift; sourceTree = "<group>"; };
 		A1710A4023CE1D3000CA846D /* Cloudy.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cloudy.storyboard; sourceTree = "<group>"; };
+		A1AAE5D023D4DB99003E99A3 /* LocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRepository.swift; sourceTree = "<group>"; };
 		A1BA8FB523C23053007979E0 /* OverpassPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassPagerViewController.swift; sourceTree = "<group>"; };
 		A1BA8FC123C245D9007979E0 /* OverpassListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OverpassListView.storyboard; sourceTree = "<group>"; };
 		A1BA8FC523C24D63007979E0 /* OverpassPagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassPagerViewModel.swift; sourceTree = "<group>"; };
@@ -682,6 +684,7 @@
 				A11E20B123BE33AA00F62995 /* TrajectoryLocalRepository.swift */,
 				A109227623C0E8530073B416 /* OverpassLocalRepository.swift */,
 				3D15AACC23CF48E400499ADF /* ImageryLocalRepository.swift */,
+				A1AAE5D023D4DB99003E99A3 /* LocalRepository.swift */,
 			);
 			path = LocalRepository;
 			sourceTree = "<group>";
@@ -1206,6 +1209,7 @@
 				3D0E604123A764B000F9ECFD /* BaseViewController.swift in Sources */,
 				A109227123C0E27E0073B416 /* OverpassModel.swift in Sources */,
 				3D231DC123A8D0BF00B4CFD4 /* COPButton.swift in Sources */,
+				A1AAE5D123D4DB99003E99A3 /* LocalRepository.swift in Sources */,
 				A11E20B223BE33AA00F62995 /* TrajectoryLocalRepository.swift in Sources */,
 				3D8E525023ABA6E40067CD39 /* WalkthroughViewController.swift in Sources */,
 				A109226D23C0C9F70073B416 /* OverpassRemoteRepository.swift in Sources */,

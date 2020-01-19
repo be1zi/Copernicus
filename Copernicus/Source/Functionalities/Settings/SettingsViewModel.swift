@@ -16,12 +16,12 @@ public class SettingsViewModel {
     
     public var title: String?
     public var subtitle: String?
-    public var saveButton: String = ""
     public var locationTitle: String?
     public var dataTitle: String?
     public var notificationsTitle: String?
     public var gpsTitle: String?
     public var clearDataTitle: String?
+    public var clearDataButton: String = ""
     public var notificationsInfo: String?
     public var changeLocation: String = ""
     public var changeGpsPermission: String = ""
@@ -46,7 +46,6 @@ public class SettingsViewModel {
     private func setStaticData() {
         self.title = "settings.title".localized()
         self.subtitle = "settings.subtitle".localized()
-        self.saveButton = "button.save.title".localized()
         self.locationTitle = "settings.content.location.title".localized()
         self.gpsTitle = "settings.content.location.gps".localized()
         self.dataTitle = "settings.content.data.title".localized()
@@ -56,6 +55,7 @@ public class SettingsViewModel {
         
         self.changeLocation = "  \("button.change.title".localized())  "
         self.changeGpsPermission = "  \("button.change.title".localized())  "
+        self.clearDataButton = "  \("button.clear.title".localized())  "
     }
     
     private func getCurrentLocation() {
@@ -76,5 +76,9 @@ public class SettingsViewModel {
         }
 
         locationValue.onNext(value)
+    }
+    
+    public func deleteData() {
+        LocalRepository.sharedInstance.clearDatabase()
     }
 }

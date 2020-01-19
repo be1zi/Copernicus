@@ -20,6 +20,7 @@
 "button.save.title" = "Zapisz";
 "button.change.title" = "Zmień";
 "button.cancel.title" = "Anuluj";
+"button.clear.title" = "Wyczyść";
 
 //Errors
 "error.geocoder.description" = "Nie można zmienić adresu na współrzędne geograficzne. Proszę sprawdzić czy podany adres jest poprawny.";

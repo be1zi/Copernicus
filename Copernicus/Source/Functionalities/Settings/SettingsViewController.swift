@@ -17,7 +17,6 @@ class SettingsViewController: BaseViewController {
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     
@@ -28,7 +27,7 @@ class SettingsViewController: BaseViewController {
     @IBOutlet weak var gpsSettingsButton: UIButton!
     @IBOutlet weak var dataTitleLabel: UILabel!
     @IBOutlet weak var clearDataLabel: UILabel!
-    @IBOutlet weak var clearDataSwitch: UISwitch!
+    @IBOutlet weak var clearDataButton: UIButton!
     @IBOutlet weak var notificationTitleLabel: UILabel!
     @IBOutlet weak var notificationInfoLabel: UILabel!
     
@@ -54,11 +53,10 @@ class SettingsViewController: BaseViewController {
     
     private func setupView() {
         contentView.backgroundColor = UIColor.copBlackColor
-        saveButton.backgroundColor = UIColor.copYellowColor
         notificationInfoLabel.textColor = UIColor.copBlueColor
-        clearDataSwitch.onTintColor = UIColor.copYellowColor
         
-        clearDataSwitch.isOn = false
+        clearDataButton.backgroundColor = UIColor.copYellowColor
+        clearDataButton.cornerRadius = clearDataButton.bounds.height / 2.0
         
         changeLocationButton.backgroundColor = UIColor.copYellowColor
         changeLocationButton.cornerRadius = changeLocationButton.bounds.height / 2.0
@@ -92,7 +90,7 @@ class SettingsViewController: BaseViewController {
         
         changeLocationButton.setTitle(viewModel.changeLocation, for: .normal)
         gpsSettingsButton.setTitle(viewModel.changeGpsPermission, for: .normal)
-        saveButton.setTitle(viewModel.saveButton, for: .normal)
+        clearDataButton.setTitle(viewModel.clearDataButton, for: .normal)
     }
     
     //
@@ -102,6 +100,10 @@ class SettingsViewController: BaseViewController {
     private func setupRx() {
         backButton.rx.tap.subscribe(onNext: { [weak self] _ in
             self?.navigationController?.popViewController(animated: true)
+        }).disposed(by: disposeBag)
+        
+        clearDataButton.rx.tap.subscribe(onNext: { [weak self] _ in
+            self?.viewModel.deleteData()
         }).disposed(by: disposeBag)
         
         viewModel.locationValue.subscribe(onNext: { [weak self] value in
