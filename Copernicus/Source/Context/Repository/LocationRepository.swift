@@ -23,7 +23,6 @@ public struct LocationRepository {
     //
     
     public func getLocationObservable() -> Observable<[LocationModel]> {
-        
         return LocationLocalRepository.sharedInstance.getLocationObservable()
     }
 }

@@ -101,7 +101,7 @@ public class CloudyViewModel {
     //
     
     public func numberOfRowsInSection(_ section: Int) -> Int {
-        return section <= cloudyData.count ? cloudyData[section].count : 0
+        return section < cloudyData.count ? cloudyData[section].count : 0
     }
     
     public func dataForCell(atIndexPath indexPath: IndexPath) -> ImageryResultModel {
@@ -109,14 +109,15 @@ public class CloudyViewModel {
     }
     
     public func titleForSection(_ section: Int) -> String {
-        return section <= seasons.count ? seasons[section] : ""
+        return section < seasons.count ? seasons[section] : ""
     }
     
     public func averageCloudyForSection(_ section: Int) -> Double {
         
-        if section > cloudyData.count {
+        if section >= cloudyData.count {
             return 0.0
         }
+        
         let average = cloudyData[section].map { $0.cloudCoverPercentage }.reduce(0.0, +) / Double(cloudyData[section].count)
         
         return (average * 100).rounded() / 100

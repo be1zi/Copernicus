@@ -35,8 +35,9 @@ public class SettingsViewModel {
     //
     
     public init() {
-        setStaticData()
         getCurrentLocation()
+        setStaticData()
+        setLocation(location: nil)
     }
     
     //
@@ -61,16 +62,21 @@ public class SettingsViewModel {
     private func getCurrentLocation() {
         
         LocationRepository.sharedInstance.getLocationObservable().subscribe(onNext: { [unowned self] locations in
-            guard let location = locations.first else { return }
-            self.setData(location: location)
+            self.setLocation(location: locations.first)
         }).disposed(by: disposeBag)
     }
     
-    private func setData(location: LocationModel) {
+    private func setLocation(location: LocationModel?) {
         var value = ""
         
-        if location.exist() == true {
-            value = location.toString()
+        guard let loc = location else {
+            value = "settings.content.location.notChoosed".localized()
+            locationValue.onNext(value)
+            return
+        }
+        
+        if loc.exist() == true {
+            value = loc.toString()
         } else {
             value = "settings.content.location.notChoosed".localized()
         }
