@@ -14,8 +14,19 @@ public class RecentImageryDetailsViewModel {
     // MARK: - Properties
     //
     
+    public let cellIdentifier = String(describing: RecentImageryDetailsTableViewCell.self)
+    
     private let imageryId: Int
     private let disposeBag = DisposeBag()
+    public var imageModels = [ImageModel]()
+    
+    public var shouldReload = ReplaySubject<Void>.create(bufferSize: 1)
+    public var rowNumber: Int {
+        get {
+            return imageModels.count
+        }
+    }
+    public var basePath: String?
     
     //
     // MARK: - Init
@@ -34,7 +45,19 @@ public class RecentImageryDetailsViewModel {
         if imageryId < 0 { return }
         
         ImageryRepository.sharedInstance.getImagesForImageryObservable(withId: imageryId).subscribe(onNext: { [unowned self] images in
-            print(images.count)
+            self.imageModels = images
+            self.prepareData()
         }).disposed(by: disposeBag)
+    }
+    
+    public func prepareData() {
+        
+        guard let address = ConfigurationManager.sharedInstance.serverAddress else {
+            return
+        }
+        
+        basePath = "\(address)/imagery/\(imageryId)/files/"
+        
+        shouldReload.onNext(())
     }
 }
