@@ -50,6 +50,10 @@
 		3D9719E523D5941C00CAA8D2 /* RecentImageryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9719E423D5941C00CAA8D2 /* RecentImageryTableViewCell.swift */; };
 		3D9719E723D5945300CAA8D2 /* RecentImageryTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9719E623D5945300CAA8D2 /* RecentImageryTableViewCellViewModel.swift */; };
 		3D9719E923D5947800CAA8D2 /* RecentImageryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D9719E823D5947800CAA8D2 /* RecentImageryTableViewCell.xib */; };
+		3D9719EE23D5AADA00CAA8D2 /* RecentImageryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9719ED23D5AADA00CAA8D2 /* RecentImageryDetailsViewController.swift */; };
+		3D9719F023D5AAF600CAA8D2 /* RecentImageryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9719EF23D5AAF600CAA8D2 /* RecentImageryDetailsViewModel.swift */; };
+		3D9719F223D5AB0800CAA8D2 /* RecentImageryDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D9719F123D5AB0800CAA8D2 /* RecentImageryDetails.storyboard */; };
+		3D9719F423D5B33B00CAA8D2 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9719F323D5B33B00CAA8D2 /* ImageModel.swift */; };
 		3D98F3F423ACFBB1000E70D9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D98F3F323ACFBB1000E70D9 /* SettingsViewController.swift */; };
 		3D98F3F623ACFBBF000E70D9 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D98F3F523ACFBBF000E70D9 /* SettingsViewModel.swift */; };
 		3D98F3F823ACFBCF000E70D9 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D98F3F723ACFBCF000E70D9 /* Settings.storyboard */; };
@@ -198,6 +202,10 @@
 		3D9719E423D5941C00CAA8D2 /* RecentImageryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentImageryTableViewCell.swift; sourceTree = "<group>"; };
 		3D9719E623D5945300CAA8D2 /* RecentImageryTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentImageryTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		3D9719E823D5947800CAA8D2 /* RecentImageryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentImageryTableViewCell.xib; sourceTree = "<group>"; };
+		3D9719ED23D5AADA00CAA8D2 /* RecentImageryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentImageryDetailsViewController.swift; sourceTree = "<group>"; };
+		3D9719EF23D5AAF600CAA8D2 /* RecentImageryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentImageryDetailsViewModel.swift; sourceTree = "<group>"; };
+		3D9719F123D5AB0800CAA8D2 /* RecentImageryDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecentImageryDetails.storyboard; sourceTree = "<group>"; };
+		3D9719F323D5B33B00CAA8D2 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		3D98F3F323ACFBB1000E70D9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3D98F3F523ACFBBF000E70D9 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		3D98F3F723ACFBCF000E70D9 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -482,6 +490,7 @@
 		3D9719DC23D5886E00CAA8D2 /* RecentImagery */ = {
 			isa = PBXGroup;
 			children = (
+				3D9719EC23D5A95000CAA8D2 /* Details */,
 				3D9719E323D5940900CAA8D2 /* Cell */,
 				3D9719DD23D5889500CAA8D2 /* RecentImageryListViewController.swift */,
 				3D9719DF23D588B300CAA8D2 /* RecentImageryListViewModel.swift */,
@@ -498,6 +507,16 @@
 				3D9719E823D5947800CAA8D2 /* RecentImageryTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		3D9719EC23D5A95000CAA8D2 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				3D9719ED23D5AADA00CAA8D2 /* RecentImageryDetailsViewController.swift */,
+				3D9719EF23D5AAF600CAA8D2 /* RecentImageryDetailsViewModel.swift */,
+				3D9719F123D5AB0800CAA8D2 /* RecentImageryDetails.storyboard */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		3D98F3F223ACFB9B000E70D9 /* Settings */ = {
@@ -609,6 +628,7 @@
 				A109227223C0E3480073B416 /* SingleOverpassModel.swift */,
 				3DDF89D323CDF3240088741C /* ImageryResultModel.swift */,
 				3DDF89D523CDF4330088741C /* ImageryGeometryModel.swift */,
+				3D9719F323D5B33B00CAA8D2 /* ImageModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1037,6 +1057,7 @@
 				A1372C7423CF7D2100D31D56 /* CloudyTableViewCell.xib in Resources */,
 				3D9719E923D5947800CAA8D2 /* RecentImageryTableViewCell.xib in Resources */,
 				A141EBC423BA5C0500BF26C6 /* Satellites.storyboard in Resources */,
+				3D9719F223D5AB0800CAA8D2 /* RecentImageryDetails.storyboard in Resources */,
 				A1BFF31E23A5349B008165FA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1186,11 +1207,13 @@
 				3DDF89D423CDF3240088741C /* ImageryResultModel.swift in Sources */,
 				A160A19923A65CE700025C02 /* Logger.swift in Sources */,
 				A1372C7A23CF7E0A00D31D56 /* CloudyTableViewHeaderViewModel.swift in Sources */,
+				3D9719EE23D5AADA00CAA8D2 /* RecentImageryDetailsViewController.swift in Sources */,
 				3D8E525523ABAF1E0067CD39 /* WalkthroughViewModel.swift in Sources */,
 				A149558323C361E60054A314 /* OverpassListFutureTableViewCell.swift in Sources */,
 				3D602E0D23C4927400B06568 /* AppError.swift in Sources */,
 				A109227323C0E3480073B416 /* SingleOverpassModel.swift in Sources */,
 				A109227523C0E65D0073B416 /* OverpassFootprintModel.swift in Sources */,
+				3D9719F423D5B33B00CAA8D2 /* ImageModel.swift in Sources */,
 				3D144F1923A8ECA300E17504 /* HomeCellView.swift in Sources */,
 				3D231DB823A8BF8400B4CFD4 /* WindowController.swift in Sources */,
 				A141EBC023BA5B7700BF26C6 /* SatellitesListViewController.swift in Sources */,
@@ -1260,6 +1283,7 @@
 				A11E20AE23BE272900F62995 /* TrajectoryModel.swift in Sources */,
 				A1372C7623CF7D8800D31D56 /* CloudyTableViewFooterViewModel.swift in Sources */,
 				A11E20B623BE35D000F62995 /* TrajectoryRemoteRepository.swift in Sources */,
+				3D9719F023D5AAF600CAA8D2 /* RecentImageryDetailsViewModel.swift in Sources */,
 				A16C25D423CA09C800C4B4FD /* LocationPickerViewModel.swift in Sources */,
 				A109226B23C0B6F70073B416 /* LocationRepository.swift in Sources */,
 				A1BA8FB623C23053007979E0 /* OverpassPagerViewController.swift in Sources */,

@@ -15,7 +15,14 @@ public struct RecentImageryTableViewCellViewModel {
     //
         
     public var date: String?
-    public var satellite: String?
+    public let satellite: String?
+    private let imageId: Int
+    
+    public var image: Int {
+        get {
+            return imageId
+        }
+    }
     
     //
     // MARK: - Init
@@ -23,6 +30,7 @@ public struct RecentImageryTableViewCellViewModel {
     
     public init(model: ImageryResultModel) {
         self.satellite = model.satellite
+        self.imageId = model.id
         self.date = prepareDate(model.endPositionDate)
     }
     

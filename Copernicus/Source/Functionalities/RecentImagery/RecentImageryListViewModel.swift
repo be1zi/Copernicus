@@ -15,6 +15,7 @@ public class RecentImageryListViewModel {
     //
     
     public let cellIdentifier = String(describing: RecentImageryTableViewCell.self)
+    public let detailsIdentifier = "RecentImageryDetails"
     
     private let disposeBag = DisposeBag()
     

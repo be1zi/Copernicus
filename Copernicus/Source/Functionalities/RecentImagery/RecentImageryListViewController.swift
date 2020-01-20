@@ -72,3 +72,20 @@ extension RecentImageryListViewController: UITableViewDataSource {
         return cell
     }
 }
+
+extension RecentImageryListViewController: UITableViewDelegate {
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let cell = tableView.cellForRow(at: indexPath) as? RecentImageryTableViewCell else { return }
+        
+        guard let vc = UIStoryboard.init(name: viewModel.detailsIdentifier, bundle: nil).instantiateInitialViewController() as? RecentImageryDetailsViewController else {
+            return
+        }
+        
+        let vm = RecentImageryDetailsViewModel(imageryId: cell.getImageId())
+        vc.setViewModel(vm)
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}

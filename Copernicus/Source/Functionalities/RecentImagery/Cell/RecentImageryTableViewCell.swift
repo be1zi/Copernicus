@@ -17,12 +17,21 @@ public class RecentImageryTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var satelliteLabel: UILabel!
 
+    private var viewModel: RecentImageryTableViewCellViewModel?
+    
     //
     // MARK: - Data
     //
     
-    public func setViewModel(_ viewModel: RecentImageryTableViewCellViewModel) {
-        dateLabel.text = viewModel.date
-        satelliteLabel.text = viewModel.satellite
+    public func setViewModel(_ vm: RecentImageryTableViewCellViewModel) {
+        viewModel = vm
+        dateLabel.text = vm.date
+        satelliteLabel.text = vm.satellite
+    }
+    
+    public func getImageId() -> Int {
+        guard let vm = viewModel else { return -1 }
+        
+        return vm.image
     }
 }
