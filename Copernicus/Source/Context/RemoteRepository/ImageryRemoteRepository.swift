@@ -10,6 +10,7 @@ import Moya
 
 public enum ImageryRemoteRepository {
     case imagery(_ data: CloudyData, page: Int)
+    case filesList(_ imageId: Int)
 }
 
 extension ImageryRemoteRepository: TargetType {
@@ -20,7 +21,13 @@ extension ImageryRemoteRepository: TargetType {
     }
     
     public var path: String {
-        return "/imagery/"
+        
+        switch self {
+        case .imagery(_, page: _):
+            return "/imagery/"
+        case .filesList(let imageId):
+            return "/imagery/\(imageId)/files/"
+        }
     }
     
     public var method: Method {
@@ -40,6 +47,10 @@ extension ImageryRemoteRepository: TargetType {
                                          "satelites" : data.satellitesString(),
                                          "date_from" : data.dateFromString(),
                                          "page" : page]
+            return .requestParameters(parameters: params, encoding: URLEncoding.default)
+        case .filesList(_):
+            let params: [String: Any] = ["api_key" : ConfigurationManager.sharedInstance.serverKey ?? ""]
+            
             return .requestParameters(parameters: params, encoding: URLEncoding.default)
         }
     }

@@ -10,6 +10,7 @@ target 'Copernicus' do
   pod 'RxRealm', '~> 2.0.0'
   pod 'SkyFloatingLabelTextField', '~> 3.0'
   pod 'MXSegmentedPager'
+  pod 'Kingfisher'
   
   target 'CopernicusTests' do
     pod 'RxTest', '~> 5.0'

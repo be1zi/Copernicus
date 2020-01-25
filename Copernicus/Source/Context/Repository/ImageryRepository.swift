@@ -58,4 +58,15 @@ public class ImageryRepository {
         
         return ImageryLocalRepository.sharedInstance.imageryObservable()
     }
+    
+    public func getImagesForImageryObservable(withId id: Int) -> Observable<[ImageModel]> {
+  
+        provider.rx.request(.filesList(id)).map { response in
+            ImageryLocalRepository.sharedInstance.saveImageArray(forImageId: id, jsonResponse: response)
+        }
+        .subscribe()
+        .disposed(by: disposeBag)
+        
+        return ImageryLocalRepository.sharedInstance.imagesObservable(withId: id)
+    }
 }
