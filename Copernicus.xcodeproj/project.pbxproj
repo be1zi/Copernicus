@@ -127,6 +127,7 @@
 		A1BFF32423A5349B008165FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1BFF32223A5349B008165FA /* LaunchScreen.storyboard */; };
 		A1BFF32F23A5349C008165FA /* CopernicusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BFF32E23A5349C008165FA /* CopernicusTests.swift */; };
 		A1BFF33A23A5349C008165FA /* CopernicusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BFF33923A5349C008165FA /* CopernicusUITests.swift */; };
+		A1D1057D23DC7C31005C3EA5 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1D1057C23DC7C31005C3EA5 /* config.plist */; };
 		ABD1EFFD8633E057DE2A862D /* Pods_Copernicus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8825F663483BEC8673BA0E19 /* Pods_Copernicus.framework */; };
 /* End PBXBuildFile section */
 
@@ -281,6 +282,7 @@
 		A1BFF33523A5349C008165FA /* CopernicusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CopernicusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BFF33923A5349C008165FA /* CopernicusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopernicusUITests.swift; sourceTree = "<group>"; };
 		A1BFF33B23A5349C008165FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1D1057C23DC7C31005C3EA5 /* config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		DE605A64A7BACCEAFEFF1325 /* Pods_Copernicus_CopernicusUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Copernicus_CopernicusUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -616,6 +618,7 @@
 			isa = PBXGroup;
 			children = (
 				A1BFF32523A5349B008165FA /* Info.plist */,
+				A1D1057B23DC7C03005C3EA5 /* Release */,
 				A160A18823A5411900025C02 /* Debug */,
 			);
 			path = Configuration;
@@ -867,6 +870,14 @@
 			path = CopernicusUITests;
 			sourceTree = "<group>";
 		};
+		A1D1057B23DC7C03005C3EA5 /* Release */ = {
+			isa = PBXGroup;
+			children = (
+				A1D1057C23DC7C31005C3EA5 /* config.plist */,
+			);
+			path = Release;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -982,6 +993,7 @@
 				A1710A4123CE1D3000CA846D /* Cloudy.storyboard in Resources */,
 				3DEE0E9023A7970D0036DA45 /* Localizable.strings in Resources */,
 				3D231DBA23A8C1AE00B4CFD4 /* Language.storyboard in Resources */,
+				A1D1057D23DC7C31005C3EA5 /* config.plist in Resources */,
 				A16C25D623CA09D500C4B4FD /* LocationPicker.storyboard in Resources */,
 				A11E20AA23BE14FE00F62995 /* SatellitesListCell.xib in Resources */,
 				A11E20BF23BE39B100F62995 /* SatelliteDetails.storyboard in Resources */,
