@@ -25,14 +25,16 @@ public struct SatelliteRepository {
     //
     
     public func getSatellitesObservable() -> Observable<[SatelliteModel]> {
+                
+        if SynchroManager.sharedInstance.shouldSynchronize(type: SatelliteModel.self) {
         
-        // if need synchronize
-        
-        provider.rx.request(.allSatellites).map { response in
-            SatelliteLocalRepository.sharedInstance.saveSatellites(jsonResponse: response)
+            provider.rx.request(.allSatellites).map { response in
+                SatelliteLocalRepository.sharedInstance.saveSatellites(jsonResponse: response)
+                SynchroManager.sharedInstance.synchronized(type: SatelliteModel.self)
+            }
+            .subscribe()
+            .disposed(by: disposeBag)
         }
-        .subscribe()
-        .disposed(by: disposeBag)
                 
         return SatelliteLocalRepository.sharedInstance.allSatellitesObservable()
     }

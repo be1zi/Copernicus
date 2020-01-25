@@ -26,12 +26,15 @@ public struct TrajectoryRepository {
     
     public func getTrajectoryObservable(satelliteId id: Int) -> Observable<TrajectoryModel> {
         
-        provider.rx.request(.trajectory(satelliteId: id)).map { response in
-            TrajectoryLocalRepository.sharedInstance.saveTrajectory(jsonResponse: response)
+        if SynchroManager.sharedInstance.shouldSynchronize(type: TrajectoryModel.self) {
+            provider.rx.request(.trajectory(satelliteId: id)).map { response in
+                TrajectoryLocalRepository.sharedInstance.saveTrajectory(jsonResponse: response)
+                SynchroManager.sharedInstance.synchronized(type: TrajectoryModel.self)
+            }
+            .subscribe()
+            .disposed(by: disposeBag)
         }
-        .subscribe()
-        .disposed(by: disposeBag)
-        
+            
         return TrajectoryLocalRepository.sharedInstance.trajectoryObservable(satelliteId: id)
     }
 }

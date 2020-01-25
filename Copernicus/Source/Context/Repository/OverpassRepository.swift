@@ -25,12 +25,16 @@ public struct OverpassRepository {
     
     public func getOverpassObservable(data: OverpassData) -> Observable<[OverpassModel]> {
         
-        provider.rx.request(.overpass(data)).map { response in
-            OverpassLocalRepository.sharedInstance.saveOverpass(response)
-        }
-        .subscribe()
-        .disposed(by: disposeBag)
+        if SynchroManager.sharedInstance.shouldSynchronize(type: OverpassModel.self) {
         
+            provider.rx.request(.overpass(data)).map { response in
+                OverpassLocalRepository.sharedInstance.saveOverpass(response)
+                SynchroManager.sharedInstance.synchronized(type: OverpassModel.self)
+            }
+            .subscribe()
+            .disposed(by: disposeBag)
+        }
+            
         return OverpassLocalRepository.sharedInstance.getOverpassObservable()
     }
 }

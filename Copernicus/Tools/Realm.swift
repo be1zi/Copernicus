@@ -34,7 +34,8 @@ public extension Realm {
                               SatelliteModel.self,
                               TrajectoryModel.self,
                               OverpassModel.self,
-                              ImageryResultModel.self]
+                              ImageryResultModel.self,
+                              SynchroInfo.self]
         
         mainEntityList = mainEntityList.filter { element in
             !without.contains(where: { element == $0 })
