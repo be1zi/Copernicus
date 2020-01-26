@@ -65,9 +65,7 @@ public struct SynchroManager {
         let objects = realm.objects(SynchroInfo.self).filter(predicate)
         
         guard let obj = objects.first, let objDate = obj.date else { return true }
-        
-        print(abs(objDate.timeIntervalSinceNow), SynchroInterval.intervalForModel(type: type))
-        
+                
         if abs(objDate.timeIntervalSinceNow) < SynchroInterval.intervalForModel(type: type) {
             return false
         }

@@ -31,6 +31,8 @@ public class LocationViewController: BaseViewController {
     
     @IBOutlet weak var constraintToBottom: NSLayoutConstraint!
     
+    @IBOutlet var contentView: UIView!
+    
     private var viewModel = LocationViewModel()
     private let disposeBag = DisposeBag()
     
@@ -56,12 +58,13 @@ public class LocationViewController: BaseViewController {
     }
     
     override public var preferredStatusBarStyle: UIStatusBarStyle {
-        return .darkContent
+        return .lightContent
     }
     
     private func setupView() {
         languageButton.backgroundColor = UIColor.copYellowColor
-        infoLabel.textColor = UIColor.copGreyColor
+        infoLabel.textColor = UIColor.copBlueColor
+        contentView.backgroundColor = UIColor.copBlackColor
     }
     
     //
