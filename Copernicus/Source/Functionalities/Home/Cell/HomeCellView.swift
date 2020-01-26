@@ -49,7 +49,6 @@ class HomeCellView: UICollectionViewCell {
     }
     
     private func setStyle() {
-        titleLabel.textColor = UIColor.copGreyColor
         content.backgroundColor = UIColor.copYellowColor
     }
 }

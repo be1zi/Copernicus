@@ -38,9 +38,9 @@
 
 //Home View
 "home.title" = "Witamy w aplikacji Copernicus";
-"home.menu.item1" = "Kolejne przeloty satelitów";
-"home.menu.item2" = "Średnia częstotliwość obrazowań";
-"home.menu.item3" = "Średnie zachmurzenie";
+"home.menu.item1" = "Satelity";
+"home.menu.item2" = "Przeloty";
+"home.menu.item3" = "Zachmurzenie";
 "home.menu.item4" = "Obecnie dostępne obrazowania";
 "home.menu.item5" = "Ostatnie obrazowania";
 "home.menu.item6" = "Rozdzielczość obrazowań";

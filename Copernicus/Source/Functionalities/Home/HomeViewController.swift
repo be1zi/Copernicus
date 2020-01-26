@@ -32,7 +32,7 @@ class HomeViewController: BaseViewController {
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .darkContent
+        return .lightContent
     }
     
     //
@@ -107,6 +107,6 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let size = (UIScreen.main.bounds.width - 60.0) / 2.0
         
-        return CGSize(width: size, height: 1.4 * size)
+        return CGSize(width: size, height: size)
     }
 }

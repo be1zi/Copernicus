@@ -39,12 +39,9 @@ struct HomeViewModel {
     private mutating func setupCellViewModels() {
         
         cellViewModels = [HomeCellViewModel(title: "home.menu.item1".localized(), imageName: "menuSatellite", storyboardName: "Satellites"),
-                          HomeCellViewModel(title: "home.menu.item1".localized(), storyboardName: "Overpass"),
-                          HomeCellViewModel(title: "home.menu.item2".localized()),
+                          HomeCellViewModel(title: "home.menu.item2".localized(), imageName: "menuOverpass", storyboardName: "Overpass"),
                           HomeCellViewModel(title: "home.menu.item3".localized(), imageName: "menuClouds", storyboardName: "Cloudy"),
-                          HomeCellViewModel(title: "home.menu.item4".localized()),
-                          HomeCellViewModel(title: "home.menu.item5".localized(), storyboardName: "RecentImagery"),
-                          HomeCellViewModel(title: "home.menu.item6".localized()),
+                          HomeCellViewModel(title: "home.menu.item5".localized(), imageName: "menuImagery",storyboardName: "RecentImagery"),
                           HomeCellViewModel(title: "home.menu.item7".localized(), imageName: "menuSettings", storyboardName: "Settings")]
         
         cellsNumber = cellViewModels.count
