@@ -28,7 +28,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="7ix-1z-y9L">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <rect key="frame" x="5" y="5" width="70" height="70"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -36,12 +36,12 @@
                                             <constraint firstItem="tej-OT-rWa" firstAttribute="leading" secondItem="hNY-HH-EXx" secondAttribute="leading" id="2Vl-JW-Fty"/>
                                             <constraint firstAttribute="bottom" secondItem="tej-OT-rWa" secondAttribute="bottom" id="4HK-cN-y3c"/>
                                             <constraint firstAttribute="width" secondItem="hNY-HH-EXx" secondAttribute="height" multiplier="1:1" id="HBA-BE-dQY"/>
-                                            <constraint firstItem="7ix-1z-y9L" firstAttribute="top" secondItem="hNY-HH-EXx" secondAttribute="top" id="MSB-xN-Bh2"/>
+                                            <constraint firstItem="7ix-1z-y9L" firstAttribute="top" secondItem="hNY-HH-EXx" secondAttribute="top" constant="5" id="MSB-xN-Bh2"/>
                                             <constraint firstAttribute="trailing" secondItem="tej-OT-rWa" secondAttribute="trailing" id="Rc3-Ta-ryl"/>
-                                            <constraint firstAttribute="bottom" secondItem="7ix-1z-y9L" secondAttribute="bottom" id="XGz-iT-0Xx"/>
+                                            <constraint firstAttribute="bottom" secondItem="7ix-1z-y9L" secondAttribute="bottom" constant="5" id="XGz-iT-0Xx"/>
                                             <constraint firstItem="tej-OT-rWa" firstAttribute="top" secondItem="hNY-HH-EXx" secondAttribute="top" id="XfO-R0-uEr"/>
-                                            <constraint firstAttribute="trailing" secondItem="7ix-1z-y9L" secondAttribute="trailing" id="bjB-vB-jx7"/>
-                                            <constraint firstItem="7ix-1z-y9L" firstAttribute="leading" secondItem="hNY-HH-EXx" secondAttribute="leading" id="diz-zH-7L0"/>
+                                            <constraint firstAttribute="trailing" secondItem="7ix-1z-y9L" secondAttribute="trailing" constant="5" id="bjB-vB-jx7"/>
+                                            <constraint firstItem="7ix-1z-y9L" firstAttribute="leading" secondItem="hNY-HH-EXx" secondAttribute="leading" constant="5" id="diz-zH-7L0"/>
                                             <constraint firstAttribute="width" constant="80" id="u7L-Mw-x03"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
