@@ -22,6 +22,10 @@
 "button.cancel.title" = "Cancel";
 "button.clear.title" = "Clear";
 
+//Alerts
+"alert.title" = "Warning";
+"alert.location.message" = "Please check that the data entered is correct";
+
 //Errors
 "error.geocoder.description" = "The address cannot be changed to geographic coordinates. Please check that the address provided is correct.";
 

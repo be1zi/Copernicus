@@ -115,7 +115,10 @@ public class LocationViewController: BaseViewController {
                   AppDelegate.sharedInstance.windowController?.presentHomeController()
                   AppDelegate.sharedInstance.shouldSkipToHome = true
             }) { error in
-                  Logger.logError(error: error)
+                Logger.logError(error: error)
+                self.showAlert(title: "alert.title".localized(),
+                               message: "alert.location.message".localized(),
+                               buttonTitle: "button.cancel.title".localized() )
             }.disposed(by: self.disposeBag)
         }).disposed(by: disposeBag)
         

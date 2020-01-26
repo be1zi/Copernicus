@@ -66,4 +66,17 @@ public class BaseViewController: UIViewController {
     public override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
+    //
+    // MARK: - Alerts
+    //
+    
+    public func showAlert(title: String? = nil, message: String? = nil, buttonTitle: String? = nil) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: buttonTitle, style: .cancel, handler: nil))
+
+        self.present(alert, animated: true, completion: nil)
+    }
 }

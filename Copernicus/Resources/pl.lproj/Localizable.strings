@@ -22,6 +22,10 @@
 "button.cancel.title" = "Anuluj";
 "button.clear.title" = "Wyczyść";
 
+//Alerts
+"alert.title" = "Uwaga";
+"alert.location.message" = "Proszę sprawdzić czy wprowadzone dane są poprawne";
+
 //Errors
 "error.geocoder.description" = "Nie można zmienić adresu na współrzędne geograficzne. Proszę sprawdzić czy podany adres jest poprawny.";
 
