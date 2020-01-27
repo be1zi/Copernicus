@@ -20,6 +20,9 @@ class SettingsViewController: BaseViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     
+    @IBOutlet weak var genetalTitleLabel: UILabel!
+    @IBOutlet weak var selectedLanguageLabel: UILabel!
+    @IBOutlet weak var changeLanguageButton: UIButton!
     @IBOutlet weak var locationTitleLabel: UILabel!
     @IBOutlet weak var locationValueLabel: UILabel!
     @IBOutlet weak var changeLocationButton: UIButton!
@@ -63,6 +66,9 @@ class SettingsViewController: BaseViewController {
         
         gpsSettingsButton.backgroundColor = UIColor.copYellowColor
         gpsSettingsButton.cornerRadius = gpsSettingsButton.bounds.height  / 2.0
+        
+        changeLanguageButton.backgroundColor = UIColor.copYellowColor
+        changeLanguageButton.cornerRadius = changeLanguageButton.bounds.height / 2.0
     }
     
     override func shouldHideNavigationBar() -> Bool {
@@ -81,6 +87,7 @@ class SettingsViewController: BaseViewController {
         titleLabel.text = viewModel.title
         subtitleLabel.text = viewModel.subtitle
         
+        genetalTitleLabel.text = viewModel.generalTitle
         locationTitleLabel.text = viewModel.locationTitle
         gpsLabel.text = viewModel.gpsTitle
         dataTitleLabel.text = viewModel.dataTitle
@@ -91,6 +98,7 @@ class SettingsViewController: BaseViewController {
         changeLocationButton.setTitle(viewModel.changeLocation, for: .normal)
         gpsSettingsButton.setTitle(viewModel.changeGpsPermission, for: .normal)
         clearDataButton.setTitle(viewModel.clearDataButton, for: .normal)
+        changeLanguageButton.setTitle(viewModel.changeLanguageButton, for: .normal)
     }
     
     //
@@ -108,6 +116,10 @@ class SettingsViewController: BaseViewController {
         
         viewModel.locationValue.subscribe(onNext: { [weak self] value in
             self?.locationValueLabel.text = value
+        }).disposed(by: disposeBag)
+        
+        viewModel.languageValue.subscribe(onNext : { [weak self] value in
+            self?.selectedLanguageLabel.text = value
         }).disposed(by: disposeBag)
         
         changeLocationButton.rx.tap.subscribe(onNext: { [weak self] _ in

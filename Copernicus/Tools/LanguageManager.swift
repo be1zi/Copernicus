@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 public enum Language: String {
     case pl
@@ -47,5 +48,9 @@ public struct LanguageManager {
     
     public func selectedBefore() -> Bool {
         return UserDefaults.standard.object(forKey: languageKey) as? String != nil
+    }
+    
+    public func currentLanguageObservable() -> Observable<String?> {
+        return UserDefaults.standard.rx.observe(String.self, languageKey).asObservable()
     }
 }

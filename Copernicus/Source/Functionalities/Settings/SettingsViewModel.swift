@@ -25,7 +25,10 @@ public class SettingsViewModel {
     public var notificationsInfo: String?
     public var changeLocation: String = ""
     public var changeGpsPermission: String = ""
+    public var generalTitle: String?
+    public var changeLanguageButton: String = ""
     public var locationValue = BehaviorSubject<String>(value: "")
+    public var languageValue = BehaviorSubject<String>(value: "")
     
     private let disposeBag = DisposeBag()
     
@@ -35,9 +38,12 @@ public class SettingsViewModel {
     //
     
     public init() {
-        getCurrentLocation()
-        setStaticData()
         setLocation(location: nil)
+        setLanguage(language: nil)
+        
+        getCurrentLocation()
+        getSelectedLanguage()
+        setStaticData()
     }
     
     //
@@ -53,16 +59,24 @@ public class SettingsViewModel {
         self.clearDataTitle = "settings.content.data.clear".localized()
         self.notificationsTitle = "settings.content.notifications.title".localized()
         self.notificationsInfo = "settings.content.notifications.info".localized()
+        self.generalTitle = "settings.content.general.title".localized()
         
         self.changeLocation = "  \("button.change.title".localized())  "
         self.changeGpsPermission = "  \("button.change.title".localized())  "
         self.clearDataButton = "  \("button.clear.title".localized())  "
+        self.changeLanguageButton = "  \("button.change.title".localized())  "
     }
     
     private func getCurrentLocation() {
         
         LocationRepository.sharedInstance.getLocationObservable().subscribe(onNext: { [unowned self] locations in
             self.setLocation(location: locations.first)
+        }).disposed(by: disposeBag)
+    }
+    
+    private func getSelectedLanguage() {
+        LanguageManager.sharedInstance.currentLanguageObservable().subscribe(onNext: { [unowned self] language in
+            self.setLanguage(language: language)
         }).disposed(by: disposeBag)
     }
     
@@ -82,6 +96,23 @@ public class SettingsViewModel {
         }
 
         locationValue.onNext(value)
+    }
+    
+    private func setLanguage(language: String?) {
+        var value = "settings.content.general.selectedLanguage".localized()
+        
+        guard let lang = language else {
+            languageValue.onNext(value)
+            return
+        }
+        
+        if lang == Language.en.value() {
+            value += " \("language.english".localized())"
+        } else {
+            value += " \("language.polish".localized())"
+        }
+        
+        languageValue.onNext(value)
     }
     
     public func deleteData() {
