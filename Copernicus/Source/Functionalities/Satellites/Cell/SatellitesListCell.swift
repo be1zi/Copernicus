@@ -22,5 +22,16 @@ public class SatellitesListCell: UITableViewCell {
     
     public func setupViewModel(_ viewModel: SatellitesListCellViewModel) {
         nameLabel.text = viewModel.name
+        
+        setStyle()
+    }
+    
+    //
+    // MARK: - UI
+    //
+    
+    private func setStyle() {
+        contentView.backgroundColor = UIColor.copBlackColor
+        nameLabel.textColor = UIColor.white
     }
 }

@@ -8,6 +8,11 @@
 
 import UIKit
 
+public enum NavigationBarStyle {
+    case lightContent
+    case darkContent
+}
+
 public class BaseViewController: UIViewController {
     
     //
@@ -47,8 +52,15 @@ public class BaseViewController: UIViewController {
         navigationItem.backBarButtonItem = backButton
         
         self.title = navigationBarTitle()
-        
+    
         navigationController?.navigationItem.setHidesBackButton(shouldHideBackButton(), animated: true)
+        
+        switch navigationBarStyle() {
+        case .darkContent:
+            navigationController?.navigationBar.barTintColor = UIColor.white
+        case .lightContent:
+            navigationController?.navigationBar.barTintColor = UIColor.copYellowColor
+        }
     }
     
     public func navigationBarTitle() -> String? {
@@ -65,6 +77,10 @@ public class BaseViewController: UIViewController {
     
     public override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    public func navigationBarStyle() -> NavigationBarStyle {
+        return .darkContent
     }
     
     //

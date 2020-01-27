@@ -16,7 +16,8 @@ public class SatellitesListViewController: BaseViewController {
     //
     
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet var contentView: UIView!
+    
     private let viewModel = SatellitesListViewModel()
     private let disposeBag = DisposeBag()
     
@@ -29,8 +30,7 @@ public class SatellitesListViewController: BaseViewController {
         
         registerCell()
         setupRx()
-        
-        tableView.tableFooterView = UIView()
+        setupView()
     }
     
     //
@@ -43,6 +43,17 @@ public class SatellitesListViewController: BaseViewController {
     
     public override func navigationBarTitle() -> String? {
         return "satellites.list.title".localized()
+    }
+    
+    public override func navigationBarStyle() -> NavigationBarStyle {
+        return .lightContent
+    }
+    
+    private func setupView() {
+        contentView.backgroundColor = UIColor.copBlackColor
+        
+        tableView.tableFooterView = UIView()
+        tableView.separatorColor = UIColor.copYellowColor
     }
     
     //
