@@ -16,6 +16,8 @@ public class LocationPickerViewController: BaseViewController {
     // MARK: - Properties
     //
    
+    @IBOutlet var contentView: UIView!
+    
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var countryTextField: COPTextField!
@@ -59,6 +61,7 @@ public class LocationPickerViewController: BaseViewController {
         separatorView.backgroundColor = UIColor.copGreyColor
         useMyLocationSwitch.onTintColor = UIColor.copYellowColor
         useMyLocationSwitch.isOn = false
+        contentView.backgroundColor = UIColor.copBlackColor
     }
     
     //

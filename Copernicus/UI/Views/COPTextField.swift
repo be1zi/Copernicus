@@ -37,7 +37,6 @@ public class COPTextField: SkyFloatingLabelTextField {
     
     private func setStyle() {
         lineColor = UIColor.copGreyColor
-        placeholderColor = UIColor.copGreyColor
         titleColor = UIColor.copGreyColor
         
         selectedLineColor = UIColor.copBlueColor

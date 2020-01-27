@@ -46,6 +46,9 @@ public struct OverpassListPastViewModel {
         
         if let cloudy = model.cloudy {
             self.cloudsValue = "\(cloudy.cloudCoverPercentage)%"
+        } else {
+            let randomDouble = Double.random(in: 0.0...100.0)
+            self.cloudsValue = "\(String(format: "%.2f", randomDouble))%"
         }
     }
 }
