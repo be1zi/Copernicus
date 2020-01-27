@@ -80,6 +80,10 @@
 "overpass.list.cell.in" = "za";
 "overpass.list.cell.imagining" = "Obrazowanie?";
 "overpass.list.header.frequency" = "Częstotliwość:";
+"overpass.list.header.frequency.days" = "dni";
+"overpass.list.header.frequency.hours" = "godzin";
+"overpass.list.header.frequency.minutes" = "minut";
+"overpass.list.header.frequency.seconds" = "sekund";
 "overpass.list.cell.image" = "obraz";
 "overpass.list.cell.ago" = "temu";
 "overpass.list.cell.clouds" = "zachmurzenie";

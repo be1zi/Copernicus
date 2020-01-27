@@ -27,9 +27,6 @@ public class OverpassListFutureTableViewCell: UITableViewCell {
     //
     
     private func setupView() {
-        nameLabel.textColor = UIColor.copGreyColor
-        inSeparatorLabel.textColor = UIColor.copGreyColor
-        imaginingLabel.textColor = UIColor.copGreyColor
         separatorView.backgroundColor = UIColor.red
     }
     

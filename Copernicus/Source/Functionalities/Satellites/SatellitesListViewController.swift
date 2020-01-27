@@ -46,7 +46,7 @@ public class SatellitesListViewController: BaseViewController {
     }
     
     public override func navigationBarStyle() -> NavigationBarStyle {
-        return .lightContent
+        return .yellowContent
     }
     
     private func setupView() {

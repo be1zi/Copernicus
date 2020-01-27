@@ -21,6 +21,7 @@ public class OverpassPagerViewController: BaseViewController {
     @IBOutlet weak var currentLocationLabel: UILabel!
     @IBOutlet weak var changeLocationButton: UIButton!
     @IBOutlet weak var separatorView: UIView!
+    @IBOutlet var contentView: UIView!
     
     private let viewModel = OverpassPagerViewModel()
     private let disposeBag = DisposeBag()
@@ -51,7 +52,12 @@ public class OverpassPagerViewController: BaseViewController {
         return viewModel.title
     }
     
+    public override func navigationBarStyle() -> NavigationBarStyle {
+        return .yellowContent
+    }
+    
     private func setupView() {
+        contentView.backgroundColor = UIColor.copBlackColor
         separatorView.backgroundColor = UIColor.copYellowColor
         
         changeLocationButton.backgroundColor = UIColor.copYellowColor
@@ -66,7 +72,7 @@ public class OverpassPagerViewController: BaseViewController {
         
         segmentedPager.segmentedControl.clipsToBounds = true
         segmentedPager.segmentedControl.selectedTextColor = UIColor.black
-        segmentedPager.segmentedControl.textColor = UIColor.copGreyColor
+        segmentedPager.segmentedControl.textColor = UIColor.white
         segmentedPager.segmentedControlEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 8, right: 20)
         
         segmentedPager.segmentedControl.borderColor = UIColor.copYellowColor

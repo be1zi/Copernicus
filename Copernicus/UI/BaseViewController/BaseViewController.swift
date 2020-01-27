@@ -9,8 +9,8 @@
 import UIKit
 
 public enum NavigationBarStyle {
-    case lightContent
-    case darkContent
+    case whiteContent
+    case yellowContent
 }
 
 public class BaseViewController: UIViewController {
@@ -56,9 +56,9 @@ public class BaseViewController: UIViewController {
         navigationController?.navigationItem.setHidesBackButton(shouldHideBackButton(), animated: true)
         
         switch navigationBarStyle() {
-        case .darkContent:
+        case .whiteContent:
             navigationController?.navigationBar.barTintColor = UIColor.white
-        case .lightContent:
+        case .yellowContent:
             navigationController?.navigationBar.barTintColor = UIColor.copYellowColor
         }
     }
@@ -80,7 +80,7 @@ public class BaseViewController: UIViewController {
     }
     
     public func navigationBarStyle() -> NavigationBarStyle {
-        return .darkContent
+        return .whiteContent
     }
     
     //

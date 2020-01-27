@@ -27,9 +27,6 @@ public class OverpassListPastTableViewCell: UITableViewCell {
     //
     
     private func setupView() {
-        imageLabel.textColor = UIColor.copGreyColor
-        agoSeparatorLabel.textColor = UIColor.copGreyColor
-        cloudsNameLabel.textColor = UIColor.copGreyColor
         separatorView.backgroundColor = UIColor.red
     }
     

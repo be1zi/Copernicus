@@ -17,6 +17,7 @@ public class OverpassListHeaderTableViewCell: UITableViewHeaderFooterView {
     @IBOutlet weak var frequencyLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var separatorView: UIView!
+    @IBOutlet weak var content: UIView!
     
     //
     // MARK: - Appearance
@@ -24,7 +25,7 @@ public class OverpassListHeaderTableViewCell: UITableViewHeaderFooterView {
     
     private func setupView() {
         separatorView.backgroundColor = UIColor.copYellowColor
-        frequencyLabel.textColor = UIColor.copGreyColor
+        content.backgroundColor = UIColor.copBlackColor
     }
     
     //

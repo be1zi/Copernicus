@@ -16,6 +16,7 @@ public class OverpassListViewController: BaseViewController {
     //
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var contentView: UIView!
     
     private var viewModel: OverpassListViewModel!
     private let disposeBag = DisposeBag()
@@ -40,6 +41,8 @@ public class OverpassListViewController: BaseViewController {
         tableView.tableFooterView = UIView()
         tableView.sectionHeaderHeight = UITableView.automaticDimension
         tableView.estimatedSectionHeaderHeight = 50.0
+        
+        contentView.backgroundColor = UIColor.copBlackColor
     }
     
     //
