@@ -50,7 +50,6 @@ public class LocationPickerViewController: BaseViewController {
         setupView()
         setupRx()
         setData()
-        setupLocationManager()
     }
     
     //
@@ -137,10 +136,12 @@ public class LocationPickerViewController: BaseViewController {
         }).disposed(by: disposeBag)
         
         useMyLocationSwitch.rx.isOn.changed.subscribe(onNext: { [weak self] result in
-            self?.setupLocationManager()
-            self?.setUserInteractionEnabled(!result)
-            self?.setTextFieldsBackgroundColor(!result)
-            self?.viewModel.useMyLocation(result)
+            if result == true {
+                self?.setupLocationManager()
+                self?.setUserInteractionEnabled(!result)
+                self?.setTextFieldsBackgroundColor(!result)
+                self?.viewModel.useMyLocation(result)
+            }
         }).disposed(by: disposeBag)
     }
     
@@ -233,10 +234,18 @@ public class LocationPickerViewController: BaseViewController {
         self.locationManager.requestWhenInUseAuthorization()
 
         if CLLocationManager.locationServicesEnabled() {
-            locationManager = CLLocationManager()
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startUpdatingLocation()
+           // locationManager = CLLocationManager()
+            switch CLLocationManager.authorizationStatus() {
+            case .denied, .restricted:
+                showAlert(title: "alert.title".localized(),
+                          message: "alert.location.picker.denied".localized(),
+                          buttonTitle: "button.ok.title".localized())
+                useMyLocationSwitch.isOn = false
+            default:
+                locationManager.delegate = self
+                locationManager.desiredAccuracy = kCLLocationAccuracyBest
+                locationManager.startUpdatingLocation()
+            }
         }
     }
 }

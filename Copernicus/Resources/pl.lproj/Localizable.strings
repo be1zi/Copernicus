@@ -21,10 +21,12 @@
 "button.change.title" = "Zmień";
 "button.cancel.title" = "Anuluj";
 "button.clear.title" = "Wyczyść";
+"button.ok.title" = "OK";
 
 //Alerts
 "alert.title" = "Uwaga";
 "alert.location.message" = "Proszę sprawdzić czy wprowadzone dane są poprawne";
+"alert.location.picker.denied" = "Nie udzielono dostępu do modułu gps. Aby użyc tej funkcji proszę zmienić poziom dostępu w ustawieniach telefonu.";
 
 //Errors
 "error.geocoder.description" = "Nie można zmienić adresu na współrzędne geograficzne. Proszę sprawdzić czy podany adres jest poprawny.";

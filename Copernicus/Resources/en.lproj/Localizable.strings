@@ -21,10 +21,12 @@
 "button.change.title" = "Change";
 "button.cancel.title" = "Cancel";
 "button.clear.title" = "Clear";
+"button.ok.title" = "OK";
 
 //Alerts
 "alert.title" = "Warning";
 "alert.location.message" = "Please check that the data entered is correct";
+"alert.location.picker.denied" = "Access to gps module not granted. To use this function, please change the access level in the phone's settings.";
 
 //Errors
 "error.geocoder.description" = "The address cannot be changed to geographic coordinates. Please check that the address provided is correct.";
