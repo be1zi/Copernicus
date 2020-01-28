@@ -36,10 +36,21 @@ public class RecentImageryListViewController: BaseViewController {
     //
     
     private func setupView() {
+        view.backgroundColor = UIColor.copBlackColor
+        
         tableView.backgroundColor = UIColor.copBlackColor
         tableView.tableFooterView = UIView()
+        tableView.separatorColor = UIColor.copYellowColor
         
         tableView.register(UINib(nibName: viewModel.cellIdentifier, bundle: nil), forCellReuseIdentifier: viewModel.cellIdentifier)
+    }
+    
+    public override func navigationBarTitle() -> String? {
+        return "imagery.title".localized()
+    }
+    
+    public override func navigationBarStyle() -> NavigationBarStyle {
+        return .yellowContent
     }
     
     //

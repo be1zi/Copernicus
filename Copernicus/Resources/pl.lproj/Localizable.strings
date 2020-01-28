@@ -114,3 +114,6 @@
 "settings.content.notifications.info" = "Wkrotce dostępne";
 "settings.content.general.title" = "Ogólne";
 "settings.content.general.selectedLanguage" = "Wybrany język:";
+
+// Imagery
+"imagery.title" = "Ostatnie obrazowania";

@@ -114,3 +114,6 @@
 "settings.content.notifications.info" = "Soon available";
 "settings.content.general.title" = "General";
 "settings.content.general.selectedLanguage" = "Selected language:";
+
+// Imagery
+"imagery.title" = "Recent imagery";

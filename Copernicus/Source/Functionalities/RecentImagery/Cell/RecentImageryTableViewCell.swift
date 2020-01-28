@@ -27,6 +27,8 @@ public class RecentImageryTableViewCell: UITableViewCell {
         viewModel = vm
         dateLabel.text = vm.date
         satelliteLabel.text = vm.satellite
+        
+        contentView.backgroundColor = UIColor.copBlackColor
     }
     
     public func getImageId() -> Int {
